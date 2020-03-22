@@ -1,24 +1,40 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#たまご辞典
 
-Things you may want to cover:
+## サイト概要
+卵料理のレシピサイト
 
-* Ruby version
+### サイトテーマ
+タンパク質不足防止、
+タンパク質が豊富でコスパも良く、
+調理も簡単な卵料理レシピに特化したサイト。
+レシピ閲覧、投稿、ブックマーク機能だけでなく、たんぱく質や卵の栄養知識も知る事ができる。
 
-* System dependencies
 
-* Configuration
+### テーマを選んだ理由
+私は大学時代、管理栄養士養成の大学に通っておりました。
 
-* Database creation
+その中で三大栄養素の一つ「タンパク質」は筋肉だけでなく、血液、毛髪、皮膚、臓器様々なものを
+作り上げる役割を持っています。
 
-* Database initialization
+その中でも卵はタンパク質が６.2gとたった１個食べるだけで１日の必要量の約１３％を占めています。
+かつコスパも調理方法も簡単なため、あまり時間が取れないユーザーであったり、料理初心者のユーザーに最適だと考えました。
+物知りの母も卵の摂取を推していて、私も将来一人暮らしするにあたり、何か栄養を考え調理できるようになりたいと考え、同じユーザーがいるのではないかなと考えます。
 
-* How to run the test suite
+レシピだけでなく、卵に関する知識もこのサイトを通し伝えていけたらなと思います。
 
-* Services (job queues, cache servers, search engines, etc.)
+### ターゲットユーザ
+・料理に興味があり、食に関する健康を気にする20代〜50代男女
+・料理はしたいが、時間があまり取れないユーザー
+・栄養学に興味があるユーザー
 
-* Deployment instructions
+### 主な利用シーン
+・レシピを確認し調理をする際
+・卵料理が食べたい際
+・栄養学に興味があり知りたい際
 
-* ...
+## 設計書
+
+### 機能一覧
+https://docs.google.com/spreadsheets/
