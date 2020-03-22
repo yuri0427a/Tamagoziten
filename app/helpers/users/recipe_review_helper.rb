@@ -1,0 +1,2 @@
+module Users::RecipeReviewHelper
+end

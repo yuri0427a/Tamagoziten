@@ -1,0 +1,2 @@
+module Experts::CookingProceduresHelper
+end
