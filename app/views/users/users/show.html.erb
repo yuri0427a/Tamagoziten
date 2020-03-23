@@ -1,2 +1,10 @@
-<h1>Profile<h1>
+<div class="container">
+  <div class="row">  
+    <h1>Profile<h1>
+    <%= attachment_image_tag @user, :profile_image_id, :fill, 100, 100, format: "jpeg"%>
+    <%= @user.name %>
+    <%= @user.email %>
+    <%= @user.introduction %>
+    </div>
+</div>
 <%= link_to " 会員編集", edit_users_user_path(current_user.id) %>
