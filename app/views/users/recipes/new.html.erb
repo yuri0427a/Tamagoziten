@@ -1,12 +1,10 @@
 <h1>NEW MENU<h1>
-<div class="container">
+
   <div class="row">
-    <div class="col-xs-4">
-    <%= form_for @resipe do |f| %>
-        <%= f.attachment_field :profile_image, placeholder: "プロフィール画像", class: "user-edit-form" %>
-      <% end %>
-    </div>
-    <div class="col-xs-6">
-    </div
+  <%= form_for @recipe, url: users_recipes_path do |f| %>
+    <%= attachment_image_tag @user, :recipe_image, :fill, 60, 60, class: "img-circle pull-left profile-thumb"%>
+<%= f.attachment_field :recipe_image, placeholder: "プロフィール画像", class: "recipe-edit-form" %> 
+<%= f.submit "変更を保存" %>   
+<% end %>
+
   </div>
-</div>
