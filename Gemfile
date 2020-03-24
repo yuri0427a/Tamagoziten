@@ -67,3 +67,9 @@ gem 'jquery-rails'
 gem "refile", require: "refile/rails", github: 'manfe/refile' 
 gem "refile-mini_magick" 
 gem 'kaminari', '~> 0.17.0' 
+
+group :development, :test do
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'pry-doc'
+end
