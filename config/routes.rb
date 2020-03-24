@@ -13,10 +13,10 @@ Rails.application.routes.draw do
     resources :recipes, except: :show do
       #cooking_materialsのルート
       get '/cooking_materials' => 'cooking_materials#index', as: 'materials'
-      post '/cooking_materials' => 'cooking_materials#create', as: 'material'
-      patch '/cooking_materials/:id' => 'cooking_materials#update'
-      delete'/cooking_materials/:id' => 'cooking_materials#destroy'
-      get '/cooking_materials/:id/edit' => 'cooking_materials#edit', as: 'edit_material'
+      #post '/cooking_materials' => 'cooking_materials#create', as: 'material'
+      #patch '/cooking_materials/:id' => 'cooking_materials#update'
+      #delete'/cooking_materials/:id' => 'cooking_materials#destroy'
+      #get '/cooking_materials/:id/edit' => 'cooking_materials#edit', as: 'edit_material'
       #cooking_proceduresのルート
       get '/cooking_procedures' => 'cooking_procedures#index', as: 'procedures'
       post '/cooking_procedures' => 'cooking_procedures#create', as: 'procedure'
@@ -31,11 +31,19 @@ Rails.application.routes.draw do
 
   namespace :users do
     resources :users, only: [:show, :edit, :update]
-    resources :recipes, only: [:show, :index] do
+    resources :recipes do
       #cooking_materialsのルート
       get '/cooking_materials' => 'cooking_materials#index', as: 'materials'
+      post '/cooking_materials' => 'cooking_materials#create', as: 'material'
+      patch '/cooking_materials/:id' => 'cooking_materials#update'
+      delete'/cooking_materials/:id' => 'cooking_materials#destroy'
+      get '/cooking_materials/:id/edit' => 'cooking_materials#edit', as: 'edit_material'
       #cooking_proceduresのルート
       get '/cooking_procedures' => 'cooking_procedures#index', as: 'procedures'
+      post '/cooking_procedures' => 'cooking_procedures#create', as: 'procedure'
+      patch '/cooking_procedures/:id' => 'cooking_procedures#update'
+      delete'/cooking_procedures/:id' => 'cooking_procedures#destroy'
+      get '/cooking_procedures/:id/edit' => 'cooking_procedures#edit', as: 'edit_procedure'
       #レビュー機能
       post '/recipe_favorites' => 'recipe_reviews#create', as: 'review'
       #ブックマーク機能
