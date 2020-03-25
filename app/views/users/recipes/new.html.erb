@@ -1,10 +1,57 @@
-<h1>NEW MENU<h1>
+<h1>NEW MENU</h1>
 
   <div class="row">
+  <div class="col-xs-4">
   <%= form_for @recipe, url: users_recipes_path do |f| %>
+    #javascriptで写真レビューを作る
     <%= attachment_image_tag @user, :recipe_image, :fill, 60, 60, class: "img-circle pull-left profile-thumb"%>
-<%= f.attachment_field :recipe_image, placeholder: "プロフィール画像", class: "recipe-edit-form" %> 
-<%= f.submit "変更を保存" %>   
+    <%= f.attachment_field :recipe_image, placeholder: "プロフィール画像", class: "recipe-edit-form" %> 
+    </div>
+    <div class="col-xs-8">
+    <table>
+       <td colspan="2"><h4>レシピ名</h4></td>
+       </tr>
+       <tr>
+       <td colspan="2"><%= f.text_field :name %></td>
+       </tr>
+       <tr>
+       <td colspan="2"><h4>説明</h4></td>
+       </tr>
+       <tr>
+       <td colspan="2"><%= f.text_field :description %></td>
+       </tr>
+      
+       <tr>
+         <td><%= f.text_field :serving %>人分</td>
+         <td><%= f.text_field :cooking_time %>分</td>
+       </tr>
+       </table>
+   </tbody>
+   　<div class="row">
+   <div style="display:inline-flex">
+   　<table>
+       <thead>
+            <tr>
+              <td>材料</td>
+              <td>分量</td>
+            </tr>
+       </thead>
+       <tbody>
+       <tr>
+         <td>卵</td>
+         <td><%= f.text_field :egg_quantity %></td>
+       </tr>
+       <%= f.fields_for :cooking_materials do |m| %>
+       <tr>
+         <td><%= m.text_field :material_name %></td>
+         <td><%= m.text_field :material_quantity %></td>
+       </tr>
+       <% end %>
+       </tbody>
+     </table>
+     </div>
+   </table>
+   <br><%= f.submit "変更を保存" %>   
 <% end %>
-
+</div>
   </div>

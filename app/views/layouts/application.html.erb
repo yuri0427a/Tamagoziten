@@ -31,6 +31,9 @@
         <li>
           <%= link_to " ブックマーク", users_recipe_favorites_path(current_user.id) %>
         </li>
+        <li>
+          <%= link_to " レシピ投稿", new_users_recipe_path %>
+        </li>
        <li>
        <%= link_to " ログアウト", destroy_user_session_path, method: :delete %>
        </li>
