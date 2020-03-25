@@ -1,21 +1,21 @@
 <h1>NEW MENU</h1>
 
   <div class="row">
-  <div class="col-xs-4">
-  <%= form_for @recipe, url: users_recipes_path do |f| %>
-    #javascriptで写真レビューを作る
-    <%= attachment_image_tag @user, :recipe_image, :fill, 60, 60, class: "img-circle pull-left profile-thumb"%>
-    <%= f.attachment_field :recipe_image, placeholder: "プロフィール画像", class: "recipe-edit-form" %> 
+     <div class="col-xs-4">
+         <%= form_for @recipe, url: users_recipes_path do |f| %>
+        #javascriptで写真レビューを作る
+         <%= attachment_image_tag @user, :recipe_image, :fill, 60, 60, class: "img-circle pull-left profile-thumb"%>
+        <%= f.attachment_field :recipe_image, placeholder: "プロフィール画像", class: "recipe-edit-form" %> 
     </div>
     <div class="col-xs-8">
-    <table>
-       <td colspan="2"><h4>レシピ名</h4></td>
-       </tr>
+    　　<table>
+       <th colspan="2">レシピ名</th>
+			 </tr>
        <tr>
        <td colspan="2"><%= f.text_field :name %></td>
        </tr>
        <tr>
-       <td colspan="2"><h4>説明</h4></td>
+       <th colspan="2">説明</th>
        </tr>
        <tr>
        <td colspan="2"><%= f.text_field :description %></td>
@@ -28,16 +28,16 @@
        </table>
    </tbody>
    　<div class="row">
-   <div style="display:inline-flex">
-   　<table>
-       <thead>
+       <div style="display:inline-flex">
+   　   <table>
+          <thead>
             <tr>
-              <td>材料</td>
-              <td>分量</td>
+              <th>材料</th>
+              <th>分量</th>
             </tr>
-       </thead>
+         </thead>
        <tbody>
-       <tr>
+         <tr>
          <td>卵</td>
          <td><%= f.text_field :egg_quantity %></td>
        </tr>
@@ -51,7 +51,31 @@
      </table>
      </div>
    </table>
+   </div>
+   </div>
+   <div 
+   <div class= "row">
+   <div class="col-xs-12">
+   <table>
+     <thead>
+      <th colspan="4">調理手順</th>
+     </thead>
+      
+      
+				<tbody>
+				<%= f.fields_for :cooking_procedures do |p| %>
+         <tr>
+      　　  <th></th>
+         </tr>
+         <tr>
+         　<th><%= p.text_area :procedure_description %></th>
+				 </tr>
+				 <% end %>
+      </tbody>
+      
+      </div>
+      </div>
+      </table>
    <br><%= f.submit "変更を保存" %>   
 <% end %>
 </div>
-  </div>

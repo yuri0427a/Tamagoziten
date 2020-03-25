@@ -6,4 +6,5 @@ class Recipe < ApplicationRecord
     has_many :recipe_reviews, dependent: :destroy
     attachment :recipe_image
     accepts_nested_attributes_for :cooking_materials
+    accepts_nested_attributes_for :cooking_procedures
 end

@@ -18,11 +18,7 @@
         </nav>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-      <% if expert_signed_in? %>
-      <li class="">
-      <%=link_to destroy_expert_session_path, method: "delete" do %>ログアウト</li>
-      <% end %>
-      <% elsif user_signed_in? %>
+      <% if user_signed_in? %>
         <li>
         <%= link_to " マイページ", users_user_path(current_user.id) %>
         <li>
