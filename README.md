@@ -38,5 +38,8 @@
 ER図
 https://drive.google.com/file/d/1xYbq2cULtz1LSRfu_623gZJwr26_mLEC/view?usp=sharing
 
+詳細設計
+https://docs.google.com/spreadsheets/d/12jTgrjX73fzKWKoU9TxtXdk1oHdnoYRS/edit#gid=2039032075
+
 ### 機能一覧
 https://docs.google.com/spreadsheets/
