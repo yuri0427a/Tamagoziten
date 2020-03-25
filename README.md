@@ -35,6 +35,9 @@
 ・栄養学に興味があり知りたい際
 
 ## 設計書
+タスクテーブル,テーブル設計書
+https://docs.google.com/spreadsheets/d/10qrBbpBlOS05fofwAsxR6fBP9ims1-iX-Qb43_-rYhI/edit#gid=1773513600
+
 ER図
 https://drive.google.com/file/d/1xYbq2cULtz1LSRfu_623gZJwr26_mLEC/view?usp=sharing
 
