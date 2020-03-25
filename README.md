@@ -35,6 +35,9 @@
 ・栄養学に興味があり知りたい際
 
 ## 設計書
+ワイヤーフレーム
+https://app.diagrams.net/#G1XCiI-p0uNivuPs4q0Qi9WYLzhyZgGaVA
+
 タスクテーブル,テーブル設計書
 https://docs.google.com/spreadsheets/d/10qrBbpBlOS05fofwAsxR6fBP9ims1-iX-Qb43_-rYhI/edit#gid=1773513600
 
