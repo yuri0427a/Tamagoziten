@@ -35,6 +35,8 @@
 ・栄養学に興味があり知りたい際
 
 ## 設計書
+ER図
+https://drive.google.com/file/d/1xYbq2cULtz1LSRfu_623gZJwr26_mLEC/view?usp=sharing
 
 ### 機能一覧
 https://docs.google.com/spreadsheets/
