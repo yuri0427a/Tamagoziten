@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  devise_for :experts
   devise_for :users
 
   devise_scope :user do
