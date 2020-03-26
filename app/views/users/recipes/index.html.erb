@@ -1,2 +1,16 @@
-<h1>Recipes#index</h1>
-<p>Find me in app/views/recipes/index.html.erb</p>
+
+レシピ一覧
+<main>
+  <section>
+     <div class="recipe">
+       <ul class="recipe-list">
+          <% @recipes.each do |recipe| %>
+            <li class="recipe-item">
+            <div class="recipe-image">
+            <%= attachment_image_tag recipe, :recipe_image, :fill, 150, 100, class: " pull-left profile-thumb" %>
+            </li>
+          <% end %>
+       </ul>
+    </div>
+  </section>
+</main>
