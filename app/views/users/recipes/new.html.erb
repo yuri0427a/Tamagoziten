@@ -41,7 +41,7 @@
          <td>卵</td>
          <td><%= f.text_field :egg_quantity %></td>
        </tr>
-       <%= f.fields_for :cooking_materials do |m| %>
+       <%= f.fields_for :cooking_materials,@recipe.cooking_materials.build do |m| %>
        <tr>
          <td><%= m.text_field :material_name %></td>
          <td><%= m.text_field :material_quantity %></td>
@@ -76,6 +76,6 @@
       </div>
       </div>
       </table>
-   <br><%= f.submit "変更を保存" %>   
+   <br><%= f.submit "レシピ投稿する" %>   
 <% end %>
 </div>

@@ -1,2 +1,64 @@
-<h1>Recipes#show</h1>
-<p>Find me in app/views/recipes/show.html.erb</p>
+
+
+<div class="container">
+   <div class="row">
+     <div class="col-xs-7">
+      <h1><%= @recipe.name %></h1>
+      </div>
+      <div class="col-xs-5">
+      <p><%= link_to @recipe.user.name, users_user_path(@recipe.user.id) %></p>
+      </div>
+    </div>
+    <div class="row">
+       <div class="col-xs-7 ">
+          <div class="recipe-image">
+            <%= attachment_image_tag @recipe, :recipe_image, :fill, 600, 600, class: " pull-left profile-thumb" %>
+          </div>
+       </div>
+      <div class="col-xs-5">
+    　　  <div class="lavel">
+             <lavel>調理時間</labvel>
+             <%= @recipe.cooking_time %>分
+           </div>
+           <div class="lavel">
+             <lavel>レビュー数</labvel>
+           </div>
+             <%= @recipe.description %>
+
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-xs-5">
+       <div class="item-recipe">
+           <h3 class="item-title">
+               <span>材料（</span><%= @recipe.serving %> <span>人分）</span>
+           </h3>
+        </div>
+            <table>
+            <% @materials.each do |material| %>
+              <tr>
+                <th>
+                    <%= material.material_name %>
+                </th>
+                <th>
+                　　<%= material.material_quantity %>
+            　　</th>
+              </tr>
+　　　　　　　   <% end %>
+            </table>
+        </div>
+        <div class="col-xs-7">
+        <h3 class="cooking_step">
+            作り方
+        </h3>
+        <% @procedures.each.with_index(1) do |procedure, idx| %>
+           <h3><%= idx %></h3>
+           <p><%= procedure.procedure_description %></p>
+        <% end %>
+      </div>
+        
+ 
+    <%= link_to "レシピ編集", edit_users_recipe_path(@recipe.id) %>
+    </div>
+</div>
+ 
