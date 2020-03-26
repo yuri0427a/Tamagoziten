@@ -1,5 +1,6 @@
 class Users::RecipesController < ApplicationController
   def index
+     @recipes = Recipe.all
   end
 
   def show
@@ -33,7 +34,7 @@ class Users::RecipesController < ApplicationController
   def update
     @recipe = Recipe.find(params[:id]) 
     @recipe.update(recipe_params)
-    redirect_to users_recipe_path(@recipe)
+    redirect_to users_recipe_path(@recipe.id)
   end
 
 
