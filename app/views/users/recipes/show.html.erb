@@ -35,6 +35,14 @@
            </h3>
         </div>
             <table>
+            <tr>
+            <th>
+                卵
+            </th>
+            <th>
+            　　 <%= @recipe.egg_quantity %>
+        　　</th>
+          </tr>
             <% @materials.each do |material| %>
               <tr>
                 <th>
@@ -56,9 +64,9 @@
            <p><%= procedure.procedure_description %></p>
         <% end %>
       </div>
-        
- 
+
     <%= link_to "レシピ編集", edit_users_recipe_path(@recipe.id) %>
+
     </div>
 </div>
  

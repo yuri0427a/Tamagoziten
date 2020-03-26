@@ -24,14 +24,21 @@ class Users::RecipesController < ApplicationController
      redirect_to users_recipe_path(@recipe.id)
      end
 
-     def edit
-     end
+  def edit
+    @recipe = Recipe.find(params[:id]) 
+    @materials = @recipe.cooking_materials
+    @procedures = @recipe.cooking_procedures
+  end
+
+  def update
+    @recipe = Recipe.find(params[:id]) 
+    @recipe.update(recipe_params)
+    redirect_to users_recipe_path(@recipe)
+  end
 
 
   private
-  def matarial_params
-    params.require(:cookingmatarial).permit(:material_name, :material_quantity)  
-  end
+
   def recipe_params
     params.require(:recipe).permit(:name, :description, :introduction, :recipe_image, :serving, :cooking_time, :egg_quantity, :publishing_status, cooking_materials_attributes: [:id, :material_name, :material_quantity], cooking_procedures_attributes: [:id, :procedure_description, :step_number])  
   end
