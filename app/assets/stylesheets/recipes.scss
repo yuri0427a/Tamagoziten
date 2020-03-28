@@ -33,17 +33,19 @@ main{
 }
 .reshipe-image{
     display: block;
+   
 }
 
 
 .list-items{
     float: left;
     margin: 30px 30px 30px 0;
-    border:5px double #f0e68c;
+    border: 6px double #f0e68c;
     border-radius: 30px;
     padding: 20px 20px 30px 20px;;
     display: block;
     box-sizing: border-box;
+    box-shadow: 0 3px 5px 0 #000;
 }
 
 .recipe_tilte{

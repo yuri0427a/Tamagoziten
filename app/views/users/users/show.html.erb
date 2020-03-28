@@ -1,14 +1,34 @@
+
 <div class="container">
   <div class="row">  
-  <div class="col-xs-offset-4">
-    <h1>Profile</h1>
-    
-    <p><%= attachment_image_tag @user, :profile_image, :fill, 300, 300, format: "jpeg", class: "profile_image" %>
-    <lavel class="user-name">
-     <span>I am</span>
-     <%= @user.name %></lavel><br></p>
-     <p class="user-introduction"><%= @user.introduction %></p>
+    <div class="col-xs-offset-4">
+      <h1>Profile</h1>
+        <p><%= attachment_image_tag @user, :profile_image, :fill, 300, 300, format: "jpeg", class: "profile_image" %>
+        <lavel class="user-name">
+        <span>I am</span>
+        <%= @user.name %></lavel><br></p>
+        <p class="user-introduction"><%= @user.introduction %></p>
     </div>
-</div>
-</div>
-<%= link_to " 会員編集", edit_users_user_path(current_user.id) %>
+  </div>
+  
+  <%= link_to " 会員編集", users_user_path(current_user.id) , class: "show-modal" %>
+<%= form_for @user, url: users_user_path do |f| %>
+  
+
+  <div id="modalwin", class="modalwin out">
+  
+    <h1 class="edit-profile">〜Edit Profile〜</h1>
+  
+        <%= f.attachment_field :profile_image, placeholder: "プロフィール画像", class: "user-edit-form" %>
+        <h4 class="profile-name ">ニックネーム</h4>
+         <lavel><%= f.text_field :name , class: "form-control input-sm"%></lavel>
+        <h4 class="profile-name">自己紹介</h4><%= f.text_area :introduction, class: "form-control input-sm" %><br>
+        <%= f.submit "Update", class: "btn btn-danger" %>
+      
+        　<%= link_to users_user_path(current_user.id), class: "modal-close" do %>
+          <%= image_tag "icon_16-1.jpg", class: "modal-close" %>
+        </div>
+       　<% end %>
+       </div>
+
+<% end %>
