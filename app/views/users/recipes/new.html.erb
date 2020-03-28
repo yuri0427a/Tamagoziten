@@ -1,3 +1,4 @@
+<div class="container">
 <h1>NEW MENU</h1>
 <%= form_for @recipe, url: users_recipes_path do |f| %>
   <div class="row">
@@ -14,7 +15,7 @@
                <th colspan="2">レシピ名</th>
 		     </tr>
              <tr>
-               <td colspan="2"><%= f.text_field :name %></td>
+               <td colspan="2"><%= f.text_field :name , class: "form-control input-sm"%></td>
              </tr>
              <tr>
                <th colspan="2">説明</th>
@@ -76,4 +77,5 @@
 <%= f.submit "レシピ編集する" %> 
 <% end %>  
 
+</div>
 </div>
