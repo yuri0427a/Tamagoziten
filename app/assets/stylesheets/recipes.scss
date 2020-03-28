@@ -1,3 +1,65 @@
 // Place all the styles related to the recipes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+main{
+    width: 1000px;
+    margin-left: auto;
+    margin-right:  auto;
+    box-sizing: border-box;
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'HanziPen TC',sans-serif;
+ }
+
+.recipe-index{
+    padding-left: 200px;
+}
+
+.recipe-list{
+    margin-top: 50px;
+    height: 500px;
+}
+
+
+.link-recepi{
+    display: block;
+}
+.reshipe-image{
+    display: block;
+}
+
+
+.list-items{
+    float: left;
+    margin: 30px 30px 30px 0;
+    border:5px double #f0e68c;
+    border-radius: 30px;
+    padding: 20px 20px 30px 20px;;
+    display: block;
+    box-sizing: border-box;
+}
+
+.recipe_tilte{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.link-recepi:hover{
+    text-decoration: none;
+}
+
+
+.list-items:hover{
+    border: outset #f0e68c 30px;
+    transition: 0.1s;
+    text-decoration: underline;
+
+
+}
