@@ -1,6 +1,8 @@
 class Users::RecipesController < ApplicationController
+  PER = 9
+
   def index
-     @recipes = Recipe.all
+    @recipes = Recipe.page(params[:page]).per(PER)
   end
 
   def show

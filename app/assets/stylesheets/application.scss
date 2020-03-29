@@ -17,6 +17,37 @@
  @import "bootstrap-sprockets"; 
  @import "bootstrap"; 
 
+*{
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   box-sizing: border-box;
+   font-family: 'HanziPen TC',sans-serif;
+}
+
+ 
+ #a{
+    height: 500px;
+    
+} 
  .container{
      margin-top: 50px;
+     
  }
+
+
+ .test1 {
+    background-image: url(test1.jpg);
+    }
+ .test2 {
+    background-image: url(test2.jpg);
+    }
+ .test3 {
+    background-image: url(test3.jpg);
+    }
+  .test4 {
+    background-image: url(test4.jpg);
+    }
+  .test5{
+    background-image: url(test5.jpg);
+    }
