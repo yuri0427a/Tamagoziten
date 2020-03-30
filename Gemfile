@@ -73,3 +73,8 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-doc'
 end
+
+gem 'dotenv-rails'
+  group :production do
+    gem 'mysql2'
+  end
