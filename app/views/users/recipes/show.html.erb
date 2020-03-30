@@ -7,6 +7,21 @@
       </div>
       <div class="col-xs-5">
       <p><%= link_to @recipe.user.name, users_user_path(@recipe.user.id) %></p>
+      <% if @recipe.favorited_by?(current_user) %>
+       <li>
+    <%= link_to users_recipe_favorite_path(@recipe), method: :delete do %>
+      <i class="glyphicon glyphicon-star" aria-hidden="true"></i>
+      ぶっくまーく済
+    <% end %>
+  </li>
+<% else %>
+  <li>
+    <%= link_to users_recipe_favorite_path(@recipe), method: :post do %>
+      <i class="glyphicon glyphicon-star-empty" aria-hidden="true"></i>
+      ぶっくまーく
+    <% end %>
+  </li>
+<% end %>
       </div>
     </div>
     <div class="row">
