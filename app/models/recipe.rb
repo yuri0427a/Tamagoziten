@@ -7,4 +7,7 @@ class Recipe < ApplicationRecord
     attachment :recipe_image
     accepts_nested_attributes_for :cooking_materials
     accepts_nested_attributes_for :cooking_procedures
+    def favorited_by?(user)
+        recipe_favorites.where(user_id: user.id).exists?
+    end
 end
