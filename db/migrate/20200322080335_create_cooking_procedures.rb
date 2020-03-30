@@ -5,7 +5,7 @@ class CreateCookingProcedures < ActiveRecord::Migration[5.2]
 
       t.timestamps
       t.integer :recipe_id,            null: false  
-      t.integer :step_number,          AUTO_INCREMENT: true, null: false  
+      t.integer :step_number  
       t.string :procedure_description, null: false 
     end
   end
