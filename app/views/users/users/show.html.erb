@@ -4,7 +4,7 @@
 
   </div>
     <div class="col-xs-offset-4">
-      <h1>Profile</h1>
+      <h1>Profile...</h1>
         <p><%= attachment_image_tag @user, :profile_image, :fill, 300, 300, format: "jpeg", class: "profile_image" %>
         <lavel class="user-name">
         <span>I am</span>
@@ -14,6 +14,23 @@
   </div>
   
   <%= link_to " 会員編集", users_user_path(current_user.id) , class: "show-modal" %>
+
+  <% @recipes.each do |recipe| %>
+ 
+    <li class="list-items">
+    <%= link_to users_recipe_path(recipe.id), class: "link-recepi" do %>
+      <%= attachment_image_tag recipe, :recipe_image, :fill, 230, 130, class: "reshipe-image" %>
+      <div class="detail">
+        <p class="recipe_time">
+           <%= recipe.cooking_time %><span>分</span>
+        </p>
+        <h3 class="recipe_tilte"><%= recipe.name %></h3>
+      </div>
+      <% end %>
+    </li>
+
+    <% end %>
+
 <%= form_for @user, url: users_user_path do |f| %>
   
 

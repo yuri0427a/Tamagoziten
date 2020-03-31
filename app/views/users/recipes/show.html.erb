@@ -3,6 +3,9 @@
 <div class="container">
    <div class="row">
      <div class="col-xs-7">
+     <%= link_to 'Twitter', "https://twitter.com/share?url=#{request.url}", title: 'たまご辞典レシピ', target: '_blank' %>
+     <%= link_to 'Facebook', "https://www.facebook.com/sharer/sharer.php?u=#{request.url}&text=タイトル", title: 'Facebook', target: '_blank' %>
+     <%= link_to 'LINE', "http://line.me/R/msg/text/?#{request.url}&text=タイトル", title: 'LINE', target: '_blank' %>
       <h1><%= @recipe.name %></h1>
       </div>
       <div class="col-xs-5">
@@ -22,7 +25,7 @@
     <% end %>
   </li>
 <% end %>
-      </div>
+<li>
     </div>
     <div class="row">
        <div class="col-xs-7 ">
@@ -79,9 +82,21 @@
            <p><%= procedure.procedure_description %></p>
         <% end %>
       </div>
-
+      <% @recipe.recipe_reviews.each do |review| %>
+        <%= attachment_image_tag review, :cooking_image, :fill, 200, 150, class: " pull-left profile-thumb" %>
+        <%= review.user.name %>
+        <%= review.impression %>
+      <% end %>
     <%= link_to "レシピ編集", edit_users_recipe_path(@recipe.id) %>
-
+    <%= form_for [@recipe, @review], url: users_recipe_review_path(@recipe.id) do |f| %>
+      <div class="row">
+          <div class="col-sm-12">
+              <%= f.attachment_field :cooking_image, placeholder: "プロフィール画像", class: "review-image-form" %>
+              <%= f.text_area :impression, rows:'5', class: "form-control",placeholder: "コメントをここに" %>
+          </div>
+      </div>
+      <%= f.submit "送信する", class: "btn btn-lg btn-base-1 mt-20 pull-right" %>
+  <% end %>
     </div>
 </div>
  
