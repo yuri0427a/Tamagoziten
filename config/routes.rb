@@ -30,6 +30,7 @@ Rails.application.routes.draw do
 
   namespace :users do
     resources :users, only: [:show, :edit, :update]
+    
     resources :recipes do
       #cooking_materialsのルート
       get '/cooking_materials' => 'cooking_materials#index', as: 'materials'

@@ -9,6 +9,7 @@ class Users::RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id]) 
     @materials = @recipe.cooking_materials
     @procedures = @recipe.cooking_procedures
+    @review = RecipeReview.new
     
   end
 
