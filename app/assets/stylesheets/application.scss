@@ -25,6 +25,45 @@
    font-family: 'HanziPen TC',sans-serif;
 }
 
+.field{
+   margin: 5px 0 10px 0;
+}
+
+.form-control:focus{
+border: 4px groove #ffd700;
+ outline: 0;
+ box-shadow: none;
+}
+
+.btn{
+   padding: 10px 40px;
+   border-radius: 50px;
+}
+
+.login{
+   border: 1px solid orange;
+   color: orangered;
+   margin: 10px 0 0 150px;
+}
+.signup{
+   margin: 10px 0 0 150px;
+   color: orangered;
+    border: 1px solid orange
+}
+
+
+.login:hover{
+background-color: orangered;
+color: #fff;
+}
+
+.signup:hover{
+background-color: orangered;
+color: #fff;
+}
+
+
+
  
  #a{
     height: 500px;
@@ -36,18 +75,3 @@
  }
 
 
- .test1 {
-    background-image: url(test1.jpg);
-    }
- .test2 {
-    background-image: url(test2.jpg);
-    }
- .test3 {
-    background-image: url(test3.jpg);
-    }
-  .test4 {
-    background-image: url(test4.jpg);
-    }
-  .test5{
-    background-image: url(test5.jpg);
-    }
