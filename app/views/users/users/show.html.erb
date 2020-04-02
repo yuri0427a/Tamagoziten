@@ -1,28 +1,19 @@
-
-
-<div class="tab">
-  <ul class="tab-menu clear">
-      <li class="selected">
-        <a href="#" data-tabid="1">プロフィール/投稿レシピ
-        </a>
-      </li> 
-      <li>
-        <a href="#" data-tabid="2">ブックマーク
-        </a>
-      </li> 
+<ul class="tabnav">
+    <li><a href="#tab01">プロフィール/投稿レシピ</a></li>
+    <li><a href="#tab02">ブックマーク</a></li>
   </ul>
-</div>
-<div class="tab-contents">
-  <div data-contentid="1">
-     <div class="col-xs-offset-4">
+
+<div class="tabcontent">
+    <div id="tab01">
+      <div class="col-xs-offset-4">
         <h1>Profile...</h1>
-        <p><%= attachment_image_tag @user, :profile_image, :fill, 300, 300, format: "jpeg", class: "profile_image", fallback: "no_image.jpg", size: "300x300" %>
-          <lavel class="user-name">
-          <span>I am</span>
-        <%= @user.name %></lavel><br></p>
-        <p class="user-introduction"><%= @user.introduction %></p>
-    </div>
-  </div>
+            <p><%= attachment_image_tag @user, :profile_image, :fill, 300, 300, format: "jpeg", class: "profile_image", fallback: "no_image.jpg", size: "300x300" %>
+             <lavel class="user-name">
+             <span>I am</span>
+            <%= @user.name %></lavel><br></p>
+          <p class="user-introduction"><%= @user.introduction %></p>
+       </div>
+  
   
   <%= link_to " 会員編集", users_user_path(current_user.id) , class: "show-modal" %>
 
@@ -40,11 +31,15 @@
      </li>
 
     <% end %>
-  <div class="h" data-contentid="2">
-     aaaa
-  </div>
-
+    </div>
+    
+    <div id="tab02">タブ2の内容<br>タブ2の内容</div>
 </div>
+</div>
+
+
+
+  
    
 
 <%= form_for @user, url: users_user_path do |f| %>
