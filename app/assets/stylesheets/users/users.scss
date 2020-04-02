@@ -1,3 +1,5 @@
+//css
+
 // Place all the styles related to the users::users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
@@ -19,7 +21,7 @@
 }
 //tab
 
-
+/*
 .tab-menu{
     border-bottom: 6px solid #f0e68c;
     height: 48px;
@@ -70,9 +72,52 @@
     background-color: #f0e68c;
 }
 
-.tab-contents .h{
+　.tab-contents .h{
     display: none;
 }
+*/
+
+.tabnav li{
+    display: inline;
+    
+}
+
+.tabnav li a{
+    display: inline-block;
+    background: #405dca;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    text-decoration: none;
+}
+
+
+.tabnav{
+    margin-top: 50px;
+    padding: 0;
+    border-bottom: 6px solid  #f0e68c;
+}
+
+.tabnav li a{
+    display: inline-block;
+    padding: 10px 60px;
+    border-radius: 5px 5px 0 0;
+    text-decoration: none;
+    background: #ddd;
+    color: #333;
+}
+
+.tabnav li:nth-child(1){
+    margin-left: 450px;
+}
+
+.tabnav li a:hover,
+.tabnav li a.active{
+    background: #f0e68c;
+    color: #fff;
+}
+
+
 //modalwin　
 
 .modalwin{
@@ -121,6 +166,7 @@
 .out{
   display: none;
 }
+
 
 
 
