@@ -44,20 +44,14 @@
                   <td>卵</td>
                   <td><%= f.text_field :egg_quantity %></td>
                 </tr>
-                 <tr>
 
-                   <td><%= m.text_field :material_name, class: "form-control pluralBtn" %></td>
-                  <td><%= m.text_field :material_quantity, class: "form-control" %></td>
-                  </tr>
-                  <tr>
-                     <%= render "tag_fields", m: f %>
-                  </tr>
-                    <div class="links">
-    <%= link_to_add_association "タグを追加", form, :cooking_materials %>
-  </div>
+                  <%= render "tag_fields", m: m %>
+ 
+  
               </tbody>
           </table>
-        </div>
+          
+        
     </div>
 </div>
 <% end %>
