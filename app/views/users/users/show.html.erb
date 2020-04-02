@@ -1,26 +1,24 @@
 
-<div class="container">
-  <div class="row">  
-<div class="wrap">
-  <ul id="tab-menu" class="clearfix">
-    <li><a href="#tab1" class="active">TAB1</a></li>
-    <li><a href="#tab2" class="">TAB2</a></li>
+
+<div class="tab">
+  <ul class="tab-menu clear">
+      <li class="selected">
+        <a href="#" data-tabid="1">プロフィール/投稿レシピ
+        </a>
+      </li> 
+      <li>
+        <a href="#" data-tabid="2">ブックマーク
+        </a>
+      </li> 
   </ul>
 </div>
-<div id="tab-contents" class="clearfix">
-    <div id="tab1" class="tab">
-      <p>TAB1のテキストが入ります。</p>
-    </div>
-<div id="tab-contents" class="clearfix">
-    <div id="tab2" class="tab">
-      <p>TAB1のテキストが入ります。</p>
-    </div>
-</div>
-    <div class="col-xs-offset-4">
-      <h1>Profile...</h1>
+<div class="tab-contents">
+  <div data-contentid="1">
+     <div class="col-xs-offset-4">
+        <h1>Profile...</h1>
         <p><%= attachment_image_tag @user, :profile_image, :fill, 300, 300, format: "jpeg", class: "profile_image", fallback: "no_image.jpg", size: "300x300" %>
-        <lavel class="user-name">
-        <span>I am</span>
+          <lavel class="user-name">
+          <span>I am</span>
         <%= @user.name %></lavel><br></p>
         <p class="user-introduction"><%= @user.introduction %></p>
     </div>
@@ -29,24 +27,29 @@
   <%= link_to " 会員編集", users_user_path(current_user.id) , class: "show-modal" %>
 
   <% @recipes.each do |recipe| %>
- 
-    <li class="list-items">
-    <%= link_to users_recipe_path(recipe.id), class: "link-recepi" do %>
-      <%= attachment_image_tag recipe, :recipe_image, :fill, 230, 130, class: "reshipe-image" %>
-      <div class="detail">
-        <p class="recipe_time">
+     <li class="list-items">
+      <%= link_to users_recipe_path(recipe.id), class: "link-recepi" do %>
+        <%= attachment_image_tag recipe, :recipe_image, :fill, 230, 130, class: "reshipe-image" %>
+        <div class="detail">
+          <p class="recipe_time">
            <%= recipe.cooking_time %><span>分</span>
-        </p>
-        <h3 class="recipe_tilte"><%= recipe.name %></h3>
-      </div>
+          </p>
+          <h3 class="recipe_tilte"><%= recipe.name %></h3>
+        </div>
       <% end %>
-    </li>
+     </li>
 
     <% end %>
+  <div class="h" data-contentid="2">
+     aaaa
+  </div>
+
+</div>
+   
 
 <%= form_for @user, url: users_user_path do |f| %>
   
-
+<%# モーダルウィンドウ（user_edit） %>
   <div id="modalwin", class="modalwin out">
   
     <h1 class="edit-profile">〜Edit Profile〜</h1>
