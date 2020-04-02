@@ -45,3 +45,33 @@ $(function () {
     //編集するボタン（show-modal）を押すと呼び出される（A）
     $('.show-modal').on('click', showModal);
 });
+
+//tab
+
+$(function () {
+    $('.tab-menu li > a')
+        .on('click', function () {
+            var $this = $(this);
+            //ボタンをクリックして変更する
+            $this.parent().siblings()
+                .removeClass('selected')
+                .end()
+                .addClass('selected');
+
+            //コンテンツを切り替える
+            var tabId = $this.data('tabid');
+            $this.closest('.tab').find('.tab-contents').children()
+                .each(function () {
+                    var $content = $(this);
+                    if ($content.data('contentid') == tabId) {
+                        $content.removedClass('h');
+
+                    } else {
+                        $content.addClass('h');
+                    }
+
+                });
+        });
+
+
+});

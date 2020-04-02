@@ -3,6 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+
+
 .user-name{
     font-size: 30px;
 }
@@ -15,7 +17,62 @@
 .user-introduction{
     font-size: 15px;
 }
+//tab
 
+
+.tab-menu{
+    border-bottom: 6px solid #f0e68c;
+    height: 48px;
+}
+
+.tab-menu > li{
+    float: left;
+    margin: 0 3px 0 0px;
+    //background-color: #fff;
+    //color: #f0e68c;
+    
+}
+
+.tab-menu > li:hover{
+    background-color:#f0e68c;
+    border-radius: 5px 5px 0 0;
+}
+
+.tab-menu > li:nth-child(1){
+    margin-left: 200px;
+}
+
+.tab-menu > li >a{
+    display: inline-block;
+    padding: 10px 150px;
+    border: 3px solid #f0e68c;
+    border-radius: 5px 5px 0 0;
+}
+
+.tab-menu > li >a:nth-child(1){
+    padding: 10px 100px;
+}
+
+.tab-menu > li >a:hover{
+    background-color: #f0e68c;
+    border-radius: 5px 5px 0 0;
+}
+
+.tab-menu > li:active{
+    border: 1px solid #ffd700;
+}
+.tab-menu > li > a:active{
+    background-color: #ffd700;
+    border: 1px solid #ffd700;
+}
+
+.tab-menu > li.selected > a{
+    background-color: #f0e68c;
+}
+
+.tab-contents .h{
+    display: none;
+}
 //modalwin　
 
 .modalwin{
