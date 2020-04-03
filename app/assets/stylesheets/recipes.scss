@@ -38,12 +38,13 @@ main{
 }
 
 
+
+
 .list-items{
     float: left;
     margin: 30px 30px 30px 0;
-    border: 6px double #f0e68c;
     border-radius: 30px;
-    padding: 20px 20px 30px 20px;;
+    padding: 20px 30px 30px 20px;;
     display: block;
     box-sizing: border-box;
     box-shadow: 0 3px 5px 0 #000;
@@ -51,7 +52,7 @@ main{
 
 .recipe_tilte{
     text-align: center;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .link-recepi:hover{
@@ -59,10 +60,14 @@ main{
 }
 
 
-.list-items:hover{
-    border: outset #f0e68c 30px;
+.index:hover{
+    border: outset #f0e68c 12px;
     transition: 0.1s;
     text-decoration: underline;
 
 
+}
+
+.index{
+     border: 6px double #f0e68c;
 }
