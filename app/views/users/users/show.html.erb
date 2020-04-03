@@ -52,14 +52,12 @@
                     <li class="bookmark-item time">
                     <i class="glyphicon glyphicon-time"></i>
              <%= bookmark.recipe.cooking_time %>
-             <%= fa_icon("home") %>
+             
              <span>分</span>
            </li>
-            <li><br>
-                    <li class="bookmark-item time">
-                    <i class="glyphicon glyphicon-time"></i>
-             <%= bookmark.recipe.cooking_time %>
-             <span>分</span>
+            <li>
+            <li class="bookmark-item time">
+                <%= fa_icon("comment") %><%= bookmark.recipe.recipe_reviews.count %>
            </li>
       
       </ul>

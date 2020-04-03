@@ -3,7 +3,6 @@
 <%= form_for @recipe, url: users_recipes_path do |f| %>
   <div class="row">
      <div class="col-xs-4">
-    = fa_icon 'edit'
               #javascriptで写真レビューを作る
              <%= attachment_image_tag @user, :recipe_image, :fill, 60, 60, class: "img-circle pull-left profile-thumb"%>
              <%= f.attachment_field :recipe_image, placeholder: "プロフィール画像", class: "recipe-edit-form" %> 
