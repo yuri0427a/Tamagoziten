@@ -37,26 +37,34 @@
 
 <% @bookmarks.each  do |bookmark| %>
 <%= link_to users_recipe_path(bookmark.id), class: "link-recepi" do %>
-        
+        <div class="bookmark-image">
+          <%= attachment_image_tag bookmark.recipe, :recipe_image, :fill, 280, 180, class: "bookmark-image" %>
+        </div>
         <div class="detail">
           <ul>
-          <li class="bookmark-item">
-          <%= attachment_image_tag bookmark.recipe, :recipe_image, :fill, 230, 130, class: "reshipe-favorite" %>
-           </li>
-          <li class="bookmark-item">
-             <%= bookmark.recipe.name %>
-             </li><br>
-               <li class="bookmark-item">
+
+          <li class="bookmark-item name">
+             <%= bookmark.recipe.name  %>
+             </li>
+               <li class="bookmark-item description" style:"display: block;">
              <%= bookmark.recipe.description %>
              </li><br>
-                    <li class="bookmark-item">
+                    <li class="bookmark-item time">
+                    <i class="glyphicon glyphicon-time"></i>
              <%= bookmark.recipe.cooking_time %>
              <%= fa_icon("home") %>
              <span>分</span>
            </li>
-      <% end %>
+            <li><br>
+                    <li class="bookmark-item time">
+                    <i class="glyphicon glyphicon-time"></i>
+             <%= bookmark.recipe.cooking_time %>
+             <span>分</span>
+           </li>
+      
       </ul>
-        </div>        
+        </div>   
+        <% end %>     
 <% end  %>
     </div>
 </div>
