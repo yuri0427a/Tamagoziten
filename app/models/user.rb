@@ -10,4 +10,5 @@ class User < ApplicationRecord
 
 #バリテーショ
  validates :name, presence: true, length: {maximum: 10}
+ validates :name, length: {maximum: 15}
 end
