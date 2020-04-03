@@ -98,21 +98,75 @@ background-image: url(test5.jpg);
      
  }
 
+ //mypage
+
+.tabcontent{
+   position: relative;
+}
+
+.user-edit{
+    position: absolute;
+    font-size: 30px;
+    top: 210px;
+    left: 160px;
+    transform: rotate(-45deg);
+}
+ .show-modal{
+    padding: 50px 70px;
+    border-radius: 100px;
+    position: absolute;
+    top: -300px;
+    left: 20px;
+   
+    
+ }
+  .show-modal:hover{
+    padding: 50px 70px;
+    border-radius: 100px;
+    position: absolute;
+    top: -320px;
+    left: 20px;
+    opacity: 0.7;
+   
+ }
+
+ .hiyoko{
+    position: absolute;
+    top: 40px;
+    right: 100px;
+  
+ }
+
+
+
  // recipe_bookmark_page(user_show)
- .bookmark-image{
-    float: left;   
+
+.bookmark{
+   border: #deb887 3px double;
 }
 
- .detail{
-    margin: 30px;
+ // my_recipe_page(user_show)
+
+.myrecipe:nth-child(odd){
+   border: #ffb6c1 3px double;
+}
+
+.myrecipe:nth-child(even){
+   border: #f0e68c 3px double;
 }
 
 
-.name{
-  font-size: 50px;
-}
-.description{
-  font-size: 30px;
+.myrecipe{
+   border: #ffb6c1 3px double;
 }
 
+.myrecipe:nth-child(even):hover{
+   border: #f0e68c  12px double;
+   opacity: 0.7;
+   transition: 0.1s;}
 
+   .myrecipe:nth-child(odd):hover{
+   border: #ffb6c1 12px double;
+   opacity: 0.7;
+   transition: 0.1s;
+   }
