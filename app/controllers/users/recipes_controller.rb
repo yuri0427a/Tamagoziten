@@ -10,7 +10,7 @@ class Users::RecipesController < ApplicationController
     @materials = @recipe.cooking_materials
     @procedures = @recipe.cooking_procedures
     @review = RecipeReview.new
-    
+    @favorites = RecipeFavorite.where(user_id: current_user.id)
   end
 
   def new

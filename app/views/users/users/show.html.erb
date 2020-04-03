@@ -33,7 +33,13 @@
     <% end %>
     </div>
     
-    <div id="tab02">タブ2の内容<br>タブ2の内容</div>
+    <div id="tab02">
+
+<% @bookmarks.each  do |bookmark| %>
+  <%= bookmark.recipe.name %>
+  <%= bookmark.recipe.cooking_time %>
+<% end  %>
+    </div>
 </div>
 </div>
 

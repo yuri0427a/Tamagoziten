@@ -15,8 +15,7 @@ class Users::RecipeReviewsController < ApplicationController
         end
     end
 
-    def index
-    end
+
   private
     def recipe_review_params
         params.require(:recipe_review).permit(:impression, :cooking_image, :user_id, :recipe_id)
