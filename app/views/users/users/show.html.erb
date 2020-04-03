@@ -15,8 +15,12 @@
        </div>
 
  
+<% if current_user != @user %>
+<p class="hiyoko2"><%= image_tag('hiyoko2.png')%></p>
+    
+<p class="hiyoko"><%= image_tag('hiyoko.png')%></p>
 
-  
+ <% else %>
 
   <% @recipes.each do |recipe| %>
      <li class="list-items myrecipe">
@@ -32,11 +36,15 @@
      </li>
 
     <% end %>
+    
+
+  
     <span class="user-edit">Edit</span>
            <%= link_to  users_user_path(current_user.id) , class: "show-modal" do %>
             
       <%= image_tag('female_hand.png') %>
   <% end %>
+<% end %>
   <p class="hiyoko"><%= image_tag('hiyoko.png')%></p>
     </div>
 
