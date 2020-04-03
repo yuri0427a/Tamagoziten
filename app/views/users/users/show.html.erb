@@ -33,7 +33,31 @@
     <% end %>
     </div>
     
-    <div id="tab02">タブ2の内容<br>タブ2の内容</div>
+    <div id="tab02">
+
+<% @bookmarks.each  do |bookmark| %>
+<%= link_to users_recipe_path(bookmark.id), class: "link-recepi" do %>
+        
+        <div class="detail">
+          <ul>
+          <li class="bookmark-item">
+          <%= attachment_image_tag bookmark.recipe, :recipe_image, :fill, 230, 130, class: "reshipe-favorite" %>
+           </li>
+          <li class="bookmark-item">
+             <%= bookmark.recipe.name %>
+             </li><br>
+               <li class="bookmark-item">
+             <%= bookmark.recipe.description %>
+             </li><br>
+                    <li class="bookmark-item">
+             <%= bookmark.recipe.cooking_time %>
+             <span>分</span>
+           </li>
+      <% end %>
+      </ul>
+        </div>        
+<% end  %>
+    </div>
 </div>
 </div>
 

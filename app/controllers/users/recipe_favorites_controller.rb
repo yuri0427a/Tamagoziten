@@ -1,7 +1,9 @@
 class Users::RecipeFavoritesController < ApplicationController
+
+   
     def index
         @user = current_user
-        @bookmarks = RecipeFavorite.where(user_id: @user.id).all
+        @bookmarks = RecipeFavorite.where(user_id: current_user.id).all  #whereメソッド…したカラムの全データを取得できる（allの検索版）
     end
 
     def create

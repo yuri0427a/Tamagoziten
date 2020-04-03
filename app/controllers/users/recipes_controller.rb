@@ -10,7 +10,8 @@ class Users::RecipesController < ApplicationController
     @materials = @recipe.cooking_materials
     @procedures = @recipe.cooking_procedures
     @review = RecipeReview.new
-    
+   
+    #@bookmarks = @recipe.recipe_favorites
   end
 
   def new
