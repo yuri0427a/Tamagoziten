@@ -3,25 +3,24 @@
 <div class="container">
    <div class="row">
      <div class="col-xs-7">
-     <%= link_to 'Twitter', "https://twitter.com/share?url=#{request.url}", title: 'たまご辞典レシピ', target: '_blank' %>
-     <%= link_to 'Facebook', "https://www.facebook.com/sharer/sharer.php?u=#{request.url}&text=タイトル", title: 'Facebook', target: '_blank' %>
-     <%= link_to 'LINE', "http://line.me/R/msg/text/?#{request.url}&text=タイトル", title: 'LINE', target: '_blank' %>
+     <%= link_to fa_icon("twitter"), "https://twitter.com/share?url=#{request.url}", title: 'Twi', target: '_blank', class: 'icon' %>
+     <%= link_to fa_icon("facebook"), "https://www.facebook.com/sharer/sharer.php?u=#{request.url}&text=タイトル", title: 'Facebook', target: '_blank', class: 'icon' %>
       <h1><%= @recipe.name %></h1>
       </div>
       <div class="col-xs-5">
-      <p><%= link_to @recipe.user.name, users_user_path(@recipe.user.id) %></p>
+      <p><span>作成者: </span><%= link_to @recipe.user.name, users_user_path(@recipe.user.id), class: "user-recipe-name" %></p>
       <% if @recipe.favorited_by?(current_user) %>
        <li>
-    <%= link_to users_recipe_favorite_path(@recipe), method: :delete do %>
+    <%= link_to users_recipe_favorite_path(@recipe), class: "bookmark-recipe-show", method: :delete do %>
       <i class="glyphicon glyphicon-star" aria-hidden="true"></i>
-      ぶっくまーく済
+      レシピ保存済み
     <% end %>
   </li>
 <% else %>
   <li>
-    <%= link_to users_recipe_favorite_path(@recipe), method: :post do %>
+    <%= link_to users_recipe_favorite_path(@recipe), class: "bookmark-recipe-show", method: :post do %>
       <i class="glyphicon glyphicon-star-empty" aria-hidden="true"></i>
-      ぶっくまーく
+      レシピ保存
     <% end %>
   </li>
 <% end %>
@@ -34,14 +33,18 @@
           </div>
        </div>
       <div class="col-xs-5">
-    　　  <div class="lavel">
+    　　  <div class="lavel-recipe">
              <lavel>調理時間</labvel>
+             <i class="glyphicon glyphicon-time"></i>
              <%= @recipe.cooking_time %>分
            </div>
-           <div class="lavel">
+           <div class="lavel-recipe">
              <lavel>レビュー数</labvel>
+             <%= fa_icon("comment") %><%= @recipe.recipe_reviews.count %><span>件
            </div>
+           <div class="lavel-recipe-description">
              <%= @recipe.description %>
+            </div>
 
     </div>
     </div>

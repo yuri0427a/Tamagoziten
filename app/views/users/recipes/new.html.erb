@@ -29,21 +29,20 @@
           </tbody>
        </table>
 <div class="row">
-   <div style="display:inline-flex">
        <%= f.fields_for :cooking_materials do |m| %>
 
  　　　   <div class="material-title">
-          <ul>
-          <li>材料</li>
-          <li>分量</li>
-          </ul>
-           <div class="material">
-          　　<li><%= m.label "卵" %></li>
+            <ul>
+              <li>材料</li>
+              <li>分量</li>
+            </ul>
+            <div><br>
+          <div class="material">
+          　　 <li><%= m.label "卵" %></li>
               <li><%= f.text_field :egg_quantity %></li>
           </div>
          s
      <%= f.submit "投稿する" %> 
-
        </div>
      <% end %>   
  

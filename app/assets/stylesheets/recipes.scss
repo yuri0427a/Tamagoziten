@@ -71,3 +71,50 @@ main{
 .index{
      border: 6px double #f0e68c;
 }
+//recipe_new
+
+.material-title li{
+    float: left;
+}
+.material li{
+    float: left;
+}
+
+//recipe_show
+.icon{
+    font-size: 30px;
+    margin-right: 10px;
+    color: orange;
+}
+
+.icon:hover{
+    font-size: 40px;
+     margin-bottom: 10px;
+     color: orange;
+     opacity: 0.7;
+}
+
+.bookmark-recipe-show{
+ font-size: 20px;
+}
+.user-recipe-name{
+  font-size: 20px;
+}
+
+.glyphicon-time{
+    margin-left: 5px;
+}
+
+.profile-thumb{
+    border: ridge 3px #ffd700;
+    box-shadow: 0 3px 5px 0 #000;
+}
+
+.lavel-recipe{
+    font-size: 30px;
+    border-bottom: 2px dotted #a9a9a9;
+}
+.lavel-recipe-description{
+    font-size: 25px;
+   margin-top: 30px;
+}
