@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_26_090347) do
+ActiveRecord::Schema.define(version: 2020_04_04_075808) do
 
   create_table "cooking_materials", force: :cascade do |t|
     t.datetime "created_at", null: false

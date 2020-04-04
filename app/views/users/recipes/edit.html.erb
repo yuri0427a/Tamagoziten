@@ -33,11 +33,12 @@
 
    <div style="display:inline-flex">
        <%= f.fields_for :cooking_materials do |m| %>
-   　     <table>
-            <thead>
-               <tr>
-                  <th>材料</th>
-                  <th>分量</th>
+   　　　　　　<div class="material-title">
+                 <ul>
+                  <li>材料</li>
+                  <li>分量</li>
+                 </ul>
+             </div>
                </tr>
            </thead>
            <tbody>
