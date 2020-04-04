@@ -10,4 +10,9 @@ class Recipe < ApplicationRecord
     def favorited_by?(user)
         recipe_favorites.where(user_id: user.id).exists?
     end
+
+    validates :name, presence: true, length: {maximum: 10}
+    validates :description, length: {maximum: 20}
+    validates :egg_quantity, presence: true
+    validates :serving, presence: true
 end
