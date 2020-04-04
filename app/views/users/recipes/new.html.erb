@@ -36,18 +36,23 @@
               <li>材料</li>
               <li>分量</li>
             </ul>
-            <div><br>
+            </div><br>
           <div class="material">
           　　 <li><%= m.label "卵" %></li>
               <li><%= f.text_field :egg_quantity %></li>
           </div>
-         s
+  　　　 <%= render "cooking_materials_fields", m: m %>
+        </div>
      <%= f.submit "投稿する" %> 
        </div>
+  
+    
      <% end %>   
- 
 
 
+       <div class="links">
+    <%= link_to_add_association "+", f, :cooking_materials %>
+  </div>   
 <% end %>  
 
 </div>
