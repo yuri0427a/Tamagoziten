@@ -53,7 +53,7 @@
 
 <% @bookmarks.each  do |bookmark| %>
  
-<%= link_to users_recipe_path(bookmark.id), class: "link-recepi" do %>
+<%= link_to users_recipe_path(bookmark.recipe.id), class: "link-recepi" do %>
          <li class="list-items bookmark">
         <div class="bookmark-image">
           <%= attachment_image_tag bookmark.recipe, :recipe_image, :fill, 280, 180, class: "reshipe-image" %>

@@ -32,22 +32,31 @@
        <%= f.fields_for :cooking_materials do |m| %>
 
  　　　   <div class="material-title">
-            <ul>
-              <li>材料</li>
-              <li>分量</li>
-            </ul>
-            <div><br>
+  
+              <tr>
+                <th>材料</th>
+                <th>分量</th>
+              </tr>
+            </div><br>
           <div class="material">
-          　　 <li><%= m.label "卵" %></li>
-              <li><%= f.text_field :egg_quantity %></li>
+             <tr>
+          　　   <td><%= m.label "卵" %></td>
+                <td><%= f.text_field :egg_quantity %></td>
+             <tr>
           </div>
-         s
-     <%= f.submit "投稿する" %> 
+  　　　 <%=  render partial: "users/recipes/cooking_materials_fields", locals: { f: m } %>
+        </div>
+    
        </div>
-     <% end %>   
  
-
-
+    
+     <% end %>   
+<div class="links">
+    <%= link_to_add_association "+", f, :cooking_materials , partial: "users/recipes/cooking_materials_fields" %> 
+  </div>
+   <%= f.submit "投稿する" %> 
+  
+    
 <% end %>  
 
 </div>
