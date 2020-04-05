@@ -76,7 +76,32 @@ main{
 
 .nested-fields{
     display: inline-flex;
+    margin-right: 30px;
+    margin-top: 10px;
 }
+
+
+.fields-procrdures{
+    padding: 40px 40px;
+    margin-right: 30px;
+    border-radius: 3px;
+}
+.input-sm{
+  margin-bottom: 20px;
+}
+.form-rows{
+    margin-right: 10px;
+}
+
+.recipe_newlist span{
+    background-color: #f0e68c;
+    border-radius: 2px;
+    font-size: 15px;
+}
+.recipe-new span{
+    background-color: #f0e68c;
+}
+
 
 //recipe_show
 .icon{

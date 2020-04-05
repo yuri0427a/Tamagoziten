@@ -1,11 +1,11 @@
 
 <div class="nested-fields">
   <tr>
-    <td><%= f.text_field :material_name, class: "form-control"%></td>
-    <td><%= f.text_field :material_quantity, class: "form-control" %></td>
+    <td><%= f.text_field :material_name, class: "form-control form-rows",placeholder: "例：牛乳" %></td>
+    <td><%= f.text_field :material_quantity, class: "form-control form-rows", placeholder: "例：20cc" %></td>
   </tr>
 
 
 
-  <%= link_to_remove_association "×", f %>
+  <%= link_to_remove_association "×", f , class: "form-delete"%>
   </div>
