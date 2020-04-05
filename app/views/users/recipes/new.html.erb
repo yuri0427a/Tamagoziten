@@ -1,5 +1,6 @@
+<div class="container">
 <main class="recipi-page">
-<div class="container col-xs-offset-2">
+<div class="col-xs-offset-2">
   
     <h1 class="page_title">〜NEW MENU〜</h1>
     <%= form_for @recipe, url: users_recipes_path do |f| %>
@@ -8,7 +9,7 @@
               <%= attachment_image_tag @user, :recipe_image, :fill, 60, 60, class: "img-circle pull-left profile-thumb"%>
               <%= f.attachment_field :recipe_image, placeholder: "プロフィール画像", class: "recipe-edit-form" %> 
           </div>
-          <div class="col-xs-6 recipe_newlist">
+    <div class="col-xs-6 recipe_newlist">
               <table>
                  <tbody>
 
@@ -32,7 +33,7 @@
                  </tbody>
               </table>
      <%= f.fields_for :cooking_materials do |m| %>
-        <div class="material-title">
+       <div class="material-title">
           <table>
             <thead>
                <tr>
@@ -50,36 +51,33 @@
           </table>
         </div>
       <% end %>
-         <div class="links">
-           <%= link_to_add_association "追加", f, :cooking_materials , partial: "users/recipes/cooking_materials_fields" %> 
-         </div>
-     </div>
-   
-  </div>
+      <div class="links">
+         <%= link_to_add_association "追加", f, :cooking_materials , partial: "users/recipes/cooking_materials_fields" %> 
+      </div>
+   </div>
+</div>
   <%= f.fields_for :cooking_procedures do |p| %>
   <div class="row">
   <div class="procedure-title">
     <h3><span>調理手順</span></h3>
     <div class="col-xs-12">
-         
        <table>
-         <thead>
-            
+       
+
           </thead>
          <tbody>
       　　   <%=  render partial: "users/recipes/cooking_procedures_fields", locals: { f: p } %></th>
          </tbody>
        </table>
-    
-
-  <% end %>
+   <% end %>
     <div class="links">
       <%= link_to_add_association "追加", f, :cooking_procedures , partial: "users/recipes/cooking_procedures_fields" %> 
     </div>
-    </div>
+   </div>
   </div>
-  </div>
-  <%= f.submit "レシピ投稿" %> 
+ </div>
+  <%= f.submit "レシピ投稿", class: "btn btn-warning col-xs-offset-3" %> 
    <% end %>
-</main>
 </div>
+</main>
+

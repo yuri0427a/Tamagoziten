@@ -3,28 +3,27 @@
 <div class="container">
    <div class="row">
      <div class="col-xs-7">
-     <%= link_to fa_icon("twitter"), "https://twitter.com/share?url=#{request.url}", title: 'Twi', target: '_blank', class: 'icon' %>
-     <%= link_to fa_icon("facebook"), "https://www.facebook.com/sharer/sharer.php?u=#{request.url}&text=タイトル", title: 'Facebook', target: '_blank', class: 'icon' %>
-      <h1><%= @recipe.name %></h1>
-      </div>
+       <%= link_to fa_icon("twitter"), "https://twitter.com/share?url=#{request.url}", title: 'Twi', target: '_blank', class: 'icon' %>
+       <%= link_to fa_icon("facebook"), "https://www.facebook.com/sharer/sharer.php?u=#{request.url}&text=タイトル", title: 'Facebook', target: '_blank', class: 'icon' %>
+           <h1><%= @recipe.name %></h1>
+     </div>
       <div class="col-xs-5">
-      <p><span>作成者: </span><%= link_to @recipe.user.name, users_user_path(@recipe.user.id), class: "user-recipe-name" %></p>
-      <% if @recipe.favorited_by?(current_user) %>
+        <p><span>作成者: </span><%= link_to @recipe.user.name, users_user_path(@recipe.user.id), class: "user-recipe-name" %></p>
+   <% if @recipe.favorited_by?(current_user) %>
        <li>
-    <%= link_to users_recipe_favorite_path(@recipe), class: "bookmark-recipe-show", method: :delete do %>
-      <i class="glyphicon glyphicon-star" aria-hidden="true"></i>
-      レシピ保存済み
+         <%= link_to users_recipe_favorite_path(@recipe), class: "bookmark-recipe-show", method: :delete do %>
+         <i class="glyphicon glyphicon-star" aria-hidden="true"></i>
+         レシピ保存済み
+       </li>
     <% end %>
-  </li>
-<% else %>
-  <li>
-    <%= link_to users_recipe_favorite_path(@recipe), class: "bookmark-recipe-show", method: :post do %>
-      <i class="glyphicon glyphicon-star-empty" aria-hidden="true"></i>
-      レシピ保存
-    <% end %>
-  </li>
-<% end %>
-<li>
+  <% else %>
+       <li>
+         <%= link_to users_recipe_favorite_path(@recipe), class: "bookmark-recipe-show", method: :post do %>
+         <i class="glyphicon glyphicon-star-empty" aria-hidden="true"></i>
+         レシピ保存
+         <% end %>
+       </li>
+  <% end %>
     </div>
     <div class="row">
        <div class="col-xs-7 ">
