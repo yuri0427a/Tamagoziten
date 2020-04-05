@@ -1,84 +1,84 @@
-<div class="container">
-    <h1>NEW MENU</h1>
-     <%= form_for @recipe, url: users_recipe_path(@recipe.id) do |f| %>
-    <div class="row">
-       <div class="col-xs-4">
-            #javascriptで写真レビューを作る
-          <%= attachment_image_tag @user, :recipe_image, :fill, 60, 60, class: "img-circle pull-left profile-thumb"%>
-             <%= f.attachment_field :recipe_image, placeholder: "プロフィール画像", class: "recipe-edit-form" %> 
-       </div>
-       <div class="col-xs-8">
-    　　   <table>
-             <tbody>
-               <tr>
-                 <th colspan="2">レシピ名</th>
-		           </tr>
-                <tr>
-                  <td colspan="2"><%= f.text_field :name %></td>
-                </tr>
-                <tr>
-                   <th colspan="2">説明</th>
-                </tr>
-                <tr>
-                   <td colspan="2"><%= f.text_field :description %></td>
-                </tr>
-                <tr>
-                   <td><%= f.text_field :serving %>人分</td>
-                   <td><%= f.text_field :cooking_time %>分</td>
-                </tr>
-             </tbody>
-           </table>
-        
-     
+<div class="container col-xs-offset-2">
+    <h1 class="page_title">〜EDIT MENU〜</h1>
+    <%= form_for @recipe, url: users_recipe_path do |f| %>
+       <div class="row ">
+          <div class="col-xs-4 recipe-newform">
+              <%= attachment_image_tag @user, :recipe_image, :fill, 60, 60, class: "img-circle pull-left profile-thumb"%>
+              <%= f.attachment_field :recipe_image, placeholder: "プロフィール画像", class: "recipe-edit-form" %> 
+          </div>
+          <div class="col-xs-6 recipe_newlist">
+              <table>
+                 <tbody>
 
-   <div style="display:inline-flex">
-       <%= f.fields_for :cooking_materials do |m| %>
-   　　　　　　<div class="material-title">
-                 <ul>
-                  <li>材料</li>
-                  <li>分量</li>
-                 </ul>
-             </div>
+               
+                     <tr>
+                      <th colspan="2"><span>レシピ名</span></th>
+ 
+                    <tr>
+                      <td colspan="2"><%= f.text_field :name , class: "form-control input-sm", id: "placeholder"%></td>
+                    </tr>
+                    <tr>
+                       <th colspan="2"><span>説明</span></th>
+                    </tr>
+                    <tr>
+                       <td colspan="2"><%= f.text_field :description, class: "form-control input-sm", placeholder: "説明、コツ、感想などをどうぞ(^○^)♪" %></td>
+                    </tr>
+                    <tr>
+                       <td><%= f.text_field :serving, class: "form-control form-rows", placeholder: "2" %>人分</td>
+                       <td><%= f.text_field :cooking_time, class: "form-control form-rows", placeholder: "15"%>分</td>
+                   </tr>
+                 </tbody>
+              </table>
+     <%= f.fields_for :cooking_materials do |m| %>
+        <div class="material-title">
+          <table>
+            <thead>
+               <tr>
+                  <th><span>材料</span></th>
+                  <th><span>分量</span></th>
                </tr>
-           </thead>
-           <tbody>
-                <tr>
-                  <td>卵</td>
-                  <td><%= f.text_field :egg_quantity %></td>
-                </tr>
-                 <tr>
-                   <td><%= m.text_field :material_name %></td>
-                  <td><%= m.text_field :material_quantity %></td>
-                </tr>
+            </thead>
+            <tbody>
+               <tr>
+          　　     <td>卵</td>
+                  <td><%= f.text_field :egg_quantity, class: "form-control form-rows" ,placeholder: "例：中2個" %></td>
+               <tr>
+                <%=  render partial: "users/recipes/cooking_materials_fields", locals: { f: m } %>
             </tbody>
           </table>
         </div>
+      <% end %>
+         <div class="links">
+           <%= link_to_add_association "追加", f, :cooking_materials , partial: "users/recipes/cooking_materials_fields" %> 
+         </div>
+     </div>
+   
+  </div>
+    <h3><span>調理手順</span></h3>
+  <%= f.fields_for :cooking_procedures do |p| %>
+  <div class="row">
+    
+  <div class="procedure-title">
+
+    <div class="col-xs-12">
+         
+       <table>
+         <thead>
+            
+          </thead>
+         <tbody>
+      　　   <%=  render partial: "users/recipes/cooking_procedures_fields", locals: { f: p } %></th>
+         </tbody>
+       </table>
+    
+
+  <% end %>
+    <div class="links">
+      <%= link_to_add_association "追加", f, :cooking_procedures , partial: "users/recipes/cooking_procedures_fields" %> 
+    </div>
     </div>
   </div>
-
-<% end %>
-
-<%= f.fields_for :cooking_procedures do |p| %>
-<div class= "row">
-  <div class="col-xs-12"> 
-     
-  <table>
-      <thead>
-        <th colspan="4">調理手順</th>
-      </thead>
-      <tbody>
-		  <tr>
-      　　    <th></th>
-          </tr>
-          <tr>
-         　   <th><%= p.text_area :procedure_description %></th>
-	      </tr>
-	  </tbody>
-    </div>
+  </div>
+  <%= f.submit "レシピ投稿" %> 
+   <% end %>
 </div>
-</table>
-<% end %>
-<%= f.submit "レシピ編集する" %> 
-<% end %>  
-
-

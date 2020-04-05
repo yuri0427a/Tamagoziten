@@ -46,7 +46,17 @@ end
   def update
     @recipe = Recipe.find(params[:id]) 
     @recipe.update(recipe_params)
-    redirect_to users_recipe_path(@recipe.id)
+    if @recipe.save
+     redirect_to users_recipe_path(@recipe.id)
+     else
+     render :edit
+  end
+end
+
+  def destroy
+    recipe = Recipe.find(params[:id]) 
+    recipe.destroy
+    redirect_to users_user_path(current_user.id)
   end
 
 
