@@ -1,5 +1,7 @@
+<main class="recipi-page">
 <div class="container col-xs-offset-2">
-    <h1>〜NEW MENU〜</h1>
+  
+    <h1 class="page_title">〜NEW MENU〜</h1>
     <%= form_for @recipe, url: users_recipes_path do |f| %>
        <div class="row ">
           <div class="col-xs-4 recipe-newform">
@@ -79,4 +81,5 @@
   </div>
   <%= f.submit "レシピ投稿" %> 
    <% end %>
+</main>
 </div>

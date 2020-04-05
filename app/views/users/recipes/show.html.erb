@@ -45,7 +45,12 @@
            <div class="lavel-recipe-description">
              <%= @recipe.description %>
             </div>
-
+            <% if current_user.id == @recipe.user.id %>
+            <div class="recipe-btn">
+            <%= link_to "レシピ編集", edit_users_recipe_path(@recipe.id), class: "btn btn-warning recipe-edit" %>
+            <%= link_to "レシピ削除", users_recipe_path(@recipe.id), method: :delete,data: {confirm: "本当に削除しますか？"}, class: "btn btn-danger" %>
+           </div>
+           <% end %>
     </div>
     </div>
     <div class="row">
@@ -90,7 +95,7 @@
         <%= review.user.name %>
         <%= review.impression %>
       <% end %>
-    <%= link_to "レシピ編集", edit_users_recipe_path(@recipe.id) %>
+    
     <%= form_for [@recipe, @review], url: users_recipe_review_path(@recipe.id) do |f| %>
       <div class="row">
           <div class="col-sm-12">

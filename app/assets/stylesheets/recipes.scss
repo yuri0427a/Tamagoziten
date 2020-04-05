@@ -101,6 +101,17 @@ main{
 .recipe-new span{
     background-color: #f0e68c;
 }
+.procedure-title span{
+    background-color: #f0e68c;
+    
+}
+
+.page_title{
+    font-size: 50px;
+    margin-bottom: 30px;
+    margin-left: 150px;
+}
+
 
 
 //recipe_show
@@ -140,4 +151,12 @@ main{
 .lavel-recipe-description{
     font-size: 25px;
    margin-top: 30px;
+}
+
+.recipe-btn{
+    margin-top: 60px;
+}
+
+.recipe-edit{
+    margin: 0 50px;
 }
