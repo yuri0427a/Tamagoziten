@@ -26,8 +26,15 @@ class Users::RecipesController < ApplicationController
   def create
      @recipe = Recipe.new(recipe_params)
      @recipe.user_id = current_user.id
-     @recipe.save
+     if @recipe.save
+      # 作成に成功した場合、 ures/recipes/{book_id} にリダイレクト
      redirect_to users_recipe_path(@recipe.id)
+     else
+     # 作成に失敗した場合、 /books/new に戻してバリデーションエラーを表示する
+     render :new
+      # view 側で、 @book.errors を使ってエラーを表示する。
+    #記述しないとノーメソッドエラーになる
+end
      end
 
   def edit

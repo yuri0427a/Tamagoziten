@@ -47,3 +47,28 @@ $(document).ready(function () {
         hidePrevious: false
     });
 });
+
+
+//recipe_title_placeholder(recipe_new)
+//placeholderのランダム表示
+$(function () {
+    //
+    var list =
+        [
+            '例）オムライス',
+            '例）ふんわり♪卵焼き',
+            '例　簡単！親子丼',
+            '例）半熟茹で卵の作り方,',
+            '例）ほうれん草の卵とじ'
+        ],
+        //リストの数をチェックしてランダム表示
+        //Math.floor()小数点以下を切り捨てる 戻り値:integer。
+        //Math.random() *数値 でその範囲内のランダムな値を取得。
+
+        r = Math.floor(Math.random() * list.length);
+
+    //placeholderに挿入
+    //prop()...指定した属性の値を取得する。戻り値:String。
+    $('#placeholder').prop('placeholder', list[r]);
+
+});
