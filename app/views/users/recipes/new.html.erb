@@ -62,13 +62,15 @@
             
           </thead>
          <tbody>
-            <tr>
-      　　    <th><%=  render partial: "users/recipes/cooking_materials_fields", locals: { f: m } %></th>
-            </tr>
+      　　   <%=  render partial: "users/recipes/cooking_procedures_fields", locals: { f: p } %></th>
          </tbody>
        </table>
+    
+
+  <% end %>
+    <div class="links">
+      <%= link_to_add_association "追加", f, :cooking_procedures , partial: "users/recipes/cooking_procedures_fields" %> 
     </div>
   </div>
-  <% end %>
    <% end %>
 </div>
