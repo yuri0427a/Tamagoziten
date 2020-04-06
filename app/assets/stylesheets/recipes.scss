@@ -50,6 +50,7 @@ main{
     box-shadow: 0 3px 5px 0 #000;
 }
 
+
 .recipe_tilte{
     text-align: center;
     margin-top: 30px;
@@ -141,13 +142,14 @@ main{
 
 .profile-thumb{
     border: ridge 3px #ffd700;
-    box-shadow: 0 3px 5px 0 #000;
 }
 
 .lavel-recipe{
     font-size: 30px;
     border-bottom: 2px dotted #a9a9a9;
 }
+
+//recipe_show
 .lavel-recipe-description{
     font-size: 25px;
    margin-top: 30px;
@@ -155,6 +157,10 @@ main{
 
 .recipe-btn{
     margin-top: 60px;
+
+}
+.item-title{
+    margin-left: -200px;
 }
 
 .recipe-edit{

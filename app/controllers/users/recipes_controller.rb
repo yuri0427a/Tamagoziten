@@ -27,7 +27,6 @@ class Users::RecipesController < ApplicationController
   def create
      @recipe = Recipe.new(recipe_params)
      @recipe.user_id = current_user.id
-     binding.pry
      if @recipe.save
       # 作成に成功した場合、 ures/recipes/{book_id} にリダイレクト
      redirect_to users_recipe_path(@recipe.id)

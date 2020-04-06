@@ -72,16 +72,23 @@ $(function () {
     $('#placeholder').prop('placeholder', list[r]);
 
 });
-$(function () {
+//$(function () {
     // limits the number of categories
-    $('.fields-procrdures').on('cocoon:after-insert', function () {
-        check_to_hide_or_show_add_link();
-    });
+    //$('.fields-procrdures').on('cocoon:after-insert', function () {
+        //check_to_hide_or_show_add_link();
+    //});
 
-    $('.fields-procrdures').on('cocoon:after-remove', function () {
-        check_to_hide_or_show_add_link();
-    });
+    //$('.fields-procrdures').on('cocoon:after-remove', function () {
+        //check_to_hide_or_show_add_link();
+    //});
 
-    check_to_hide_or_show_add_link();
+    //check_to_hide_or_show_add_link();
 
 
+
+    //function check_to_hide_or_show_add_link(i) {
+        //aaa = $('.procrdures-form').length
+        //$('.step-number').text(aaa);
+   // }
+
+//})
