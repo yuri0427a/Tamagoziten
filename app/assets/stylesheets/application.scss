@@ -142,53 +142,72 @@ background-image: url(test5.jpg);
     top: 90px;
     left: 100px;
   }
-  //review-item
 
-.recipe-review{
-   width: 250px;
-}
-  
-.recipe-review:nth-child(odd){
-    border: 3px solid yellow;
-}
-
-.recipe-review:nth-child(even){
-    border: 3px solid ;
-}
-.review-paragraph{
-
-   margin:  50px 0 -10px 0;
-}
 
 
  // recipe_bookmark_page(user_show)
 
-.bookmark{
-   border: #deb887 3px double;
+
+ .bookmark-heading-title{
+    text-align: center;
+    font-size: 70px;
+ }
+ .bookmark-heading-image{
+    margin-left: 370px;
+ }
+
+.bookmark:nth-child(even){
+   border: #deb887 5px double;
+   float: left;
+}
+
+.bookmark:nth-child(odd){
+   border: #f0e68c 5px double;
+   float: left;
+}
+
+
+.bookmark:nth-child(even):hover{
+   border: #deb887 12px double;
+   opacity: 0.7;
+}
+
+.bookmark:nth-child(odd):hover{
+   border: #f0e68c 12px double;
+   opacity: 0.7;
+}
+
+.bookmark-description{
+   text-align: justify;
+}
+
+.bookmark-item{
+   float: left;
+   margin-left: 50px;
 }
 
  // my_recipe_page(user_show)
 
+ 
+
 .myrecipe:nth-child(odd){
-   border: #ffb6c1 3px double;
+   border: #ffb6c1 5px double;
+   height: 300px;
 }
 
 .myrecipe:nth-child(even){
-   border: #f0e68c 3px double;
+   border: #f0e68c 5px double;
+   height: 300px;
 }
 
-
-.myrecipe{
-   border: #ffb6c1 3px double;
-}
 
 .myrecipe:nth-child(even):hover{
-   border: #f0e68c  12px double;
+   border: #f0e68c  15px double;
    opacity: 0.7;
    transition: 0.1s;}
 
    .myrecipe:nth-child(odd):hover{
-   border: #ffb6c1 12px double;
+   border: #ffb6c1 15px double;
    opacity: 0.7;
    transition: 0.1s;
    }
