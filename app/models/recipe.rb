@@ -12,7 +12,7 @@ class Recipe < ApplicationRecord
     end
 
     validates :name, presence: true, length: {maximum: 10}
-    validates :description, presence: true, length: {maximum: 20}
+    validates :description, presence: true, length: {maximum: 30}
     validates :recipe_image, presence: true
     validates :egg_quantity, presence: true
     validates :serving, presence: true
