@@ -142,7 +142,23 @@ background-image: url(test5.jpg);
     top: 90px;
     left: 100px;
   }
+  //review-item
 
+.recipe-review{
+   width: 250px;
+}
+  
+.recipe-review:nth-child(odd){
+    border: 3px solid yellow;
+}
+
+.recipe-review:nth-child(even){
+    border: 3px solid ;
+}
+.review-paragraph{
+
+   margin:  50px 0 -10px 0;
+}
 
 
  // recipe_bookmark_page(user_show)
