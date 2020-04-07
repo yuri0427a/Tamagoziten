@@ -13,8 +13,11 @@ class Users::UsersController < ApplicationController
 
     def update
         user = User.find(params[:id])
-        user.update(user_params)
-        redirect_to users_user_path(current_user.id)
+        if user.update(user_params)
+          redirect_to users_user_path(current_user.id), notice: "プロフィールを編集しました！"
+        else
+           render :show
+        end
     end
 
     private

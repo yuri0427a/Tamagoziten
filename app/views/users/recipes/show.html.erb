@@ -1,6 +1,7 @@
 <div class="recipe-show">
 <div class="container">
   <div class="row">
+  <p id="notice"><%=  notice %></p>
     <div class="col-xs-7">
        <%= link_to fa_icon("twitter"), "https://twitter.com/share?url=#{request.url}", title: 'Twi', target: '_blank', class: 'icon' %>
        <%= link_to fa_icon("facebook"), "https://www.facebook.com/sharer/sharer.php?u=#{request.url}&text=タイトル", title: 'Facebook', target: '_blank', class: 'icon' %>
