@@ -1,12 +1,11 @@
 
 <div class="nested-fields", style="display: inline-block;">
-  <tr>
   
-   <th class="step-number"></th>
-    <td class="procrdures-form"><%= f.text_field :procedure_description, class: "fields-procrdures"%></td>
-  </tr>
+  
+    <td><%= f.text_area :procedure_description, class: "fields-procrdures"%></td>
+  
 
-
-
-  <td><%= link_to_remove_association "×", f,  class: "form-delete" %></td>
-  </div>
+ <td><%= link_to_remove_association "×", f,  class: "form-delete" %></td>
+ </div>
+  
+ 

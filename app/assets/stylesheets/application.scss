@@ -27,10 +27,25 @@
    
 }
 
-//lonin_pagesignup　page(devise)
-.devise_win{
-   margin-top: 40px;
+//top_page
+
+.start{
+   background-image: url('egg-sandwich.jpg');
+   height: 800px;
+   background-repeat: no-repeat;
+   background-position: under;
+   background-size: cover;
+   position: relative;
+   width: 100%;
+   
 }
+
+
+
+
+
+//lonin_pagesignup　page(devise)
+
 .field{
    margin: 5px 0 10px 0;
 }
