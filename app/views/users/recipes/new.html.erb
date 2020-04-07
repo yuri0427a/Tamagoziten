@@ -32,25 +32,27 @@
                    </tr>
                  </tbody>
               </table>
-     <%= f.fields_for :cooking_materials do |m| %>
-       <div class="material-title">
-          <table>
+              <table>
             <thead>
                <tr>
                   <th><span>材料</span></th>
                   <th><span>分量</span></th>
                </tr>
             </thead>
-            <tbody>
+            tbody>
                <tr>
           　　     <td>卵</td>
                   <td><%= f.text_field :egg_quantity, class: "form-control form-rows" ,placeholder: "例：中2個" %></td>
                </tr>
+     <%= f.fields_for :cooking_materials do |m| %>
+          
+         
                <tr>
                 <%=  render partial: "users/recipes/cooking_materials_fields", locals: { f: m } %>
+               </tr>
             </tbody>
           </table>
-        </div>
+        
       <% end %>
       <div class="links">
          <%= link_to_add_association "追加", f, :cooking_materials , partial: "users/recipes/cooking_materials_fields" %> 
@@ -69,12 +71,14 @@
        </table>
    <% end %>
     <div class="links">
+      <tr>
       <%= link_to_add_association "追加", f, :cooking_procedures , partial: "users/recipes/cooking_procedures_fields" %> 
-    </div>
+      </tr>
+      </div>
    </div>
   </div>
  </div>
-  <%= f.submit "レシピ投稿", class: "btn btn-warning col-xs-offset-3" %> 
+  <%= f.submit "レシピ投稿", class: "btn btn-warning col-xs-offset-4" %> 
    <% end %>
 </div>
 </main>
