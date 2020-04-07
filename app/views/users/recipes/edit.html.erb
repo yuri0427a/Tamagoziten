@@ -1,4 +1,10 @@
 <div class="container col-xs-offset-3">
+    <ul>
+      <% @recipe.errors.full_messages.each do |message| %>
+      <li class="error"><i class="glyphicon glyphicon-star" aria-hidden="true"></i>
+      <%= message %></li>
+      <% end %>
+   </ul>
     <h1 class="page_title">〜EDIT MENU〜</h1>
     <%= form_for @recipe, url: users_recipe_path do |f| %>
        <div class="row ">

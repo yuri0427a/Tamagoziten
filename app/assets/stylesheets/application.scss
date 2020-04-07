@@ -37,9 +37,15 @@
    background-size: cover;
    position: relative;
    width: 100%;
-   
+   position: relative;
 }
 
+.app-title{
+   font-size: 200px;
+   background-color: #f0e68c;
+   position: absolute;
+   top:300px
+}
 
 
 
@@ -87,22 +93,12 @@ background-color: orangered;
 color: #fff;
 }
 
-//top_page
-.test1 {
-background-image: url(test1.jpg);
+//error-message
+
+.error{
+   color: red;
 }
-.test2 {
-background-image: url(test2.jpg);
-}
-.test3 {
-background-image: url(test3.jpg);
-}
-.test4 {
-background-image: url(test4.jpg);
-}
-.test5 {
-background-image: url(test5.jpg);
-}
+
  
  #a{
     height: 500px;
