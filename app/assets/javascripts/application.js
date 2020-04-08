@@ -73,22 +73,38 @@ $(function () {
 
 });
 //$(function () {
-    // limits the number of categories
-    //$('.fields-procrdures').on('cocoon:after-insert', function () {
-        //check_to_hide_or_show_add_link();
-    //});
+// limits the number of categories
+//$('.fields-procrdures').on('cocoon:after-insert', function () {
+//check_to_hide_or_show_add_link();
+//});
 
-    //$('.fields-procrdures').on('cocoon:after-remove', function () {
-        //check_to_hide_or_show_add_link();
-    //});
+//$('.fields-procrdures').on('cocoon:after-remove', function () {
+//check_to_hide_or_show_add_link();
+//});
 
-    //check_to_hide_or_show_add_link();
+//check_to_hide_or_show_add_link();
 
 
 
-    //function check_to_hide_or_show_add_link(i) {
-        //aaa = $('.procrdures-form').length
-        //$('.step-number').text(aaa);
-   // }
+//function check_to_hide_or_show_add_link(i) {
+//aaa = $('.procrdures-form').length
+//$('.step-number').text(aaa);
+// }
 
 //})
+
+//recipe_show accordion
+
+$(function () {
+    $('.accordion')
+        //liをクリックで処理を開始
+        .on('click', 'li', function () {
+            var $this = $(this);
+            //コンテンツを開く
+            $this
+                //.toggle('クラス名’)各要素のうち、表示状態にあるものを非表示にし、非表示状態にあるものは表示状態にします。
+                .toggleClass('expanded')
+                .children('.content')
+                .slideToggle('fast');
+        });
+});

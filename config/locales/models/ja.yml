@@ -214,3 +214,9 @@ ja:
         serving: "人数"
         cooking_time: "調理時間"
         egg_quantity: "卵の分量"
+  #activerecord:
+    #models:
+      #cooking_procedure:
+    #attributes:
+      #cooking_procedure:
+        #procedure_description: "調理手順"

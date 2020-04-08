@@ -60,49 +60,54 @@
        
   </div>
   
+  <ul class="accordion">
+　<li>
+  <h3>	<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>作り方を見る！！</h3>
+  <div class="content">
   <div class="row">
   　　<div class="col-xs-5">
   　　　　　　<h3 class="item-title">
   　　　　　　　　 材料(<%= @recipe.serving %>人分)
   　　　　　　</h3>
   　　　　　　 <table>
-                 
                  <tr>
-                   <th>
+                   <td>
                       卵
-                   </th>
-                   <th>
+                   </td>
+                   <td>
             　　     <%= @recipe.egg_quantity %>
-        　　       </th>
+        　　       </td>
                  </tr>
                  <% @materials.each do |material| %>
                     <tr>
-                       <th>
+                       <td>
                           <%= material.material_name %>
-                       </th>
-                        <th>
+                       </td>
+                        <td>
                 　　       <%= material.material_quantity %>
-            　　        </th>
+            　　        </td>
                     </tr>
 　　　　　　　      <% end %>
   　　　　　　</table>
   　　</div>
   　　<div class="col-xs-7">
-        <h3 class="cooking_step">
-            作り方
-        </h3>
+
+               <h3>作り方</h3>
           <% @procedures.each.with_index(1) do |procedure, idx| %>
-            <h3><%= idx %></h3>
-             <p><%= procedure.procedure_description %></p>
+           
+                <h3><%= idx %></h3>
+                <p><%= procedure.procedure_description %></p>
+              </td>
+            <ul>
         <% end %>
   </div>
   </div>
-<div class="row">
-    <div class="col-xs-12">
+</div>
+</div>
      <p class="review-paragraph">作成者さんに伝えよう♪</p>
      <h2>〜作りました！review〜</h2>　
 
-
+<div class="carousel">
        <div class="detail">
             <ul>
         <% @recipe.recipe_reviews.each do |review| %>
@@ -116,8 +121,7 @@
         <% end %>
             </ul>
           </div>
-        </div>
-    </div>
+
     <% if current_user.id != @recipe.user.id %>
  <div class="row">
     <div class="col-xs-8 col-xs-offset-2">
@@ -136,5 +140,5 @@
 
  </div>
  <% end %>
-</div>
+
 </div>
