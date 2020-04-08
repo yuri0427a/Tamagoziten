@@ -200,3 +200,43 @@ main{
 .recipe-edit{
     margin: 0 50px;
 }
+
+//recipe_show accordion 開いた時
+
+.accordion > li{
+  cursor: pointer;
+  margin: 0 0 5px 0;
+  padding: 0 10px;
+ border-radius: 5px;
+}
+
+.accordion > li > h3{
+    text-align: center;
+    background-color: #ff6347;
+     padding: 30px 10px;
+
+}
+
+.accordion > li:hover{
+    background-color: #fff;
+
+}
+
+.accordion > li .content{
+    display: none;
+}
+//recipe_show accodion 閉じたとき
+
+.accordion > li.expend{
+    background-color: #fff;
+}
+
+.accordion > li.expend >h2{
+    font-weight: bold;
+}
+
+.accordion > li.expend .content{
+    margin: 10px 0 0 0;
+    padding: 10px 0 0 0;
+    border-top: splid 1px #000;
+}
