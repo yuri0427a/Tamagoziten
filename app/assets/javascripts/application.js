@@ -118,5 +118,39 @@ $(function () {
             $this.parent().width(listWidth);
             //クローンを作ってinsertAfter() </ul>の後に挿入
             $this.clone().insertAfter($this);
+        })
+        //カルーセルの動き
+        //直前のトラバースをキャンセルする働き
+        .end()
+        .on('click', 'a.prev', function (event) {
+            event.preventDefault();
+            doCarousel($(this), 1);
+
+        })//右矢印をクリックした時
+        .on('click', 'a.next', function (event) {
+            //実行したイベントがキャンセル可能である場合、イベントをキャンセル
+            event.preventDefault();
+            doCarousel($(this), -1);
+
         });
+
+    //カルーセル動かす
+    //directionは文字表記の方向を指定できるプロパティ
+    //closest()直近の親要素を取得
+    //find() 子孫要素の取得
+    function doCarousel(btn, direction) {
+        var $btn = btn;
+        var $carousel = $btn.closest('.carousel');
+        var $imgContainer = $carousel.find('.thumbs');
+
+        //移動量を計算
+        var move = direction * $carousel.width() + $imgContainer.position().left;
+        //右に動く動作がないとき左に動くanimate()を指示する(移動がおかしくならないように)
+        $imgContainer.filter(':not(:animated)')
+            //animate()CSSの値を指定して、アニメーションを表現してくれる。
+            .animate({ left: move },
+                {　//duration　アニメーションの速度指定。
+                    duration: 800
+                });
+    }
 });
