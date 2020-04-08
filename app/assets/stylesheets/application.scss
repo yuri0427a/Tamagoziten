@@ -64,7 +64,7 @@ header{
 
 
 
-//lonin_pagesignup　page(devise)
+//lonin_pagesignup page(devise)
 
 .field{
    margin: 5px 0 10px 0;
@@ -247,9 +247,47 @@ color: #fff;
 }
 
 .thumbs{
-   width: 100000px;
-   position: relative;
-   left: 0;
+  width: 100000px;
+  position: relative;
+  left: 0;
 }
 
 //carousel 矢印ボタン(recipe_show review）
+
+.thunmb-nav a{
+  display: block;
+  position: absolute;
+  bottom: 159px;
+  width: 64px;
+  height: 64px;
+  background-image: url("recipe_show/yazirushi.png");
+  
+}
+
+a.prev {
+   left: 0;
+  background-position: 0 64px;
+  transform: rotate(180deg);
+}
+a.prev:hover{
+   float: left;
+   opacity: 0.7;
+}
+
+
+
+a.next{
+   right: 0;
+   background-position: 0 0;
+}
+
+a.next:hover{
+   right: 0;
+   opacity: 0.7;
+}
+
+
+a.next:hover{
+   right: 0;
+
+}

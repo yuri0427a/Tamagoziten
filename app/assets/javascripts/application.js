@@ -22,31 +22,31 @@ $(document).ready(function () {
         $(this).css('color', 'red');
     });
 });
-
-$(document).ready(function () {
-    $('#theTarget').skippr({
-        // スライドショーの変化 ("fade" or "slide")
-        transition: 'slide',
-        // 変化に係る時間(ミリ秒)
-        speed: 1000,
-        // easingの種類
-        easing: 'easeOutQuart',
-        // ナビゲーションの形("block" or "bubble")
-        navType: 'bubble',
-        // 子要素の種類("div" or "img")
-        childrenElementType: 'div',
-        // ナビゲーション矢印の表示(trueで表示)
-        arrows: true,
-        // スライドショーの自動再生(falseで自動再生なし)
-        autoPlay: true,
-        // 自動再生時のスライド切替間隔(ミリ秒)
-        autoPlayDuration: 3000,
-        // キーボードの矢印キーによるスライド送りの設定(trueで有効)
-        keyboardOnAlways: true,
-        // 一枚目のスライド表示時に戻る矢印を表示するかどうか(falseで非表示)
-        hidePrevious: false
-    });
-});
+//skipper
+//$(document).ready(function () {
+//$('#theTarget').skippr({
+// スライドショーの変化 ("fade" or "slide")
+//transition: 'slide',
+// 変化に係る時間(ミリ秒)
+//speed: 1000,
+// easingの種類
+//easing: 'easeOutQuart',
+// ナビゲーションの形("block" or "bubble")
+//navType: 'bubble',
+// 子要素の種類("div" or "img")
+// childrenElementType: 'div',
+// ナビゲーション矢印の表示(trueで表示)
+//arrows: true,
+// スライドショーの自動再生(falseで自動再生なし)
+//autoPlay: true,
+// 自動再生時のスライド切替間隔(ミリ秒)
+//autoPlayDuration: 3000,
+// キーボードの矢印キーによるスライド送りの設定(trueで有効)
+//keyboardOnAlways: true,
+// 一枚目のスライド表示時に戻る矢印を表示するかどうか(falseで非表示)
+//hidePrevious: false
+// });
+//});
 
 
 //recipe_title_placeholder(recipe_new)
@@ -108,16 +108,15 @@ $(function () {
                 .slideToggle('fast');
         });
 });
-
 //recipe_show carousel
 $(function () {
     $('#carousel')
         .find('.thumbs-list').each(function () {
             var $this = $(this);
-            //#carouselの幅
+            //#carouselの幅(繰り返すためにmargin,padding,border含んだ二倍の長さに)
             var listWidth = $this.outerWidth() * 2;
             $this.parent().width(listWidth);
-
+            //クローンを作ってinsertAfter() </ul>の後に挿入
             $this.clone().insertAfter($this);
         });
 });
