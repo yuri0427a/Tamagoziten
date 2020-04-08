@@ -11,10 +11,10 @@
 
   <body>
   <div class="container">
-  <header class="navbar navbar-fixed-top navbar-inverse">
+  <header class="navbar navbar-fixed-top navbar-inverse" style="border: #f0e68c; background-color:#f0e68c;">
 
     <nav class="nav navbar-nav navbar-left">
-            <span>Bookers</span>
+
         </nav>
     <nav>
       <ul class="nav navbar-nav navbar-right">
@@ -23,9 +23,6 @@
         <%= link_to " マイページ", users_user_path(current_user.id) %>
         <li>
           <%= link_to " レシピ", users_recipes_path %>
-        </li>
-        <li>
-          <%= link_to " ブックマーク", users_recipe_favorites_path(current_user.id) %>
         </li>
         <li>
           <%= link_to " レシピ投稿", new_users_recipe_path %>

@@ -110,7 +110,7 @@ ja:
     format: "%{attribute}%{message}"
     messages:
       accepted: を受諾してください
-      blank: を入力してください
+      blank: は入力必須です
       confirmation: と%{attribute}の入力が一致しません
       empty: を入力してください
       equal_to: は%{count}にしてください
@@ -211,6 +211,6 @@ ja:
     attributes:
       recipe:
         name: "レシピ名"
-        serving: "人分"
+        serving: "人数"
         cooking_time: "調理時間"
         egg_quantity: "卵の分量"

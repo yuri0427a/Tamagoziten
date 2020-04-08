@@ -27,6 +27,10 @@
    
 }
 
+header{
+   background-color: #800000;
+}
+
 //top_page
 
 .start{
@@ -40,11 +44,21 @@
    position: relative;
 }
 
+.start p{
+  position: absolute;
+  top: 30px;
+  left: 500px;
+  padding:20px;
+}
 .app-title{
    font-size: 200px;
    background-color: #f0e68c;
+   border-radius: 10px;
    position: absolute;
-   top:300px
+   top:430px;
+   left: 200px;
+   
+   
 }
 
 
@@ -74,10 +88,10 @@ border: 4px groove #ffa500;
 .login{
    border: 1px solid orange;
    color: orangered;
-   margin: 10px 0 0 120px;
+   margin: 10px 0 0 170px;
 }
 .signup{
-   margin: 10px 0 0 120px;
+   margin: 10px 0 0 160px;
    color: orangered;
    border: 1px solid orange
 }
