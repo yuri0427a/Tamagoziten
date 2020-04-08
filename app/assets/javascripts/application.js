@@ -108,3 +108,16 @@ $(function () {
                 .slideToggle('fast');
         });
 });
+
+//recipe_show carousel
+$(function () {
+    $('#carousel')
+        .find('.thumbs-list').each(function () {
+            var $this = $(this);
+            //#carouselの幅
+            var listWidth = $this.outerWidth() * 2;
+            $this.parent().width(listWidth);
+
+            $this.clone().insertAfter($this);
+        });
+});
