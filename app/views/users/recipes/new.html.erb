@@ -1,7 +1,12 @@
 <div class="container">
 <main class="recipi-page">
 <div class="col-xs-offset-2">
-  
+   <ul>
+      <% @recipe.errors.full_messages.each do |message| %>
+      <li class="error"><i class="glyphicon glyphicon-star" aria-hidden="true"></i>
+      <%= message %></li>
+      <% end %>
+   </ul>
     <h1 class="page_title">〜NEW MENU〜</h1>
     <%= form_for @recipe, url: users_recipes_path do |f| %>
        <div class="row ">
@@ -27,8 +32,8 @@
                        <td colspan="2"><%= f.text_field :description, class: "form-control input-sm", placeholder: "説明、コツ、感想などをどうぞ(^○^)♪" %></td>
                     </tr>
                     <tr>
-                       <td><%= f.text_field :serving, class: "form-control form-rows", placeholder: "2" %>人分</td>
-                       <td><%= f.text_field :cooking_time, class: "form-control form-rows", placeholder: "15"%>分</td>
+                       <td><%= f.text_field :serving, class: "form-control form-rows", placeholder: "例）2" %>人分</td>
+                       <td><%= f.text_field :cooking_time, class: "form-control form-rows", placeholder: "例）15"%>分</td>
                    </tr>
                  </tbody>
               </table>
@@ -39,7 +44,7 @@
                   <th><span>分量</span></th>
                </tr>
             </thead>
-            tbody>
+            <tbody>
                <tr>
           　　     <td>卵</td>
                   <td><%= f.text_field :egg_quantity, class: "form-control form-rows" ,placeholder: "例：中2個" %></td>

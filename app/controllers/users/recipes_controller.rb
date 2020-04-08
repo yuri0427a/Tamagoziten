@@ -29,7 +29,7 @@ class Users::RecipesController < ApplicationController
      @recipe.user_id = current_user.id
      if @recipe.save
       # 作成に成功した場合、 ures/recipes/{book_id} にリダイレクト
-     redirect_to users_recipe_path(@recipe.id)
+     redirect_to users_recipe_path(@recipe.id), notice: "レシピを投稿しました！"
      else
      # 作成に失敗した場合、 /books/new に戻してバリデーションエラーを表示する
      render :new
@@ -48,7 +48,7 @@ end
     @recipe = Recipe.find(params[:id]) 
     @recipe.update(recipe_params)
     if @recipe.save
-     redirect_to users_recipe_path(@recipe.id)
+     redirect_to users_recipe_path(@recipe.id), notice: "レシピを編集しました！"
      else
      render :edit
   end

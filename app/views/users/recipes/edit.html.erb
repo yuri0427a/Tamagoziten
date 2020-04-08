@@ -1,4 +1,10 @@
-<div class="container col-xs-offset-2">
+<div class="container col-xs-offset-3">
+    <ul>
+      <% @recipe.errors.full_messages.each do |message| %>
+      <li class="error"><i class="glyphicon glyphicon-star" aria-hidden="true"></i>
+      <%= message %></li>
+      <% end %>
+   </ul>
     <h1 class="page_title">〜EDIT MENU〜</h1>
     <%= form_for @recipe, url: users_recipe_path do |f| %>
        <div class="row ">
@@ -22,8 +28,8 @@
                        <td colspan="2"><%= f.text_field :description, class: "form-control input-sm", placeholder: "説明、コツ、感想などをどうぞ(^○^)♪" %></td>
                     </tr>
                     <tr>
-                       <td><%= f.text_field :serving, class: "form-control form-rows", placeholder: "2" %>人分</td>
-                       <td><%= f.text_field :cooking_time, class: "form-control form-rows", placeholder: "15"%>分</td>
+                       <td><%= f.text_field :serving, class: "form-control form-rows", placeholder: "例）2" %>人分</td>
+                       <td><%= f.text_field :cooking_time, class: "form-control form-rows", placeholder: "例）15" %>分</td>
                    </tr>
                  </tbody>
               </table>
@@ -76,6 +82,6 @@
     </div>
   </div>
   </div>
-  <%= f.submit "レシピ投稿" %> 
+  <%= f.submit "レシピ編集", class: "btn btn-warning col-xs-offset-3" %> 
    <% end %>
 </div>
