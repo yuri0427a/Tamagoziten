@@ -1,5 +1,5 @@
 class Users::RecipeReviewsController < ApplicationController
-    
+  before_action :authenticate_user!  
     
     def create
         @review = RecipeReview.new(recipe_review_params)

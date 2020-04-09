@@ -69,6 +69,8 @@ gem 'jquery-rails'
 gem "refile", require: "refile/rails", github: 'manfe/refile' 
 gem "refile-mini_magick" 
 gem 'kaminari', '~> 0.17.0' 
+gem 'devise-i18n'
+gem 'devise-i18n-views'
 
 group :development, :test do
   gem 'pry-rails'
@@ -80,3 +82,5 @@ gem 'dotenv-rails'
   group :production do
     gem 'mysql2'
   end
+
+
