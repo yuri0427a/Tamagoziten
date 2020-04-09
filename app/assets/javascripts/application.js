@@ -116,7 +116,8 @@ $(function () {
                         //<をクリック
                         //directionが１かつimgContainerが０のときtrueになる
                         //.position()...特定のHTML要素の位置座標を取得することができるユニークなメソッド
-                        if (direcition == 1 && 0 <= $this.position().left) {
+     
+                   if (direcition == 1 && 0 <= $this.position().left) {
                             resetPos = $this.position().left - $imgList.outerWidth();
                             $this.css({ "left": resetPos });
                         }
@@ -126,7 +127,6 @@ $(function () {
                             resetPos = $this.position().left + $imgList.outerWidth();
                             $this.css({ "left": resetPos });
                         }
-
 
                     }
                 });

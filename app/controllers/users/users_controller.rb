@@ -1,5 +1,5 @@
 class Users::UsersController < ApplicationController
-
+before_action :authenticate_user!
     def show
       @user = User.find(params[:id])
       @recipes = Recipe.where(user_id: current_user.id)
@@ -16,7 +16,7 @@ class Users::UsersController < ApplicationController
         if user.update(user_params)
           redirect_to users_user_path(current_user.id), notice: "プロフィールを編集しました！"
         else
-           render :show
+           render :show 
         end
     end
 
