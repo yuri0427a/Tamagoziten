@@ -57,7 +57,7 @@ $(function () {
         [
             '例）オムライス',
             '例）ふんわり♪卵焼き',
-            '例　簡単！親子丼',
+            '例  簡単！親子丼',
             '例）半熟茹で卵の作り方,',
             '例）ほうれん草の卵とじ'
         ],
@@ -149,8 +149,21 @@ $(function () {
         $imgContainer.filter(':not(:animated)')
             //animate()CSSの値を指定して、アニメーションを表現してくれる。
             .animate({ left: move },
-                {　//duration　アニメーションの速度指定。
-                    duration: 800
+                { //duration アニメーションの速度指定。
+                    duration: 800,
+                    progress: function () {
+                        var $this = $(this);
+                        //現在マッチしている要素の中で最初の要素だけを取り出す
+                        var $imgList = $this.find('.thumbs-list').first();
+                        //移動えようがthumbs-listを上回ったらthumbsのポジションをリセット
+                        //関数resetPos...初期座標の算出
+                        var resetPos;
+                        //<をクリック
+                        //directionが１かつimgContainerが０のときtrueになる
+                        //.position()...特定のHTML要素の位置座標を取得することができるユニークなメソッド
+
+
+                    }
                 });
     }
 });

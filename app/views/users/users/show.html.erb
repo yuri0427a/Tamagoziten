@@ -20,16 +20,22 @@
           <% @userrecipes .each do |userrecipe| %>
               <li class="list-items myrecipe">
                  <%= link_to users_recipe_path(userrecipe.id), class: "link-recepi" do %>
-                     <%= attachment_image_tag userrecipe, :recipe_image, :fill, 230, 130, class: "reshipe-image" %>
+                     <%= attachment_image_tag userrecipe, :recipe_image, :fill, 230, 130, class: "reshipe-image", fallback: "no_image.jpg", size: "230x130"  %>
                          <div class="detail">
-                            <p class="recipe_time">
-                              <%= userrecipe.cooking_time %><span>分</span>
-                             </p>
-                            <h3 class="recipe_tilte"><%= userrecipe.name %></h3>
-                        </div>
+                     <p class="recipe_icon">
+                        <i class="glyphicon glyphicon-time"></i>
+                        <%= userrecipe.cooking_time %><span>分</span>
+                     </p>
+                      <p class="recipe_icon">
+                         <%= fa_icon("comment") %>
+                         <%= userrecipe.recipe_reviews.count %>
+                     </p>
+                     </div>
+                  <h3 class="recipe_title"><%= userrecipe.name %></>
+               
                   <% end %>
                </li>
-            
+            </div>
             <% end %>
         </div>
      </div>
@@ -65,18 +71,18 @@
                          <%= fa_icon("comment") %>
                          <%= recipe.recipe_reviews.count %>
                      </p>
-           　　　     <h3 class="recipe_title"><%= recipe.name %></>
-         　　      </div>
-              
-      　　     <% end %>
-     　　     </li> 
+                
+               </div>
+              <h3 class="recipe_title"><%= recipe.name %></>
+           <% end %>
+          </li> 
           <% end %>
       <span class="user-edit">Edit</span>
     <%= link_to  users_user_path(current_user.id) , class: "show-modal" do %>
        <%= image_tag('female_hand.png') %>
-  　<% end %>
+  <% end %>
     <p class="hiyoko"><%= image_tag('hiyoko.png')%></p> 
-　　
+
 
   </div>
 <div id="tab02">
