@@ -1,19 +1,19 @@
 <div class="recipe-show">
-<div class="container">
-  <div class="row">
-  <p id="notice"><%=  notice %></p>
-    <div class="col-xs-7">
-       <%= link_to fa_icon("twitter"), "https://twitter.com/share?url=#{request.url}", title: 'Twi', target: '_blank', class: 'icon' %>
-       <%= link_to fa_icon("facebook"), "https://www.facebook.com/sharer/sharer.php?u=#{request.url}&text=タイトル", title: 'Facebook', target: '_blank', class: 'icon' %>
-       <h1><%= @recipe.name %></h1>
-    </div>
-    <div class="col-xs-5">
-       <p>
-         <span>作成者: </span>
-        <%= link_to @recipe.user.name, users_user_path(@recipe.user.id), class: "user-recipe-name" %>
-       </p>
-       <% if @recipe.favorited_by?(current_user) %>
-          <li>
+  <div class="container">
+    <div class="row">
+      <p id="notice"><%=  notice %></p>
+        <div class="col-xs-7">
+          <%= link_to fa_icon("twitter"), "https://twitter.com/share?url=#{request.url}", title: 'Twi', target: '_blank', class: 'icon' %>
+          <%= link_to fa_icon("facebook"), "https://www.facebook.com/sharer/sharer.php?u=#{request.url}&text=タイトル", title: 'Facebook', target: '_blank', class: 'icon' %>
+          <h1><%= @recipe.name %></h1>
+        </div>
+        <div class="col-xs-5">
+          <p>
+            <span>作成者: </span>
+            <%= link_to @recipe.user.name, users_user_path(@recipe.user.id), class: "user-recipe-name" %>
+          </p>
+          <% if @recipe.favorited_by?(current_user) %>
+            <li>
             <%= link_to users_recipe_favorite_path(@recipe), class: "bookmark-recipe-show", method: :delete do %>
               <i class="glyphicon glyphicon-star" aria-hidden="true"></i>
               レシピ保存済み
@@ -34,39 +34,37 @@
        <div class="recipe-image">
          <%= attachment_image_tag @recipe, :recipe_image, :fill, 600, 600, class: " pull-left profile-thumb", fallback: "no_image.jpg", size: "600x600"%>
        </div>
-     </div>
-     <div class="col-xs-5">
+    </div>
+    <div class="col-xs-5">
        <div class="lavel-recipe">
           <lavel>調理時間</labvel>
           <i class="glyphicon glyphicon-time"></i>
              <%= @recipe.cooking_time %>分
-           </div>
-           <div class="lavel-recipe">
-               <lavel>レビュー数</labvel>
-               <%= fa_icon("comment") %>
-               <%= @recipe.recipe_reviews.count %>
-              <span>件</span>
-           </div>
-           <div class="lavel-recipe-description">
-               <%= @recipe.description %>
+       </div>
+       <div class="lavel-recipe">
+          <lavel>レビュー数</labvel>
+           <%= fa_icon("comment") %>
+           <%= @recipe.recipe_reviews.count %>
+           <span>件</span>
+       </div>
+       <div class="lavel-recipe-description">
+          <%= @recipe.description %>
+       </div>
+       <% if current_user.id == @recipe.user.id %>
+          <div class="recipe-btn">
+              <%= link_to "レシピ編集", edit_users_recipe_path(@recipe.id), class: "btn btn-warning recipe-edit" %>
+              <%= link_to "レシピ削除", users_recipe_path(@recipe.id), method: :delete,data: {confirm: "本当に削除しますか？"}, class: "btn btn-danger" %>
           </div>
-             <% if current_user.id == @recipe.user.id %>
-                <div class="recipe-btn">
-                   <%= link_to "レシピ編集", edit_users_recipe_path(@recipe.id), class: "btn btn-warning recipe-edit" %>
-                   <%= link_to "レシピ削除", users_recipe_path(@recipe.id), method: :delete,data: {confirm: "本当に削除しますか？"}, class: "btn btn-danger" %>
-              </div>
-          <% end %>
-     </div>
-       
+      <% end %>
+    </div>
   </div>
-  
-  <ul class="accordion">
-　<li>
-  <h3><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>作り方を見る！！</h3>
-  <div class="content">
-  <div class="row">
-  　　<div class="col-xs-5">
-  　　　　　　<h3 class="item-title">
+    <ul class="accordion">
+    <li>
+      <h3><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>作り方を見る！！</h3>
+        <div class="content">
+          <div class="row">
+            <div class="col-xs-5">
+     <h3 class="item-title">
   　　　　　　　　 材料(<%= @recipe.serving %>人分)
   　　　　　　</h3>
   　　　　　　 <table>
@@ -104,28 +102,33 @@
   </div>
 </div>
 </div>
-     <p class="review-paragraph">作成者さんに伝えよう♪</p>
-     <h2>〜作りました！review〜</h2>　
-
-<div class="carousel" id="carousel">
-  <div class="thumbs clear">
-     <div class="detail">
-       <ul class="thumbs-list">
-        <% @recipe.recipe_reviews.each do |review| %>
-          <li class="list-items recipe-review">
-             <p><%= attachment_image_tag review, :cooking_image, :fill, 200, 150, fallback: "no_image.jpg", size: "200x150"%></p>
-              <h3 class="recipe-title"><%= link_to review.user.name, users_user_path(@recipe.user.id) %></h3>
-              <p><%= review.impression %></p>
-          </li>
-        <% end %>
-     </ul>
-   </div>
-  </div>
-  <div class="thunmb-nav">
-    <a href="#" class="prev"></a><a href="#" class="next"></a>
-  </div>
+     
+<div class="review-section">
+  <p class="review-paragraph">
+    作成者さんに伝えよう♪
+  </p>     
+  <h2>〜作りました！review〜</h2>　
 </div>
-
+<div class="review">
+    <div class="carousel" id="carousel">
+        <div class="thumbs clear">
+            <div class="detail">
+                <ul class="thumbs-list">
+                  <% @recipe.recipe_reviews.each do |review| %>
+                      <li class="list-items recipe-review">
+                         <p><%= attachment_image_tag review, :cooking_image, :fill, 200, 150, fallback: "no_image.jpg", size: "200x150"%></p>
+                         <h3 class="recipe-title"><%= link_to review.user.name, users_user_path(@recipe.user.id) %></h3>
+                         <p><%= review.impression %></p>
+                      </li>
+                   <% end %>
+                </ul>
+            </div>
+        </div>
+        <div class="thunmb-nav">
+          <a href="#" class="prev"></a><a href="#" class="next"></a>
+        </div>
+     </div>
+</div>
     <% if current_user.id != @recipe.user.id %>
  <div class="row">
     <div class="col-xs-8 col-xs-offset-2">
@@ -144,5 +147,5 @@
 
  </div>
  <% end %>
-
+</div>
 </div>

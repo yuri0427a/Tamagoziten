@@ -22,32 +22,6 @@ $(document).ready(function () {
         $(this).css('color', 'red');
     });
 });
-//skipper
-//$(document).ready(function () {
-//$('#theTarget').skippr({
-// スライドショーの変化 ("fade" or "slide")
-//transition: 'slide',
-// 変化に係る時間(ミリ秒)
-//speed: 1000,
-// easingの種類
-//easing: 'easeOutQuart',
-// ナビゲーションの形("block" or "bubble")
-//navType: 'bubble',
-// 子要素の種類("div" or "img")
-// childrenElementType: 'div',
-// ナビゲーション矢印の表示(trueで表示)
-//arrows: true,
-// スライドショーの自動再生(falseで自動再生なし)
-//autoPlay: true,
-// 自動再生時のスライド切替間隔(ミリ秒)
-//autoPlayDuration: 3000,
-// キーボードの矢印キーによるスライド送りの設定(trueで有効)
-//keyboardOnAlways: true,
-// 一枚目のスライド表示時に戻る矢印を表示するかどうか(falseで非表示)
-//hidePrevious: false
-// });
-//});
-
 
 //recipe_title_placeholder(recipe_new)
 //placeholderのランダム表示
@@ -57,7 +31,7 @@ $(function () {
         [
             '例）オムライス',
             '例）ふんわり♪卵焼き',
-            '例　簡単！親子丼',
+            '例  簡単！親子丼',
             '例）半熟茹で卵の作り方,',
             '例）ほうれん草の卵とじ'
         ],
@@ -72,26 +46,7 @@ $(function () {
     $('#placeholder').prop('placeholder', list[r]);
 
 });
-//$(function () {
-// limits the number of categories
-//$('.fields-procrdures').on('cocoon:after-insert', function () {
-//check_to_hide_or_show_add_link();
-//});
 
-//$('.fields-procrdures').on('cocoon:after-remove', function () {
-//check_to_hide_or_show_add_link();
-//});
-
-//check_to_hide_or_show_add_link();
-
-
-
-//function check_to_hide_or_show_add_link(i) {
-//aaa = $('.procrdures-form').length
-//$('.step-number').text(aaa);
-// }
-
-//})
 
 //recipe_show accordion
 
@@ -118,5 +73,62 @@ $(function () {
             $this.parent().width(listWidth);
             //クローンを作ってinsertAfter() </ul>の後に挿入
             $this.clone().insertAfter($this);
+        })
+        //カルーセルの動き
+        //直前のトラバースをキャンセルする働き
+        .end()
+        .on('click', 'a.prev', function (event) {
+            event.preventDefault();
+            doCarousel($(this), 1);
+
+        })//右矢印をクリックした時
+        .on('click', 'a.next', function (event) {
+            //実行したイベントがキャンセル可能である場合、イベントをキャンセル
+            event.preventDefault();
+            doCarousel($(this), -1);
+
         });
+
+    //カルーセル動かす
+    //directionは文字表記の方向を指定できるプロパティ
+    //closest()直近の親要素を取得
+    //find() 子孫要素の取得
+    function doCarousel(btn, direction) {
+        var $btn = btn;
+        var $carousel = $btn.closest('.carousel');
+        var $imgContainer = $carousel.find('.thumbs');
+
+        //移動量を計算
+        var move = direction * $carousel.width() + $imgContainer.position().left;
+        //右に動く動作がないとき左に動くanimate()を指示する(移動がおかしくならないように)
+        $imgContainer.filter(':not(:animated)')
+            //animate()CSSの値を指定して、アニメーションを表現してくれる。
+            .animate({ left: move },
+                { //duration アニメーションの速度指定。
+                    duration: 800,
+                    progress: function () {
+                        var $this = $(this);
+                        //現在マッチしている要素の中で最初の要素だけを取り出す
+                        var $imgList = $this.find('.thumbs-list').first();
+                        //移動えようがthumbs-listを上回ったらthumbsのポジションをリセット
+                        //関数resetPos...初期座標の算出
+                        var resetPos;
+                        //<をクリック
+                        //directionが１かつimgContainerが０のときtrueになる
+                        //.position()...特定のHTML要素の位置座標を取得することができるユニークなメソッド
+                        if (direcition == 1 && 0 <= $this.position().left) {
+                            resetPos = $this.position().left - $imgList.outerWidth();
+                            $this.css({ "left": resetPos });
+                        }
+                        //>をクリック
+                        if (direction == -1 && $imgList.outerWidth() <= Math.abs
+                            ($this.position().left)) {
+                            resetPos = $this.position().left + $imgList.outerWidth();
+                            $this.css({ "left": resetPos });
+                        }
+
+
+                    }
+                });
+    }
 });

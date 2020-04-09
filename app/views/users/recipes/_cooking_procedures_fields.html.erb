@@ -1,11 +1,10 @@
 
 <div class="nested-fields", style="display: inline-block;">
-  
-  
-    <td><%= f.text_area :procedure_description, class: "fields-procrdures"%></td>
-  
-
- <td><%= link_to_remove_association "×", f,  class: "form-delete" %></td>
- </div>
+  <tr>
+    <td><%= f.text_area :procedure_description, class: "fields-procrdures"%>
+      <%= link_to_remove_association "×", f , class: "form-delete"%>
+    </td>
+  </tr>
+</div>
   
  

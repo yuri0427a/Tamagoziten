@@ -1,9 +1,0 @@
-<h1>Edit Profile</h1>
-   <%= form_for @user, url: users_user_path do |f| %>
-    <%= f.attachment_field :profile_image, placeholder: "プロフィール画像", class: "user-edit-form" %>
-    <h4 class="profile-name">お名前</h4><%= f.text_field :name %>
-    <h4 class="profile-name">自己紹介</h4><%= f.text_area :introduction %>
-    <%= f.submit "Update" %>
-
-  <% end %>
-<%= link_to " 戻る", users_user_path(current_user.id) %>
