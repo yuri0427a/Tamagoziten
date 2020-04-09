@@ -1,5 +1,7 @@
-<div class="container col-xs-offset-3">
-    <ul>
+<div class="container">
+<main class="recipi-page">
+<div class="col-xs-offset-2">
+   <ul>
       <% @recipe.errors.full_messages.each do |message| %>
       <li class="error"><i class="glyphicon glyphicon-star" aria-hidden="true"></i>
       <%= message %></li>
@@ -12,12 +14,14 @@
               <%= attachment_image_tag @user, :recipe_image, :fill, 60, 60, class: "img-circle pull-left profile-thumb"%>
               <%= f.attachment_field :recipe_image, placeholder: "プロフィール画像", class: "recipe-edit-form" %> 
           </div>
-          <div class="col-xs-6 recipe_newlist">
+    <div class="col-xs-6 recipe_newlist">
               <table>
                  <tbody>
-                    <tr>
+
+               
+                     <tr>
                       <th colspan="2"><span>レシピ名</span></th>
-                   </tr>
+ 
                     <tr>
                       <td colspan="2"><%= f.text_field :name , class: "form-control input-sm", id: "placeholder"%></td>
                     </tr>
@@ -29,13 +33,11 @@
                     </tr>
                     <tr>
                        <td><%= f.text_field :serving, class: "form-control form-rows", placeholder: "例）2" %>人分</td>
-                       <td><%= f.text_field :cooking_time, class: "form-control form-rows", placeholder: "例）15" %>分</td>
+                       <td><%= f.text_field :cooking_time, class: "form-control form-rows", placeholder: "例）15"%>分</td>
                    </tr>
                  </tbody>
               </table>
-     <%= f.fields_for :cooking_materials do |m| %>
-        <div class="material-title">
-          <table>
+              <table>
             <thead>
                <tr>
                   <th><span>材料</span></th>
@@ -46,42 +48,43 @@
                <tr>
           　　     <td>卵</td>
                   <td><%= f.text_field :egg_quantity, class: "form-control form-rows" ,placeholder: "例：中2個" %></td>
+               </tr>
+     <%= f.fields_for :cooking_materials do |m| %>
+          
+         
                <tr>
                 <%=  render partial: "users/recipes/cooking_materials_fields", locals: { f: m } %>
+               </tr>
             </tbody>
           </table>
-        </div>
+        
       <% end %>
-         <div class="links">
-           <%= link_to_add_association "追加", f, :cooking_materials , partial: "users/recipes/cooking_materials_fields" %> 
-         </div>
-     </div>
-   </div>
-    <h3><span>調理手順</span></h3>
-  <%= f.fields_for :cooking_procedures do |p| %>
+      <div class="links">
+         <%= link_to_add_association "追加", f, :cooking_materials , partial: "users/recipes/cooking_materials_fields" %> 
+      </div>
+    </div>
+</div>
   <div class="row">
-    
   <div class="procedure-title">
-
+    <h3><span>調理手順</span></h3>
     <div class="col-xs-12">
-         
-       <table>
-         <thead>
-            
-          </thead>
+  <%= f.fields_for :cooking_procedures do |p| %>
+　　　　<table>
          <tbody>
       　　   <%=  render partial: "users/recipes/cooking_procedures_fields", locals: { f: p } %></th>
          </tbody>
        </table>
-    
-
-  <% end %>
+   <% end %>
     <div class="links">
+      <tr>
       <%= link_to_add_association "追加", f, :cooking_procedures , partial: "users/recipes/cooking_procedures_fields" %> 
-    </div>
-    </div>
+      </tr>
+      </div>
+   </div>
   </div>
-  </div>
-  <%= f.submit "レシピ編集", class: "btn btn-warning col-xs-offset-3" %> 
+ </div>
+  <%= f.submit "レシピ編集", class: "btn btn-warning col-xs-offset-4" %> 
    <% end %>
 </div>
+</main>
+

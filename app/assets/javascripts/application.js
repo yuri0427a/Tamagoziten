@@ -161,9 +161,27 @@ $(function () {
                         //<をクリック
                         //directionが１かつimgContainerが０のときtrueになる
                         //.position()...特定のHTML要素の位置座標を取得することができるユニークなメソッド
+                        if (direcition == 1 && 0 <= $this.position().left) {
+                            resetPos = $this.position().left - $imgList.outerWidth();
+                            $this.css({ "left": resetPos });
+                        }
+                        //>をクリック
+                        if (direction == -1 && $imgList.outerWidth() <= Math.abs
+                            ($this.position().left)) {
+                            resetPos = $this.position().left + $imgList.outerWidth();
+                            $this.css({ "left": resetPos });
+                        }
 
 
                     }
                 });
     }
+});
+
+$('#myImage').on('change', function (e) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+        $("#preview").attr('src', e.target.result);
+    }
+    reader.readAsDataURL(e.target.files[0]);
 });
