@@ -22,32 +22,6 @@ $(document).ready(function () {
         $(this).css('color', 'red');
     });
 });
-//skipper
-//$(document).ready(function () {
-//$('#theTarget').skippr({
-// スライドショーの変化 ("fade" or "slide")
-//transition: 'slide',
-// 変化に係る時間(ミリ秒)
-//speed: 1000,
-// easingの種類
-//easing: 'easeOutQuart',
-// ナビゲーションの形("block" or "bubble")
-//navType: 'bubble',
-// 子要素の種類("div" or "img")
-// childrenElementType: 'div',
-// ナビゲーション矢印の表示(trueで表示)
-//arrows: true,
-// スライドショーの自動再生(falseで自動再生なし)
-//autoPlay: true,
-// 自動再生時のスライド切替間隔(ミリ秒)
-//autoPlayDuration: 3000,
-// キーボードの矢印キーによるスライド送りの設定(trueで有効)
-//keyboardOnAlways: true,
-// 一枚目のスライド表示時に戻る矢印を表示するかどうか(falseで非表示)
-//hidePrevious: false
-// });
-//});
-
 
 //recipe_title_placeholder(recipe_new)
 //placeholderのランダム表示
@@ -72,26 +46,7 @@ $(function () {
     $('#placeholder').prop('placeholder', list[r]);
 
 });
-//$(function () {
-// limits the number of categories
-//$('.fields-procrdures').on('cocoon:after-insert', function () {
-//check_to_hide_or_show_add_link();
-//});
 
-//$('.fields-procrdures').on('cocoon:after-remove', function () {
-//check_to_hide_or_show_add_link();
-//});
-
-//check_to_hide_or_show_add_link();
-
-
-
-//function check_to_hide_or_show_add_link(i) {
-//aaa = $('.procrdures-form').length
-//$('.step-number').text(aaa);
-// }
-
-//})
 
 //recipe_show accordion
 
@@ -176,12 +131,4 @@ $(function () {
                     }
                 });
     }
-});
-
-$('#myImage').on('change', function (e) {
-    var reader = new FileReader();
-    reader.onload = function (e) {
-        $("#preview").attr('src', e.target.result);
-    }
-    reader.readAsDataURL(e.target.files[0]);
 });
