@@ -50,9 +50,7 @@
                   <td><%= f.text_field :egg_quantity, class: "form-control form-rows" ,placeholder: "例：中2個" %></td>
                </tr>
      <%= f.fields_for :cooking_materials do |m| %>
-          
-         
-               <tr>
+             <tr>
                 <%=  render partial: "users/recipes/cooking_materials_fields", locals: { f: m } %>
                </tr>
             </tbody>
@@ -67,8 +65,7 @@
   <div class="row">
   <div class="procedure-title">
     <h3><span>調理手順</span></h3>
-    <div class="col-xs-12">
-  
+    <div class="col-xs-12"> 
 　　　　<table>
          <tbody>
          <%= f.fields_for :cooking_procedures do |p| %>
