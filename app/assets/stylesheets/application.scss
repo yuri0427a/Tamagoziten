@@ -26,17 +26,55 @@
   font-family: "HanziPen TC", sans-serif;
 }
 
+//header
 header {
   box-shadow: 0 3px 5px 0 #000;
 }
 
-.a {
-  background-color: #fff;
-  height: 100px;
+header > h1{
+  text-align: center;
 }
 
-.b {
+.area1 {
+  background-color: #fff;
+  height: 90px;
+  text-align: center;
+  
+}
+
+.area2 {
   background-color: #ffd700;
+  height: 20px;
+}
+
+a > ul {
+  margin: 0 auto;
+ 
+}
+
+
+.area1 > ul > li {
+  float: left;
+  width: 25%;
+  margin-top: 20px;
+  border-right : 1px double #000;
+}
+
+.header-link{
+  display: inline-block;
+  padding: 10px;
+  font-size: 20px;
+  color: #000;
+}
+
+.header-link:hover{
+  background-color: #ffd700;
+  border-radius: 5px;
+  transition: 0.3s;
+  text-decoration: none;
+  font-size: 30px;
+  color: #fff;
+  margin-top: -5px;
 }
 
 //top_page
@@ -279,3 +317,5 @@ a.next:hover {
 a.next:hover {
   right: 0;
 }
+
+

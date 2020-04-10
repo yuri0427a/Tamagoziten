@@ -66,11 +66,10 @@ $(function () {
     .find(".thumbs-list")
     .each(function () {
       var $this = $(this);
-      //#carouselの幅(繰り返すためにmargin,padding,border含んだ二倍の長さに)
-      var listWidth = $this.outerWidth() * 2;
+      //#carouselの幅(
+      var listWidth = $this.outerWidth();
       $this.parent().width(listWidth);
-      //クローンを作ってinsertAfter() </ul>の後に挿入
-      $this.clone().insertAfter($this);
+
     })
     //カルーセルの動き
     //直前のトラバースをキャンセルする働き

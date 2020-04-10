@@ -1,0 +1,16 @@
+
+<div class="containor">
+<header>
+    <h1>〜Tamagoziten〜</h1>
+  <nav class="area1">
+   <ul>
+    <li><%= link_to "マイページ", users_user_path(current_user.id), class: "header-link" %></li>
+    <li><%= link_to "レシピ", users_recipes_path, class: "header-link"  %></li>
+    <li><%= link_to "レシピ投稿", new_users_recipe_path , class: "header-link"  %></li>
+    <li><%= link_to "ログアウト", destroy_user_session_path, class: "header-link"  %></li>
+  </ul>
+  </nav>
+  <nav class="area2">
+  </nav>
+</header>
+</div>
