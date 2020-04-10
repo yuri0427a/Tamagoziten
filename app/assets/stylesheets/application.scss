@@ -215,7 +215,7 @@ footer > p {
 
 .tabcontent {
   position: relative;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .user-edit {
@@ -297,6 +297,10 @@ footer > p {
 }
 
 // my_recipe_page(user_show)
+
+.recipe-list-index{
+  margin-left: 80px;
+}
 
 .myrecipe:nth-child(odd) {
   border: #ffb6c1 5px double;
