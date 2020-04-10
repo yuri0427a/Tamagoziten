@@ -94,7 +94,7 @@ $(function () {
     var $imgContainer = $carousel.find(".thumbs");
 
     //移動量を計算
-    var move = direction * $carousel.width() + $imgContainer.position().left;
+    var move = (direction * $carousel.width())/3 + $imgContainer.position().left;
     //右に動く動作がないとき左に動くanimate()を指示する(移動がおかしくならないように)
     $imgContainer
       .filter(":not(:animated)")
