@@ -16,6 +16,8 @@ class Users::RecipesController < ApplicationController
     #@bookmarks = @recipe.recipe_favorites
   end
 
+  
+
   def new
     @recipe = Recipe.new
     @recipe.cooking_materials.build #build・・結びついてる物のnewと同じ働きをもつ
@@ -59,6 +61,10 @@ end
     recipe = Recipe.find(params[:id]) 
     recipe.destroy
     redirect_to users_user_path(current_user.id)
+  end
+
+  def preview
+    render template: 'users/show', layout: 'header'
   end
 
 
