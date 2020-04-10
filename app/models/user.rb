@@ -9,5 +9,5 @@ class User < ApplicationRecord
   has_many :recipe_reviews, dependent: :destroy
 
 #バリテーショ
- validates :name, presence: true, length: {maximum: 10}
+ validates :name, presence: true
 end
