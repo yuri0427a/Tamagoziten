@@ -63,10 +63,6 @@ end
     redirect_to users_user_path(current_user.id)
   end
 
-  def preview
-    render template: 'users/show', layout: 'header'
-  end
-
 
   private
 

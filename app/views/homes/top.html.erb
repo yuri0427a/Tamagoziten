@@ -5,6 +5,12 @@
   <p>
     <%= image_tag('hiyoko-i7.png') %>
   </p>
+  <%= link_to new_user_registration_path, class: "sign-up-btn" do %>
+    <%= image_tag('kumo-l.png') %>
+  <% end %>
+  <%= link_to user_session_path, class: "log-in-btn" do %>
+    <%= image_tag('kumo-r.png') %>
+  <% end %>
   <h1 class="app-title">たまご辞典</h1>
 
 </div>
