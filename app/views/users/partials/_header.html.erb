@@ -7,7 +7,7 @@
     <li><%= link_to "マイページ", users_user_path(current_user.id), class: "header-link" %></li>
     <li><%= link_to "レシピ", users_recipes_path, class: "header-link"  %></li>
     <li><%= link_to "レシピ投稿", new_users_recipe_path , class: "header-link"  %></li>
-    <li><%= link_to "ログアウト", destroy_user_session_path, data: {confirm: "本当にログアウトしますか？"}, class: "header-link"  %></li>
+    <li><%= link_to "ログアウト", destroy_user_session_path, data: {confirm: "ログアウトしますか？"}, class: "header-link"  %></li>
   </ul>
   </nav>
   <nav class="area2">

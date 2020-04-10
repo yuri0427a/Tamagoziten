@@ -211,6 +211,7 @@ ja:
     attributes:
       recipe:
         name: "レシピ名"
+        description: "説明"
         serving: "人分"
         cooking_time: "調理時間"
         egg_quantity: "卵の分量" 
