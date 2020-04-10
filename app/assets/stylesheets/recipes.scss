@@ -18,6 +18,8 @@ main{
     font-family: 'HanziPen TC',sans-serif;
  }
 
+ //recipe_index
+
 .recipe-index{
     text-align: center;
     font-size: 80px;
@@ -95,19 +97,20 @@ main{
 
 
 
+
 //recipe_new
 
 .nested-fields{
-    display: inline-flex;
-    margin-right: 30px;
-    margin-top: 10px;
+  display: inline-flex;
+  margin-right: 30px;
+  margin-top: 10px;
 }
 
 
 .fields-procrdures{
-    padding: 30px 30px;
-    margin-right: 30px;
-    border-radius: 3px;
+  padding: 30px 30px;
+  margin-right: 30px;
+  border-radius: 3px;
 }
 .input-sm{
   margin-bottom: 20px;
