@@ -47,7 +47,7 @@ header > h1{
   height: 20px;
 }
 
-a > ul {
+.area1t> ul {
   margin: 0 auto;
  
 }
@@ -215,7 +215,7 @@ footer > p {
 
 .tabcontent {
   position: relative;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .user-edit {
@@ -298,6 +298,10 @@ footer > p {
 
 // my_recipe_page(user_show)
 
+.recipe-list-index{
+  margin-left: 80px;
+}
+
 .myrecipe:nth-child(odd) {
   border: #ffb6c1 5px double;
   height: 300px;
@@ -330,7 +334,7 @@ footer > p {
 }
 
 .thumbs {
-  width:1400px;
+  width:2560px;
   position: relative;
   left: 0;
 }

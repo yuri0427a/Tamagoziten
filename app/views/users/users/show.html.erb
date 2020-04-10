@@ -1,4 +1,5 @@
-<%= render 'users/recipes/header' %>
+<%= render 'users/partials/header' %>
+
 <% if current_user != @user %>
   <div class="tab">
     <ul class="tabnav">
@@ -19,6 +20,7 @@
          </div>
              <p class="hiyoko2"><%= image_tag('hiyoko2.png')%></p>
              <p class="hiyoko"><%= image_tag('hiyoko.png')%></p>
+             <ul class="recipe-list-index">
          <% @userrecipes .each do |userrecipe| %>
             <li class="list-items myrecipe">
               <%= link_to users_recipe_path(userrecipe.id), class: "link-recepi" do %>
@@ -38,6 +40,7 @@
             </li>
             </div>
          <% end %>
+        </ul>
       </div>
    </div>
  <% else %>
@@ -73,6 +76,7 @@
           <%= @user.introduction %>
         </p>
       </div>
+      <ul class="recipe-list-index">
       <% @recipes.each do |recipe| %>
          <li class="list-items myrecipe">
             <%= link_to users_recipe_path(recipe.id), class: "link-recepi" do %>
@@ -90,7 +94,9 @@
                   <h3 class="recipe_title"><%= recipe.name %></>
             <% end %>
          </li> 
+        
       <% end %>
+       </ul>
       <span class="user-edit">Edit</span>
       <%= link_to  users_user_path(current_user.id) , class: "show-modal" do %>
          <%= image_tag('female_hand.png') %>
@@ -136,10 +142,15 @@
      </div>
    </div>
   </div>
+       
+ 
 <% end %>
+
 </div>
 
 <%# モーダルウィンドウ（user_edit） %>
+
+
 <%= form_for @user, url: users_user_path do |f| %>
   <div id="modalwin", class="modalwin out">
     <h1 class="edit-profile">〜Edit Profile〜</h1>

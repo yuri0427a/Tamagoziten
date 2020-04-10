@@ -1,4 +1,4 @@
-<%= render 'header' %>
+<%= render 'users/partials/header' %>
 <div class="recipe-show">
   <div class="container">
     <div class="row">
@@ -115,7 +115,7 @@
         <div class="thumbs clear">
             <div class="detail">
                 <ul class="thumbs-list">
-                  <% @recipe.recipe_reviews.limit(5).each do |review| %>
+                  <% @recipe.recipe_reviews.order('id DESC').limit(10).each do |review| %>
                       <li class="list-items recipe-review">
                          <p><%= attachment_image_tag review, :cooking_image, :fill, 200, 150, fallback: "no_image.jpg", size: "200x150"%></p>
                          <h3 class="recipe-title"><%= link_to review.user.name, users_user_path(@recipe.user.id) %></h3>
@@ -150,3 +150,4 @@
  <% end %>
 </div>
 </div>
+<%= render 'users/partials/footer' %>
