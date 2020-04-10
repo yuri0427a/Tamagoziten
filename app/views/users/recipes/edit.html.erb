@@ -1,5 +1,5 @@
-<%= render 'header' %>
-<div class="container">
+<%= render 'users/partials/header' %>
+
   <main class="recipi-page">
 <div class="col-xs-offset-2">
    <ul>
@@ -84,8 +84,10 @@
    </div>
   </div>
  </div>
-  <%= f.submit "レシピ編集", class: "btn btn-warning col-xs-offset-4" %> 
+  <%= f.submit "レシピ編集", class: "btn btn-warning col-xs-offset-4", style: "margin-bottom: 30px;" %> 
    <% end %>
 </div>
 </main>
+
+<%= render 'users/partials/footer' %>
 

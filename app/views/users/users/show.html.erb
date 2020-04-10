@@ -1,4 +1,4 @@
-<%= render 'users/recipes/header' %>
+<%= render 'users/partials/header' %>
 
 <% if current_user != @user %>
   <div class="tab">
@@ -137,14 +137,17 @@
             </div>
            <% end %> 
          </li> 
-         
         <% end %>
       </ul>
      </div>
    </div>
   </div>
+       
+ 
 <% end %>
+
 </div>
+
 <%# モーダルウィンドウ（user_edit） %>
 
 
