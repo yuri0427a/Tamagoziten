@@ -1,6 +1,6 @@
 class Users::RecipesController < ApplicationController
   before_action :authenticate_user!
-  PER = 9
+  PER = 6
 
   def index
     @recipes = Recipe.page(params[:page]).per(PER)

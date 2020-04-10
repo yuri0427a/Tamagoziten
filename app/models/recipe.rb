@@ -11,7 +11,7 @@ class Recipe < ApplicationRecord
         recipe_favorites.where(user_id: user.id).exists?
     end
 
-    validates :name, presence: true, length: {maximum: 10}
+    validates :name, presence: true, length: {maximum: 15}
     validates :description, length: {maximum: 30}
     validates :egg_quantity, presence: true
     validates :serving, presence: true
