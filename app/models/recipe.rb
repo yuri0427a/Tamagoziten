@@ -16,4 +16,5 @@ class Recipe < ApplicationRecord
     validates :egg_quantity, presence: true
     validates :serving, presence: true
     validates :cooking_time, presence: true
+    
 end

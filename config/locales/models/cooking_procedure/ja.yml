@@ -1,0 +1,7 @@
+ja: 
+  activerecord:
+    models:
+      cooking_procedure: "調理手順"
+    attributes:
+      cooking_procedure:
+        Cooking procedures procedure description: "調理手順"

@@ -1,3 +1,4 @@
+<%= render 'header' %>
 <div class="recipe-show">
   <div class="container">
     <div class="row">
@@ -21,7 +22,7 @@
           </li>
         <% else %>
            <li>
-             <%= link_to users_recipe_favorite_path(@recipe), class: "bookmark-recipe-show", method: :post do %>
+          <%= link_to users_recipe_favorite_path(@recipe), class: "bookmark-recipe-show", method: :post do %>
                 <i class="glyphicon glyphicon-star-empty" aria-hidden="true"></i>
                 レシピ保存
              <% end %>

@@ -19,13 +19,14 @@
               <%= f.password_field :password, autocomplete: "new-password", class:"form-control" %>
            </div>
            <div class="field">
-               <%= f.label "パスワード" %><br />
+               <%= f.label "パスワード確認" %><br />
                <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form-control" %>
            </div>
          <div class="actions">
              <%= f.submit "Sign up", class: "btn signup" %>
          </div>
       <% end %>
+      <%= render "devise/shared/links" %>
    </div>
 </div>
 

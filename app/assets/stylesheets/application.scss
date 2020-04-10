@@ -14,287 +14,361 @@
  *= require_self
  */
 
- @import "bootstrap-sprockets"; 
- @import "bootstrap"; 
- @import "font-awesome";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
 
-*{
-   margin: 0;
-   padding: 0;
-   list-style: none;
-   box-sizing: border-box;
-   font-family: 'HanziPen TC',sans-serif;
-   
-}
-header{
-   box-shadow: 0 3px 5px 0 #000;
-   
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "HanziPen TC", sans-serif;
 }
 
-.a{
-   background-color: #fff;
-   height: 100px;
-
-}
-.b{
-   background-color:#ffd700;
+//header
+header {
+  box-shadow: 0 3px 5px 0 #000;
 }
 
+header > h1{
+  text-align: center;
+}
+
+.area1 {
+  background-color: #fff;
+  height: 90px;
+  text-align: center;
+  
+}
+
+.area2 {
+  background-color: #ffd700;
+  height: 20px;
+}
+
+a > ul {
+  margin: 0 auto;
+ 
+}
+
+
+.area1 > ul > li {
+  float: left;
+  width: 25%;
+  margin-top: 20px;
+  border-right : 1px double #000;
+}
+
+.header-link{
+  display: inline-block;
+  padding: 10px;
+  font-size: 20px;
+  color: #000;
+}
+
+.header-link:hover{
+  background-color: #ffd700;
+  border-radius: 5px;
+  transition: 0.3s;
+  text-decoration: none;
+  font-size: 30px;
+  color: #fff;
+  margin-top: -5px;
+}
+
+//footer
+
+footer{
+  height: 100px;
+  background-color: #ffd700;
+  
+}
+
+footer > p {
+  text-align: center;
+  line-height:100px;
+  font-size: 20px;
+}
 //top_page
 
-.start{
-   background-image: url('egg-sandwich.jpg');
-   height: 800px;
-   background-repeat: no-repeat;
-   background-position: under;
-   background-size: cover;
-   position: relative;
-   width: 100%;
-   position: relative;
+.start {
+  background-image: url("egg-sandwich.jpg");
+  height: 800px;
+  background-repeat: no-repeat;
+  background-position: under;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  position: relative;
 }
 
-.start p{
+.start p {
   position: absolute;
   top: 30px;
   left: 500px;
-  padding:20px;
-}
-.app-title{
-   font-size: 200px;
-   background-color: #f0e68c;
-   border-radius: 10px;
-   position: absolute;
-   top:430px;
-   left: 200px;
-   
-   
+  padding: 20px;
 }
 
+.app-title {
+  font-size: 200px;
+  background-color: #f0e68c;
+  border-radius: 10px;
+  position: absolute;
+  top: 430px;
+  left: 200px;
+}
+
+.sign-up-btn{
+  position: absolute;
+  top: 60px;
+  left: 400px;
+}
+
+
+.log-in-btn{
+  position: absolute;
+  top: 60px;
+  right: 360px;
+}
+
+.sign-up-btn:hover{
+  position: absolute;
+  top: 40px;
+  left: 400px;
+}
+
+.log-in-btn:hover{
+  position: absolute;
+  top: 40px;
+  right: 360px;
+}
+.sign-up-btn:active{
+  position: absolute;
+  top: 50px;
+  left: 400px;
+}
+
+
+.log-in-btn:active{
+  position: absolute;
+  top: 50px;
+  right: 360px;
+}
 
 
 
 //lonin_pagesignup page(devise)
 
-.field{
-   margin: 5px 0 10px 0;
+.field {
+  margin: 5px 0 10px 0;
 }
 
-.form-control:focus{
-border: 4px groove #ffa500;
- outline: 0;
- box-shadow: none;
+.form-control:focus {
+  border: 4px groove #ffa500;
+  outline: 0;
+  box-shadow: none;
 }
 
-.btn{
-   padding: 10px 40px;
-   border-radius: 50px;
+.btn {
+  padding: 10px 40px;
+  border-radius: 50px;
 }
 
-.devise-title{
-   font-style: bold;
+.devise-title {
+  font-style: bold;
 }
 
-.login{
-   border: 1px solid orange;
-   color: orangered;
-   margin: 10px 0 0 170px;
-}
-.signup{
-   margin: 10px 0 0 160px;
-   color: orangered;
-   border: 1px solid orange
+.login {
+  border: 1px solid orange;
+  color: orangered;
+  margin: 10px 0 0 170px;
 }
 
-
-.login:hover{
-background-color: orangered;
-color: #fff;
+.signup {
+  margin: 10px 0 0 160px;
+  color: orangered;
+  border: 1px solid orange;
 }
 
-.signup:hover{
-background-color: orangered;
-color: #fff;
+.login:hover {
+  background-color: orangered;
+  color: #fff;
+}
+
+.signup:hover {
+  background-color: orangered;
+  color: #fff;
 }
 
 //error-message
 
-.error{
-   color: red;
+.error {
+  color: red;
 }
 
- 
- 
-
- .container{
-     margin-top: 50px;
-     
- }
-
- //mypage
-
-.tabcontent{
-   position: relative;
+.container {
+  margin-top: 50px;
 }
 
-.user-edit{
-    position: absolute;
-    font-size: 30px;
-    top: 210px;
-    left: 160px;
-    transform: rotate(-45deg);
-}
- .show-modal{
-    padding: 50px 70px;
-    border-radius: 100px;
-    position: absolute;
-    top: -300px;
-    left: 20px;
-   
-    
- }
-  .show-modal:hover{
-    padding: 50px 70px;
-    border-radius: 100px;
-    position: absolute;
-    top: -320px;
-    left: 20px;
-    opacity: 0.7;
-    text-decoration: none;
- }
+//mypage
 
- .hiyoko{
-    position: absolute;
-    top: 40px;
-    right: 100px;
-  
- }
-
-  .hiyoko2{
-   position: absolute;
-    top: 90px;
-    left: 100px;
-  }
-
-
-
- // recipe_bookmark_page(user_show)
-
-
- .heading-title{
-    text-align: center;
-    font-size: 70px;
- }
- .bookmark-heading-image{
-    margin-left: 370px;
- }
-
-.bookmark:nth-child(even){
-   border: #deb887 5px double;
-   float: left;
+.tabcontent {
+  position: relative;
+  margin-top: 50px;
 }
 
-.bookmark:nth-child(odd){
-   border: #f0e68c 5px double;
-   float: left;
+.user-edit {
+  position: absolute;
+  font-size: 30px;
+  top: 210px;
+  left: 160px;
+  transform: rotate(-45deg);
 }
 
-
-.bookmark:nth-child(even):hover{
-   border: #deb887 12px double;
-   opacity: 0.7;
+.show-modal {
+  padding: 50px 70px;
+  border-radius: 100px;
+  position: absolute;
+  top: -150px;
+  left: 20px;
 }
 
-.bookmark:nth-child(odd):hover{
-   border: #f0e68c 12px double;
-   opacity: 0.7;
+.show-modal:hover {
+  padding: 50px 70px;
+  border-radius: 100px;
+  position: absolute;
+  top: -170px;
+  left: 20px;
+  opacity: 0.7;
+  text-decoration: none;
 }
 
-.bookmark-description{
-   text-align: justify;
+.hiyoko {
+  position: absolute;
+  top: 40px;
+  right: 100px;
 }
 
-.bookmark-item{
-   float: left;
-   margin-left: 50px;
+.hiyoko2 {
+  position: absolute;
+  top: 90px;
+  left: 100px;
 }
 
- // my_recipe_page(user_show)
+// recipe_bookmark_page(user_show)
 
- 
-
-.myrecipe:nth-child(odd){
-   border: #ffb6c1 5px double;
-   height: 300px;
+.heading-title {
+  text-align: center;
+  font-size: 70px;
 }
 
-.myrecipe:nth-child(even){
-   border: #f0e68c 5px double;
-   height: 300px;
+.bookmark-heading-image {
+  margin-left: 370px;
 }
 
+.bookmark:nth-child(even) {
+  border: #deb887 5px double;
+  float: left;
+}
 
-.myrecipe:nth-child(even):hover{
-   border: #f0e68c  15px double;
-   opacity: 0.7;
-   transition: 0.1s;}
+.bookmark:nth-child(odd) {
+  border: #f0e68c 5px double;
+  float: left;
+}
 
-   .myrecipe:nth-child(odd):hover{
-   border: #ffb6c1 15px double;
-   opacity: 0.7;
-   transition: 0.1s;
-   }
+.bookmark:nth-child(even):hover {
+  border: #deb887 12px double;
+  opacity: 0.7;
+}
+
+.bookmark:nth-child(odd):hover {
+  border: #f0e68c 12px double;
+  opacity: 0.7;
+}
+
+.bookmark-description {
+  text-align: justify;
+}
+
+.bookmark-item {
+  float: left;
+  margin-left: 50px;
+}
+
+// my_recipe_page(user_show)
+
+.myrecipe:nth-child(odd) {
+  border: #ffb6c1 5px double;
+  height: 300px;
+}
+
+.myrecipe:nth-child(even) {
+  border: #f0e68c 5px double;
+  height: 300px;
+}
+
+.myrecipe:nth-child(even):hover {
+  border: #f0e68c 15px double;
+  opacity: 0.7;
+  transition: 0.1s;
+}
+
+.myrecipe:nth-child(odd):hover {
+  border: #ffb6c1 15px double;
+  opacity: 0.7;
+  transition: 0.1s;
+}
 
 //carousel(recipe_show review）
 //サムネイル増えても１列に並ぶよう配置
 
-.carousel{
-   position: relative;
-   overflow: hidden; 
-   width:100%;
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
 }
 
-.thumbs{
-  width: 10000px;
+.thumbs {
+  width:1400px;
   position: relative;
   left: 0;
 }
 
 //carousel 矢印ボタン(recipe_show review）
 
-.thunmb-nav a{
+.thunmb-nav a {
   display: block;
   position: absolute;
   bottom: 159px;
   width: 64px;
   height: 64px;
   background-image: url("recipe_show/yazirushi.png");
-  
 }
 
 a.prev {
-   left: 0;
+  left: 0;
   background-position: 0 64px;
   transform: rotate(180deg);
 }
-a.prev:hover{
-   float: left;
-   opacity: 0.7;
+
+a.prev:hover {
+  float: left;
+  opacity: 0.7;
+}
+
+a.next {
+  right: 0;
+  background-position: 0 0;
+}
+
+a.next:hover {
+  right: 0;
+  opacity: 0.7;
+}
+
+a.next:hover {
+  right: 0;
 }
 
 
-
-a.next{
-   right: 0;
-   background-position: 0 0;
-}
-
-a.next:hover{
-   right: 0;
-   opacity: 0.7;
-}
-
-
-a.next:hover{
-   right: 0;
-
-}

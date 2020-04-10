@@ -16,6 +16,8 @@ class Users::RecipesController < ApplicationController
     #@bookmarks = @recipe.recipe_favorites
   end
 
+  
+
   def new
     @recipe = Recipe.new
     @recipe.cooking_materials.build #build・・結びついてる物のnewと同じ働きをもつ
