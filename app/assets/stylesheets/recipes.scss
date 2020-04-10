@@ -37,7 +37,6 @@ main{
 }
 .reshipe-image{
     display: block;
-   
 }
 
 
@@ -154,13 +153,13 @@ main{
 
 .icon:hover{
     font-size: 40px;
-     margin-bottom: 10px;
-     color: orange;
-     opacity: 0.7;
+    margin-bottom: 10px;
+    color: orange;
+    opacity: 0.7;
 }
 
 .bookmark-recipe-show{
- font-size: 20px;
+    font-size: 20px;
 }
 .user-recipe-name{
   font-size: 20px;
@@ -179,13 +178,12 @@ main{
     border-bottom: 2px dotted #a9a9a9;
 }
   //recipe_review
-   .recipe-review{
-      border: solid 3px yellow;
-      width: 250px;
+.recipe-review{
+    border: solid 3px yellow;
+    width: 250px;
    }
-   .review-paragraph{
-       margin: 30px 0 5px 0;
-       
+.review-paragraph{
+    margin: 30px 0 5px 0;
    }
 
 //recipe_show
