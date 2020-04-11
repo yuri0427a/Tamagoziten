@@ -93,7 +93,7 @@ footer > p {
 //top_page
 
 .start {
-  background-image: url("egg-sandwich.jpg");
+  background-image: image-url("egg-sandwich.jpg");
   height: 800px;
   background-repeat: no-repeat;
   background-position: under;
@@ -349,7 +349,7 @@ footer > p {
   bottom: 159px;
   width: 64px;
   height: 64px;
-  background-image: url("recipe_show/yazirushi.png");
+  background-image: image-url("recipe_show/yazirushi.png");
 }
 
 a.prev {
