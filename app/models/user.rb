@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :recipe_favorites, dependent: :destroy
   has_many :recipe_reviews, dependent: :destroy
 
-#バリテーショ
- validates :name, presence: true
+
+ validates :name, presence: true, length: {maximum: 10}
+ validates :introduction, presence: true, length: {maximum: 15}
 end
