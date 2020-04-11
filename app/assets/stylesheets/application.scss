@@ -49,7 +49,7 @@ header > h1{
 
 .area1t> ul {
   margin: 0 auto;
- 
+
 }
 
 
@@ -159,6 +159,16 @@ footer > p {
 
 
 //lonin_pagesignup page(devise)
+
+.devise_win{
+  background-image: image-url('egg-top-pc.jpg');
+  height: 800px;
+  background-repeat: no-repeat;
+  background-position: 500p;;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+}
 
 .field {
   margin: 5px 0 10px 0;
