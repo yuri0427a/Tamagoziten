@@ -16,7 +16,7 @@ before_action :authenticate_user!
         if user.update(user_params)
           redirect_to users_user_path(current_user.id), notice: "プロフィールを編集しました！"
         else
-           render :show 
+          redirect_to users_user_path(current_user.id)
         end
     end
 

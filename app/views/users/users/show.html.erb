@@ -160,7 +160,7 @@
       <%= f.text_field :name , class: "form-control input-sm", placeholder: "10文字以内"%>
     </lavel>
     <h4 class="profile-name">自己紹介</h4>
-    <%= f.text_area :introduction, class: "form-control input-sm" %><br>
+    <%= f.text_area :introduction, class: "form-control input-sm", placeholder: "20文字以内" %><br>
    <%= f.submit "Update", class: "btn btn-danger" %>
    <%= link_to users_user_path(current_user.id), class: "modal-close" do %>
      <%= image_tag "icon_16-1.jpg", class: "modal-close" %>
