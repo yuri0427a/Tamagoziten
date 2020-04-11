@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 2020_04_07_071229) do
     t.string "description"
     t.string "recipe_image_id"
     t.integer "serving", null: false
-    t.integer "cooking_treime", null: false
+    t.integer "cooking_time", null: false
     t.string "egg_quantity", null: false
     t.boolean "publishing_status", default: true, null: false
     t.datetime "created_at", null: false
