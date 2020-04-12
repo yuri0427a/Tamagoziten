@@ -5,7 +5,7 @@
       〜Recipe Page〜
     </h1>
       <ul class="recipe-index-ul">
-        <% @recipes.each do |recipe| %>
+        <% @recipes.order('id DESC').each do |recipe| %>
           <li class="lists-items index">
             <%= link_to users_recipe_path(recipe.id), class: "link-recepi" do %>
              <%= attachment_image_tag recipe, :recipe_image, :fill, 230, 130, class: "reshipe-image", fallback: "no_image.jpg", size: "230x130", alt: "料理画像" %>
