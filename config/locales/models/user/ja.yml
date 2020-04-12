@@ -209,5 +209,5 @@ ja:
       user: "会員"
     attributes:
       user:
-        name: "ユーザー名"
+        name: ""
         introduction: "自己紹介"
