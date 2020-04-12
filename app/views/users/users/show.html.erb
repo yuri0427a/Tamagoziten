@@ -10,7 +10,7 @@
       <div id="tab01">
           <div class="col-xs-offset-4">
             <h1>Profile...</h1>
-               <p><%= attachment_image_tag @user, :profile_image, :fill, 300, 300, format: "jpeg", class: "profile-image", fallback: "no_image.jpg", size: "300x300" %>
+               <p><%= attachment_image_tag @user, :profile_image, :fill, 300, 300, format: "jpeg", class: "profile-image", fallback: "no_image.jpg", size: "300x300", alt: "プロフ画像" %>
                   <lavel class="user-name">
                     <span>I am</span>
                     <%= @user.name %>
@@ -24,7 +24,7 @@
          <% @userrecipes .each do |userrecipe| %>
             <li class="list-items myrecipe">
               <%= link_to users_recipe_path(userrecipe.id), class: "link-recepi" do %>
-                  <%= attachment_image_tag userrecipe, :recipe_image, :fill, 230, 130, class: "reshipe-image", fallback: "no_image.jpg", size: "230x130"  %>
+                  <%= attachment_image_tag userrecipe, :recipe_image, :fill, 230, 130, class: "reshipe-image", fallback: "no_image.jpg", size: "230x130", alt:"レシピ画像"  %>
                     <div class="detail">
                        <p class="recipe_icon">
                          <i class="glyphicon glyphicon-time"></i>
@@ -76,7 +76,7 @@
         </p>
          <h1>Profile...</h1>
         <p>
-          <%= attachment_image_tag @user, :profile_image, :fill, 300, 300, format: "jpeg", class: "profile-image", fallback: "no_image.jpg", size: "300x300" %>
+          <%= attachment_image_tag @user, :profile_image, :fill, 300, 300, format: "jpeg", class: "profile-image", fallback: "no_image.jpg", size: "300x300", alt: "プロフ画像" %>
             <lavel class="user-name">
               <span>I am</span>
               <%= current_user.name %>
@@ -90,7 +90,7 @@
       <% @recipes.each do |recipe| %>
          <li class="list-items myrecipe">
             <%= link_to users_recipe_path(recipe.id), class: "link-recepi" do %>
-               <%= attachment_image_tag recipe, :recipe_image, :fill, 230, 130, class: "reshipe-image", fallback: "no_image.jpg", size: "230x130"  %>
+               <%= attachment_image_tag recipe, :recipe_image, :fill, 230, 130, class: "reshipe-image", fallback: "no_image.jpg", size: "230x130", alt:"レシピ画像" %>
                   <div class="detail">
                      <p class="recipe_icon">
                        <i class="glyphicon glyphicon-time"></i>
@@ -128,7 +128,7 @@
          <li class="list-items bookmark">
            <%= link_to users_recipe_path(bookmark.recipe.id), class: "link-recepi" do %>
              <div class="bookmark-image">
-              <%= attachment_image_tag bookmark.recipe, :recipe_image, :fill, 230, 150, class: "reshipe-image", fallback: "no_image.jpg", size: "230x150" %>
+              <%= attachment_image_tag bookmark.recipe, :recipe_image, :fill, 230, 150, class: "reshipe-image", fallback: "no_image.jpg", size: "230x150", alt:"レシピ画像" %>
              </div>
             <div class="detail">
               <h3 class="recipe_title">
