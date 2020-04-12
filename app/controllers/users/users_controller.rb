@@ -12,11 +12,11 @@ before_action :authenticate_user!
     end
 
     def update
-        user = User.find(params[:id])
-        if user.update(user_params)
+        @user = User.find(params[:id])
+        if @user.update(user_params)
           redirect_to users_user_path(current_user.id), notice: "プロフィールを編集しました！"
         else
-          redirect_to users_user_path(current_user.id)
+          redirect_to users_user_path(@user.id), flash: { error: @user.errors.full_messages }
         end
     end
 
