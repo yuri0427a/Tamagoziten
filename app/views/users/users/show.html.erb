@@ -61,6 +61,16 @@
   <div class="tabcontent">
     <div id="tab01">
       <div class="col-xs-offset-4">
+  <% if flash[:error].present? %>
+    <ul>
+      <% flash[:error].each do |message| %>
+      <li class="error">
+        <i class="glyphicon glyphicon-star" aria-hidden="true"></i>
+        <%= message %>
+      </li> 
+  c<% end %>
+    </ul>
+<% end %>
         <p id="notice">
           <%=  notice %>
         </p>

@@ -6,6 +6,8 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
+//modalwindow
+
 $(function () {
     //モーダルウィンドウを開く
     function showModal(event) {
