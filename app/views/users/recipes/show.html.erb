@@ -29,7 +29,10 @@
               レシピ保存
              <% end %>
            </li>
-        <% end %>    
+        <% end %> 
+        <li class="create-time">
+          <span>投稿日:</span><%= @recipe.created_at.to_s(:datetime_jp) %>
+        </li>   
     </div>
   </div>
   <div class="row">
