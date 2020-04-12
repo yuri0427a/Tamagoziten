@@ -7,7 +7,6 @@ class CreateRecipes < ActiveRecord::Migration[5.2]
       t.integer :serving,               null: false 
       t.integer :cooking_time,          null: false 
       t.integer :egg_quantity,          null: false 
-      t.boolean :publishing_status,     default: true,  null: false 
 
       t.timestamps
     end
