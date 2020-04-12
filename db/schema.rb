@@ -51,7 +51,6 @@ ActiveRecord::Schema.define(version: 2020_04_07_071229) do
     t.integer "serving", null: false
     t.integer "cooking_time", null: false
     t.string "egg_quantity", null: false
-    t.boolean "publishing_status", default: true, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
@@ -63,7 +62,7 @@ ActiveRecord::Schema.define(version: 2020_04_07_071229) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.string "name", default: "", null: false
+    t.string "name", null: false
     t.string "introduction"
     t.string "profile_image_id"
     t.datetime "created_at", null: false
