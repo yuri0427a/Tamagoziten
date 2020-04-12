@@ -2,7 +2,9 @@
 <div class="recipe-show">
   <div class="container">
     <div class="row">
-      <p id="check_message"><%= flash[:check_message] %></p>
+      <p id="notice">
+          <%=  notice %>
+        </p>
         <div class="col-xs-7">
           <%= link_to fa_icon("twitter"), "https://twitter.com/share?url=#{request.url}", title: 'Twi', target: '_blank', class: 'icon' %>
           <%= link_to fa_icon("facebook"), "https://www.facebook.com/sharer/sharer.php?u=#{request.url}&text=タイトル", title: 'Facebook', target: '_blank', class: 'icon' %>
@@ -33,7 +35,7 @@
   <div class="row">
      <div class="col-xs-7 ">
        <div class="recipe-image">
-         <%= attachment_image_tag @recipe, :recipe_image, :fill, 600, 600, class: " pull-left profile-thumb", fallback: "no_image.jpg", size: "600x600"%>
+         <%= attachment_image_tag @recipe, :recipe_image, :fill, 600, 600, class: " pull-left profile-thumb", alt: "料理画像", fallback: "no_image.jpg", size: "600x600"%>
        </div>
     </div>
     <div class="col-xs-5">
@@ -66,16 +68,16 @@
           <div class="row">
             <div class="col-xs-5">
      <h3 class="item-title">
-  　　　　　　　　 材料(<%= @recipe.serving %>人分)
-  　　　　　　</h3>
-  　　　　　　 <table>
+            材料(<%= @recipe.serving %>人分)
+          </h3>
+            <table>
                  <tr>
                    <td>
                       卵
                    </td>
                    <td>
-            　　     <%= @recipe.egg_quantity %>
-        　　       </td>
+                   <%= @recipe.egg_quantity %>
+                 </td>
                  </tr>
                  <% @materials.each do |material| %>
                     <tr>
@@ -83,13 +85,13 @@
                           <%= material.material_name %>
                        </td>
                         <td>
-                　　       <%= material.material_quantity %>
-            　　        </td>
+                         <%= material.material_quantity %>
+                      </td>
                     </tr>
-　　　　　　　      <% end %>
-  　　　　　　</table>
-  　　</div>
-  　　<div class="col-xs-7">
+             <% end %>
+          </table>
+    </div>
+    <div class="col-xs-7">
 
                <h3>作り方</h3>
           <% @procedures.each.with_index(1) do |procedure, idx| %>
@@ -108,7 +110,7 @@
   <p class="review-paragraph">
     作成者さんに伝えよう♪
   </p>     
-  <h2>〜作りました！review〜</h2>　
+  <h2>〜作りました！review〜</h2> 
 </div>
 <div class="review">
     <div class="carousel" id="carousel">
