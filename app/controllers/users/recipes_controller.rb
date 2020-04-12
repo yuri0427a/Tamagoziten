@@ -49,8 +49,7 @@ end
 
   def update
     @recipe = Recipe.find(params[:id]) 
-    @recipe.update(recipe_params)
-    if @recipe.save
+   if @recipe.update(recipe_params)
      redirect_to users_recipe_path(@recipe.id), notice: "レシピを編集しました！"
      else
      render :edit

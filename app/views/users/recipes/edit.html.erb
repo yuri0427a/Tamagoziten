@@ -1,6 +1,6 @@
 <%= render 'users/partials/header' %>
-
-  <main class="recipi-page">
+<div class="container">
+<main class="recipi-page">
 <div class="col-xs-offset-2">
    <ul>
       <% @recipe.errors.full_messages.each do |message| %>
@@ -88,6 +88,6 @@
    <% end %>
 </div>
 </main>
-
+</div>
 <%= render 'users/partials/footer' %>
 
