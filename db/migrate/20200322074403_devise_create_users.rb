@@ -13,7 +13,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
 
       ## Rememberable
       t.datetime :remember_created_at
-      t.string :name,            null: false
+      t.string :name,            null: false, default: ""
       t.string :introduction
       t.string :profile_image_id
       t.string :email,              null: false, default: ""
