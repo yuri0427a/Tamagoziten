@@ -215,5 +215,5 @@ ja:
         serving: "人分"
         cooking_time: "調理時間"
         egg_quantity: "卵の分量" 
-      cooking_procedure:
-        Cooking procedures procedure description: "調理手順"
+    　　recipe/cooking_procedure:
+          procedure_description: "調理手順"
