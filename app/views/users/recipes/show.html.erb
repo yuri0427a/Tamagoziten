@@ -67,10 +67,11 @@
         <div class="content">
           <div class="row">
             <div class="col-xs-5">
-     <h3 class="item-title">
-            材料(<%= @recipe.serving %>人分)
-          </h3>
-            <table>
+             <h3 class="item-title">
+                材料(<%= @recipe.serving %>人分)
+             </h3>
+               <table>
+              
                  <tr>
                    <td>
                       卵
@@ -90,7 +91,7 @@
                     </tr>
              <% end %>
           </table>
-    </div>
+      </div>
     <div class="col-xs-7">
 
                <h3>作り方</h3>
@@ -139,7 +140,7 @@
       <div class="row">
           <div class="col-sm-12">
               <%= f.attachment_field :cooking_image, placeholder: "プロフィール画像", class: "review-image-form" %>
-              <%= f.text_area :impression, rows:'5', class: "form-control",　placeholder: "レビューここに記入♪" %>
+              <%= f.text_area :impression, rows:'5', class: "form-control", placeholder: "レビューここに記入♪" %>
           </div>
       </div>
       <%= f.submit "送信する", class: "btn btn-lg btn-base-1 mt-20 pull-right" %>
