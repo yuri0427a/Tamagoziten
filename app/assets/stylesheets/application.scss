@@ -278,6 +278,18 @@ footer > p {
   border: 1px solid orange;
 }
 
+.signup-go{
+  display: inline-block;
+  margin-top: 30px;
+  margin-left: 160px;
+}
+
+.login-go{
+  display: inline-block;
+  margin-top: 30px;
+  margin-left: 130px;
+}
+
 .login:hover {
   background-color: orangered;
   color: #fff;
@@ -295,14 +307,26 @@ footer > p {
   }
 
   .signup {
-    margin: 10px 0 10px 40px;
+    margin: 10px 0 10px 50px;
   }
   .login {
-    margin: 10px 0 10px 40px;
+    margin: 10px 0 10px 50px;
   }
 
   .login_form{
     margin-top: 80px;
+  }
+
+  .signup-go{
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 50px;
+  }
+  
+  .login-go{
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 10px;
   }
 
 }
