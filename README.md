@@ -68,8 +68,8 @@ gem 'jquery-rails'
 gem 'cocoon'
 gem 'jquery-rails' 
 
-### 
-gem "refile", require: "refile/rails", github: 'manfe/refile' 
+### 画像投稿機能
+gem "refile" 
 gem "refile-mini_magick" 
 
 ### ページネーション機能
