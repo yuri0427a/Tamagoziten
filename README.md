@@ -64,11 +64,11 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'font-awesome-rails'
 gem 'jquery-rails' 
 
-###　動的フォーム実装
+### 動的フォーム実装機能
 gem 'cocoon'
 gem 'jquery-rails' 
 
-###　画像投稿
+### 
 gem "refile", require: "refile/rails", github: 'manfe/refile' 
 gem "refile-mini_magick" 
 
