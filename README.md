@@ -26,6 +26,7 @@
 ・料理に興味があり、食に関する健康を気にする20代〜50代男女
 ・料理はしたいが、時間があまり取れないユーザー
 ・栄養学に興味があるユーザー
+・料理好きなユーザー
 
 ### 主な利用シーン
 ・レシピを確認し調理をする際
@@ -46,4 +47,37 @@ https://drive.google.com/file/d/1xYbq2cULtz1LSRfu_623gZJwr26_mLEC/view?usp=shari
 https://docs.google.com/spreadsheets/d/12jTgrjX73fzKWKoU9TxtXdk1oHdnoYRS/edit#gid=2039032075
 
 ### 機能一覧
-https://docs.google.com/spreadsheets/
+https://docs.google.com/spreadsheets/d/1IXXbrOzEMknkBaVxdGBFGR2QaDzeW80pfZs3BtbrwBA/edit?usp=sharing
+
+## gem一覧
+
+### デバック
+gem 'pry-byebug'
+gem 'pry-doc'
+gem 'pry-rails'
+
+### ログイン機能
+gem 'devise' 
+
+### レイアウト
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'font-awesome-rails'
+gem 'jquery-rails' 
+
+###　動的フォーム実装
+gem 'cocoon'
+gem 'jquery-rails' 
+
+###　画像投稿
+gem "refile", require: "refile/rails", github: 'manfe/refile' 
+gem "refile-mini_magick" 
+
+### ページネーション機能
+gem 'kaminari', '~> 0.17.0' 
+
+### バリデーション日本語化
+gem 'devise-i18n'
+gem 'devise-i18n-views'
+
+### デプロイ
+gem 'mysql2'
