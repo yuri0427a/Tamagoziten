@@ -1,9 +1,26 @@
 
 
+<nav class="sm-header">
+<div class="area1">
+<ul>
+  <li>
+    <%= link_to "新規登録", user_session_path, class: "header-link" %>
+  </li>
+  <li>
+    <%= link_to "ログイン", user_session_path, class: "header-link" %>
+  </li>
+</ul>
+</div>
+<div class="area2">
+</div>
+</nav>
 <div class="start">
 
-  <p>
+  <p class="pc-niwatori">
     <%= image_tag('hiyoko-i7.png') %>
+  </p>
+  <p class="sm-niwatori">
+    <%= image_tag('niwatori.png') %>
   </p>
   <%= link_to new_user_registration_path, class: "sign-up-btn" do %>
     <%= image_tag('kumo-l.png') %>

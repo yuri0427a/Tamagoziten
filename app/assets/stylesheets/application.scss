@@ -104,12 +104,14 @@ footer > p {
   position: relative;
 }
 
-.start p {
+.pc-niwatori {
   position: absolute;
   top: 30px;
   left: 500px;
   padding: 20px;
 }
+
+
 
 .app-title {
   font-size: 200px;
@@ -119,6 +121,7 @@ footer > p {
   top: 430px;
   left: 200px;
 }
+
 
 .sign-up-btn{
   position: absolute;
@@ -156,9 +159,83 @@ footer > p {
   top: 50px;
   right: 360px;
 }
+//top-page スマホ画面
+
+@media screen and (max-width:425px) {
+
+  .start {
+    background-image: image-url("egg-sandwich.sm.jpg");
+    height: 550px;
+  }
+
+  .app-title {
+    font-size: 50px;
+    background-color: #f0e68c;
+    border-radius: 10px;
+    position: absolute;
+    top: 30px;
+    left: 60px;
+  }
+
+  .pc-niwatori, .sign-up-btn, .log-in-btn{
+    display: none;
+  }
+
+  .sm-niwatori{
+    position: absolute;
+    top: 120px;
+    left: 10px;
+  }
+  
+  .sm-header{
+    height: 60px;
+    background-color: #ffd700;
+    
+  }
+  .sm-header > h1 {
+    text-align: center;
+
+}
+  .area1 {
+  background-color: #fff;
+  height: 50px;
+  text-align: center;
+  margin-top: 0;
+}
+
+.area2 {
+  background-color: #ffd700;
+  height: 5px;
+  text-align: center;
+  margin-top: 0;
+}
+.area1 > ul > li {
+  width: 50%;
+  margin-top: 0;
+}
+
+.header-link{
+  font-size:10px;
+
+}
+
+.header-link:hover{
+  background-color: #ffd700;
+  border-radius: 5px;
+  font-size: 15px;
+  color: #fff;
+  margin-top: -2px;
+}
+}
+
+@media screen and (min-width:426px) {
+
+  .sm-header, .sm-niwatori{
+    display: none;
+  }
 
 
-
+}
 //lonin_page&signup_page(devise)
 
 .devise_win{
