@@ -26,6 +26,7 @@
   font-family: "HanziPen TC", 'Hannotate SC','ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN','ヒラギノ角ゴシック','Hiragino Sans', sans-serif; 
 }
 
+
 //header
 header {
   box-shadow: 0 3px 5px 0 #000;
@@ -164,7 +165,6 @@ footer > p {
   background-image: image-url('egg-top-pc.jpg');
   height: 800px;
   background-repeat: no-repeat;
-  background-position: 500p;;
   background-size: cover;
   position: relative;
   width: 100%;
@@ -209,6 +209,25 @@ footer > p {
 .signup:hover {
   background-color: orangered;
   color: #fff;
+}
+//lonin_page&signup_page(devise) スマホ画面
+@media screen and (max-width:425px) {
+  .devise_win{
+    height: 570px;
+    background-image: image-url('egg-top-sm.jpg');
+  }
+
+  .signup {
+    margin: 10px 0 10px 40px;
+  }
+  .login {
+    margin: 10px 0 10px 40px;
+  }
+
+  .login_form{
+    margin-top: 80px;
+  }
+
 }
 
 //error-message
