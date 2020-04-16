@@ -2,6 +2,11 @@
 <div class="containor">
 <header>
     <h1>〜Tamagoziten〜</h1>
+     <%= search_form_for @search, url: users_recipes_path do |f| %>
+       <%= label :name, "レシピ検索" %>
+       <%= f.search_field :name %>
+       <%= f.submit '検索' %>
+     <% end %>
   <nav class="area1">
    <ul>
     <li><%= link_to "マイページ", users_user_path(current_user.id), class: "header-link" %></li>
