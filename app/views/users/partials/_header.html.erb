@@ -2,6 +2,16 @@
 <div class="containor">
 <header>
     <h1>〜Tamagoziten〜</h1>
+    <% if user_sign_in? %>
+      <div class="search-form">
+        <%= form_tag(search_path, method: :get) do %>
+          <%= text_field 'search[content]' %>
+          <%= select_tag 'search[model]', options_for_select({ "User" => "user", "Post" => "post" }) %>
+          <%= select_tag 'search[how]', options_for_select({ "完全一致" => "match", "前方一致" => "forward", "後方一致" => "backward", "部分一致" => "partical"  }) %>
+          <%= submit_tag '検索', class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    <% end %>
   <nav class="area1">
    <ul>
     <li><%= link_to "マイページ", users_user_path(current_user.id), class: "header-link" %></li>
