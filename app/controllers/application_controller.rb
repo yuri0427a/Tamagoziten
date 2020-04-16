@@ -6,6 +6,13 @@ before_action :configure_permitted_parameters, if: :devise_controller?
   def after_sign_out_path_for(resource)
       root_path
   end
+    
+  before_action :set_search
+
+  def set_search
+    @search = User.ransack(params[:q])
+    @recipe = @search.result
+  end
 
   protected
  def configure_permitted_parameters

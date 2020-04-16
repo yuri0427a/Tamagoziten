@@ -4,6 +4,8 @@ class Users::RecipesController < ApplicationController
 
   def index
     @recipes = Recipe.page(params[:page]).per(PER)
+    @search = Recipe.ransack(params[:q])
+    @recipe = @search.result
   end
 
   def show
