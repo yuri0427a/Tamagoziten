@@ -1,0 +1,2 @@
+class Seach < ApplicationRecord
+end
