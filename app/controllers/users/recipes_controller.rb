@@ -3,10 +3,11 @@ class Users::RecipesController < ApplicationController
   PER = 6
 
   def index
-    @recipes = Recipe.page(params[:page]).per(PER)
-    @search = Recipe.ransack(params[:q])
-    @recipe = @search.result
+    #@recipes = Recipe.page(params[:page]).per(PER)
+    @search = Recipe.ransack(params[:q]) #ransackメソッド推奨
+    @search_recipes = @search.result.page(params[:page])
   end
+
 
   def show
     @recipe = Recipe.find(params[:id]) 

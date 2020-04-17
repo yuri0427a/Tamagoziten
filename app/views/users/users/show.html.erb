@@ -1,4 +1,4 @@
-<%= render 'users/partials/header' %>
+<%= render partial: 'users/partials/header', locals: { search: @search } %>
 
 <% if current_user != @user %>
   <div class="tab">
