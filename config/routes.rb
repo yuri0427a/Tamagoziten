@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-
-  get 'search/search'
+  
   devise_for :users
 
   devise_scope :user do
@@ -31,7 +30,7 @@ Rails.application.routes.draw do
 
   namespace :users do
     resources :users, only: [:show, :edit, :update]
-    
+    get 'recipes/search' => 'recipes#search'
     resources :recipes do
       #cooking_materialsのルート
       get '/cooking_materials' => 'cooking_materials#index', as: 'materials'
