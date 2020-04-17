@@ -10,9 +10,12 @@ before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :set_search
 
   def set_search
-    @search = User.ransack(params[:q])
-    @recipe = @search.result
+    #@search = Article.search(params[:q])
+    @search = Recipe.ransack(params[:q]) #ransackメソッド推奨
+    @search_recipes = @search.result.page(params[:page])
   end
+
+
 
   protected
  def configure_permitted_parameters
