@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
+#ログインログアウト遷移先
 before_action :configure_permitted_parameters, if: :devise_controller?
+
     def after_sign_in_path_for(resource)
       users_user_path(current_user.id)
     end
@@ -7,18 +9,20 @@ before_action :configure_permitted_parameters, if: :devise_controller?
       root_path
   end
     
-  before_action :set_search
+  #検索機能
+before_action :set_search
 
   def set_search
     #@search = Article.search(params[:q])
-    @search = Recipe.ransack(params[:q]) #ransackメソッド推奨
+    @search = Recipe.ransack(params[:q]) #ransackメソッド推奨rb
     @search_recipes = @search.result.page(params[:page])
   end
 
 
 
   protected
- def configure_permitted_parameters
+
+  def configure_permitted_parameters
     added_attrs = [:name, :email, :password, :password_confirmation, :remember_me]
     devise_parameter_sanitizer.permit :sign_up, keys: added_attrs
     #sign_upの際にnameのデータ操作を許。追加したカラム。

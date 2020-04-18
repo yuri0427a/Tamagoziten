@@ -78,6 +78,27 @@ header > h1{
   margin-top: -5px;
 }
 
+.search{
+  float: right;
+  margin-top: -40px;
+  margin-right: 20px;
+}
+
+.search-form{
+  padding: 5px 10px;
+}
+
+.search-form:focus{
+  border: 3px #ffa500 solid;
+  outline: 0;
+}
+
+.search-btn{
+  background-color: #f0e68c;
+  padding: 8px;
+  margin-left:  -10px;
+}
+
 //footer
 
 footer{
