@@ -5,7 +5,7 @@ class Users::RecipesController < ApplicationController
   def index
     #@recipes = Recipe.page(params[:page]).per(PER)
     @search = Recipe.ransack(params[:q]) #ransackメソッド推奨
-    @search_recipes = @search.result.page(params[:page])
+    @search_recipes = @search.result.page(params[:page]).per(PER)
   end
 
 
@@ -15,7 +15,6 @@ class Users::RecipesController < ApplicationController
     @procedures = @recipe.cooking_procedures
     @review = RecipeReview.new
     @reviews= @recipe.recipe_reviews
-   
     #@bookmarks = @recipe.recipe_favorites
   end
 
@@ -27,22 +26,21 @@ class Users::RecipesController < ApplicationController
     @recipe.cooking_procedures.build
     # @matarials = @material.cooking_materilals
     #@matarials = @recipe.matarial_params
-   
   end
 
   def create
-     @recipe = Recipe.new(recipe_params)
-     @recipe.user_id = current_user.id
-     if @recipe.save
-      # 作成に成功した場合、 ures/recipes/{book_id} にリダイレクト
-     redirect_to users_recipe_path(@recipe.id), notice: "レシピを投稿しました！"
-     else
-     # 作成に失敗した場合、 /books/new に戻してバリデーションエラーを表示する
-     render :new
-      # view 側で、 @book.errors を使ってエラーを表示する。
+    @recipe = Recipe.new(recipe_params)
+    @recipe.user_id = current_user.id
+    if @recipe.save
+    # 作成に成功した場合、 ures/recipes/{book_id} にリダイレクト
+    redirect_to users_recipe_path(@recipe.id), notice: "レシピを投稿しました！"
+    else
+    # 作成に失敗した場合、 /books/new に戻してバリデーションエラーを表示する
+    render :new
+    # view 側で、 @book.errors を使ってエラーを表示する。
     #記述しないとノーメソッドエラーになる
-end
-     end
+    end
+  end
 
   def edit
     @recipe = Recipe.find(params[:id]) 
@@ -52,12 +50,12 @@ end
 
   def update
     @recipe = Recipe.find(params[:id]) 
-   if @recipe.update(recipe_params)
-     redirect_to users_recipe_path(@recipe.id), notice: "レシピを編集しました！"
-     else
-     render :edit
+    if @recipe.update(recipe_params)
+    redirect_to users_recipe_path(@recipe.id), notice: "レシピを編集しました！"
+    else
+    render :edit
+    end
   end
-end
 
   def destroy
     recipe = Recipe.find(params[:id]) 
@@ -65,8 +63,7 @@ end
     redirect_to users_user_path(current_user.id)
   end
 
-
-  private
+private
 
   def recipe_params
     params.require(:recipe).permit(:name, :description, :introduction, :recipe_image, :serving, :cooking_time, :egg_quantity, :publishing_status, cooking_materials_attributes: [:id, :material_name, :material_quantity], cooking_procedures_attributes: [:id, :procedure_description, :step_number])  
