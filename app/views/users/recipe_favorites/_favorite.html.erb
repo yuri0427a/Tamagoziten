@@ -1,0 +1,18 @@
+
+<% if user_signed_in? %>
+<% if recipe.favorited_by?(current_user) %>
+            <li>
+            <%= link_to users_recipe_favorite_path(recipe), class: "bookmark-recipe-show", remote: true, method: :delete do %>
+              <i class="glyphicon glyphicon-star" aria-hidden="true"></i>
+              レシピ保存済み
+            <% end %>
+          </li>
+        <% else %>
+          <li>
+            <%= link_to users_recipe_favorite_path(recipe), class: "bookmark-recipe-show", remote: true, method: :post do %>
+                <i class="glyphicon glyphicon-star-empty" aria-hidden="true"></i>
+              レシピ保存
+            <% end %>
+          </li>
+        <% end %> 
+      <% end %> 
