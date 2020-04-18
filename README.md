@@ -79,7 +79,7 @@ gem 'kaminari', '~> 0.17.0'
 gem 'devise-i18n'  
 gem 'devise-i18n-views'
 
-###　検索機能
+### 検索機能
 gem 'ransack'
 
 ### デプロイ
