@@ -1,2 +1,0 @@
-class Seach < ApplicationRecord
-end

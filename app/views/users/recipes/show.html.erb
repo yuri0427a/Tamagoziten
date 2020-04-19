@@ -126,7 +126,8 @@
       <%= form_for [@recipe, @review], url: users_recipe_review_path(@recipe.id) do |f| %>
         <div class="row">
           <div class="col-sm-12">
-              <%= f.attachment_field :cooking_image, placeholder: "プロフィール画像", class: "review-image-form" %>
+              <img id="img1" style="width:200px;height:150px;", alt: "画像プレビュー" />
+              <%= f.attachment_field :cooking_image, placeholder: "プロフィール画像", class: "review-image-form", id: "recipefile" %>
               <%= f.text_area :impression, rows:'5', class: "form-control", placeholder: "レビューここに記入♪" %>
           </div>
         </div>
