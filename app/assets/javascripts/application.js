@@ -133,3 +133,28 @@ $(function () {
       );
   }
 });
+
+//レシピ画像プレビュー
+
+$(function () {
+  $('#recipefile').change(function (e) {
+    //ファイルオブジェクトの取得
+    var file = e.target.files[0];
+    var reader = new FileReader();
+
+    //画像でない場合は処理の終了
+    //indexOf()fromIndex から検索を始め、指定された値が最初に現れたインデックスを返します.見つからない場合は-1
+    if (file.type.indexOf("image") < 0) {
+      alert("画像ファイルを指定してください");
+      return false;
+    }
+    //アップロードした画像を選択する
+    reader.onload = (function (file) {
+      return function (e) {
+        $("#img1").attr("src", e.target.result);
+        $("#img1").attr("title", file.name);
+      };
+    })(file);
+    reader.readAsDataURL(file);
+  }); 
+});
