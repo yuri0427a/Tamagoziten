@@ -104,43 +104,43 @@ $(function () {
     var $imgContainer = $carousel.find(".thumbs");
 
     //移動量を計算
-    var move = (direction * $carousel.width())/3 + $imgContainer.position().left;
+    var move = (direction * $carousel.width()) / 3 + $imgContainer.position().left;
     //右に動く動作がないとき左に動くanimate()を指示する(移動がおかしくならないように)
     $imgContainer
       .filter(":not(:animated)")
       //animate()CSSの値を指定して、アニメーションを表現してくれる。
-      .animate(
-        {
-          left: move,
-        },
-        {
-          //duration アニメーションの速度指定。
-          duration: 800,
-          progress: function () {
-            var $this = $(this);
-            //現在マッチしている要素の中で最初の要素だけを取り出す
-            var $imgList = $this.find(".thumbs-list").first();
-            //移動えようがthumbs-listを上回ったらthumbsのポジションをリセット
-            //関数resetPos...初期座標の算出
-            var resetPos;
-            //<をクリック
-            //directionが１かつimgContainerが０のときtrueになる
-            //.position()...特定のHTML要素の位置座標を取得することができるユニークなメソッド
+      .animate({
+        left: move,
+      }, {
+        //duration アニメーションの速度指定。
+        duration: 800,
+        progress: function () {
+          var $this = $(this);
+          //現在マッチしている要素の中で最初の要素だけを取り出す
+          var $imgList = $this.find(".thumbs-list").first();
+          //移動えようがthumbs-listを上回ったらthumbsのポジションをリセット
+          //関数resetPos...初期座標の算出
+          var resetPos;
+          //<をクリック
+          //directionが１かつimgContainerが０のときtrueになる
+          //.position()...特定のHTML要素の位置座標を取得することができるユニークなメソッド
 
-            if (direction == 1 && 0 <= $this.position().left) {
-              resetPos = $this.position().left - $imgList.outerWidth();
-              $this.css({ "left": resetPos});
-            }
-            //>をクリック
-            if (
-              direction == -1 && $imgList.outerWidth() <= Math.abs
-                ($this.position().left)) {
-              resetPos = $this.position().left + $imgList.outerWidth();
-              $this.css({ "left": resetPos});
-            }
+          if (direction == 1 && 0 <= $this.position().left) {
+            resetPos = $this.position().left - $imgList.outerWidth();
+            $this.css({
+              "left": resetPos
+            });
+          }
+          //>をクリック
+          if (
+            direction == -1 && $imgList.outerWidth() <= Math.abs($this.position().left)) {
+            resetPos = $this.position().left + $imgList.outerWidth();
+            $this.css({
+              "left": resetPos
+            });
           }
         }
-      );
+      });
   }
 });
 
@@ -166,5 +166,5 @@ $(function () {
       };
     })(file);
     reader.readAsDataURL(file);
-  }); 
+  });
 });

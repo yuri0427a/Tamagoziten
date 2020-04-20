@@ -2,61 +2,63 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-main{
+main {
     width: 1000px;
     margin-left: auto;
-    margin-right:  auto;
+    margin-right: auto;
     box-sizing: border-box;
-    
+
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     list-style: none;
     box-sizing: border-box;
-    font-family: 'HanziPen TC',sans-serif;
- }
+    font-family: 'HanziPen TC', sans-serif;
+}
 
 
 
- .list-items{
+.list-items {
     float: left;
     margin: 30px 30px 30px 0;
     border-radius: 30px;
-    padding: 20px 20px 30px 20px;;
+    padding: 20px 20px 30px 20px;
+    ;
     display: block;
     box-sizing: border-box;
     box-shadow: 0 3px 5px 0 #000;
     background-color: #fff;
 }
 
- //recipe_index
+//recipe_index
 
-.recipe-index{
+.recipe-index {
     text-align: center;
     font-size: 80px;
 }
 
 
-.recipe-list{
+.recipe-list {
     margin-top: 50px;
     height: 800px;
     font-family: 'HanziPen TC';
-    width : 1000px;
+    width: 1000px;
 }
 
 
-.link-recepi{
-    display: block;
-}
-.reshipe-image{
+.link-recepi {
     display: block;
 }
 
+.reshipe-image {
+    display: block;
+}
 
 
-.lists-items{
+
+.lists-items {
     float: left;
     margin: 30px 30px 30px 0;
     border-radius: 30px;
@@ -69,37 +71,37 @@ main{
 }
 
 
-.recipe_title{
+.recipe_title {
     margin-top: 60px;
-   text-align: center;
-    
+    text-align: center;
+
 }
 
 
 
-.recipe_icon{
-    float:left;
+.recipe_icon {
+    float: left;
     padding-left: 40px;
-    margin-top:10px;
+    margin-top: 10px;
 }
 
-.link-recepi{
+.link-recepi {
     color: #000;
     width: 230px;
-    
+
 }
 
-.link-recepi:hover{
+.link-recepi:hover {
     text-decoration: none;
     color: #000;
 }
 
-.index{
+.index {
     border: 6px double #f0e68c;
 }
 
 
-.index:hover{
+.index:hover {
     border: outset #f0e68c 15px;
     transition: 0.1s;
     text-decoration: underline;
@@ -109,7 +111,7 @@ main{
     box-sizing: border-box;
 }
 
-.index:nth-child(3):hover{
+.index:nth-child(3):hover {
     margin-bottom: 20px;
 }
 
@@ -117,45 +119,49 @@ main{
 
 //recipe_new
 
-.nested-fields{
-  display: inline-flex;
-  margin-right: 30px;
-  margin-top: 10px;
+.nested-fields {
+    display: inline-flex;
+    margin-right: 30px;
+    margin-top: 10px;
 }
 
 
-.fields-procrdures{
-  padding: 30px 30px;
-  margin-right: 30px;
-  border-radius: 3px;
+.fields-procrdures {
+    padding: 30px 30px;
+    margin-right: 30px;
+    border-radius: 3px;
 }
-.input-sm{
-  margin-bottom: 20px;
+
+.input-sm {
+    margin-bottom: 20px;
 }
-.form-rows{
+
+.form-rows {
     margin-right: 10px;
 }
 
-.recipe_newlist span{
+.recipe_newlist span {
     background-color: #f0e68c;
     border-radius: 2px;
     font-size: 15px;
 }
-.recipe-new span{
+
+.recipe-new span {
     background-color: #f0e68c;
-}
-.procedure-title span{
-    background-color: #f0e68c;
-    
 }
 
-.page_title{
+.procedure-title span {
+    background-color: #f0e68c;
+
+}
+
+.page_title {
     font-size: 50px;
     margin-bottom: 30px;
     margin-left: 150px;
 }
 
-.review-section{
+.review-section {
     text-align: center;
 }
 
@@ -163,106 +169,109 @@ main{
 
 
 //recipe_show
-.icon{
+.icon {
     font-size: 30px;
     margin-right: 10px;
     color: orange;
 }
 
-.icon:hover{
+.icon:hover {
     font-size: 40px;
     margin-bottom: 10px;
     color: orange;
     opacity: 0.7;
 }
 
-.bookmark-recipe-show{
+.bookmark-recipe-show {
     font-size: 20px;
 }
-.user-recipe-name{
-  font-size: 20px;
+
+.user-recipe-name {
+    font-size: 20px;
 }
 
-.glyphicon-time{
+.glyphicon-time {
     margin-left: 5px;
 }
 
-.profile-thumb{
+.profile-thumb {
     border: ridge 3px #ffd700;
 }
 
-.lavel-recipe{
+.lavel-recipe {
     font-size: 30px;
     border-bottom: 2px dotted #a9a9a9;
 }
 
-.create-time{
+.create-time {
     float: right;
 }
 
-  //recipe_review
-.recipe-review{
+//recipe_review
+.recipe-review {
     border: solid 3px yellow;
     width: 250px;
-   }
-.review-paragraph{
+}
+
+.review-paragraph {
     margin: 30px 0 5px 0;
-   }
+}
 
 //recipe_show
 
 
 
-.lavel-recipe-description{
+.lavel-recipe-description {
     font-size: 25px;
-   margin-top: 30px;
+    margin-top: 30px;
 }
 
-.recipe-btn{
+.recipe-btn {
     margin-top: 60px;
 
 }
 
 
-.recipe-edit{
+.recipe-edit {
     margin: 0 50px;
 }
 
 //recipe_show accordion 開いた時
 
-.accordion > li{
-  cursor: pointer;
-  margin: 0 0 5px 0;
-  padding: 0 10px;
-  border-radius: 5px;
+.accordion>li {
+    cursor: pointer;
+    margin: 0 0 5px 0;
+    padding: 0 10px;
+    border-radius: 5px;
 }
 
-.accordion > li > h3{
+.accordion>li>h3 {
     text-align: center;
     background-color: #ff6347;
-     padding: 30px 10px;
+    padding: 30px 10px;
 
 }
 
-.accordion > li:hover{
+.accordion>li:hover {
     background-color: #fff;
 
 }
 
-.accordion > li .content{
+.accordion>li .content {
     display: none;
 }
+
 //recipe_show accodion 閉じたとき
 
-.accordion > li.expend{
+.accordion>li.expend {
     background-color: #fff;
 }
 
-.accordion > li.expend >h2{
+.accordion>li.expend>h2 {
     font-weight: bold;
 }
 
-.accordion > li.expend .content{
+.accordion>li.expend .content {
     margin: 10px 0 0 0;
     padding: 10px 0 0 0;
     border-top: splid 1px #000;
