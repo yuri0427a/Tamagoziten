@@ -23,12 +23,11 @@
   padding: 0;
   list-style: none;
   box-sizing: border-box;
-  font-family: "HanziPen TC", 'Hannotate SC','ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN','ヒラギノ角ゴシック','Hiragino Sans', sans-serif; 
+  font-family: "HanziPen TC", 'Hannotate SC', 'ヒラギノ丸ゴ ProN', 'Hiragino Maru Gothic ProN', 'ヒラギノ角ゴシック', 'Hiragino Sans', sans-serif;
 }
 
 // mixin mediaquery
-$breakpoints: (
-  'sm': 'screen and (max-width: 480px)',
+$breakpoints: ('sm': 'screen and (max-width: 480px)',
   'lg': 'screen and (min-width: 1000px)',
 ) !default;
 
@@ -37,6 +36,7 @@ $breakpoints: (
     @content;
   }
 }
+
 @mixin mq($breakpoint: md) {
   @media #{map-get($breakpoints, $breakpoint)} {
     @content;
@@ -46,7 +46,7 @@ $breakpoints: (
 @mixin mq($breakpoint: md) {
   @media #{map-get($breakpoints, $breakpoint)} {
     @content;
-    }
+  }
 }
 
 @mixin mq($breakpoint: md) {
@@ -62,14 +62,14 @@ header {
 }
 
 
-header > h1{
+header>h1 {
   text-align: center;
 }
 
 
 
-.pc-menu{
-  @include mq(sm) { 
+.pc-menu {
+  @include mq(sm) {
     display: none;
   }
 }
@@ -79,7 +79,7 @@ header > h1{
   background-color: #fff;
   height: 150px;
   text-align: center;
-  
+
 }
 
 .area2 {
@@ -87,27 +87,27 @@ header > h1{
   height: 20px;
 }
 
-.area1t> ul {
+.area1t>ul {
   margin: 0 auto;
 
 }
 
 
-.area1 > ul > li {
+.area1>ul>li {
   float: left;
   width: 25%;
   margin-top: 20px;
-  border-right : 1px double #000;
+  border-right: 1px double #000;
 }
 
-.header-link{
+.header-link {
   display: inline-block;
   padding: 10px;
   font-size: 20px;
   color: #000;
 }
 
-.header-link:hover{
+.header-link:hover {
   background-color: #ffd700;
   border-radius: 5px;
   transition: 0.3s;
@@ -117,124 +117,125 @@ header > h1{
   margin-top: -5px;
 }
 
-.search{
+.search {
   float: right;
   margin-top: -40px;
   margin-right: 20px;
 }
 
-.search-form{
+.search-form {
   padding: 5px 10px;
 }
 
-.search-form:focus{
+.search-form:focus {
   border: 3px #ffa500 solid;
   outline: 0;
 }
 
-.search-btn{
+.search-btn {
   background-color: #f0e68c;
   padding: 8px;
-  margin-left:  -10px;
+  margin-left: -10px;
 }
 
 @media screen and (max-width:425px) {
- 
 
 
-  .area1 > h1{
+
+  .area1>h1 {
     display: none;
   }
 
-  .search-area{
+  .search-area {
     margin-top: 50px;
     margin-right: 60px;
   }
+
   .area1 {
     background-color: #fff;
     height: 100px;
     text-align: center;
-    
+
   }
- 
+
 
   // メニューハンバーガーアイコン
 
-#hm-icon{
-  position: fixed;
-  right: 20px;
-  top: 20px;
-  z-index: 10;
-}
+  #hm-icon {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 10;
+  }
 
-.menu-trigger,
-.menu-trigger span{
-  display: inline-block;
-  transition: all .4s;
-}
+  .menu-trigger,
+  .menu-trigger span {
+    display: inline-block;
+    transition: all .4s;
+  }
 
-.menu-trigger {
-  position: relative;
-  width: 45px;
-  height: 39px;
-} 
+  .menu-trigger {
+    position: relative;
+    width: 45px;
+    height: 39px;
+  }
 
-.menu-trigger span{
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background-color: #000;
-  border-radius: 4px;
-  position: absolute;
-  background-color: #ffa500;
-}
+  .menu-trigger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+    border-radius: 4px;
+    position: absolute;
+    background-color: #ffa500;
+  }
 
-.menu-trigger span:nth-of-type(1) {
-  top: 0;
-}
+  .menu-trigger span:nth-of-type(1) {
+    top: 0;
+  }
 
-.menu-trigger span:nth-of-type(2) {
-  top: 15px;
-}
+  .menu-trigger span:nth-of-type(2) {
+    top: 15px;
+  }
 
-.menu-trigger span:nth-of-type(3) {
-  bottom: 5px;
-}
+  .menu-trigger span:nth-of-type(3) {
+    bottom: 5px;
+  }
 
-.menu-trigger.active span:nth-of-type(1) {
-  -webkit-transform: translateY(20px) rotate(-45deg);
-  transform: translateY(10px) rotate(-45deg);
-  background-color: #ffa500;
-}
+  .menu-trigger.active span:nth-of-type(1) {
+    -webkit-transform: translateY(20px) rotate(-45deg);
+    transform: translateY(10px) rotate(-45deg);
+    background-color: #ffa500;
+  }
 
-.menu-trigger.active span:nth-of-type(2) {
-  opacity: 0;
-}
+  .menu-trigger.active span:nth-of-type(2) {
+    opacity: 0;
+  }
 
-.menu-trigger.active span:nth-of-type(3) {
-  -webkit-transform: translateY(-20px) rotate(45deg);
-  transform: translateY(-20px) rotate(45deg);
-  background-color: #ffa500;
-}
+  .menu-trigger.active span:nth-of-type(3) {
+    -webkit-transform: translateY(-20px) rotate(45deg);
+    transform: translateY(-20px) rotate(45deg);
+    background-color: #ffa500;
+  }
 
-#sm-menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #fff;
-  color: #000;
-  width: 100%;
-  min-height: 100%;
-  display: none;
-  z-index: 9;
-}
- 
+  #sm-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    color: #000;
+    width: 100%;
+    min-height: 100%;
+    display: none;
+    z-index: 9;
+  }
 
-#sm-menu li{
-  text-align: center;
-  margin-bottom: 30px;
-}
+
+  #sm-menu li {
+    text-align: center;
+    margin-bottom: 30px;
+  }
 
 
 
@@ -242,7 +243,8 @@ header > h1{
 
 @media screen and (min-width:426px) {
 
-  #hm-icon,#sm-menu{
+  #hm-icon,
+  #sm-menu {
     display: none;
   }
 
@@ -254,17 +256,18 @@ header > h1{
 
 
 
-footer{
+footer {
   height: 100px;
   background-color: #ffd700;
-  
+
 }
 
-footer > p {
+footer>p {
   text-align: center;
-  line-height:100px;
+  line-height: 100px;
   font-size: 20px;
 }
+
 //top_page
 
 .start {
@@ -297,42 +300,44 @@ footer > p {
 }
 
 
-.sign-up-btn{
+.sign-up-btn {
   position: absolute;
   top: 60px;
   left: 400px;
 }
 
 
-.log-in-btn{
+.log-in-btn {
   position: absolute;
   top: 60px;
   right: 360px;
 }
 
-.sign-up-btn:hover{
+.sign-up-btn:hover {
   position: absolute;
   top: 40px;
   left: 400px;
 }
 
-.log-in-btn:hover{
+.log-in-btn:hover {
   position: absolute;
   top: 40px;
   right: 360px;
 }
-.sign-up-btn:active{
+
+.sign-up-btn:active {
   position: absolute;
   top: 50px;
   left: 400px;
 }
 
 
-.log-in-btn:active{
+.log-in-btn:active {
   position: absolute;
   top: 50px;
   right: 360px;
 }
+
 //top-page スマホ画面
 @media screen and (max-width:425px) {
 
@@ -350,68 +355,75 @@ footer > p {
     left: 60px;
   }
 
-  .pc-niwatori, .sign-up-btn, .log-in-btn{
+  .pc-niwatori,
+  .sign-up-btn,
+  .log-in-btn {
     display: none;
   }
 
-  .sm-niwatori{
+  .sm-niwatori {
     position: absolute;
     top: 120px;
     left: 10px;
   }
-  
-  .sm-header{
+
+  .sm-header {
     height: 60px;
     background-color: #ffd700;
-    
+
   }
-  .sm-header > h1 {
+
+  .sm-header>h1 {
     text-align: center;
 
-}
+  }
+
   .area1 {
-  background-color: #fff;
-  height: 50px;
-  text-align: center;
-  margin-top: 0;
-}
+    background-color: #fff;
+    height: 50px;
+    text-align: center;
+    margin-top: 0;
+  }
 
-.area2 {
-  background-color: #ffd700;
-  height: 5px;
-  text-align: center;
-  margin-top: 0;
-}
-.area1 > ul > li {
-  width: 50%;
-  margin-top: 0;
-}
+  .area2 {
+    background-color: #ffd700;
+    height: 5px;
+    text-align: center;
+    margin-top: 0;
+  }
 
-.header-link{
-  font-size:10px;
+  .area1>ul>li {
+    width: 50%;
+    margin-top: 0;
+  }
 
-}
+  .header-link {
+    font-size: 10px;
 
-.header-link:hover{
-  background-color: #ffd700;
-  border-radius: 5px;
-  font-size: 15px;
-  color: #fff;
-  margin-top: -2px;
-}
+  }
+
+  .header-link:hover {
+    background-color: #ffd700;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #fff;
+    margin-top: -2px;
+  }
 }
 
 @media screen and (min-width:426px) {
 
-  .sm-header, .sm-niwatori{
+  .sm-header,
+  .sm-niwatori {
     display: none;
   }
 
 
 }
+
 //lonin_page&signup_page(devise)
 
-.devise_win{
+.devise_win {
   background-image: image-url('egg-top-pc.jpg');
   height: 800px;
   background-repeat: no-repeat;
@@ -451,13 +463,13 @@ footer > p {
   border: 1px solid orange;
 }
 
-.signup-go{
+.signup-go {
   display: inline-block;
   margin-top: 30px;
   margin-left: 160px;
 }
 
-.login-go{
+.login-go {
   display: inline-block;
   margin-top: 30px;
   margin-left: 130px;
@@ -472,9 +484,10 @@ footer > p {
   background-color: orangered;
   color: #fff;
 }
+
 //lonin_page&signup_page(devise) スマホ画面
 @media screen and (max-width:425px) {
-  .devise_win{
+  .devise_win {
     height: 570px;
     background-image: image-url('egg-top-sm.jpg');
   }
@@ -482,21 +495,22 @@ footer > p {
   .signup {
     margin: 10px 0 10px 50px;
   }
+
   .login {
     margin: 10px 0 10px 50px;
   }
 
-  .login_form{
+  .login_form {
     margin-top: 80px;
   }
 
-  .signup-go{
+  .signup-go {
     display: inline-block;
     margin-top: 10px;
     margin-left: 50px;
   }
-  
-  .login-go{
+
+  .login-go {
     display: inline-block;
     margin-top: 10px;
     margin-left: 10px;
@@ -603,7 +617,7 @@ footer > p {
 
 // my_recipe_page(user_show)
 
-.recipe-list-index{
+.recipe-list-index {
   margin-left: 80px;
 }
 
@@ -639,7 +653,7 @@ footer > p {
 }
 
 .thumbs {
-  width:2560px;
+  width: 2560px;
   position: relative;
   left: 0;
 }
@@ -679,5 +693,3 @@ a.next:hover {
 a.next:hover {
   right: 0;
 }
-
-
