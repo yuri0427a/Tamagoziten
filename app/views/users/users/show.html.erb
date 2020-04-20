@@ -160,7 +160,8 @@
 <%= form_for @user, url: users_user_path do |f| %>
   <div id="modalwin", class="modalwin out">
     <h1 class="edit-profile">〜Edit Profile〜</h1>
-    <%= f.attachment_field :profile_image, placeholder: "プロフィール画像", class: "user-edit-form" %>
+    <img id="img1" style="width:150px;height:150px;">
+    <%= f.attachment_field :profile_image, placeholder: "プロフィール画像", class: "user-edit-form", id: "recipefile" %>
     <h4 class="profile-name ">ニックネーム</h4>
     <lavel>
       <%= f.text_field :name , class: "form-control input-sm", placeholder: "10文字以内"%>
