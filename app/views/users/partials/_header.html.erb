@@ -2,20 +2,46 @@
 <div class="containor">
   <header>
     <h1>〜Tamagoziten〜</h1>
-      <%= search_form_for @search, class: "search", url: users_recipes_path do |f| %>
-        <%= f.label :name, "レシピ検索" %>
-        <%= f.search_field :name_cont, class: "search-form",placeholder: "レシピ名" %>
-        <%= f.submit "検索", class: "search-btn" %>
-      <% end %>
+      <div class="search-area">
+        <%= search_form_for @search, class: "search", url: users_recipes_path do |f| %>
+          <%= f.label :name, "レシピ検索" %>
+          <%= f.search_field :name_cont, class: "search-form",placeholder: "レシピ名" %>
+          <%= f.submit "検索", class: "search-btn" %>
+        <% end %>
+      </div>
     <nav class="area1">
+      <ul class="pc-menu">
+        <li><%= link_to "マイページ", users_user_path(current_user.id), class: "header-link" %></li>
+        <li><%= link_to "レシピ", users_recipes_path, class: "header-link"  %></li>
+        <li><%= link_to "レシピ投稿", new_users_recipe_path , class: "header-link"  %></li>
+        <li><%= link_to "ログアウト", destroy_user_session_path, data: {confirm: "ログアウトしますか？"}, class: "header-link"  %></di>
+      </ul>
+    </nav>
+    <div id="sm-menu">
+      <h2>MENU</h2>
       <ul>
         <li><%= link_to "マイページ", users_user_path(current_user.id), class: "header-link" %></li>
         <li><%= link_to "レシピ", users_recipes_path, class: "header-link"  %></li>
         <li><%= link_to "レシピ投稿", new_users_recipe_path , class: "header-link"  %></li>
-        <li><%= link_to "ログアウト", destroy_user_session_path, data: {confirm: "ログアウトしますか？"}, class: "header-link"  %></>
+        <li><%= link_to "ログアウト", destroy_user_session_path, data: {confirm: "ログアウトしますか？"}, class: "header-link"  %></li>
+        <li>
+          <%= search_form_for @search, class: "search", url: users_recipes_path do |f| %>
+            <%= f.label :name, "レシピ検索" %>
+            <%= f.search_field :name_cont, class: "search-form",placeholder: "レシピ名" %>
+            <%= f.submit "検索", class: "search-btn" %>
+          <% end %>
+        </li>
       </ul>
-    </nav>
+    </div>
+    <div id="hm-icon">
+      <a class="menu-trigger" href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </div>
     <nav class="area2">
     </nav>
+    
   </header>
 </div>

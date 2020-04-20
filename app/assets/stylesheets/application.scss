@@ -26,15 +26,63 @@
   font-family: "HanziPen TC", 'Hannotate SC','ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN','ヒラギノ角ゴシック','Hiragino Sans', sans-serif; 
 }
 
+// mixin mediaquery
+$breakpoints: (
+  'sm': 'screen and (max-width: 480px)',
+  'md': 'screen and (max-width: 768px)',
+  'lg': 'screen and (max-width: 1000px)',
+  'xl': 'screen and (min-width: 1000px)',
+) !default;
+
+@mixin mq($breakpoint: sm) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+    }
+}
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
 
 //header
 header {
   box-shadow: 0 3px 5px 0 #000;
 }
 
+
 header > h1{
   text-align: center;
+  @include mq(sm) { 
+    font-size: 20px;
+  }
 }
+
+.search-area{
+  @include mq(sm) { 
+    display: none;
+  }
+}
+
+.pc-menu{
+  @include mq(sm) { 
+    display: none;
+  }
+}
+
 
 .area1 {
   background-color: #fff;
@@ -99,7 +147,90 @@ header > h1{
   margin-left:  -10px;
 }
 
+// メニューハンバーガーアイコン
+
+#hm-icon{
+  @include mq(sm) { 
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 10;
+  }
+}
+
+.menu-trigger,
+.menu-trigger span{
+  @include mq(sm) { 
+  display: inline-block;
+  transition: all .4s;
+  
+  }
+}
+
+.menu-trigger {
+  @include mq(sm) { 
+    position: relative;
+    width: 45px;
+    height: 39px;
+    
+    }
+}
+
+.menu-trigger span{
+  @include mq(sm) { 
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+    border-radius: 4px;
+    position: absolute;
+    background-color: #ffa500;
+  }
+}
+
+.menu-trigger span:nth-of-type(1) {
+  @include mq(sm) {
+    top: 0;
+  }
+}
+
+.menu-trigger span:nth-of-type(2) {
+  @include mq(sm) {
+    top: 15px;
+  }
+}
+
+.menu-trigger span:nth-of-type(3) {
+  @include mq(sm) {
+    bottom: 5px;
+  }
+}
+
+.menu-trigger.active span:nth-of-type(1) {
+  @include mq(sm) {
+    -webkit-transform: translateY(20px) rotate(-45deg);
+    transform: translateY(20px) rotate(-45deg);
+    background-color: #fff;
+  } 
+}
+
+.menu-trigger.active span:nth-of-type(2) {
+  @include mq(sm) {
+    opacity: 0;
+  }
+}
+
+.menu-trigger.active span:nth-of-type(3) {
+  @include mq(sm) {
+    -webkit-transform: translateY(-20px) rotate(45deg);
+    transform: translateY(-20px) rotate(45deg);
+    background-color: #fff;
+}
+}
 //footer
+
+
 
 footer{
   height: 100px;
@@ -181,7 +312,6 @@ footer > p {
   right: 360px;
 }
 //top-page スマホ画面
-
 @media screen and (max-width:425px) {
 
   .start {

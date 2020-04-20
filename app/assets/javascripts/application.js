@@ -23,6 +23,10 @@ $(document).ready(function () {
   });
 });
 
+//ハンバーガーメニュー
+
+
+
 //recipe_title_placeholder(recipe_new)
 //placeholderのランダム表示
 $(function () {
