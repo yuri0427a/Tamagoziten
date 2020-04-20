@@ -23,6 +23,16 @@ $(document).ready(function () {
   });
 });
 
+// ハンバーガーメニュー
+
+$(function () {
+  $('.menu-trigger').on('click', function () {
+    $(this).toggleClass('active');
+    $('#sm-menu').fadeToggle();
+    return false;
+  });
+});
+
 //recipe_title_placeholder(recipe_new)
 //placeholderのランダム表示
 $(function () {
