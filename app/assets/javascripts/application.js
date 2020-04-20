@@ -134,7 +134,7 @@ $(function () {
   }
 });
 
-//レシピ画像プレビュー
+//ユーザープロフィール、レシピ、レビュー画像プレビュー
 
 $(function () {
   $('#recipefile').change(function (e) {
