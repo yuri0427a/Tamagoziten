@@ -1,7 +1,9 @@
 <div class="containor">
   <header>
     <nav class="area1">
+      <%= link_to root_path, style: "color: #000;" do %>
       <h1>〜Tamagoziten〜</h1>
+      <% end %>
       <%= search_form_for @search, class: "search", url: users_recipes_path do |f| %>
       <%= f.label :name, "レシピ検索" %>
       <%= f.search_field :name_cont, class: "search-form",placeholder: "レシピ名" %>
