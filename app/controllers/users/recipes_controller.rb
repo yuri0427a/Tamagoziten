@@ -1,5 +1,5 @@
 class Users::RecipesController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:show,:index]
   PER = 6
 
   def index
@@ -18,7 +18,6 @@ class Users::RecipesController < ApplicationController
     #@bookmarks = @recipe.recipe_favorites
   end
 
-  
 
   def new
     @recipe = Recipe.new

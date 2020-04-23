@@ -44,12 +44,15 @@
         <div class="lavel-recipe-description">
           <%= @recipe.description %>
         </div>
+        <% if user_signed_in? %>
         <% if current_user.id == @recipe.user.id %>
         <div class="recipe-btn">
           <%= link_to "レシピ編集", edit_users_recipe_path(@recipe.id), class: "btn btn-warning recipe-edit" %>
           <%= link_to "レシピ削除", users_recipe_path(@recipe.id), method: :delete,data: {confirm: "本当に削除しますか？"}, class: "btn btn-danger" %>
         </div>
         <% end %>
+        <% else %>
+         <% end %>
       </div>
     </div>
     <ul class="accordion">
@@ -122,6 +125,7 @@
       </div>
     </div>
   </div>
+  <% if user_signed_in? %>
   <% if current_user.id != @recipe.user.id %>
   <div class="row">
     <div class="col-xs-8 col-xs-offset-2">
@@ -137,6 +141,8 @@
       <% end %>
     </div>
   </div>
+  <% end %>
+  <% else %>
   <% end %>
 </div>
 </div>

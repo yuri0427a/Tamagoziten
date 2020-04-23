@@ -1,3 +1,4 @@
+<%= render partial: 'users/partials/header', locals: { search: @search } %>
 <nav class="sm-header">
   <div class="area1">
     <ul>
@@ -19,11 +20,14 @@
   <p class="sm-niwatori">
     <%= image_tag('niwatori.png') %>
   </p>
+  <% if user_signed_in? %>
+  <% else %>
   <%= link_to new_user_registration_path, class: "sign-up-btn" do %>
     <%= image_tag('kumo-l.png') %>
   <% end %>
   <%= link_to user_session_path, class: "log-in-btn" do %>
     <%= image_tag('kumo-r.png') %>
+  <% end %>
   <% end %>
   <h1 class="app-title">たまご辞典</h1>
 </div>
