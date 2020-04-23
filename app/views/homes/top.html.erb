@@ -22,13 +22,40 @@
   </p>
   <% if user_signed_in? %>
   <% else %>
-  <%= link_to new_user_registration_path, class: "sign-up-btn" do %>
-    <%= image_tag('kumo-l.png') %>
-  <% end %>
-  <%= link_to user_session_path, class: "log-in-btn" do %>
-    <%= image_tag('kumo-r.png') %>
-  <% end %>
+    <%= link_to new_user_registration_path, class: "sign-up-btn" do %>
+      <%= image_tag('kumo-l.png') %>
+    <% end %>
+    <%= link_to user_session_path, class: "log-in-btn" do %>
+      <%= image_tag('kumo-r.png') %>
+    <% end %>
   <% end %>
   <h1 class="app-title">たまご辞典</h1>
 </div>
+<section>
+  <div class="about">
+    <div class="about1">
+      <div class="about-image">
+        <%= image_tag('waffles-2190961_640.jpg') %>
+      </div>
+      <div class="about-message">
+        <h3>たまごでたんぱく質を取ろう！</h3>
+        <p>たまごに豊富に含まれるたんぱく質.</p><br>
+        <p>筋肉,お肌,臓器,免疫力,血液に髪の毛</p><br>
+        <p><span>たんぱく質は私たちの身体を作り上げる大切な栄養素です。</span></p><br>
+        <p>たまごはコスパも良く栄養素も豊富なんです❤︎❤︎</p><br>
+      </div>
+    </div>
+    <div class="about2">
+    <div class="about-image2">
+        <%= image_tag 'baking-1951256_1280.jpg', size: "640x390" %>
+      </div>
+      <div class="about-message2">
+        <h3>「皆様の食卓の手助けをしたい」</h3><br>
+        <p>そんな思いから</p><br>
+        <p><span>〜卵料理専門サイト〜たまご辞典は生まれました★</span></p><br>
+      </div>
+  </div>
+   </div>
+</section>
+
 <%= render 'users/partials/footer' %>

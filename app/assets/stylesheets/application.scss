@@ -138,6 +138,85 @@ header>h1 {
   margin-left: -10px;
 }
 
+//about_section
+
+.about {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-image: url(egg-background-sozai-sample.png);
+}
+
+
+.about::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.about-image {
+  margin-left: 80px;
+  float: left;
+}
+
+.about-message {
+  float: left;
+  margin: 60px 0 110px 50px;
+
+}
+
+.about-message h3 {
+  font-size: 40px;
+}
+
+.about-message p {
+  display: inline-block;
+  font-size: 18px;
+  // background-color: #ffa07a;
+  border-radius: 5px;
+  display: inline-block;
+  background-color: #ffd700;
+}
+
+
+.about-message span {
+  background-color: #ff6347;
+  border-radius: 5px;
+}
+
+
+.about-image2 {
+  float: right;
+}
+
+.about2 {
+  margin-right: 80px;
+}
+
+.about-message2 {
+  float: right;
+  margin-top: 100px;
+  margin-right: 100px;
+  padding: 3px;
+}
+
+.about-message2 h3 {
+  font-size: 30px;
+}
+
+.about-message2 p {
+  display: inline-block;
+  font-size: 18px;
+  background-color: #ffd700;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.about-message2 span {
+  background-color: #ff6347;
+  border-radius: 5px;
+}
+
 
 
 @media screen and (max-width:425px) {
@@ -162,7 +241,7 @@ header>h1 {
 
   //top_page about
 
-  
+
 
   // メニューハンバーガーアイコン
 
