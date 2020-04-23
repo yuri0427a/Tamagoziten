@@ -140,6 +140,9 @@ header>h1 {
 
 .about{
   background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-image: url(egg-background-sozai-sample.png);
 }
 
 .about::after{
