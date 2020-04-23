@@ -138,6 +138,24 @@ header>h1 {
   margin-left: -10px;
 }
 
+.about{
+  background-attachment: fixed;
+}
+
+.about::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.about-image{
+  margin-left: 120px;
+  float: left;
+}
+
+.about-message{
+  float: left;
+}
 
 
 @media screen and (max-width:425px) {

@@ -22,13 +22,25 @@
   </p>
   <% if user_signed_in? %>
   <% else %>
-  <%= link_to new_user_registration_path, class: "sign-up-btn" do %>
-    <%= image_tag('kumo-l.png') %>
-  <% end %>
-  <%= link_to user_session_path, class: "log-in-btn" do %>
-    <%= image_tag('kumo-r.png') %>
-  <% end %>
+    <%= link_to new_user_registration_path, class: "sign-up-btn" do %>
+      <%= image_tag('kumo-l.png') %>
+    <% end %>
+    <%= link_to user_session_path, class: "log-in-btn" do %>
+      <%= image_tag('kumo-r.png') %>
+    <% end %>
   <% end %>
   <h1 class="app-title">たまご辞典</h1>
 </div>
+<section>
+<div class="about">
+  <div class="about1">
+  <div class="about-image">
+  <%= image_tag('waffles-2190961_640.jpg') %>
+  </div>
+  <div class="about-message">
+  aaa
+  </div>
+  </div>
+</div>
+</section>
 <%= render 'users/partials/footer' %>
