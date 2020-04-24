@@ -60,11 +60,14 @@
 <section>
   <div class="recipe-rank">
   <% @recipe_ranks.each.with_index(1) do |recipe, i| %>
-    <%= i %>
+  <%= attachment_image_tag recipe, :recipe_image, :fill, 250, 250, class: "pull-left profile-thumb" ,fallback: "no_image.jpg", size: "250x250"%>
+  <%= attachment_image_tag recipe.user, :profile_image, :fill, 70, 70, class: "img-circle pull-left profile-thumb" ,fallback: "no_image.jpg", size: "70x70"%>
+    <%= i %>位
     <%= recipe.name %>
+    <%= recipe.user.name %>
+
     
   <% end %>
   </div>
-</section>
 
 <%= render 'users/partials/footer' %>
