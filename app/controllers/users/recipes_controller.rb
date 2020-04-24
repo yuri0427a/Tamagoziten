@@ -6,7 +6,7 @@ class Users::RecipesController < ApplicationController
     #@recipes = Recipe.page(params[:page]).per(PER)
     @search = Recipe.ransack(params[:q]) #ransackメソッド推奨
     @search_recipes = @search.result.page(params[:page]).per(PER)
-  end
+    end
 
 
   def show

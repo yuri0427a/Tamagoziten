@@ -22,12 +22,12 @@
   </p>
   <% if user_signed_in? %>
   <% else %>
-    <%= link_to new_user_registration_path, class: "sign-up-btn" do %>
-      <%= image_tag('kumo-l.png') %>
-    <% end %>
-    <%= link_to user_session_path, class: "log-in-btn" do %>
-      <%= image_tag('kumo-r.png') %>
-    <% end %>
+  <%= link_to new_user_registration_path, class: "sign-up-btn" do %>
+  <%= image_tag('kumo-l.png') %>
+  <% end %>
+  <%= link_to user_session_path, class: "log-in-btn" do %>
+  <%= image_tag('kumo-r.png') %>
+  <% end %>
   <% end %>
   <h1 class="app-title">たまご辞典</h1>
 </div>
@@ -46,7 +46,7 @@
       </div>
     </div>
     <div class="about2">
-    <div class="about-image2">
+      <div class="about-image2">
         <%= image_tag 'baking-1951256_1280.jpg', size: "640x390" %>
       </div>
       <div class="about-message2">
@@ -54,8 +54,17 @@
         <p>そんな思いから</p><br>
         <p><span>〜卵料理専門サイト〜たまご辞典は生まれました★</span></p><br>
       </div>
+    </div>
   </div>
-   </div>
+</section>
+<section>
+  <div class="recipe-rank">
+  <% @recipe_ranks.each.with_index(1) do |recipe, i| %>
+    <%= i %>
+    <%= recipe.name %>
+    
+  <% end %>
+  </div>
 </section>
 
 <%= render 'users/partials/footer' %>
