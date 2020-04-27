@@ -59,15 +59,23 @@
 </section>
 <section>
   <div class="recipe-rank">
-  <% @recipe_ranks.each.with_index(1) do |recipe, i| %>
-  <%= attachment_image_tag recipe, :recipe_image, :fill, 250, 250, class: "pull-left profile-thumb" ,fallback: "no_image.jpg", size: "250x250"%>
-  <%= attachment_image_tag recipe.user, :profile_image, :fill, 70, 70, class: "img-circle pull-left profile-thumb" ,fallback: "no_image.jpg", size: "70x70"%>
-    <%= i %>位
-    <%= recipe.name %>
-    <%= recipe.user.name %>
-
-    
-  <% end %>
+    <h1>〜Ranking〜</h1>
+    <ul>
+      <% @recipe_ranks.each.with_index(1) do |recipe, i| %>
+        <li>
+          <%= link_to users_recipe_path(recipe), class: "recipe-ranklink" do %>
+            <p class="hover-niwatori">
+              <%= image_tag 'niwatori.png', size:"80x100" %>
+            </p>
+              <%= attachment_image_tag recipe.user, :profile_image, :fill, 100, 100, class: "img-circle  profile-thumb rank-user" ,fallback: "no_image.jpg", size: "80x80"%>
+              <%= attachment_image_tag recipe, :recipe_image, :fill, 250, 250, class: " profile-thumb rank-img" ,fallback: "no_image.jpg", size: "250x250"%>
+            <p class="rank"><%= i %>位</p>
+            <p class="rank-username"><%= recipe.user.name %></p>
+            <p class="rank-recipename"><%= recipe.name %></p>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
   </div>
-
+</section>
 <%= render 'users/partials/footer' %>
