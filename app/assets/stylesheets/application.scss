@@ -217,6 +217,104 @@ header>h1 {
   border-radius: 5px;
 }
 
+//Ranking(Top_page)
+
+.recipe-rank {
+  padding: 10px 0;
+  background-color: #fffacd;
+  border-top: 5px dotted #fff;
+  border-bottom: 5px dotted #fff;
+}
+
+.recipe-rank h1 {
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 40px;
+
+}
+
+.recipe-rank ul {
+  list-style: disc;
+  padding-left: 40px;
+}
+
+.recipe-rank ul:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.recipe-rank li {
+  position: relative;
+  float: left;
+  margin: 0 10px;
+}
+
+//rankng-hover
+
+//hoverすると鶏出現するcss
+.hover-niwatori {
+  position: absolute;
+  top: -100px;
+  right: 5px;
+  display: none;
+}
+
+.recipe-rank li:hover .hover-niwatori {
+  display: block;
+}
+
+
+.rank-user {
+  position: absolute;
+  top: 220px;
+  left: 5px;
+
+}
+
+.rank-username {
+  font-size: 20px;
+  margin-left: 100px;
+}
+
+.rank-recipename {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.rank {
+  position: absolute;
+  top: 0;
+  left: 110px;
+  background-color: #87cefa;
+  padding: 10px;
+  border-radius: 10px;
+
+}
+
+.recipe-ranklink {
+  color: #000;
+}
+
+.recipe-ranklink:hover {
+  color: #000;
+}
+
+
+.recipe-rank>ul>li:first-of-type>.recipe-ranklink>.rank {
+  background-color: #ffd700;
+}
+
+.recipe-rank>ul>li:nth-of-type(2)>.recipe-ranklink>.rank {
+  background-color: #c0c0c0;
+}
+
+.recipe-rank>ul>li:nth-of-type(3)>.recipe-ranklink>.rank {
+  background-color: #8b4513;
+  color: #fff;
+}
+
 
 
 @media screen and (max-width:425px) {
@@ -240,6 +338,9 @@ header>h1 {
   }
 
   //top_page about
+
+  //ranking_seciton
+
 
 
 

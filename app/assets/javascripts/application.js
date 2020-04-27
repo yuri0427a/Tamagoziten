@@ -168,3 +168,4 @@ $(function () {
     reader.readAsDataURL(file);
   });
 });
+
