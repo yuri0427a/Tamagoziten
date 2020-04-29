@@ -5,6 +5,8 @@ class Recipe < ApplicationRecord
     has_many :cooking_procedures, dependent: :destroy
     has_many :recipe_favorites, dependent: :destroy
     has_many :recipe_reviews, dependent: :destroy
+    has_many :recipe_category_relations
+    has_many :categories, through: :recipe_category_relations
     attachment :recipe_image
     accepts_nested_attributes_for :cooking_materials
     accepts_nested_attributes_for :cooking_procedures
