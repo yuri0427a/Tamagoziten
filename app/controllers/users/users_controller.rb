@@ -16,7 +16,7 @@ before_action :authenticate_user!
         if @user.update(user_params)
           redirect_to users_user_path(current_user.id), notice: "プロフィールを編集しました！"
         else
-          redirect_to users_userg_path(@user.id), flash: { error: @user.errors.full_messages }
+          redirect_to users_user_path(@user.id), flash: { error: @user.errors.full_messages }
         end
     end
 
