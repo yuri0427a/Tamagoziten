@@ -1,149 +1,159 @@
 <%= render partial: 'users/partials/header', locals: { search: @search } %>
 <div class="recipe-show">
   <div class="container">
+
     <div class="row">
-      <p id="notice">
-        <%=  notice %>
-      </p>
-      <div class="col-xs-7">
-        <%= link_to fa_icon("twitter"), "https://twitter.com/share?url=#{request.url}", title: 'Twi', target: '_blank', class: 'icon' %>
-        <%= link_to fa_icon("facebook"), "https://www.facebook.com/sharer/sharer.php?u=#{request.url}&text=タイトル", title: 'Facebook', target: '_blank', class: 'icon' %>
-        <h1><%= @recipe.name %></h1>
-      </div>
-      <div class="col-xs-5">
-        <p>
-          <span>作成者: </span>
-          <%= link_to @recipe.user.name, users_user_path(@recipe.user.id), class: "user-recipe-name" %>
+      <div class="col-xs-12">
+        <p id="notice">
+          <%=  notice %>
         </p>
-        <div id='favorites_buttons_<%= @recipe.id %>'>
-          <%= render partial: 'users/recipe_favorites/favorite', locals: {recipe: @recipe} %>
-        </div>
-        <li class="create-time">
-          <span>投稿日:</span><%= @recipe.created_at.to_s(:datetime_jp) %>
-        </li>
+        <div class="category-tag"">
+        <ul>
+          <% @recipe.categories.each do |category| %>
+            <li><%= category.name %></li>
+          <% end %>
+        </ul>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-7 ">
-        <div class="recipe-image">
-          <%= attachment_image_tag @recipe, :recipe_image, :fill, 600, 600, class: " pull-left profile-thumb", alt: "料理画像", fallback: "no_image.jpg", size: "600x600"%>
+      </div>
+      <div class=" col-xs-7">
+          <%= link_to fa_icon("twitter"), "https://twitter.com/share?url=#{request.url}", title: 'Twi', target: '_blank', class: 'icon' %>
+          <%= link_to fa_icon("facebook"), "https://www.facebook.com/sharer/sharer.php?u=#{request.url}&text=タイトル", title: 'Facebook', target: '_blank', class: 'icon' %>
+          <h1><%= @recipe.name %></h1>
+        </div>
+        <div class="col-xs-5">
+          <p>
+            <span>作成者: </span>
+            <%= link_to @recipe.user.name, users_user_path(@recipe.user.id), class: "user-recipe-name" %>
+          </p>
+          <div id='favorites_buttons_<%= @recipe.id %>'>
+            <%= render partial: 'users/recipe_favorites/favorite', locals: {recipe: @recipe} %>
+          </div>
+          <li class="create-time">
+            <span>投稿日:</span><%= @recipe.created_at.to_s(:datetime_jp) %>
+          </li>
         </div>
       </div>
-      <div class="col-xs-5">
-        <div class="lavel-recipe">
-          <lavel>調理時間</labvel>
-            <i class="glyphicon glyphicon-time"></i>
-            <%= @recipe.cooking_time %>分
-        </div>
-        <div class="lavel-recipe">
-          <lavel>レビュー数</labvel>
-            <%= fa_icon("comment") %>
-            <%= @recipe.recipe_reviews.count %>
-            <span>件</span>
-        </div>
-        <div class="lavel-recipe-description">
-          <%= @recipe.description %>
-        </div>
-        <% if user_signed_in? %>
-        <% if current_user.id == @recipe.user.id %>
-        <div class="recipe-btn">
-          <%= link_to "レシピ編集", edit_users_recipe_path(@recipe.id), class: "btn btn-warning recipe-edit" %>
-          <%= link_to "レシピ削除", users_recipe_path(@recipe.id), method: :delete,data: {confirm: "本当に削除しますか？"}, class: "btn btn-danger" %>
-        </div>
-        <% end %>
-        <% else %>
-         <% end %>
-      </div>
-    </div>
-    <ul class="accordion">
-      <li>
-        <h3><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>作り方を見る！！</h3>
-        <div class="content">
-          <div class="row">
-            <div class="col-xs-5">
-              <h3 class="item-title">
-                材料(<%= @recipe.serving %>人分)
-              </h3>
-              <table>
-                <tr>
-                  <td>
-                    卵
-                  </td>
-                  <td>
-                    <%= @recipe.egg_quantity %>
-                  </td>
-                </tr>
-                <% @materials.each do |material| %>
-                <tr>
-                  <td>
-                    <%= material.material_name %>
-                  </td>
-                  <td>
-                    <%= material.material_quantity %>
-                  </td>
-                </tr>
-                <% end %>
-              </table>
-            </div>
-            <div class="col-xs-7">
-              <h3>作り方</h3>
-              <% @procedures.each.with_index(1) do |procedure, idx| %>
-              <h3><%= idx %></h3>
-              <p><%= procedure.procedure_description %></p>
-              </td>
-              <ul>
-                <% end %>
-            </div>
+      <div class="row">
+        <div class="col-xs-7 ">
+          <div class="recipe-image">
+            <%= attachment_image_tag @recipe, :recipe_image, :fill, 600, 600, class: " pull-left profile-thumb", alt: "料理画像", fallback: "no_image.jpg", size: "600x600"%>
           </div>
         </div>
-  </div>
-  <div class="review-section">
-    <p class="review-paragraph">
-      作成者さんに伝えよう♪
-    </p>
-    <h2>〜作りました！review〜</h2>
-  </div>
-  <div class="review">
-    <div class="carousel" id="carousel">
-      <div class="thumbs clear">
-        <div class="detail">
-          <ul class="thumbs-list">
-            <% @recipe.recipe_reviews.order('id DESC').limit(9).each do |review| %>
-            <li class="list-items recipe-review">
-              <p>
-                <%= attachment_image_tag review, :cooking_image, :fill, 200, 150, alt: "レビュー画像", fallback: "no_image.jpg", size: "200x150"%>
-              </p>
-              <h3 class="recipe-title"><%= link_to review.user.name, users_user_path(review.user.id) %></h3>
-              <p><%= review.impression %></p>
-            </li>
-            <% end %>
-          </ul>
+        <div class="col-xs-5">
+          <div class="lavel-recipe">
+            <lavel>調理時間</labvel>
+              <i class="glyphicon glyphicon-time"></i>
+              <%= @recipe.cooking_time %>分
+          </div>
+          <div class="lavel-recipe">
+            <lavel>レビュー数</labvel>
+              <%= fa_icon("comment") %>
+              <%= @recipe.recipe_reviews.count %>
+              <span>件</span>
+          </div>
+          <div class="lavel-recipe-description">
+            <%= @recipe.description %>
+          </div>
+          <% if user_signed_in? %>
+          <% if current_user.id == @recipe.user.id %>
+          <div class="recipe-btn">
+            <%= link_to "レシピ編集", edit_users_recipe_path(@recipe.id), class: "btn btn-warning recipe-edit" %>
+            <%= link_to "レシピ削除", users_recipe_path(@recipe.id), method: :delete,data: {confirm: "本当に削除しますか？"}, class: "btn btn-danger" %>
+          </div>
+          <% end %>
+          <% else %>
+          <% end %>
         </div>
       </div>
-      <div class="thunmb-nav">
-        <a href="#" class="prev"></a><a href="#" class="next"></a>
-      </div>
+      <ul class="accordion">
+        <li>
+          <h3><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>作り方を見る！！</h3>
+          <div class="content">
+            <div class="row">
+              <div class="col-xs-5">
+                <h3 class="item-title">
+                  材料(<%= @recipe.serving %>人分)
+                </h3>
+                <table>
+                  <tr>
+                    <td>
+                      卵
+                    </td>
+                    <td>
+                      <%= @recipe.egg_quantity %>
+                    </td>
+                  </tr>
+                  <% @materials.each do |material| %>
+                  <tr>
+                    <td>
+                      <%= material.material_name %>
+                    </td>
+                    <td>
+                      <%= material.material_quantity %>
+                    </td>
+                  </tr>
+                  <% end %>
+                </table>
+              </div>
+              <div class="col-xs-7">
+                <h3>作り方</h3>
+                <% @procedures.each.with_index(1) do |procedure, idx| %>
+                <h3><%= idx %></h3>
+                <p><%= procedure.procedure_description %></p>
+                </td>
+                <ul>
+                  <% end %>
+              </div>
+            </div>
+          </div>
     </div>
-  </div>
-  <% if user_signed_in? %>
-  <% if current_user.id != @recipe.user.id %>
-  <div class="row">
-    <div class="col-xs-8 col-xs-offset-2">
-      <%= form_for [@recipe, @review], url: users_recipe_review_path(@recipe.id) do |f| %>
-      <div class="row">
-        <div class="col-sm-12">
-          <img id="img1" style="width:200px;height:150px;" , alt: "画像プレビュー" />
-          <%= f.attachment_field :cooking_image, placeholder: "プロフィール画像", class: "review-image-form", id: "recipefile" %>
-          <%= f.text_area :impression, rows:'5', class: "form-control", placeholder: "レビューここに記入♪" %>
+    <div class="review-section">
+      <p class="review-paragraph">
+        作成者さんに伝えよう♪
+      </p>
+      <h2>〜作りました！review〜</h2>
+    </div>
+    <div class="review">
+      <div class="carousel" id="carousel">
+        <div class="thumbs clear">
+          <div class="detail">
+            <ul class="thumbs-list">
+              <% @recipe.recipe_reviews.order('id DESC').limit(9).each do |review| %>
+              <li class="list-items recipe-review">
+                <p>
+                  <%= attachment_image_tag review, :cooking_image, :fill, 200, 150, alt: "レビュー画像", fallback: "no_image.jpg", size: "200x150"%>
+                </p>
+                <h3 class="recipe-title"><%= link_to review.user.name, users_user_path(review.user.id) %></h3>
+                <p><%= review.impression %></p>
+              </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+        <div class="thunmb-nav">
+          <a href="#" class="prev"></a><a href="#" class="next"></a>
         </div>
       </div>
-      <%= f.submit "送信する", class: "btn btn-lg btn-base-1 mt-20 pull-right" %>
-      <% end %>
     </div>
+    <% if user_signed_in? %>
+    <% if current_user.id != @recipe.user.id %>
+    <div class="row">
+      <div class="col-xs-8 col-xs-offset-2">
+        <%= form_for [@recipe, @review], url: users_recipe_review_path(@recipe.id) do |f| %>
+        <div class="row">
+          <div class="col-sm-12">
+            <img id="img1" style="width:200px;height:150px;" , alt: "画像プレビュー" />
+            <%= f.attachment_field :cooking_image, placeholder: "プロフィール画像", class: "review-image-form", id: "recipefile" %>
+            <%= f.text_area :impression, rows:'5', class: "form-control", placeholder: "レビューここに記入♪" %>
+          </div>
+        </div>
+        <%= f.submit "送信する", class: "btn btn-lg btn-base-1 mt-20 pull-right" %>
+        <% end %>
+      </div>
+    </div>
+    <% end %>
+    <% else %>
+    <% end %>
   </div>
-  <% end %>
-  <% else %>
-  <% end %>
-</div>
 </div>
 <%= render 'users/partials/footer' %>

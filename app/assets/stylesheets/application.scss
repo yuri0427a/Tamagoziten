@@ -144,7 +144,7 @@ header>h1 {
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  background-image: url(egg-background-sozai-sample.png);
+  background-image: image-url(egg-background-sozai-sample.png);
   border-top: 5px dotted #8b4513;
 }
 
@@ -888,4 +888,29 @@ a.next:hover {
 
 a.next:hover {
   right: 0;
+}
+
+//category
+
+.category-checkbox{
+  margin: 20px 0;
+}
+
+.category-checkbox span{
+  margin-left: 5px;
+}
+
+
+.category-tag ul{
+  margin: 20px 0;
+}
+
+.category-tag li{
+  margin-right: px;
+  display: inline-block;
+  font-size: 15px;
+  background-color: #f0e68c;
+  padding: 10px;
+  border-radius: 3px;  
+
 }
