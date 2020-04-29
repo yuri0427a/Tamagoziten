@@ -227,11 +227,15 @@ header>h1 {
   border-bottom: 5px dotted #8b4513;
 }
 
+.recipe-rank li{
+  width: 250px;
+}
+
 .recipe-rank h1 {
   font-size: 60px;
   text-align: center;
   margin-bottom: 40px;
-
+  overflow: auto;
 }
 
 .recipe-rank ul {
