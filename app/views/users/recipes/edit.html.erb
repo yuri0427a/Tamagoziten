@@ -10,7 +10,17 @@
          </ul>
          <h1 class="page_title">〜EDIT MENU〜</h1>
          <%= form_for @recipe, url: users_recipe_path do |f| %>
-         <div class="row ">
+            <div class="category-checkbox col-lg-10">
+               <%= f.label :category, 'カテゴリ:' %>
+               <%= f.collection_check_boxes(:category_ids, Category.all, :id, :name) do |category| %>
+                  <%= category.label do %>
+                  <span><%= category.check_box %></span> 
+                  <%= category.text %>
+               <% end %>
+
+         <% end %>
+         </div>
+         <div class="row">
             <div class="col-xs-4 recipe-newform">
                <%= attachment_image_tag @user, :recipe_image, :fill, 60, 60, class: "img-circle pull-left profile-thumb"%>
                <%= f.attachment_field :recipe_image, placeholder: "プロフィール画像", class: "recipe-edit-form", id: "recipefile" %>
