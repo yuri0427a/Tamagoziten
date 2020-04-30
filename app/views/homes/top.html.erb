@@ -58,6 +58,11 @@
   </div>
 </section>
 <section>
+<% @categories.each do |category| %>
+            <li><%= category.name %></li>
+          <% end %>
+</section>
+<section>
   <div class="recipe-rank">
     <h1>〜Ranking〜</h1>
     <ul>
