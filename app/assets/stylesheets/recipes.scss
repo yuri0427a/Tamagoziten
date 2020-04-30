@@ -276,3 +276,41 @@ main {
     padding: 10px 0 0 0;
     border-top: splid 1px #000;
 }
+
+//category_tag(recipe_show)
+
+.category-tag ul {
+    margin: 20px 0;
+}
+
+.category-tag li {
+    margin-right: px;
+    display: inline-block;
+    font-size: 15px;
+    background-color: #f0e68c;
+    padding: 10px;
+    border-radius: 3px;
+
+}
+
+.category-tag li {
+    margin-right: px;
+    display: inline-block;
+    font-size: 15px;
+    background-color: #f0e68c;
+    padding: 10px;
+    border-radius: 3px;
+
+}
+.category-tag li:hover{
+    background-color: #ff8c00;
+}
+
+.tag-link {
+    color: #000;
+}
+
+.tag-link:hover {
+    color: #000;
+    text-decoration: none;
+}

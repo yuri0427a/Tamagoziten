@@ -10,8 +10,11 @@
         <div class="category-tag"">
         <ul>
           <% @recipe.categories.each do |category| %>
-           <%= link_to category_path(category) do %>
-            <li><%= category.name %></li>
+          
+           <%= link_to category_path(category), class: "tag-link" do %>
+           <li>
+            <%= category.name %>
+          </li>
           <% end %>
           <% end %>
         </ul>
