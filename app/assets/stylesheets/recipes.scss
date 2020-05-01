@@ -34,6 +34,12 @@ main {
 
 //recipe_index
 
+.recipe-index-ul:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
 .recipe-index {
     text-align: center;
     font-size: 80px;
@@ -42,7 +48,6 @@ main {
 
 .recipe-list {
     margin-top: 50px;
-    height: 800px;
     font-family: 'HanziPen TC';
     width: 1000px;
 }
@@ -67,7 +72,7 @@ main {
     box-sizing: border-box;
     box-shadow: 0 3px 5px 0 #000;
     background-color: #fff;
-    width: 300px;
+    width: 280px;
 }
 
 
@@ -302,8 +307,13 @@ main {
     border-radius: 3px;
 
 }
-.category-tag li:hover{
+
+.category-tag li:hover {
     background-color: #ff8c00;
+}
+
+.category-tag li:active {
+    background-color: #800000;
 }
 
 .tag-link {
@@ -317,13 +327,24 @@ main {
 
 //category_recipepage
 
-.category-recipe-count{
+.recipe-count {
     text-align: center;
     margin-top: 50px;
     font-size: 20px;
 }
 
-.category-recipe-count span{
+.recipe-count span {
     margin-left: 10px;
     font-size: 40px;
+}
+
+.no-recipe-count {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 60px;
+    margin-bottom: 180px;
+}
+
+.no-recipe-categoy-btn {
+    margin-top: 100px;
 }

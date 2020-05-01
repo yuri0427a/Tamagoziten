@@ -1,6 +1,9 @@
 class CategoriesController < ApplicationController
+  PER = 6
+
   def show
     @category = Category.find(params[:id])
+    @recipes = @category.recipes.page(params[:page]).per(PER)
   end
 private
   def category_params
