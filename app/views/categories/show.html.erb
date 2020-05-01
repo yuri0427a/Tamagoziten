@@ -1,6 +1,3 @@
-
-
-
 <%= render partial: 'users/partials/header', locals: { search: @search } %>
 <main>
   <div class="recipe-list">
@@ -8,20 +5,21 @@
       〜<%= @category.name %> Recipes〜
     </h1>
     <% if @category.recipes.count == 0 %>
-        <p class="recipe-count">
-    全<span><%= @category.recipes.count %></span>
-    件
+    <p class="recipe-count">
+      全<span><%= @category.recipes.count %></span>
+      件
     </p>
-     <p class="no-recipe-count">
-       <span><%= @category.name %></span>
-       カテゴリー　にはまだレシピが投稿されていません（；＿；)<br>
-     このカテゴリーの投稿者の第１号になりませんか？<br>
-     <%= link_to "レシピを投稿する", new_users_recipe_path, class: "btn btn-warning no-recipe-categoy-btn" %>
-     </p>
+    <p class="no-recipe-count">
+    <%= image_tag 'recipes/pl-999184207763.png', size:"320x300" %><br>
+      <span><%= @category.name %></span>
+      カテゴリー　にはまだレシピが投稿されていません（；＿；)<br>
+      このカテゴリーの投稿者の第１号になりませんか？<br>
+      <%= link_to "レシピを投稿する", new_users_recipe_path, class: "btn btn-warning no-recipe-categoy-btn" %>
+    </p>
     <% else %>
     <p class="recipe-count">
-    全<span><%= @category.recipes.count %></span>
-    件のレシピがあります(^○^)
+      全<span><%= @category.recipes.count %></span>
+      件のレシピがあります(^○^)
     </p>
     <% end %>
     <ul class="recipe-index-ul">
