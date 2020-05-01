@@ -60,6 +60,7 @@
 <section>
   <% @categories.each do |category| %>
   <%= link_to category_path(category) do %>
+  <li><%= image_tag category.image.to_s %></li>
   <li><%= category.name %></li>
   <% end %>
   <% end %>
