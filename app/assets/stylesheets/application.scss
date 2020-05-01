@@ -227,7 +227,7 @@ header>h1 {
   border-bottom: 5px dotted #8b4513;
 }
 
-.recipe-rank li{
+.recipe-rank li {
   width: 250px;
 }
 
@@ -269,7 +269,7 @@ header>h1 {
   display: block;
 }
 
-.recipe-rank li:hover .rank{
+.recipe-rank li:hover .rank {
   transform: rotate(360deg);
 }
 
@@ -300,11 +300,11 @@ header>h1 {
   padding: 20px 5px 5px 13px;
   border-radius: 10px;
   transition: transform 500ms ease;
-  display:block;
+  display: block;
   width: 50px;
   height: 60px;
   background-color: #ffc0cb;
-  border-radius:         50%  50%  50%  50%  / 60%   60%   40%  40%;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
 }
 
 
@@ -896,12 +896,16 @@ a.next:hover {
 
 //category
 
-.category-checkbox{
+.category-checkbox {
   margin: 20px 0;
 }
 
-.category-checkbox span{
+.category-checkbox span {
   margin-left: 5px;
 }
 
-
+.recipe-list::after {
+  content: "";
+  display: block;
+  clear: both;
+}
