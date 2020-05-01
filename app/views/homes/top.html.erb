@@ -57,12 +57,20 @@
     </div>
   </div>
 </section>
-<section>
-  <% @categories.each do |category| %>
-  <%= link_to category_path(category) do %>
-  <li><%= category.name %></li>
-  <% end %>
-  <% end %>
+<section class="category-all">
+  <div class="category-index">
+    <h1>〜Category〜</h1>
+    <ul>
+      <% @categories.each do |category| %>
+        <%= link_to category_path(category) do %>
+          <li>
+          <p><%= image_tag category.image.to_s, size: "300x200" %></p>
+          <p><%= category.name %></p>
+      </li>
+      <% end %>
+      <% end %>
+    </ul>
+  </div>
 </section>
 <section>
   <div class="recipe-rank">
