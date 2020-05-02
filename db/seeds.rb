@@ -40,6 +40,7 @@ Category.create!(
       {
         name: '中華',
         category_image: open("#{Rails.root}/public/assets/china-1866c1348a713bc46a9a7c57c32e10dae65f9827946b45950bf0b4223cbaf5bc.jpg")
+      
       },
       {
         name: '丼もの',
