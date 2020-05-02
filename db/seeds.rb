@@ -11,7 +11,7 @@ Category.create!(
     [
       {
         name: 'お肉×たまご',
-        category_image: open("#{Rails.root}/public/assets/images/categories/meat.jpg")
+        category_image: open("#{Rails.root}/public/assets/categories/meat.jpg")
       },
       {
         name: '野菜×たまご',
