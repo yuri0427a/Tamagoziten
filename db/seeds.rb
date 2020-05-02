@@ -23,7 +23,7 @@ Category.create!(
       },
       {
         name: '簡単レシピ',
-        category_image: open("#{Rails.root}/publicp/assets/images/categories/begginer.jpg")
+        category_image: open("#{Rails.root}/public/assets/images/categories/begginer.jpg")
       },
       {
         name: '短時間♫',
