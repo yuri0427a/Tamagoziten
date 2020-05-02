@@ -19,7 +19,7 @@ Category.create!(
       },
       {
         name: 'お魚×たまご',
-        image: open("#{Rails.root}/app/assets/images/categories/fish8_yellow.png")
+        image: open("#{Rails.root}/app/assets/images/categories/fish_yellow.png")
       },
       {
         name: '簡単レシピ',
