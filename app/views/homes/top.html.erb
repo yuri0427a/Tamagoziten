@@ -64,7 +64,7 @@
       <% @categories.each do |category| %>
         <%= link_to category_path(category) do %>
           <li>
-          <p><%= image_tag category.image.to_s, size: "300x200" %></p>
+          <p><%= image_tag category.category_image.to_s, size: "300x200" %></p>
           <p><%= category.name %></p>
       </li>
       <% end %>
