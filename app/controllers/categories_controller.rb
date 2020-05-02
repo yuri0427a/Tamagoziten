@@ -7,6 +7,6 @@ class CategoriesController < ApplicationController
   end
 private
   def category_params
-    params.require(:category).permit(:name, :image,:recipes_attributes[:id, :name, :recipe_image, :cooking_time])
+    params.require(:category).permit(:name, :category_image,:recipes_attributes[:id, :name, :recipe_image, :cooking_time])
   end
 end
