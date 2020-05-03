@@ -28,7 +28,7 @@ $(document).ready(function () {
 $(function () {
   $('.menu-trigger').on('click', function () {
     $(this).toggleClass('active');
-    $('#sm-menu').fadeToggle();
+    $('#sm-nav').fadeToggle();
     return false;
   });
 });

@@ -1,43 +1,30 @@
-<%= render partial: 'users/partials/header', locals: { search: @search } %>
-<nav class="sm-header">
-  <div class="area1">
-    <ul>
-      <li>
-        <%= link_to "新規登録", new_user_registration_path, class: "header-link" %>
-      </li>
-      <li>
-        <%= link_to "ログイン", user_session_path, class: "header-link" %>
-      </li>
-    </ul>
-  </div>
-  <div class="area2">
-  </div>
-</nav>
-<div class="start">
-  <p class="pc-niwatori">
-    <%= image_tag('hiyoko-i7.png') %>
+<%= render partial: 'layouts/header', locals: { search: @search } %>
+<div class="main_vitual">
+  <p class="pc-character">
+    <%= image_tag('homes/mainvituals/hiyoko-i7.png') %>
   </p>
-  <p class="sm-niwatori">
-    <%= image_tag('niwatori.png') %>
+  <p class="sm-character">
+    <%= image_tag('homes/mainvituals/niwatori.png') %>
   </p>
   <% if user_signed_in? %>
   <% else %>
-  <%= link_to new_user_registration_path, class: "sign-up-btn" do %>
-  <%= image_tag('kumo-l.png') %>
+    <%= link_to new_user_registration_path, class: "sign_up_balloon" do %>
+      <%= image_tag('homes/mainvituals/kumo-l.png') %>
+    <% end %>
+    <%= link_to user_session_path, class: "log_in_balloon" do %>
+      <%= image_tag('homes/mainvituals/kumo-r.png') %>
+    <% end %>
   <% end %>
-  <%= link_to user_session_path, class: "log-in-btn" do %>
-  <%= image_tag('kumo-r.png') %>
-  <% end %>
-  <% end %>
-  <h1 class="app-title">たまご辞典</h1>
+  <h1 class="app_title">
+    たまご辞典
+  </h1>
 </div>
-<section>
-  <div class="about">
-    <div class="about1">
-      <div class="about-image">
-        <%= image_tag('waffles-2190961_640.jpg') %>
+<section class="about">
+    <div class="first_part">
+      <div class="first_about_image">
+        <%= image_tag('homes/about/waffles-2190961_640.jpg') %>
       </div>
-      <div class="about-message">
+      <div class="first_about_message">
         <h3>たまごでたんぱく質を取ろう！</h3>
         <p>たまごに豊富に含まれるたんぱく質.</p><br>
         <p>筋肉,お肌,臓器,免疫力,血液に髪の毛</p><br>
@@ -45,53 +32,62 @@
         <p>たまごはコスパも良く栄養素も豊富なんです❤︎❤︎</p><br>
       </div>
     </div>
-    <div class="about2">
-      <div class="about-image2">
-        <%= image_tag 'baking-1951256_1280.jpg', size: "640x390" %>
+    <div class="concluding_part">
+      <div class="second_about_image">
+        <%= image_tag 'homes/about/baking-1951256_1280.jpg', size: "640x390" %>
       </div>
-      <div class="about-message2">
+      <div class="second_about_message">
         <h3>「皆様の食卓の手助けをしたい」</h3><br>
         <p>そんな思いから</p><br>
         <p><span>〜卵料理専門サイト〜たまご辞典は生まれました★</span></p><br>
       </div>
     </div>
-  </div>
 </section>
-<section class="category-all">
-  <div class="category-index">
+<section class="category_list">
     <h1>〜Category〜</h1>
+    <p class="secition_title_kana">
+      カテゴリーから探す
+    </p>
     <ul>
       <% @categories.each do |category| %>
         <li>
-          <%= link_to category_path(category), class: "category-link" do %>
-            <p class="category-img"></p>
-            <p class="category-name"><%= category.name %></p>
- <% end %>
+          <%= link_to category_path(category), class: "category_item" do %>
+            <p class="category_img"></p>
+            <p class="category_name">
+              <%= category.name %>
+            </p>
+          <% end %>
         </li>
       <% end %>
     </ul>
-  </div>
 </section>
-<section>
-  <div class="recipe-rank">
-    <h1>〜Ranking〜</h1>
+<section class="recipe_ranking">
+    <h1>〜Recipe Ranking〜</h1>
+    <p class="secition_title_kana">
+      ランキングから探す
+    </p>
     <ul>
       <% @recipe_ranks.each.with_index(1) do |recipe, i| %>
       <li>
-        <%= link_to users_recipe_path(recipe), class: "recipe-ranklink" do %>
-        <p class="hover-niwatori">
-          <%= image_tag'e0909_1-removebg-preview.png', size:"150x100" %>
-          <%= image_tag 'niwatori.png', size:"80x100" %>
-        </p>
-        <%= attachment_image_tag recipe.user, :profile_image, :fill, 100, 100, class: "img-circle  profile-thumb rank-user" ,fallback: "no_image.jpg", size: "80x80"%>
-        <%= attachment_image_tag recipe, :recipe_image, :fill, 250, 250, class: " profile-thumb rank-img" ,fallback: "no_image.jpg", size: "250x250"%>
-        <p class="rank"><%= i %>位</p>
-        <p class="rank-username"><%= recipe.user.name %></p>
-        <p class="rank-recipename"><%= recipe.name %></p>
+        <%= link_to users_recipe_path(recipe), class: "ranking_item" do %>
+          <p class="hover_item">
+            <%= image_tag'homes/ranks/e0909_1-removebg-preview.png', size:"150x100" %>
+            <%= image_tag 'homes/mainvituals/niwatori.png', size:"80x100" %>
+          </p>
+            <%= attachment_image_tag recipe.user, :profile_image, :fill, 100, 100, class: "img-circle  profile-thumb rankin_user_img" ,fallback: "no_image/no_image.jpg", size: "80x80"%>
+            <%= attachment_image_tag recipe, :recipe_image, :fill, 250, 250, class: " profile-thumb rankin_recipe_img" ,fallback: "no_image/no_image.jpg", size: "250x250"%>
+          <p class="rank">
+            <%= i %>位
+            </p>
+            <p class="rankin_user_name">
+              <%= recipe.user.name %>
+            </p>
+            <p class="rankin_recipe_name">
+              <%= recipe.name %>
+            </p>
         <% end %>
       </li>
       <% end %>
     </ul>
-  </div>
 </section>
-<%= render 'users/partials/footer' %>
+<%= render 'layouts/footer' %>

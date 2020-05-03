@@ -1,4 +1,4 @@
-<%= render partial: 'users/partials/header', locals: { search: @search } %>
+<%= render partial: 'layouts/header', locals: { search: @search } %>
 <div class="recipe-show">
   <div class="container">
 
@@ -11,10 +11,10 @@
         <ul>
           <% @recipe.categories.each do |category| %>
           
-           <%= link_to category_path(category), class: "tag-link" do %>
-           <li>
-            <%= category.name %>
-          </li>
+          <%= link_to category_path(category), class: "tag-link" do %>
+            <li>
+              <%= category.name %>
+            </li>
           <% end %>
           <% end %>
         </ul>
@@ -41,7 +41,7 @@
       <div class="row">
         <div class="col-xs-7 ">
           <div class="recipe-image">
-            <%= attachment_image_tag @recipe, :recipe_image, :fill, 600, 600, class: " pull-left profile-thumb", alt: "料理画像", fallback: "no_image.jpg", size: "600x600"%>
+            <%= attachment_image_tag @recipe, :recipe_image, :fill, 600, 600, class: " pull-left profile-thumb", alt: "料理画像", fallback: "no_image/no_image.jpg", size: "600x600"%>
           </div>
         </div>
         <div class="col-xs-5">
@@ -126,7 +126,7 @@
               <% @recipe.recipe_reviews.order('id DESC').limit(9).each do |review| %>
               <li class="list-items recipe-review">
                 <p>
-                  <%= attachment_image_tag review, :cooking_image, :fill, 200, 150, alt: "レビュー画像", fallback: "no_image.jpg", size: "200x150"%>
+                  <%= attachment_image_tag review, :cooking_image, :fill, 200, 150, alt: "レビュー画像", fallback: "no_image/no_image.jpg", size: "200x150"%>
                 </p>
                 <h3 class="recipe-title"><%= link_to review.user.name, users_user_path(review.user.id) %></h3>
                 <p><%= review.impression %></p>
@@ -161,4 +161,4 @@
     <% end %>
   </div>
 </div>
-<%= render 'users/partials/footer' %>
+<%= render 'layouts/footer' %>

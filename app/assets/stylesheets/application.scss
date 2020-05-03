@@ -68,21 +68,21 @@ header>h1 {
 
 
 
-.pc-menu {
+.pc-nav {
   @include mq(sm) {
     display: none;
   }
 }
 
 
-.area1 {
+.header_inside {
   background-color: #fff;
   height: 150px;
   text-align: center;
 
 }
 
-.area2 {
+.header_outside {
   background-color: #ffd700;
   height: 20px;
 }
@@ -93,21 +93,21 @@ header>h1 {
 }
 
 
-.area1>ul>li {
+.header_inside>ul>li {
   float: left;
   width: 25%;
   margin-top: 20px;
   border-right: 1px double #000;
 }
 
-.header-link {
+.nav_item {
   display: inline-block;
   padding: 10px;
   font-size: 20px;
   color: #000;
 }
 
-.header-link:hover {
+.nav_item:hover {
   background-color: #ffd700;
   border-radius: 5px;
   transition: 0.3s;
@@ -123,16 +123,16 @@ header>h1 {
   margin-right: 20px;
 }
 
-.search-form {
+.search_form {
   padding: 5px 10px;
 }
 
-.search-form:focus {
+.search_form:focus {
   border: 3px #ffa500 solid;
   outline: 0;
 }
 
-.search-btn {
+.search_btn {
   background-color: #f0e68c;
   padding: 8px;
   margin-left: -10px;
@@ -144,7 +144,7 @@ header>h1 {
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  background-image: image-url("egg-background-sozai-sample.png");
+  background-image: image-url("homes/about/egg-background-sozai-sample.png");
   border-top: 5px dotted #8b4513;
 }
 
@@ -155,22 +155,22 @@ header>h1 {
   clear: both;
 }
 
-.about-image {
+.first_about_image {
   margin-left: 80px;
   float: left;
 }
 
-.about-message {
+.first_about_message {
   float: left;
   margin: 60px 0 110px 50px;
 
 }
 
-.about-message h3 {
+.first_about_message h3 {
   font-size: 40px;
 }
 
-.about-message p {
+.first_about_message p {
   display: inline-block;
   font-size: 18px;
   // background-color: #ffa07a;
@@ -180,32 +180,32 @@ header>h1 {
 }
 
 
-.about-message span {
+.first_about_message span {
   background-color: #ff6347;
   border-radius: 5px;
 }
 
 
-.about-image2 {
+.second_about_image {
   float: right;
 }
 
-.about2 {
+.concluding_part {
   margin-right: 80px;
 }
 
-.about-message2 {
+.second_about_message {
   float: right;
   margin-top: 100px;
   margin-right: 100px;
   padding: 3px;
 }
 
-.about-message2 h3 {
+.second_about_message h3 {
   font-size: 30px;
 }
 
-.about-message2 p {
+.second_about_message p {
   display: inline-block;
   font-size: 18px;
   background-color: #ffd700;
@@ -213,43 +213,42 @@ header>h1 {
   display: inline-block;
 }
 
-.about-message2 span {
+.second_about_message span {
   background-color: #ff6347;
   border-radius: 5px;
 }
 
 //Ranking(Top_page)
 
-.recipe-rank {
+.recipe_ranking {
   padding: 10px 0;
   background-color: #fffacd;
   border-top: 5px dotted #8b4513;
   border-bottom: 5px dotted #8b4513;
 }
 
-.recipe-rank li {
+.recipe_ranking li {
   width: 250px;
 }
 
-.recipe-rank h1 {
+.recipe_ranking h1 {
   font-size: 60px;
   text-align: center;
-  margin-bottom: 40px;
   overflow: auto;
 }
 
-.recipe-rank ul {
+.recipe_ranking ul {
   list-style: disc;
   padding-left: 40px;
 }
 
-.recipe-rank ul:after {
+.recipe_ranking ul:after {
   content: "";
   display: block;
   clear: both;
 }
 
-.recipe-rank li {
+.recipe_ranking li {
   position: relative;
   float: left;
   margin: 0 10px;
@@ -257,140 +256,146 @@ header>h1 {
 
 //category_index
 
-.category-all {
+.category_list {
   border-top: 5px dotted #8b4513;
-  background-image: image-url('homes/publicdomainq-0030527cvuiyk.png');
-
+  background-image: image-url('homes/categories/publicdomainq-0030527cvuiyk.png');
+  padding-bottom: 50px;
 }
 
 
-.category-index ul:after {
+.category_list ul:after {
   content: "";
   display: block;
   clear: both;
 
 }
 
-.category-index ul {
+.category_list ul {
   margin: 0 120px;
 }
 
-.category-index h1 {
+.category_list h1 {
   font-size: 60px;
   text-align: center;
   margin: 20px;
 }
 
-.category-index p:nth-of-type(2) {
+.secition_title_kana {
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: 50px;
+}
+
+.category_list p:nth-of-type(2) {
   text-align: center;
   color: #000;
   font-size: 20px;
 }
 
-.category-index li {
+.category_list li {
   float: left;
   margin-bottom: 20px;
 }
 
-.category-img {
+.category_img {
   width: 300px;
   height: 200px;
-  background-image: image-url('no_image.jpg');
+  background-image: image-url('no_image/no_image.jpg');
   background-size: cover;
 }
 
 
 
-.category-index>ul>li:nth-of-type(1)>.category-link>.category-img {
-  background-image: image-url('categories/meat.jpg');
+.category_list>ul>li:nth-of-type(1)>.category_item>.category_img {
+  background-image: image-url('homes/categories/meat.jpg');
 }
 
-.category-index>ul>li:nth-of-type(2)>.category-link>.category-img {
-  background-image: image-url('categories/vegetables.jpg');
+.category_list>ul>li:nth-of-type(2)>.category_item>.category_img {
+  background-image: image-url('homes/categories/vegetables.jpg');
 }
 
-.category-index>ul>li:nth-of-type(3)>.category-link>.category-img {
-  background-image: image-url('categories/fish_yellow.png');
+.category_list>ul>li:nth-of-type(3)>.category_item>.category_img {
+  background-image: image-url('homes/categories/fish_yellow.png');
 }
 
-.category-index>ul>li:nth-of-type(4)>.category-link>.category-img {
-  background-image: image-url('categories/begginer.jpg');
+.category_list>ul>li:nth-of-type(4)>.category_item>.category_img {
+  background-image: image-url('homes/categories/begginer.jpg');
 }
 
-.category-index>ul>li:nth-of-type(5)>.category-link>.category-img {
-  background-image: image-url('categories/time.jpg');
+.category_list>ul>li:nth-of-type(5)>.category_item>.category_img {
+  background-image: image-url('homes/categories/time.jpg');
 }
 
-.category-index>ul>li:nth-of-type(6)>.category-link>.category-img {
-  background-image: image-url('categories/japanese.jpg');
+.category_list>ul>li:nth-of-type(6)>.category_item>.category_img {
+  background-image: image-url('homes/categories/japanese.jpg');
 }
 
-.category-index>ul>li:nth-of-type(7)>.category-link>.category-img {
-  background-image: image-url('categories/restaurant.jpg');
+.category_list>ul>li:nth-of-type(7)>.category_item>.category_img {
+  background-image: image-url('homes/categories/restaurant.jpg');
 }
 
-.category-index>ul>li:nth-of-type(8)>.category-link>.category-img {
-  background-image: image-url('categories/china.jpg');
+.category_list>ul>li:nth-of-type(8)>.category_item>.category_img {
+  background-image: image-url('homes/categories/china.jpg');
 }
 
-.category-index>ul>li:nth-of-type(9)>.category-link>.category-img {
-  background-image: image-url('categories/don.jpg');
+.category_list>ul>li:nth-of-type(9)>.category_item>.category_img {
+  background-image: image-url('homes/categories/don.jpg');
 }
 
-.category-index>ul>li:nth-of-type(10)>.category-link>.category-img {
-  background-image: image-url('categories/okazu.jpg');
+.category_list>ul>li:nth-of-type(10)>.category_item>.category_img {
+  background-image: image-url('homes/categories/okazu.jpg');
 }
 
-.category-index>ul>li:nth-of-type(11)>.category-link>.category-img {
-  background-image: image-url('categories/dessert.jpg');
+.category_list>ul>li:nth-of-type(11)>.category_item>.category_img {
+  background-image: image-url('homes/categories/dessert.jpg');
 }
 
-.category-index>ul>li:nth-of-type(12)>.category-link>.category-img {
-  background-image: image-url('categories/bentoubako.jpg');
+.category_list>ul>li:nth-of-type(12)>.category_item>.category_img {
+  background-image: image-url('homes/categories/bentoubako.jpg');
 }
 
-.category-index li:hover .category-img {
+.category_list li:hover .category_img {
   transform: scale(1.5);
   transition: 0.5s;
   border: 3px solid #ffd700;
 }
 
-.category-link:hover {
+.category_item:hover {
   text-decoration: none;
 }
 
 //rankng-hover
 
 //hoverすると鶏出現するcss
-.hover-niwatori {
+.hover_item {
   position: absolute;
   top: -100px;
   right: 5px;
   display: none;
 }
 
-.recipe-rank li:hover .hover-niwatori {
+.recipe_ranking li:hover .hover_item {
   display: block;
 }
 
-.recipe-rank li:hover .rank {
+.recipe_ranking li:hover .rank {
   transform: rotate(360deg);
 }
 
 
-.rank-user {
+.rankin_user_img {
   position: absolute;
   top: 220px;
   left: 5px;
 
 }
 
-.rank-username {
+.rankin_user_name {
   font-size: 20px;
   margin-left: 100px;
 }
 
-.rank-recipename {
+.rankin_recipe_name {
   font-size: 30px;
   text-align: center;
   margin-top: 30px;
@@ -412,24 +417,24 @@ header>h1 {
 }
 
 
-.recipe-ranklink {
+.ranking_item {
   color: #000;
 }
 
-.recipe-ranklink:hover {
+.ranking_item:hover {
   color: #000;
 }
 
 
-.recipe-rank>ul>li:first-of-type>.recipe-ranklink>.rank {
+.recipe_ranking>ul>li:first-of-type>.ranking_item>.rank {
   background-color: #ffd700;
 }
 
-.recipe-rank>ul>li:nth-of-type(2)>.recipe-ranklink>.rank {
+.recipe_ranking>ul>li:nth-of-type(2)>.ranking_item>.rank {
   background-color: #c0c0c0;
 }
 
-.recipe-rank>ul>li:nth-of-type(3)>.recipe-ranklink>.rank {
+.recipe_ranking>ul>li:nth-of-type(3)>.ranking_item>.rank {
   background-color: #8b4513;
   color: #fff;
 }
@@ -440,16 +445,16 @@ header>h1 {
 
 
 
-  .area1>h1 {
+  .header_inside>h1 {
     display: none;
   }
 
-  .search-area {
+  .search_area {
     margin-top: 50px;
     margin-right: 60px;
   }
 
-  .area1 {
+  .header_inside {
     background-color: #fff;
     height: 100px;
     text-align: center;
@@ -523,7 +528,7 @@ header>h1 {
     background-color: #ffa500;
   }
 
-  #sm-menu {
+  #sm-nav {
     position: fixed;
     top: 0;
     left: 0;
@@ -536,7 +541,7 @@ header>h1 {
   }
 
 
-  #sm-menu li {
+  #sm-nav li {
     text-align: center;
     margin-bottom: 30px;
   }
@@ -548,7 +553,7 @@ header>h1 {
 @media screen and (min-width:426px) {
 
   #hm-icon,
-  #sm-menu {
+  #sm-nav {
     display: none;
   }
 
@@ -574,8 +579,8 @@ footer>p {
 
 //top_page
 
-.start {
-  background-image: image-url("egg-sandwich.jpg");
+.main_vitual {
+  background-image: image-url("homes/mainvituals/egg-sandwich.jpg");
   height: 800px;
   background-repeat: no-repeat;
   background-position: under;
@@ -585,7 +590,7 @@ footer>p {
   position: relative;
 }
 
-.pc-niwatori {
+.pc-character {
   position: absolute;
   top: 30px;
   left: 500px;
@@ -594,7 +599,7 @@ footer>p {
 
 
 
-.app-title {
+.app_title {
   font-size: 200px;
   background-color: #f0e68c;
   border-radius: 10px;
@@ -604,39 +609,39 @@ footer>p {
 }
 
 
-.sign-up-btn {
+.sign_up_balloon {
   position: absolute;
   top: 60px;
   left: 400px;
 }
 
 
-.log-in-btn {
+.log_in_balloon {
   position: absolute;
   top: 60px;
   right: 360px;
 }
 
-.sign-up-btn:hover {
+.sign_up_balloon:hover {
   position: absolute;
   top: 40px;
   left: 400px;
 }
 
-.log-in-btn:hover {
+.log_in_balloon:hover {
   position: absolute;
   top: 40px;
   right: 360px;
 }
 
-.sign-up-btn:active {
+.sign_up_balloon:active {
   position: absolute;
   top: 50px;
   left: 400px;
 }
 
 
-.log-in-btn:active {
+.log_in_balloon:active {
   position: absolute;
   top: 50px;
   right: 360px;
@@ -645,12 +650,12 @@ footer>p {
 //top-page スマホ画面
 @media screen and (max-width:425px) {
 
-  .start {
-    background-image: image-url("egg-sandwich.sm.jpg");
+  .main_vitual {
+    background-image: image-url("homes/mainvituals/egg-sandwich.sm.jpg");
     height: 550px;
   }
 
-  .app-title {
+  .app_title {
     font-size: 50px;
     background-color: #f0e68c;
     border-radius: 10px;
@@ -659,13 +664,13 @@ footer>p {
     left: 60px;
   }
 
-  .pc-niwatori,
-  .sign-up-btn,
-  .log-in-btn {
+  .pc-character,
+  .sign_up_balloon,
+  .log_in_balloon {
     display: none;
   }
 
-  .sm-niwatori {
+  .sm-character {
     position: absolute;
     top: 120px;
     left: 10px;
@@ -682,31 +687,31 @@ footer>p {
 
   }
 
-  .area1 {
+  .header_inside {
     background-color: #fff;
     height: 50px;
     text-align: center;
     margin-top: 0;
   }
 
-  .area2 {
+  .header_outside {
     background-color: #ffd700;
     height: 5px;
     text-align: center;
     margin-top: 0;
   }
 
-  .area1>ul>li {
+  .header_inside>ul>li {
     width: 50%;
     margin-top: 0;
   }
 
-  .header-link {
+  .nav_item {
     font-size: 10px;
 
   }
 
-  .header-link:hover {
+  .nav_item:hover {
     background-color: #ffd700;
     border-radius: 5px;
     font-size: 15px;
@@ -718,7 +723,7 @@ footer>p {
 @media screen and (min-width:426px) {
 
   .sm-header,
-  .sm-niwatori {
+  .sm-character {
     display: none;
   }
 
@@ -728,7 +733,7 @@ footer>p {
 //lonin_page&signup_page(devise)
 
 .devise_win {
-  background-image: image-url('egg-top-pc.jpg');
+  background-image: image-url('devise/egg-top-pc.jpg');
   height: 800px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -793,7 +798,7 @@ footer>p {
 @media screen and (max-width:425px) {
   .devise_win {
     height: 570px;
-    background-image: image-url('egg-top-sm.jpg');
+    background-image: image-url('devise/egg-top-sm.jpg');
   }
 
   .signup {
