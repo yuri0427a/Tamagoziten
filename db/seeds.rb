@@ -11,51 +11,51 @@ Category.create!(
     [
       {
         name: 'お肉×たまご',
-        category_image: open("./db/categories/meat.jpg")
+        #category_image: open("./db/categories/meat.jpg")
       },
       {
         name: '野菜×たまご',
-        category_image: open("./db/categories/meat.jpg")
+        #category_image: open("./db/categories/meat.jpg")
       },
       {
         name: 'お魚×たまご',
-        category_image: open("./db/categories/meat.jpg")
+        #category_image: open("./db/categories/meat.jpg")
       },
       {
         name: '簡単レシピ',
-        category_image: open("./db/categories/meat.jpg")
+        #category_image: open("./db/categories/meat.jpg")
       },
       {
         name: '短時間♫',
-        category_image: open("./db/categories/meat.jpg")
+        #category_image: open("./db/categories/meat.jpg")
       },
       {
         name: '和風',
-        category_image: open("./db/categories/meat.jpg")
+        category_image: open("./public/assets/images/categories/meat.jpg")
       },
       {
         name: '洋風',
-        category_image: open("./db/categories/meat.jpg")
+        #category_image: open("./db/categories/meat.jpg")
       },
       {
         name: '中華',
-        category_image: open("./db/categories/meat.jpg")
+        #category_image: open("./db/categories/meat.jpg")
       },
       {
         name: '丼もの',
-        category_image: open("./db/categories/meat.jpg")
+        #category_image: open("./db/categories/meat.jpg")
       },
       {
         name: '作り置きおかず',
-        category_image: open("./db/categories/meat.jpg")
+        #category_image: open("./db/categories/meat.jpg")
       },
       {
         name: 'おやつ',
-        category_image: open("./db/categories/meat.jpg")
+        #category_image: open("./db/categories/meat.jpg")
       },
       {
         name: 'お弁当に♪',
-        category_image: open("./db/categories/meat.jpg")
+        #category_image: open("./db/categories/meat.jpg")
       }
     ]
   )
