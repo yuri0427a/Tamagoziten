@@ -31,7 +31,7 @@ Category.create!(
       },
       {
         name: '和風',
-        category_image: open("./public/assets/images/categories/meat.jpg")
+        category_image: open("public/assets/images/categories/meat.jpg")
       },
       {
         name: '洋風',
