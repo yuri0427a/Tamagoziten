@@ -62,12 +62,12 @@
     <h1>〜Category〜</h1>
     <ul>
       <% @categories.each do |category| %>
-        <%= link_to category_path(category) do %>
-          <li>
-          <p><%= image_tag category.category_image.to_s, size: "300x200" %></p>
-          <p><%= category.name %></p>
-      </li>
-      <% end %>
+        <li>
+          <%= link_to category_path(category), class: "category-link" do %>
+            <p class="category-img"></p>
+            <p><%= category.name %></p>
+          <% end %>
+        </li>
       <% end %>
     </ul>
   </div>
