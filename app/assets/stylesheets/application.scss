@@ -257,6 +257,12 @@ header>h1 {
 
 //category_index
 
+.category-all {
+  border-top: 5px dotted #8b4513;
+  background-image: image-url('homes/publicdomainq-0030527cvuiyk.png');
+
+}
+
 
 .category-index ul:after {
   content: "";
@@ -264,7 +270,6 @@ header>h1 {
   clear: both;
 
 }
-
 
 .category-index ul {
   margin: 0 120px;
@@ -276,73 +281,83 @@ header>h1 {
   margin: 20px;
 }
 
-.category-index li {
-  float: left;
-  margin-bottom: 20px;
-}
-
 .category-index p:nth-of-type(2) {
   text-align: center;
   color: #000;
   font-size: 20px;
 }
 
-.category-img{
+.category-index li {
+  float: left;
+  margin-bottom: 20px;
+}
+
+.category-img {
   width: 300px;
   height: 200px;
   background-image: image-url('no_image.jpg');
   background-size: cover;
 }
 
-.category-index>ul>li:nth-of-type(1)> .category-link> .category-img {
+
+
+.category-index>ul>li:nth-of-type(1)>.category-link>.category-img {
   background-image: image-url('categories/meat.jpg');
 }
 
-.category-index>ul>li:nth-of-type(2)> .category-link> .category-img {
+.category-index>ul>li:nth-of-type(2)>.category-link>.category-img {
   background-image: image-url('categories/vegetables.jpg');
 }
 
-.category-index>ul>li:nth-of-type(3)> .category-link> .category-img {
+.category-index>ul>li:nth-of-type(3)>.category-link>.category-img {
   background-image: image-url('categories/fish_yellow.png');
 }
 
-.category-index>ul>li:nth-of-type(4)> .category-link> .category-img {
+.category-index>ul>li:nth-of-type(4)>.category-link>.category-img {
   background-image: image-url('categories/begginer.jpg');
 }
 
-.category-index>ul>li:nth-of-type(5)> .category-link> .category-img {
+.category-index>ul>li:nth-of-type(5)>.category-link>.category-img {
   background-image: image-url('categories/time.jpg');
 }
 
-.category-index>ul>li:nth-of-type(6)> .category-link> .category-img {
+.category-index>ul>li:nth-of-type(6)>.category-link>.category-img {
   background-image: image-url('categories/japanese.jpg');
 }
 
-.category-index>ul>li:nth-of-type(7)> .category-link> .category-img {
+.category-index>ul>li:nth-of-type(7)>.category-link>.category-img {
   background-image: image-url('categories/restaurant.jpg');
 }
 
-.category-index>ul>li:nth-of-type(8)> .category-link> .category-img {
+.category-index>ul>li:nth-of-type(8)>.category-link>.category-img {
   background-image: image-url('categories/china.jpg');
 }
 
-.category-index>ul>li:nth-of-type(9)> .category-link> .category-img {
+.category-index>ul>li:nth-of-type(9)>.category-link>.category-img {
   background-image: image-url('categories/don.jpg');
 }
 
-.category-index>ul>li:nth-of-type(10)> .category-link> .category-img {
+.category-index>ul>li:nth-of-type(10)>.category-link>.category-img {
   background-image: image-url('categories/okazu.jpg');
 }
 
-.category-index>ul>li:nth-of-type(11)> .category-link> .category-img {
+.category-index>ul>li:nth-of-type(11)>.category-link>.category-img {
   background-image: image-url('categories/dessert.jpg');
 }
 
-.category-index>ul>li:nth-of-type(12)> .category-link> .category-img {
+.category-index>ul>li:nth-of-type(12)>.category-link>.category-img {
   background-image: image-url('categories/bentoubako.jpg');
 }
 
+.category-index li:hover .category-img {
+  transform: scale(1.5);
+  transition: 0.5s;
+  border: 3px solid #ffd700;
+}
 
+.category-link:hover {
+  text-decoration: none;
+}
 
 //rankng-hover
 
