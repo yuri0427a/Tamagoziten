@@ -1,9 +1,11 @@
 <div class="devise_win">
   <div class="col-lg-4 col-lg-offset-4 col-xs-8 col-xs-offset-2">
     <div class="login_form">
-      <h2 class="devise-title" style="text-align: center;">〜ログイン〜</h2>
+      <h2 class="devise_title">
+        〜ログイン〜
+      </h2>
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <%= render "devise/shared/error_messages", resource: resource %>
+        <%= render "devise/shared/error_messages", resource: resource %>
       <div class="field">
         <%= f.label "メールアドレス" %><br />
         <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control" %>
@@ -13,10 +15,11 @@
         <%= f.password_field :password, autocomplete: "current-password", class:"form-control" %>
       </div>
       <div class="actions">
-        <%= f.submit "Log in", class: "btn login" %>
+        <%= f.submit "Log in", class: "btn login_btn" %>
       </div>
       <% end %>
-      <%= link_to "登録がお済みでない方はこちら", new_registration_path(resource_name), class: "login-go" %>
+      <%= link_to "登録がお済みでない方はこちら", new_registration_path(resource_name), class: "signup_link" %>
+      <%= link_to "Topページへ", root_path, class: "top_link" %>
     </div>
   </div>
 </div>
