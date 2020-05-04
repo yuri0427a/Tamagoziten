@@ -1,10 +1,10 @@
 class Users::UsersController < ApplicationController
-before_action :authenticate_user!
+  before_action :authenticate_user!
     def show
-      @user = User.find(params[:id])
-      @recipes = Recipe.where(user_id: current_user.id)
-      @userrecipes = Recipe.where(user_id: @user.id)
-      @bookmarks= RecipeFavorite.where(user_id: current_user.id)
+        @user = User.find(params[:id])
+        @recipes = Recipe.where(user_id: current_user.id)
+        @userrecipes = Recipe.where(user_id: @user.id)
+        @bookmarks= RecipeFavorite.where(user_id: current_user.id)
     end
 
     def edit
@@ -20,7 +20,7 @@ before_action :authenticate_user!
         end
     end
 
-    private
+  private
     def user_params
         params.require(:user).permit(:name, :email, :introduction, :profile_image)  
     end

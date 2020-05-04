@@ -1,11 +1,9 @@
 class Users::RecipeReviewsController < ApplicationController
-  before_action :authenticate_user!  
-    
+before_action :authenticate_user!  
     def create
         @review = RecipeReview.new(recipe_review_params)
         @review.user_id=current_user.id
         @review.recipe_id=params[:recipe_id]
-    
         if @review.save
             flash[:notice]="投稿できました"
             redirect_to users_recipe_path(@review.recipe_id)
@@ -15,8 +13,8 @@ class Users::RecipeReviewsController < ApplicationController
         end
     end
 
-
-  private
+    private
+    
     def recipe_review_params
         params.require(:recipe_review).permit(:impression, :cooking_image, :user_id, :recipe_id)
     end
