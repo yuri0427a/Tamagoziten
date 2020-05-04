@@ -72,7 +72,6 @@ gem 'kaminari', '~> 0.17.0'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
 gem 'ransack'
-gem 'carrierwave'
 
 group :development, :test do
   gem 'pry-rails'

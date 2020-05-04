@@ -8,7 +8,6 @@ class User < ApplicationRecord
   has_many :recipe_favorites, dependent: :destroy
   has_many :recipe_reviews, dependent: :destroy
 
-
   validates :name, presence: true, length: {maximum: 10},uniqueness: true, format: { with: /\A[a-zA-Z0-9]+\z/, message: 'は半角英数字で入力してください'}
   validates :introduction, length: {maximum: 20}
 
