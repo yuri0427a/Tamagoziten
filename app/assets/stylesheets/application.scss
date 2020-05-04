@@ -83,8 +83,9 @@ header>h1 {
 }
 
 .header_outside {
-  background-color: #ffd700;
   height: 20px;
+  background-color: #ffd700;
+
 }
 
 .area1t>ul {
@@ -756,11 +757,12 @@ footer>p {
   border-radius: 50px;
 }
 
-.devise-title {
+.devise_title {
   font-style: bold;
+  text-align: center;
 }
 
-.login {
+.login_btn {
   border: 1px solid orange;
   color: orangered;
   margin: 10px 0 0 170px;
@@ -772,19 +774,19 @@ footer>p {
   border: 1px solid orange;
 }
 
-.signup-go {
+.login_link {
   display: inline-block;
   margin-top: 30px;
   margin-left: 160px;
 }
 
-.login-go {
+.signup_link {
   display: inline-block;
   margin-top: 30px;
   margin-left: 130px;
 }
 
-.login:hover {
+.login_btn:hover {
   background-color: orangered;
   color: #fff;
 }
@@ -805,7 +807,7 @@ footer>p {
     margin: 10px 0 10px 50px;
   }
 
-  .login {
+  .login_btn {
     margin: 10px 0 10px 50px;
   }
 
@@ -813,13 +815,13 @@ footer>p {
     margin-top: 80px;
   }
 
-  .signup-go {
+  .login_link {
     display: inline-block;
     margin-top: 10px;
     margin-left: 50px;
   }
 
-  .login-go {
+  .signup_link {
     display: inline-block;
     margin-top: 10px;
     margin-left: 10px;
