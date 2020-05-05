@@ -1,79 +1,92 @@
-<div class="containor">
-  <header>
-    <nav class="header_inside">
-      <%= link_to root_path, class: "logo" do %>
-        <h1>〜Tamagoziten〜</h1>
-      <% end %>
-      <%= search_form_for @search, class: "search", url: users_recipes_path do |f| %>
-        <%= f.label :name, "レシピ検索" %>
-        <%= f.search_field :name_cont, class: "search_form",placeholder: "レシピ名" %>
-        <%= f.submit "検索", class: "search_btn" %>
-      <% end %>
-      <% if user_signed_in? %>
-        <ul class="pc-nav">
-          <li><%= link_to "マイページ", users_user_path(current_user.id), class: "nav_item" %></li>
-          <li><%= link_to "レシピ", users_recipes_path, class: "nav_item"  %></li>
-          <li><%= link_to "レシピ投稿", new_users_recipe_path , class: "nav_item"  %></li>
-          <li><%= link_to "ログアウト", destroy_user_session_path, data: {confirm: "ログアウトしますか？"}, class: "nav_item"  %></>
-        </ul>
-      <div id="sm-nav">
-        <h2>MENU</h2>
-        <ul>
-          <li><%= link_to "マイページ", users_user_path(current_user.id), class: "nav_item" %></li>
-          <li><%= link_to "レシピ", users_recipes_path, class: "nav_item"  %></li>
-          <li><%= link_to "レシピ投稿", new_users_recipe_path , class: "nav_item"  %></li>
-          <li><%= link_to "ログアウト", destroy_user_session_path, data: {confirm: "ログアウトしますか？"}, class: "nav_item"  %>
-          </li>
-          <li>
-            <%= search_form_for @search, class: "search", url: users_recipes_path do |f| %>
-              <%= f.label :name, "レシピ検索" %>
-              <%= f.search_field :name_cont, class: "search_form",placeholder: "レシピ名" %>
-              <%= f.submit "検索", class: "search_btn" %>
+<header class="header">
+  <div class="containor">
+    <div class="header_inside">
+      <h1 class="logo">
+        <%= link_to root_path, class:"logo_link" do %>
+        〜Tamagoziten〜
+        <% end %>
+      </h1>
+      <div class="tool">
+        <p class="search_area">
+          <%= search_form_for @search, class: "search", url: users_recipes_path do |f| %>
+            <%= f.label :name, "レシピ検索" %>
+            <%= f.search_field :name_cont, class: "search_form", placeholder: "レシピ名" %>
+            <%= f.submit "検索", class: "search_btn" %>
           <% end %>
-          </li>
-        </ul>
+        </p>
       </div>
-      <div id="hm-icon">
-        <a class="menu-trigger" href="#">
-          <span></span>
-          <span></span>
-          <span></span>
-        </a>
+      <% if user_signed_in? %>
+        <div class="pc_nav_wrapper">
+          <ul class="pc_nav">
+            <li><%= link_to "マイページ", users_user_path(current_user.id), class: "nav_item" %></li>
+            <li><%= link_to "レシピ", users_recipes_path, class: "nav_item" %></li>
+            <li><%= link_to "レシピ投稿", new_users_recipe_path , class: "nav_item" %></li>
+            <li><%= link_to "ログアウト", destroy_user_session_path, data: {confirm: "ログアウトしますか？"}, class: "nav_item" %></li>
+          </ul>
+        </div>
+        <div class="sm_nav_wrapper">
+          <div id="sm-nav">
+            <h2>MENU</h2>
+            <ul>
+              <li><%= link_to "マイページ", users_user_path(current_user.id), class: "nav_item" %></li>
+              <li><%= link_to "レシピ", users_recipes_path, class: "nav_item"  %></li>
+              <li><%= link_to "レシピ投稿", new_users_recipe_path , class: "nav_item"  %></li>
+              <li><%= link_to "ログアウト", destroy_user_session_path, data: {confirm: "ログアウトしますか？"}, class: "nav_item"  %>
+              </li>
+              <li>
+                <%= search_form_for @search, class: "search", url: users_recipes_path do |f| %>
+                <%= f.label :name, "レシピ検索" %>
+                <%= f.search_field :name_cont, class: "search_form",placeholder: "レシピ名" %>
+                <%= f.submit "検索", class: "search_btn" %>
+                <% end %>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="hm_icon">
+          <a class="menu_trigger" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+        </div>
       </div>
-    </nav>
-    <nav class="header_outside">
-    </nav>
     <% else %>
-    <ul class="pc-nav">
-      <li><%= link_to "マイページ", user_session_path, class: "nav_item" %></li>
-      <li><%= link_to "レシピ", users_recipes_path, class: "nav_item"  %></li>
-      <li><%= link_to "レシピ投稿", new_users_recipe_path , class: "nav_item"  %></li>
-    </ul>
-    <div id="sm-nav">
-      <h2>MENU</h2>
-      <ul>
+    <div class="pc_nav_wrapper">
+      <ul class="pc_nav">
         <li><%= link_to "マイページ", user_session_path, class: "nav_item" %></li>
         <li><%= link_to "レシピ", users_recipes_path, class: "nav_item"  %></li>
         <li><%= link_to "レシピ投稿", new_users_recipe_path , class: "nav_item"  %></li>
-        <li>
-          <%= search_form_for @search, class: "search", url: users_recipes_path do |f| %>
-            <%= f.label :name, "レシピ検索" %>
-            <%= f.search_field :name_cont, class: "search_form",placeholder: "レシピ名" %>
-            <%= f.submit "検索", class: "search_btn" %>
-          <% end %>
-        </li>
       </ul>
     </div>
-    <div id="hm-icon">
-      <a class="menu-trigger" href="#">
-        <span></span>
-        <span></span>
-        <span></span>
-      </a>
-    </div>
-    </nav>
-    <nav class="header_outside">
-    </nav>
-    <% end %>
-  </header>
 </div>
+<div class="sm_nav_wrapper">
+  <div id="sm-nav">
+    <h2>MENU</h2>
+    <ul>
+      <li><%= link_to "マイページ", user_session_path, class: "nav_item" %></li>
+      <li><%= link_to "レシピ", users_recipes_path, class: "nav_item" %></li>
+      <li><%= link_to "レシピ投稿", new_users_recipe_path , class: "nav_item" %></li>
+      <li>
+        <%= search_form_for @search, class: "search", url: users_recipes_path do |f| %>
+          <%= f.label :name, "レシピ検索" %>
+          <%= f.search_field :name_cont, class: "search_form",placeholder: "レシピ名" %>
+          <%= f.submit "検索", class: "search_btn" %>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</div>
+<div id="hm_icon">
+  <a class="menu_trigger" href="#">
+    <span></span>
+    <span></span>
+    <span></span>
+  </a>
+</div>
+</nav>
+<% end %>
+<nav class="header_outside">
+</nav>
+</div>
+</header>
