@@ -26,7 +26,7 @@ $(document).ready(function () {
 // ハンバーガーメニュー
 
 $(function () {
-  $('.menu-trigger').on('click', function () {
+  $('.menu_trigger').on('click', function () {
     $(this).toggleClass('active');
     $('#sm-nav').fadeToggle();
     return false;
