@@ -1,11 +1,4 @@
 
-
-//= require rails-ujs
-//= require activestorage
-//= require jquery
-//= require bootstrap-sprockets
-//= require_tree .
-
 //modalwindow
 
 $(function () {
@@ -79,10 +72,10 @@ $(function () {
 jQuery(function ($) {
     $('.tabcontent > div').hide();
 
-    $('.tabnav a').click(function () {
+    $('.tab_nav a').click(function () {
         $('.tabcontent > div').hide().filter(this.hash).fadeIn();
 
-        $('.tabnav a').removeClass('active');
+        $('.tab_nav a').removeClass('active');
         $(this).addClass('active');
 
         return false;
