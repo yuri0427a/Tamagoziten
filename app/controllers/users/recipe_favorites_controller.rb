@@ -7,13 +7,15 @@ class Users::RecipeFavoritesController < ApplicationController
 
         def create
             @recipe = Recipe.find(params[:recipe_id])
-            favorite = current_user.recipe_favorites.new(recipe_id: @recipe.id)
-            favorite.save
+            @favorite = current_user.recipe_favorites.new(recipe_id: @recipe.id)
+            @favorite.save
+            render :change
         end
 
         def destroy
             @recipe = Recipe.find(params[:recipe_id])
-            favorite = current_user.recipe_favorites.find_by(recipe_id: @recipe.id)
-            favorite.destroy
+            @favorite = current_user.recipe_favorites.find_by(recipe_id: @recipe.id)
+            @favorite.destroy
+            render :change
         end
 end

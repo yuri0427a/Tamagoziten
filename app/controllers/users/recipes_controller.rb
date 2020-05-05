@@ -39,6 +39,9 @@ class Users::RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id]) 
     @materials = @recipe.cooking_materials
     @procedures = @recipe.cooking_procedures
+    if @recipe.user_id != current_user.id
+      redirect_to users_recipe_path(@recipe.id)
+    end
   end
 
   def update
@@ -54,6 +57,9 @@ class Users::RecipesController < ApplicationController
     recipe = Recipe.find(params[:id]) 
     recipe.destroy
     redirect_to users_user_path(current_user.id)
+    if @recipe.user_id != current_user.id
+      redirect_to users_recipe_path(@recipe.id)
+    end
   end
 
   private

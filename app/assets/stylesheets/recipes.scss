@@ -131,7 +131,7 @@ main {
 }
 
 
-.fields-procrdures {
+.fields-procedures {
     padding: 30px 30px;
     margin-right: 30px;
     border-radius: 3px;
@@ -170,7 +170,15 @@ main {
     text-align: center;
 }
 
+.recipe_img_preview {
+    width: 280px;
+    height: 200px;
 
+}
+
+#btn_submit {
+    margin-bottom: 30px;
+}
 
 
 //recipe_show
@@ -203,7 +211,7 @@ main {
     border: ridge 3px #ffd700;
 }
 
-.lavel-recipe {
+.label-recipe {
     font-size: 30px;
     border-bottom: 2px dotted #a9a9a9;
 }
@@ -222,11 +230,16 @@ main {
     margin: 30px 0 5px 0;
 }
 
+.review_img_preview {
+    width: 200px;
+    height: 150px;
+}
+
 //recipe_show
 
 
 
-.lavel-recipe-description {
+.label-recipe-description {
     font-size: 25px;
     margin-top: 30px;
 }
