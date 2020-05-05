@@ -847,7 +847,7 @@ footer>p {
 
 //mypage
 
-.tabcontent {
+.tab_content {
   position: relative;
   margin-top: 30px;
 }
@@ -878,13 +878,13 @@ footer>p {
   text-decoration: none;
 }
 
-.hiyoko {
+.hiyoko_right {
   position: absolute;
   top: 40px;
   right: 100px;
 }
 
-.hiyoko2 {
+.hiyoko_left {
   position: absolute;
   top: 90px;
   left: 100px;
@@ -983,7 +983,7 @@ footer>p {
   bottom: 159px;
   width: 64px;
   height: 64px;
-  background-image: image-url("recipe_show/yazirushi.png");
+  background-image: image-url("recipes/yazirushi.png");
 }
 
 a.prev {

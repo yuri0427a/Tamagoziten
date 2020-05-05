@@ -2,11 +2,11 @@
 <% if current_user != @user %>
 <div class="tab">
   <ul class="tab_nav">
-    <li><a href="#tab01">プロフィール/投稿レシピ</a></li>
+    <li><a href="#tab_mypage">プロフィール/投稿レシピ</a></li>
   </ul>
 </div>
-<div class="tabcontent">
-  <div id="tab01">
+<div class="tab_content">
+  <div id="tab_mypage">
     <div class="col-xs-offset-4">
       <h1>Profile...</h1>
       <p>
@@ -18,8 +18,8 @@
       </p>
       <p class="user_introduction"><%= @user.introduction %></p>
     </div>
-    <p class="hiyoko2"><%= image_tag('users/my_page/hiyoko2.png')%></p>
-    <p class="hiyoko"><%= image_tag('users/my_page/hiyoko.png')%></p>
+    <p class="hiyoko_left"><%= image_tag('users/my_page/hiyoko_left.png')%></p>
+    <p class="hiyoko_right"><%= image_tag('users/my_page/hiyoko.png')%></p>
     <ul class="recipe-list-index">
       <% @userrecipes .each do |userrecipe| %>
       <li class="list-items myrecipe">
@@ -46,19 +46,19 @@
 <div class="tab">
   <ul class="tab_nav">
     <li>
-      <a href="#tab01">
+      <a href="#tab_mypage">
         プロフィール/投稿レシピ
       </a>
     </li>
     <li>
-      <a href="#tab02">
+      <a href="#tab_bookmark">
         保存レシピ
       </a>
     </li>
   </ul>
 </div>
-<div class="tabcontent">
-  <div id="tab01">
+<div class="tab_content">
+  <div id="tab_mypage">
     <div class="col-xs-offset-4">
       <% if flash[:error].present? %>
       <ul>
@@ -109,9 +109,9 @@
     <%= link_to  users_user_path(current_user.id) , class: "show-modal" do %>
     <%= image_tag('users/my_page/female_hand.png') %>
     <% end %>
-    <p class="hiyoko"><%= image_tag('users/my_page/hiyoko.png')%></p>
+    <p class="hiyoko_right"><%= image_tag('users/my_page/hiyoko.png')%></p>
   </div>
-  <div id="tab02">
+  <div id="tab_bookmark">
     <div class="bookmark-heading">
       <h2 class="heading-title">
         〜BookMark Recipe〜

@@ -70,10 +70,10 @@ $(function () {
 });
 
 jQuery(function ($) {
-    $('.tabcontent > div').hide();
+    $('.tab_content > div').hide();
 
     $('.tab_nav a').click(function () {
-        $('.tabcontent > div').hide().filter(this.hash).fadeIn();
+        $('.tab_content > div').hide().filter(this.hash).fadeIn();
 
         $('.tab_nav a').removeClass('active');
         $(this).addClass('active');
