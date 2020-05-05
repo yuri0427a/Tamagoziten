@@ -161,8 +161,8 @@ $(function () {
     //アップロードした画像を選択する
     reader.onload = (function (file) {
       return function (e) {
-        $("#img1").attr("src", e.target.result);
-        $("#img1").attr("title", file.name);
+        $("#img_preview").attr("src", e.target.result);
+        $("#img_preview").attr("title", file.name);
       };
     })(file);
     reader.readAsDataURL(file);

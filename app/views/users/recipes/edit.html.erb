@@ -24,7 +24,7 @@
             <div class="col-xs-4 recipe-newform">
                <%= attachment_image_tag @user, :recipe_image, :fill, 60, 60, class: "img-circle pull-left profile-thumb"%>
                <%= f.attachment_field :recipe_image, placeholder: "プロフィール画像", class: "recipe-edit-form", id: "recipefile" %>
-               　　<img id="img1" style="width:280px;height:200px;" , alt: "画像プレビュー" />
+               　<img id="img_preview", class="recipe_img_preview", alt: "画像プレビュー" />
             </div>
             <div class="col-xs-6 recipe_newlist">
                <table>
@@ -96,7 +96,7 @@
                </div>
             </div>
          </div>
-         <%= f.submit "レシピ編集", class: "btn btn-warning col-xs-offset-4", style: "margin-bottom: 30px;" %>
+         <%= f.submit "レシピ編集", id: "btn_submit", class: "btn btn-warning col-xs-offset-4"  %>
          <% end %>
       </div>
    </main>

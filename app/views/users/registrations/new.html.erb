@@ -2,7 +2,8 @@
    <div class="col-lg-4 col-lg-offset-4 col-xs-8 col-xs-offset-2">
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
-      <h2 style="text-align: center;">〜新規登録〜</h2>
+      <h2 class="devise_title">
+         〜新規登録〜</h2>
       <div class="field">
          <%= f.label "ニックネーム" %><br />
          <%= f.text_field :name, autofocus: true, class:"form-control" %>
@@ -26,7 +27,8 @@
          <%= f.submit "Sign up", class: "btn signup" %>
       </div>
       <% end %>
-      <%= link_to "ログインはこちら", new_session_path(resource_name), class: "signup-go" %>
+      <%= link_to "ログインはこちら", new_session_path(resource_name), class: "login_link" %><br>
+      <%= link_to "Topページへ", root_path, class: "top_link" %>
    </div>
 </div>
 <%= render 'layouts/footer' %>

@@ -5,14 +5,15 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-//profile
+//user_profile
 .user-name {
     font-size: 30px;
+    font-weight: normal;
 }
 
 .edit-profile {
-    font-family: 'HanziPen TC';
     margin-bottom: 15px;
+    font-family: 'HanziPen TC';
 }
 
 .user-introduction {
@@ -22,133 +23,80 @@
 
 //tab
 
-/*
-.tab-menu{
-    border-bottom: 6px solid #f0e68c;
-    height: 48px;
-}
-
-.tab-menu > li{
-    float: left;
-    margin: 0 3px 0 0px;
-    //background-color: #fff;
-    //color: #f0e68c;
-    
-}
-
-.tab-menu > li:hover{
-    background-color:#f0e68c;
-    border-radius: 5px 5px 0 0;
-}
-
-.tab-menu > li:nth-child(1){
-    margin-left: 200px;
-}
-
-.tab-menu > li >a{
-    display: inline-block;
-    padding: 10px 150px;
-    border: 3px solid #f0e68c;
-    border-radius: 5px 5px 0 0;
-}
-
-.tab-menu > li >a:nth-child(1){
-    padding: 10px 100px;
-}
-
-.tab-menu > li >a:hover{
-    background-color: #f0e68c;
-    border-radius: 5px 5px 0 0;
-}
-
-.tab-menu > li:active{
-    border: 1px solid #ffd700;
-}
-.tab-menu > li > a:active{
-    background-color: #ffd700;
-    border: 1px solid #ffd700;
-}
-
-.tab-menu > li.selected > a{
-    background-color: #f0e68c;
-}
-
-　.tab-contents .h{
-    display: none;
-}
-*/
-
-.tabnav li {
+.tab_nav li {
     display: inline;
 
 }
 
-.tabnav li a {
+.tab_nav li a {
     display: inline-block;
-    background: #405dca;
-    color: #fff;
     padding: 10px;
-    border-radius: 5px 5px 0 0;
+    color: #fff;
     text-decoration: none;
+    background: #405dca;
+    border-radius: 5px 5px 0 0;
 }
 
 
-.tabnav {
+.tab_nav {
     margin-top: 50px;
     padding: 0;
     border-bottom: 6px solid #f0e68c;
 }
 
-.tabnav li a {
+.tab_nav li a {
     display: inline-block;
     padding: 10px 60px;
-    border-radius: 5px 5px 0 0;
+    color: #333;
     text-decoration: none;
     background: #ddd;
-    color: #333;
+    border-radius: 5px 5px 0 0;
 }
 
-.tabnav li:nth-child(1) {
+.tab_nav li:nth-child(1) {
     margin-left: 450px;
 }
 
-.tabnav li a:hover,
-.tabnav li a.active {
-    background: #f0e68c;
+.tab_nav li a:hover,
+.tab_nav li a.active {
     color: #fff;
+    background: #f0e68c;
 }
 
 
 //modalwin　
 
 .modalwin {
-    width: 500px;
-    border: 5px dotted #d2b48c;
-    background-color: #fffacd;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 2px 4px 0 #000;
-    text-align: center;
     position: fixed;
+    width: 500px;
+    padding: 20px;
+    text-align: center;
+    border: 5px dotted #d2b48c;
+    border-radius: 10px;
+    background-color: #fffacd;
+    box-shadow: 0 2px 4px 0 #000;
 }
 
 .modal-close {
     display: block;
-    background-position: 0 0;
-    background-position: no-repeat;
-    width: 40px;
-    height: 40px;
     position: absolute;
     top: 0;
     right: 0;
+    width: 40px;
+    height: 40px;
+    background-position: 0;
+    background-position: no-repeat;
+}
+
+.userimg_preview {
+    width: 150px;
+    height: 150px;
 }
 
 .modal-close:hover {
     text-decoration: none;
     cursor: pointer;
 }
-
-
 
 #shade {
     position: fixed;
