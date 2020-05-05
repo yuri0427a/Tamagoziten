@@ -56,95 +56,6 @@ $breakpoints: ('sm': 'screen and (max-width: 480px)',
 }
 
 
-//header
-header {
-  box-shadow: 0 3px 5px 0 #000;
-}
-
-
-header>h1 {
-  text-align: center;
-}
-
-.logo{
-  color: #000;
-}
-
-.logo:hover{
-  color: #000;
-}
-
-.pc-nav {
-  @include mq(sm) {
-    display: none;
-  }
-}
-
-
-.header_inside {
-  background-color: #fff;
-  height: 150px;
-  text-align: center;
-
-}
-
-.header_outside {
-  height: 20px;
-  background-color: #ffd700;
-
-}
-
-.area1t>ul {
-  margin: 0 auto;
-
-}
-
-
-.header_inside>ul>li {
-  float: left;
-  width: 25%;
-  margin-top: 20px;
-  border-right: 1px double #000;
-}
-
-.nav_item {
-  display: inline-block;
-  padding: 10px;
-  font-size: 20px;
-  color: #000;
-}
-
-.nav_item:hover {
-  background-color: #ffd700;
-  border-radius: 5px;
-  transition: 0.3s;
-  text-decoration: none;
-  font-size: 30px;
-  color: #fff;
-  margin-top: -5px;
-}
-
-.search {
-  float: right;
-  margin-top: -40px;
-  margin-right: 20px;
-}
-
-.search_form {
-  padding: 5px 10px;
-}
-
-.search_form:focus {
-  border: 3px #ffa500 solid;
-  outline: 0;
-}
-
-.search_btn {
-  background-color: #f0e68c;
-  padding: 8px;
-  margin-left: -10px;
-}
-
 //about_section
 
 .about {
@@ -477,26 +388,26 @@ header>h1 {
 
   // メニューハンバーガーアイコン
 
-  #hm-icon {
+  #hm_icon {
     position: fixed;
     right: 20px;
     top: 20px;
     z-index: 10;
   }
 
-  .menu-trigger,
-  .menu-trigger span {
+  .menu_trigger,
+  .menu_trigger span {
     display: inline-block;
     transition: all .4s;
   }
 
-  .menu-trigger {
+  .menu_trigger {
     position: relative;
     width: 45px;
     height: 39px;
   }
 
-  .menu-trigger span {
+  .menu_trigger span {
     position: absolute;
     left: 0;
     width: 100%;
@@ -507,29 +418,29 @@ header>h1 {
     background-color: #ffa500;
   }
 
-  .menu-trigger span:nth-of-type(1) {
+  .menu_trigger span:nth-of-type(1) {
     top: 0;
   }
 
-  .menu-trigger span:nth-of-type(2) {
+  .menu_trigger span:nth-of-type(2) {
     top: 15px;
   }
 
-  .menu-trigger span:nth-of-type(3) {
+  .menu_trigger span:nth-of-type(3) {
     bottom: 5px;
   }
 
-  .menu-trigger.active span:nth-of-type(1) {
+  .menu_trigger.active span:nth-of-type(1) {
     -webkit-transform: translateY(20px) rotate(-45deg);
     transform: translateY(10px) rotate(-45deg);
     background-color: #ffa500;
   }
 
-  .menu-trigger.active span:nth-of-type(2) {
+  .menu_trigger.active span:nth-of-type(2) {
     opacity: 0;
   }
 
-  .menu-trigger.active span:nth-of-type(3) {
+  .menu_trigger.active span:nth-of-type(3) {
     -webkit-transform: translateY(-20px) rotate(45deg);
     transform: translateY(-20px) rotate(45deg);
     background-color: #ffa500;
@@ -559,7 +470,7 @@ header>h1 {
 
 @media screen and (min-width:426px) {
 
-  #hm-icon,
+  #hm_icon,
   #sm-nav {
     display: none;
   }
@@ -568,21 +479,6 @@ header>h1 {
 }
 
 
-//footer
-
-
-
-footer {
-  height: 100px;
-  background-color: #ffd700;
-
-}
-
-footer>p {
-  text-align: center;
-  line-height: 100px;
-  font-size: 20px;
-}
 
 //top_page
 
@@ -847,7 +743,7 @@ footer>p {
 
 //mypage
 
-.tabcontent {
+.tab_content {
   position: relative;
   margin-top: 30px;
 }
@@ -878,13 +774,13 @@ footer>p {
   text-decoration: none;
 }
 
-.hiyoko {
+.hiyoko_right {
   position: absolute;
   top: 40px;
   right: 100px;
 }
 
-.hiyoko2 {
+.hiyoko_left {
   position: absolute;
   top: 90px;
   left: 100px;
@@ -983,7 +879,7 @@ footer>p {
   bottom: 159px;
   width: 64px;
   height: 64px;
-  background-image: image-url("recipe_show/yazirushi.png");
+  background-image: image-url("recipes/yazirushi.png");
 }
 
 a.prev {
@@ -1025,4 +921,443 @@ a.next:hover {
   content: "";
   display: block;
   clear: both;
+}
+
+
+header {
+  box-shadow: 0 3px 5px 0 #000;
+}
+
+header>h1 {
+  text-align: center;
+}
+
+.logo_link {
+  color: #000;
+}
+
+.logo_link:hover {
+  color: #000;
+}
+
+.header_inside {
+  background-color: #fff;
+  height: 150px;
+  text-align: center;
+}
+
+.header_outside {
+  height: 20px;
+  background-color: #ffd700;
+
+}
+
+
+.header_inside>.pc_nav_wrapper>ul>li {
+  float: left;
+  width: 25%;
+  margin-top: 20px;
+  border-right: 1px double #000;
+}
+
+.nav_item {
+  display: inline-block;
+  padding: 10px;
+  font-size: 20px;
+  color: #000;
+}
+
+.nav_item:hover {
+  background-color: #ffd700;
+  border-radius: 5px;
+  transition: 0.3s;
+  text-decoration: none;
+  font-size: 30px;
+  color: #fff;
+  margin-top: -5px;
+}
+
+.search {
+  float: right;
+  margin-top: -40px;
+  margin-right: 20px;
+}
+
+.search_form {
+  padding: 5px 10px;
+}
+
+.search_form:focus {
+  border: 3px #ffa500 solid;
+  outline: 0;
+}
+
+.search_btn {
+  background-color: #f0e68c;
+  padding: 8px;
+  margin-left: -10px;
+}
+
+// Place all the styles related to the recipes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+main {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: 'HanziPen TC', sans-serif;
+}
+
+
+
+.list-items {
+  float: left;
+  margin: 30px 30px 30px 0;
+  border-radius: 30px;
+  padding: 20px 20px 30px 20px;
+  ;
+  display: block;
+  box-sizing: border-box;
+  box-shadow: 0 3px 5px 0 #000;
+  background-color: #fff;
+}
+
+//recipe_index
+
+.recipe-index-ul:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.recipe-index {
+  text-align: center;
+  font-size: 80px;
+}
+
+
+.recipe-list {
+  margin-top: 50px;
+  font-family: 'HanziPen TC';
+  width: 1000px;
+}
+
+
+.link-recepi {
+  display: block;
+}
+
+.reshipe-image {
+  display: block;
+}
+
+
+
+.lists-items {
+  float: left;
+  margin: 30px 30px 30px 0;
+  border-radius: 30px;
+  padding: 20px 20px 30px 20px;
+  display: block;
+  box-sizing: border-box;
+  box-shadow: 0 3px 5px 0 #000;
+  background-color: #fff;
+  width: 280px;
+}
+
+
+.recipe_title {
+  margin-top: 60px;
+  text-align: center;
+
+}
+
+
+
+.recipe_icon {
+  float: left;
+  padding-left: 40px;
+  margin-top: 10px;
+}
+
+.link-recepi {
+  color: #000;
+  width: 230px;
+
+}
+
+.link-recepi:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+.index {
+  border: 6px double #f0e68c;
+}
+
+
+.index:hover {
+  border: outset #f0e68c 15px;
+  transition: 0.1s;
+  text-decoration: underline;
+  opacity: 0.7;
+  margin-bottom: 10px;
+  padding: 20px 20px 30px 10px;
+  box-sizing: border-box;
+}
+
+.index:nth-child(3):hover {
+  margin-bottom: 20px;
+}
+
+
+
+//recipe_new
+
+.nested-fields {
+  display: inline-flex;
+  margin-right: 30px;
+  margin-top: 10px;
+}
+
+
+.fields-procedures {
+  padding: 30px 30px;
+  margin-right: 30px;
+  border-radius: 3px;
+}
+
+.input-sm {
+  margin-bottom: 20px;
+}
+
+.form-rows {
+  margin-right: 10px;
+}
+
+.recipe_newlist span {
+  background-color: #f0e68c;
+  border-radius: 2px;
+  font-size: 15px;
+}
+
+.recipe-new span {
+  background-color: #f0e68c;
+}
+
+.procedure-title span {
+  background-color: #f0e68c;
+
+}
+
+.page_title {
+  font-size: 50px;
+  margin-bottom: 30px;
+  margin-left: 150px;
+}
+
+.review-section {
+  text-align: center;
+}
+
+.recipe_img_preview {
+  width: 280px;
+  height: 200px;
+
+}
+
+#btn_submit {
+  margin-bottom: 30px;
+}
+
+
+//recipe_show
+.icon {
+  font-size: 30px;
+  margin-right: 10px;
+  color: orange;
+}
+
+.icon:hover {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: orange;
+  opacity: 0.7;
+}
+
+.bookmark-recipe-show {
+  font-size: 20px;
+}
+
+.user-recipe-name {
+  font-size: 20px;
+}
+
+.glyphicon-time {
+  margin-left: 5px;
+}
+
+.profile-thumb {
+  border: ridge 3px #ffd700;
+}
+
+.label-recipe {
+  font-size: 30px;
+  border-bottom: 2px dotted #a9a9a9;
+}
+
+.create-time {
+  float: right;
+}
+
+//recipe_review
+.recipe-review {
+  border: solid 3px yellow;
+  width: 250px;
+}
+
+.review-paragraph {
+  margin: 30px 0 5px 0;
+}
+
+.review_img_preview {
+  width: 200px;
+  height: 150px;
+}
+
+//recipe_show
+
+
+
+.label-recipe-description {
+  font-size: 25px;
+  margin-top: 30px;
+}
+
+.recipe-btn {
+  margin-top: 60px;
+
+}
+
+
+.recipe-edit {
+  margin: 0 50px;
+}
+
+//recipe_show accordion 開いた時
+
+.accordion>li {
+  cursor: pointer;
+  margin: 0 0 5px 0;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+
+.accordion>li>h3 {
+  text-align: center;
+  background-color: #ff6347;
+  padding: 30px 10px;
+
+}
+
+.accordion>li:hover {
+  background-color: #fff;
+
+}
+
+.accordion>li .content {
+  display: none;
+}
+
+//recipe_show accodion 閉じたとき
+
+.accordion>li.expend {
+  background-color: #fff;
+}
+
+.accordion>li.expend>h2 {
+  font-weight: bold;
+}
+
+.accordion>li.expend .content {
+  margin: 10px 0 0 0;
+  padding: 10px 0 0 0;
+  border-top: splid 1px #000;
+}
+
+//category_tag(recipe_show)
+
+.category-tag ul {
+  margin: 20px 0;
+}
+
+.category-tag li {
+  margin-right: px;
+  display: inline-block;
+  font-size: 15px;
+  background-color: #f0e68c;
+  padding: 10px;
+  border-radius: 3px;
+
+}
+
+.category-tag li {
+  margin-right: px;
+  display: inline-block;
+  font-size: 15px;
+  background-color: #f0e68c;
+  padding: 10px;
+  border-radius: 3px;
+
+}
+
+.category-tag li:hover {
+  background-color: #ff8c00;
+}
+
+.category-tag li:active {
+  background-color: #800000;
+}
+
+.tag-link {
+  color: #000;
+}
+
+.tag-link:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+//category_recipepage
+
+.recipe-count {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 20px;
+}
+
+.recipe-count span {
+  margin-left: 10px;
+  font-size: 40px;
+}
+
+.no-recipe-count {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 60px;
+  margin-bottom: 180px;
+}
+
+.no-recipe-categoy-btn {
+  margin-top: 100px;
 }

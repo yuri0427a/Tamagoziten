@@ -1,0 +1,17 @@
+
+//*= require_tree .
+//*= require_self
+
+
+//フッターレイアウト
+footer {
+    height: 100px;
+    background-color: #ffd700;
+  
+  }
+  
+  footer>p {
+    text-align: center;
+    line-height: 100px;
+    font-size: 20px;
+  }
