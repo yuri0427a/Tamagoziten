@@ -45,28 +45,28 @@
           </div>
         </div>
         <div class="col-xs-5">
-          <div class="lavel-recipe">
-            <lavel>調理時間</labvel>
+          <div class="label-recipe">
+            <label>調理時間</labvel>
               <i class="glyphicon glyphicon-time"></i>
               <%= @recipe.cooking_time %>分
           </div>
-          <div class="lavel-recipe">
-            <lavel>レビュー数</labvel>
+          <div class="label-recipe">
+            <label>レビュー数</labvel>
               <%= fa_icon("comment") %>
               <%= @recipe.recipe_reviews.count %>
               <span>件</span>
           </div>
-          <div class="lavel-recipe-description">
+          <div class="label-recipe-description">
             <%= @recipe.description %>
           </div>
           <% if user_signed_in? %>
-          <% if current_user.id == @recipe.user.id %>
+          <% if current_user.id != @recipe.user.id %>          
+          <% else %>
           <div class="recipe-btn">
             <%= link_to "レシピ編集", edit_users_recipe_path(@recipe.id), class: "btn btn-warning recipe-edit" %>
             <%= link_to "レシピ削除", users_recipe_path(@recipe.id), method: :delete,data: {confirm: "本当に削除しますか？"}, class: "btn btn-danger" %>
           </div>
           <% end %>
-          <% else %>
           <% end %>
         </div>
       </div>
@@ -147,7 +147,7 @@
         <%= form_for [@recipe, @review], url: users_recipe_review_path(@recipe.id) do |f| %>
         <div class="row">
           <div class="col-sm-12">
-            <img id="img1" style="width:200px;height:150px;" , alt: "画像プレビュー" />
+            <img id="img_preview", class="review_img_preview", alt: "画像プレビュー" />
             <%= f.attachment_field :cooking_image, placeholder: "プロフィール画像", class: "review-image-form", id: "recipefile" %>
             <%= f.text_area :impression, rows:'5', class: "form-control", placeholder: "レビューここに記入♪" %>
           </div>
