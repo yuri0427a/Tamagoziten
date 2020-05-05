@@ -1,7 +1,7 @@
 <%= render partial: 'layouts/header', locals: { search: @search } %>
 <% if current_user != @user %>
 <div class="tab">
-  <ul class="tabnav">
+  <ul class="tab_nav">
     <li><a href="#tab01">プロフィール/投稿レシピ</a></li>
   </ul>
 </div>
@@ -11,14 +11,14 @@
       <h1>Profile...</h1>
       <p>
         <%= attachment_image_tag @user, :profile_image, :fill, 300, 300, format: "jpeg", class: "profile-image", fallback: "no_image/no_image.jpg", size: "300x300", alt: "プロフ画像" %>
-        <lavel class="user-name">
+        <label class="user-name">
           <span>I am</span>
           <%= @user.name %>
-        </lavel><br>
+        </label><br>
       </p>
       <p class="user_introduction"><%= @user.introduction %></p>
     </div>
-    <p class="hiyoko2"><%= image_tag('hiyoko2.png')%></p>
+    <p class="hiyoko2"><%= image_tag('users/my_page/hiyoko2.png')%></p>
     <p class="hiyoko"><%= image_tag('users/my_page/hiyoko.png')%></p>
     <ul class="recipe-list-index">
       <% @userrecipes .each do |userrecipe| %>
@@ -38,14 +38,13 @@
         <h3 class="recipe_title"><%= userrecipe.name %></h3>
         <% end %>
       </li>
-  </div>
   <% end %>
   </ul>
 </div>
 </div>
 <% else %>
 <div class="tab">
-  <ul class="tabnav">
+  <ul class="tab_nav">
     <li>
       <a href="#tab01">
         プロフィール/投稿レシピ
@@ -77,10 +76,10 @@
       <h1>Profile...</h1>
       <p>
         <%= attachment_image_tag @user, :profile_image, :fill, 300, 300, format: "jpeg", class: "profile-image", fallback: "no_image/no_image.jpg", size: "300x300", alt: "プロフ画像" %>
-        <lavel class="user-name">
+        <label class="user-name">
           <span>I am</span>
           <%= current_user.name %>
-        </lavel><br>
+        </label><br>
       </p>
       <p class="user-introduction">
         <%= current_user.introduction %>
@@ -133,7 +132,7 @@
             <h3 class="recipe_title">
               <%= bookmark.recipe.name  %>
             </h3>
-            <p class="bookmark-description" style:"display: block;">
+            <p class="bookmark-description">
               <%= bookmark.recipe.description %>
             </p><br>
             <p class="bookmark-item time">
@@ -153,19 +152,15 @@
 </div>
 <% end %>
 
-</div>
-
 <%# モーダルウィンドウ（user_edit） %>
 
 <%= form_for @user, url: users_user_path do |f| %>
 <div id="modalwin" , class="modalwin out">
   <h1 class="edit-profile">〜Edit Profile〜</h1>
-  <img id="img1" style="width:150px;height:150px;">
+  <img id="img_preview", class="userimg_preview">
   <%= f.attachment_field :profile_image, placeholder: "プロフィール画像", class: "user-edit-form", id: "recipefile" %>
   <h4 class="profile-name ">ニックネーム</h4>
-  <lavel>
     <%= f.text_field :name , class: "form-control input-sm", placeholder: "10文字以内"%>
-  </lavel>
   <h4 class="profile-name">自己紹介</h4>
   <%= f.text_area :introduction, class: "form-control input-sm", placeholder: "20文字以内" %><br>
   <%= f.submit "Update", class: "btn btn-danger" %>
