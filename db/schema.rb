@@ -31,7 +31,6 @@ ActiveRecord::Schema.define(version: 2020_04_29_044905) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "recipe_id", null: false
-    t.integer "step_number"
     t.string "procedure_description", null: false
   end
 
@@ -68,11 +67,6 @@ ActiveRecord::Schema.define(version: 2020_04_29_044905) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
-  end
-
-  create_table "seaches", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
