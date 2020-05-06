@@ -1,0 +1,258 @@
+//top_page
+
+.main_vitual {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    margin-top: 150px;
+    background-image: image-url("homes/mainvituals/egg-sandwich.jpg");
+    background-size: cover;
+    background-position: under;
+    background-repeat: no-repeat;
+}
+
+.pc-character {
+    position: absolute;
+    top: 30px;
+    left: 500px;
+    padding: 20px;
+}
+
+
+
+.app_title {
+    position: absolute;
+    top: 430px;
+    left: 200px;
+    font-size: 200px;
+    border-radius: 10px;
+    background-color: #f0e68c;
+}
+
+
+.sign_up_balloon {
+    position: absolute;
+    top: 60px;
+    left: 400px;
+}
+
+
+.log_in_balloon {
+    position: absolute;
+    top: 60px;
+    right: 360px;
+}
+
+.sign_up_balloon:hover {
+    position: absolute;
+    top: 40px;
+    left: 400px;
+}
+
+.log_in_balloon:hover {
+    position: absolute;
+    top: 40px;
+    right: 360px;
+}
+
+.sign_up_balloon:active {
+    position: absolute;
+    top: 50px;
+    left: 400px;
+}
+
+
+.log_in_balloon:active {
+    position: absolute;
+    top: 50px;
+    right: 360px;
+}
+
+//top-page スマホ画面
+@media screen and (max-width:425px) {
+
+    .main_vitual {
+        height: 550px;
+        background-image: image-url("homes/mainvituals/egg-sandwich.sm.jpg");
+    }
+
+    .app_title {
+        position: absolute;
+        top: 30px;
+        left: 60px;
+        font-size: 50px;
+        border-radius: 10px;
+        background-color: #f0e68c;
+    }
+
+    .pc-character,
+    .sign_up_balloon,
+    .log_in_balloon {
+        display: none;
+    }
+
+    .sm_character_img{
+        width: 100%;
+        height: auto;
+    }
+
+    .sm-character {
+        position: absolute;
+        top: 120px;
+        left: 10px;
+    }
+    
+
+}
+
+//about_section
+
+.about {
+    background-image: image-url("homes/about/egg-background-sozai-sample.png");
+    border-top: 5px dotted #8b4513;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+.about::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.first_about_image {
+    float: left;
+    margin-left: 80px;
+}
+
+.first_about_message {
+    float: left;
+    margin: 60px 0 110px 50px;
+
+}
+
+.first_about_message h3 {
+    font-size: 40px;
+}
+
+.first_about_message p {
+    display: inline-block;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: #ffd700;
+}
+
+
+.first_about_message p:nth-of-type(3) {
+    background-color: #ff6347;
+    border-radius: 5px;
+}
+
+
+.second_about_image {
+    float: right;
+}
+
+.about_second_img{
+    width: 640px;
+    height: 390px;
+}
+
+.concluding_part {
+    margin-right: 80px;
+}
+
+.second_about_message {
+    float: right;
+    margin-top: 100px;
+    margin-right: 100px;
+    padding: 3px;
+}
+
+.second_about_message h3 {
+    font-size: 30px;
+}
+
+.second_about_message p {
+    display: inline-block;
+    font-size: 18px;
+    background-color: #ffd700;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.second_about_message p:nth-of-type(2){
+    background-color: #ff6347;
+    border-radius: 5px;
+}
+
+@media screen and (max-width:425px) {
+
+ 
+
+    .first_about_image {
+        margin-left:  0;
+    }
+    .about_img{
+        width: 100%;
+        height: auto;
+    }
+
+    
+    
+    .first_about_message{
+        width: 100%;
+        margin: 50px 0;
+        text-align: center;
+    }
+    
+    .first_about_message h3{
+        margin: 10px 0;
+        font-size: 25px;
+    }
+    
+    .first_about_message h3{
+        margin: 10px 0;
+        font-size: 25px;
+    }
+    
+    .first_about_message p{
+        display: inline-block;
+        font-size: 15px;
+    }
+
+    .first_about_message p:nth-of-type(3) {
+        font-size:13px;
+        border-radius: 5px;
+        background-color: #ff6347;
+    }
+    
+    .concluding_part{
+        width: 100%;
+    }
+
+    .second_about_message{
+        margin: 50px 0;
+        text-align: center;
+    }
+
+    .second_about_message h3{
+        font-size: 23px;
+    }
+
+    .second_about_message p:nth-of-type(2) {
+        font-size: 15px;
+    }
+    
+
+    .about_second_img{
+        float: none;
+        width: 100%;
+        height: auto;
+    }
+    
+
+    
+}

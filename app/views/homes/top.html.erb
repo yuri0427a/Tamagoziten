@@ -1,10 +1,11 @@
+<body class="top">
 <%= render partial: 'layouts/header', locals: { search: @search } %>
 <div class="main_vitual">
   <p class="pc-character">
     <%= image_tag('homes/mainvituals/hiyoko-i7.png') %>
   </p>
   <p class="sm-character">
-    <%= image_tag('homes/mainvituals/niwatori.png') %>
+    <%= image_tag 'homes/mainvituals/niwatori.png', class:"sm_character_img" %>
   </p>
   <% if user_signed_in? %>
   <% else %>
@@ -22,24 +23,24 @@
 <section class="about">
     <div class="first_part">
       <div class="first_about_image">
-        <%= image_tag('homes/about/waffles-2190961_640.jpg') %>
-      </div>
+        <%= image_tag'homes/about/waffles-2190961_640.jpg', class: "about_img" %>
+    </div>
       <div class="first_about_message">
         <h3>たまごでたんぱく質を取ろう！</h3>
         <p>たまごに豊富に含まれるたんぱく質.</p><br>
         <p>筋肉,お肌,臓器,免疫力,血液に髪の毛</p><br>
-        <p><span>たんぱく質は私たちの身体を作り上げる大切な栄養素です。</span></p><br>
+        <p>たんぱく質は私たちの身体を作り上げる大切な栄養素です。</p><br>
         <p>たまごはコスパも良く栄養素も豊富なんです❤︎❤︎</p><br>
       </div>
     </div>
     <div class="concluding_part">
       <div class="second_about_image">
-        <%= image_tag 'homes/about/baking-1951256_1280.jpg', size: "640x390" %>
+        <%= image_tag 'homes/about/baking-1951256_1280.jpg', class: "about_second_img" %>
       </div>
       <div class="second_about_message">
         <h3>「皆様の食卓の手助けをしたい」</h3><br>
         <p>そんな思いから</p><br>
-        <p><span>〜卵料理専門サイト〜たまご辞典は生まれました★</span></p><br>
+        <p>〜卵料理専門サイト〜たまご辞典は生まれました★</p><br>
       </div>
     </div>
 </section>
@@ -71,7 +72,7 @@
       <li>
         <%= link_to users_recipe_path(recipe), class: "ranking_item" do %>
           <p class="hover_item">
-            <%= image_tag'homes/ranks/e0909_1-removebg-preview.png', size:"150x100" %>
+            <%= image_tag 'homes/ranks/e0909_1-removebg-preview.png', size:"150x100" %>
             <%= image_tag 'homes/mainvituals/niwatori.png', size:"80x100" %>
           </p>
             <%= attachment_image_tag recipe.user, :profile_image, :fill, 100, 100, class: "img-circle  profile-thumb rankin_user_img" ,fallback: "no_image/no_image.jpg", size: "80x80"%>
@@ -90,4 +91,5 @@
       <% end %>
     </ul>
 </section>
+</div>
 <%= render 'layouts/footer' %>
