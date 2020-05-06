@@ -91,7 +91,7 @@
         display: none;
     }
 
-    .sm_character_img{
+    .sm_character_img {
         width: 100%;
         height: auto;
     }
@@ -101,7 +101,7 @@
         top: 120px;
         left: 10px;
     }
-    
+
 
 }
 
@@ -155,7 +155,7 @@
     float: right;
 }
 
-.about_second_img{
+.about_second_img {
     width: 640px;
     height: 390px;
 }
@@ -183,76 +183,352 @@
     display: inline-block;
 }
 
-.second_about_message p:nth-of-type(2){
+.second_about_message p:nth-of-type(2) {
     background-color: #ff6347;
     border-radius: 5px;
 }
 
 @media screen and (max-width:425px) {
 
- 
+
 
     .first_about_image {
-        margin-left:  0;
+        margin-left: 0;
     }
-    .about_img{
+
+    .about_img {
         width: 100%;
         height: auto;
     }
 
-    
-    
-    .first_about_message{
+
+
+    .first_about_message {
         width: 100%;
         margin: 50px 0;
         text-align: center;
     }
-    
-    .first_about_message h3{
+
+    .first_about_message h3 {
         margin: 10px 0;
         font-size: 25px;
     }
-    
-    .first_about_message h3{
+
+    .first_about_message h3 {
         margin: 10px 0;
         font-size: 25px;
     }
-    
-    .first_about_message p{
+
+    .first_about_message p {
         display: inline-block;
         font-size: 15px;
     }
 
     .first_about_message p:nth-of-type(3) {
-        font-size:13px;
+        font-size: 13px;
         border-radius: 5px;
         background-color: #ff6347;
     }
-    
-    .concluding_part{
+
+    .concluding_part {
         width: 100%;
     }
 
-    .second_about_message{
+    .second_about_message {
         margin: 50px 0;
         text-align: center;
     }
 
-    .second_about_message h3{
+    .second_about_message h3 {
         font-size: 23px;
     }
 
     .second_about_message p:nth-of-type(2) {
         font-size: 15px;
     }
-    
 
-    .about_second_img{
+
+    .about_second_img {
         float: none;
         width: 100%;
         height: auto;
     }
-    
 
-    
+
+
 }
+
+
+//category_index
+
+.category_wrapper {
+    border-top: 5px dotted #8b4513;
+    background-image: image-url('homes/categories/publicdomainq-0030527cvuiyk.png');
+    padding-bottom: 50px;
+}
+
+
+.category_wrapper ul:after {
+    content: "";
+    display: block;
+    clear: both;
+
+}
+
+.category_wrapper ul {
+    margin: 0 120px;
+}
+
+.category_section_title {
+    font-size: 60px;
+    text-align: center;
+    margin: 20px;
+}
+
+.secition_title_kana {
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 50px;
+}
+
+.category_wrapper p:nth-of-type(2) {
+    text-align: center;
+    color: #000;
+    font-size: 20px;
+}
+
+
+
+.category_list li {
+    float: left;
+    margin-bottom: 20px;
+}
+
+.category_img {
+    width: 300px;
+    height: 200px;
+    background-image: image-url('no_image/no_image.jpg');
+    background-size: cover;
+}
+
+
+
+.category_list>ul>li:nth-of-type(1)>.category_item>.category_img {
+    background-image: image-url('homes/categories/meat.jpg');
+}
+
+.category_list>ul>li:nth-of-type(2)>.category_item>.category_img {
+    background-image: image-url('homes/categories/vegetables.jpg');
+}
+
+.category_list>ul>li:nth-of-type(3)>.category_item>.category_img {
+    background-image: image-url('homes/categories/fish_yellow.png');
+}
+
+.category_list>ul>li:nth-of-type(4)>.category_item>.category_img {
+    background-image: image-url('homes/categories/begginer.jpg');
+}
+
+.category_list>ul>li:nth-of-type(5)>.category_item>.category_img {
+    background-image: image-url('homes/categories/time.jpg');
+}
+
+.category_list>ul>li:nth-of-type(6)>.category_item>.category_img {
+    background-image: image-url('homes/categories/japanese.jpg');
+}
+
+.category_list>ul>li:nth-of-type(7)>.category_item>.category_img {
+    background-image: image-url('homes/categories/restaurant.jpg');
+}
+
+.category_list>ul>li:nth-of-type(8)>.category_item>.category_img {
+    background-image: image-url('homes/categories/china.jpg');
+}
+
+.category_list>ul>li:nth-of-type(9)>.category_item>.category_img {
+    background-image: image-url('homes/categories/don.jpg');
+}
+
+.category_list>ul>li:nth-of-type(10)>.category_item>.category_img {
+    background-image: image-url('homes/categories/okazu.jpg');
+}
+
+.category_list>ul>li:nth-of-type(11)>.category_item>.category_img {
+    background-image: image-url('homes/categories/dessert.jpg');
+}
+
+.category_list>ul>li:nth-of-type(12)>.category_item>.category_img {
+    background-image: image-url('homes/categories/bentoubako.jpg');
+}
+
+.category_wrapper li:hover .category_img {
+    transform: scale(1.5);
+    transition: 0.5s;
+    border: 3px solid #ffd700;
+}
+
+.category_item:hover {
+    text-decoration: none;
+}
+
+@media screen and (max-width:425px) {
+
+    .category_section_title {
+        font-size: 50px;
+    }
+
+    .category_wrapper ul {
+        margin: 0 30px;
+    }
+
+    .category_list li {
+        width: 50%;
+    }
+
+    .category_list>ul>li:nth-of-type(3)>.category_item>.category_img {
+        background-position: left;
+    }
+
+    .category_img {
+        width: 150px;
+        height: 150px;
+        background-position: center;
+    }
+
+}
+
+//Ranking(Top_page)
+
+.recipe_ranking {
+    padding: 10px 0;
+    background-color: #fffacd;
+    border-top: 5px dotted #8b4513;
+    border-bottom: 5px dotted #8b4513;
+  }
+  
+  .recipe_ranking li {
+    width: 250px;
+  }
+  
+  .recipe_ranking h1 {
+    font-size: 60px;
+    text-align: center;
+    overflow: auto;
+  }
+  
+  .recipe_ranking ul {
+    list-style: disc;
+    padding-left: 40px;
+  }
+  
+  .recipe_ranking ul:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  
+  .recipe_ranking li {
+    position: relative;
+    float: left;
+    margin: 0 10px;
+  }
+  
+  
+  //rankng-hover
+  
+  //hoverすると鶏出現するcss
+  .hover_item {
+    position: absolute;
+    top: -100px;
+    right: 5px;
+    display: none;
+  }
+  
+  .recipe_ranking li:hover .hover_item {
+    display: block;
+  }
+  
+  .recipe_ranking li:hover .rank {
+    transform: rotate(360deg);
+  }
+  
+  
+  .rankin_user_img {
+    position: absolute;
+    top: 220px;
+    left: 5px;
+  
+  }
+  
+  .rankin_user_name {
+    font-size: 20px;
+    margin-left: 100px;
+  }
+  
+  .rankin_recipe_name {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .rank {
+    position: absolute;
+    top: -20px;
+    left: 110px;
+    background-color: #ffc0cb;
+    padding: 20px 5px 5px 13px;
+    border-radius: 10px;
+    transition: transform 500ms ease;
+    display: block;
+    width: 50px;
+    height: 60px;
+    background-color: #ffc0cb;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  }
+  
+  
+  .ranking_item {
+    color: #000;
+  }
+  
+  .ranking_item:hover {
+    color: #000;
+  }
+  
+  
+  .ranking_list>ul>li:first-of-type>.ranking_item>.rank {
+    background-color: #ffd700;
+  }
+  
+  .ranking_list>ul>li:nth-of-type(2)>.ranking_item>.rank {
+    background-color: #c0c0c0;
+  }
+  
+  .ranking_list>ul>li:nth-of-type(3)>.ranking_item>.rank {
+    background-color: #8b4513;
+    color: #fff;
+  }
+
+  @media screen and (max-width:425px) {
+    
+    .recipe_ranking li {
+        width: 250px;
+        margin-bottom: 70px;
+    }
+    
+    
+    .recipe_ranking h1{
+        font-size: 40px;
+    }
+
+    .ranking_list>ul>li:nth-of-type(2)>.ranking_item>.rank {
+        background-color: #c0c0c0;
+      }
+      
+      .ranking_list>ul>li:nth-of-type(3)>.ranking_item>.rank {
+        background-color: #8b4513;
+        color: #fff;
+      }
+  }
+
+  
