@@ -1,5 +1,5 @@
 <%= render partial: 'layouts/header', locals: { search: @search } %>
-<main>
+<body class="recipe_index">
   <div class="recipe-list">
     <h1 class="recipe-index">
       〜Recipe Page〜
@@ -40,5 +40,5 @@
       </ul>
   </div>
   <p><%= paginate @search_recipes %></p>
-</main>
+</body>
 <%= render 'layouts/footer' %>
