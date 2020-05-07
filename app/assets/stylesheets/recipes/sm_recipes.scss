@@ -1,19 +1,19 @@
 @media screen and (max-width:480px) {
 
-    // レシピ一覧共通
+    // recipe_index
+    
     .recipe-list {
         width: 380px;
     }
 
-    .recipe-index-ul {
-        padding-left: 40px;
-    }
-
-
     .recipe-list h1 {
         font-size: 40px;
     }
-
+    
+    .recipe-index-ul {
+        padding-left: 40px;
+    }
+    
     // 検索件数０件の場合（categopries_show, recipes_index）
     
     .no_recipe_view {
@@ -21,8 +21,8 @@
     }
     
     .no_recipe_count {
-        margin: 0 0 10px 20px;
-        font-size: 20px;
+        margin: 0 0 50px 20px;
+        font-size: 18px;
         text-align: center;
     }
     

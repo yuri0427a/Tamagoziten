@@ -31,16 +31,9 @@
 
 }
 
-.lists-items {
-    float: left;
-    display: block;
-    width: 280px;
-    padding: 20px 20px 30px 20px;
-    margin: 30px 30px 30px 0;
-    border-radius: 30px;
-    background-color: #fff;
-    box-sizing: border-box;
-    box-shadow: 0 3px 5px 0 #000;
+.link-recipes:hover {
+    text-decoration: none;
+    color: #000;
 }
 
 .recipe_title {
@@ -55,10 +48,6 @@
 }
 
 
-.link-recipes:hover {
-    text-decoration: none;
-    color: #000;
-}
 
 // recipe_index
 
@@ -69,17 +58,18 @@
 }
 
 
-.lists-items {
+.r_index_items{
     float: left;
+    display: block;
+    width: 280px;
+    padding: 20px 20px 30px 20px;
     margin: 30px 30px 30px 0;
     border-radius: 30px;
-    padding: 20px 20px 30px 20px;
-    display: block;
+    background-color: #fff;
     box-sizing: border-box;
     box-shadow: 0 3px 5px 0 #000;
-    background-color: #fff;
-    width: 280px;
 }
+
 
 .index {
     border: 6px double #f0e68c;
