@@ -1,9 +1,11 @@
+
+
 <%= render partial: 'layouts/header', locals: { search: @search } %>
-<div class="recipe-show">
+<body class="recipe_show">
   <div class="container">
 
     <div class="row">
-      <div class="col-xs-12">
+      <div class="col-lg-12">
         <p id="notice">
           <%=  notice %>
         </p>
@@ -161,4 +163,5 @@
     <% end %>
   </div>
 </div>
+</body>
 <%= render 'layouts/footer' %>

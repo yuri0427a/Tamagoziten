@@ -1,11 +1,9 @@
 // Place all the styles related to the recipes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-main {
-    width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
+.recipe_list {
+    width:100%;
+    margin: 0 auto;
     box-sizing: border-box;
 
 }
@@ -40,6 +38,8 @@ main {
     clear: both;
 }
 
+
+
 .recipe-index {
     text-align: center;
     font-size: 80px;
@@ -49,7 +49,8 @@ main {
 .recipe-list {
     margin-top: 50px;
     font-family: 'HanziPen TC';
-    width: 1000px;
+    width: 1200px;
+    margin: auto;
 }
 
 

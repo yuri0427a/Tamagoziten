@@ -23,7 +23,17 @@
   padding: 0;
   list-style: none;
   box-sizing: border-box;
-  font-family: "HanziPen TC", 'Hannotate SC', 'ヒラギノ丸ゴ ProN', 'Hiragino Maru Gothic ProN', 'ヒラギノ角ゴシック', 'Hiragino Sans', sans-serif;
+  font-family: "HanziPen TC", 'Hannotate SC', 'Meiryo UI', '游ゴシック','ヒラギノ丸ゴ Pro W4', 'Hiragino Maru Gothic ProN', 'ヒラギノ角ゴシック', 'Hiragino Sans', sans-serif;
+}
+
+//ヘッダー入り込み解除
+
+.top{
+  margin-top: 150px;
+}
+
+.recipe_show, .recipe_edit, .recipe_index, .recipe_new{
+  margin-top: 230px;
 }
 
 // mixin mediaquery
@@ -159,6 +169,7 @@ $breakpoints: ('sm': 'screen and (max-width: 480px)',
 
 //lonin_page&signup_page(devise) スマホ画面
 @media screen and (max-width:425px) {
+
   .devise_win {
     height: 570px;
     background-image: image-url('devise/egg-top-sm.jpg');
