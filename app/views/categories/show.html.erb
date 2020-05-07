@@ -1,20 +1,21 @@
 <%= render partial: 'layouts/header', locals: { search: @search } %>
-<main>
+<body class="categories_show">
   <div class="recipe-list">
     <h1 class="recipe-index">
       〜<%= @category.name %> Recipes〜
     </h1>
     <% if @category.recipes.count == 0 %>
+    <div class="no_recipe_view">
     <p class="recipe-count">
       全<span><%= @category.recipes.count %></span>
       件
     </p>
     <p class="no-recipe-count">
-    <%= image_tag 'recipes/pl-999184207763.png', size:"320x300" %><br>
-      <span><%= @category.name %></span>
-      カテゴリー　にはまだレシピが投稿されていません（；＿；)<br>
+    <%= image_tag 'recipes/pl-999184207763.png', class:"no_recipe_img" %><br>
+      <span><%= @category.name %></span>カテゴリー　にはまだレシピが投稿されていません（；＿；)<br>
       このカテゴリーの投稿者の第１号になりませんか？<br>
       <%= link_to "レシピを投稿する", new_users_recipe_path, class: "btn btn-warning no-recipe-categoy-btn" %>
+    </カテゴリー>
     </p>
     <% else %>
     <p class="recipe-count">
@@ -44,5 +45,5 @@
     </ul>
   </div>
   <p><%= paginate @recipes %></p>
-</main>
+</body>
 <%= render 'layouts/footer' %>

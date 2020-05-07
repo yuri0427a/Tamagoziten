@@ -24,7 +24,7 @@
           </ul>
         </div>
         <div class="sm_nav_wrapper"></div>
-          <nav id="sm-nav">
+          <nav id="sm-nav" class="sm-nav">
             <h2>MENU</h2>
             <ul>
               <li><%= link_to "マイページ", users_user_path(current_user.id), class: "nav_item" %></li>
@@ -40,7 +40,7 @@
                 <% end %>
               </li>
             </ul>
-            <p><%= image_tag'layouts/sm_nav.png', size:"150x100" %></p>
+            <p><%= image_tag'layouts/sm_nav.png', class:"nav_pic" %></p>
           </nav>
         </div>
         <div id="hm_icon">
