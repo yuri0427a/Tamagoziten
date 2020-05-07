@@ -1,126 +1,9 @@
 // Place all the styles related to the recipes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.recipe_list {
-    width: 100%;
-    margin: 0 auto;
-    box-sizing: border-box;
-
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    box-sizing: border-box;
-    font-family: 'HanziPen TC', sans-serif;
-}
 
 
-
-.list-items {
-    float: left;
-    margin: 30px 30px 30px 0;
-    border-radius: 30px;
-    padding: 20px 20px 30px 20px;
-    display: block;
-    box-sizing: border-box;
-    box-shadow: 0 3px 5px 0 #000;
-    background-color: #fff;
-}
-
-//recipe_index
-
-.recipe-index-ul:after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
-
-
-.recipe-index {
-    text-align: center;
-    font-size: 80px;
-}
-
-
-.recipe-list {
-    margin-top: 50px;
-    font-family: 'HanziPen TC';
-    width: 1200px;
-    margin: auto;
-}
-
-
-.link-recepi {
-    display: block;
-}
-
-.reshipe-image {
-    display: block;
-}
-
-
-
-.lists-items {
-    float: left;
-    margin: 30px 30px 30px 0;
-    border-radius: 30px;
-    padding: 20px 20px 30px 20px;
-    display: block;
-    box-sizing: border-box;
-    box-shadow: 0 3px 5px 0 #000;
-    background-color: #fff;
-    width: 280px;
-}
-
-
-.recipe_title {
-    margin-top: 60px;
-    text-align: center;
-
-}
-
-
-
-.recipe_icon {
-    float: left;
-    padding-left: 40px;
-    margin-top: 10px;
-}
-
-.link-recepi {
-    color: #000;
-    width: 230px;
-
-}
-
-.link-recepi:hover {
-    text-decoration: none;
-    color: #000;
-}
-
-.index {
-    border: 6px double #f0e68c;
-}
-
-
-.index:hover {
-    border: outset #f0e68c 15px;
-    transition: 0.1s;
-    text-decoration: underline;
-    opacity: 0.7;
-    margin-bottom: 10px;
-    padding: 20px 20px 30px 10px;
-    box-sizing: border-box;
-}
-
-.index:nth-child(3):hover {
-    margin-bottom: 20px;
-}
-
-//recipe_index
+//レシピアイテム共通
 
 .recipe-index-ul:after {
     content: "";
@@ -132,17 +15,21 @@
     padding-left: 150px;
 }
 
-.recipe-index {
-    text-align: center;
-    font-size: 80px;
-}
-
 
 .recipe-list {
     margin-top: 50px;
+    font-family: 'HanziPen TC';
+    width: 1200px;
+    margin: auto;
 }
 
 
+.link-recipes {
+    display: block;
+    color: #000;
+    width: 230px;
+
+}
 .lists-items {
     float: left;
     display: block;
@@ -155,29 +42,48 @@
     box-shadow: 0 3px 5px 0 #000;
 }
 
-
 .recipe_title {
     margin-top: 60px;
     text-align: center;
 }
 
-
-
 .recipe_icon {
     float: left;
-    padding-left: 40px;
+    padding-left: 50px;
     margin-top: 10px;
 }
 
-.link-recipe {
-    width: 230px;
-    color: #000;
 
+.link-recipes:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+//recipe_index
+
+
+.recipe-index {
+    text-align: center;
+    font-size: 80px;
+}
+
+
+.lists-items {
+    float: left;
+    margin: 30px 30px 30px 0;
+    border-radius: 30px;
+    padding: 20px 20px 30px 20px;
+    display: block;
+    box-sizing: border-box;
+    box-shadow: 0 3px 5px 0 #000;
+    background-color: #fff;
+    width: 280px;
 }
 
 .index {
     border: 6px double #f0e68c;
 }
+
 
 .index:hover {
     padding: 20px 20px 30px 10px;
@@ -189,7 +95,7 @@
     opacity: 0.7;
 }
 
-//カラム落ち防止
+//カラム落ち防止(recipe_index)
 .index:nth-child(3):hover {
     margin-bottom: 20px;
 }
@@ -456,8 +362,4 @@
     font-size: 20px;
     margin-top: 60px;
     margin-bottom: 180px;
-}
-
-.no-recipe-categoy-btn {
-    margin-top: 100px;
 }
