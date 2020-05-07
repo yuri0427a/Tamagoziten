@@ -18,8 +18,10 @@
         <%= f.submit "Log in", class: "btn login_btn" %>
       </div>
       <% end %>
-      <%= link_to "登録がお済みでない方はこちら", new_registration_path(resource_name), class: "signup_link" %>
+      <div class="link_btn">
+      <%= link_to "登録がお済みでない方はこちら", new_registration_path(resource_name), class: "signup_link" %><br>
       <%= link_to "Topページへ", root_path, class: "top_link" %>
+      </div>
     </div>
   </div>
 </div>
