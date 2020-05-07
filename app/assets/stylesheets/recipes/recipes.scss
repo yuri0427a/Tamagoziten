@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-//レシピアイテム共通
+// レシピアイテム共通
 
 .recipe-index-ul:after {
     content: "";
@@ -30,6 +30,7 @@
     width: 230px;
 
 }
+
 .lists-items {
     float: left;
     display: block;
@@ -59,7 +60,7 @@
     color: #000;
 }
 
-//recipe_index
+// recipe_index
 
 
 .recipe-index {
@@ -101,13 +102,7 @@
 }
 
 
-//category_show
-
-
-.no_recipe_img {
-    width: 320px;
-    height: 300px;
-}
+// category_show
 
 .recipe-count {
     margin-top: 50px;
@@ -120,13 +115,18 @@
     font-size: 40px;
 }
 
-.no-recipe-count {
+.no_recipe_count {
     margin: 60px 0 180px 0;
     text-align: center;
     font-size: 20px;
 }
 
-.no-recipe-categoy-btn {
+.no_recipe_img {
+    width: 320px;
+    height: 300px;
+}
+
+.no_recipe_category_btn {
     margin-top: 100px;
 }
 
@@ -342,24 +342,4 @@
 .tag-link:hover {
     color: #000;
     text-decoration: none;
-}
-
-//category_recipepage
-
-.recipe-count {
-    text-align: center;
-    margin-top: 50px;
-    font-size: 20px;
-}
-
-.recipe-count span {
-    margin-left: 10px;
-    font-size: 40px;
-}
-
-.no-recipe-count {
-    text-align: center;
-    font-size: 20px;
-    margin-top: 60px;
-    margin-bottom: 180px;
 }

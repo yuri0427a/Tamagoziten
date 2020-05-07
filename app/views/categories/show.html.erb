@@ -11,11 +11,11 @@
         全<span><%= @category.recipes.count %></span>
         件
       </p>
-      <p class="no-recipe-count">
+      <p class="no_recipe_count">
         <%= image_tag 'recipes/pl-999184207763.png', class:"no_recipe_img" %><br>
         <span><%= @category.name %></span>カテゴリー　にはまだレシピが投稿されていません（；＿；)<br>
         このカテゴリーの投稿者の第１号になりませんか？<br>
-        <%= link_to "レシピを投稿する", new_users_recipe_path, class: "btn btn-warning no-recipe-categoy-btn" %>
+        <%= link_to "レシピを投稿する", new_users_recipe_path, class: "btn btn-warning no_recipe_category_btn" %>
         </カテゴリー>
       </p>
     </div>
