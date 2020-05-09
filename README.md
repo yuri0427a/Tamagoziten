@@ -7,7 +7,7 @@ URL:https://tamagoziten.work/
 <img width="1438" alt="スクリーンショット 2020-05-08 22.11.42.png" src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/574886/0d84ec6c-166e-7577-388f-ac77f218d7e1.png">
 
 ### スマホ版
-<img width="200" alt="スクリーンショット 2020-05-08 22.16.57.png" src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/574886/babc3236-dfdf-2839-7981-4a5346326841.png">
+<img width="250" alt="スクリーンショット 2020-05-08 22.16.57.png" src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/574886/babc3236-dfdf-2839-7981-4a5346326841.png">
 
 
 
