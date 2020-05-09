@@ -23,16 +23,21 @@
   padding: 0;
   list-style: none;
   box-sizing: border-box;
-  font-family: "HanziPen TC", 'Hannotate SC', 'Meiryo UI', '游ゴシック','ヒラギノ丸ゴ Pro W4', 'Hiragino Maru Gothic ProN', 'ヒラギノ角ゴシック', 'Hiragino Sans', sans-serif;
+  font-family: "HanziPen TC", 'Hannotate SC', 'Meiryo UI', '游ゴシック', 'ヒラギノ丸ゴ Pro W4', 'Hiragino Maru Gothic ProN', 'ヒラギノ角ゴシック', 'Hiragino Sans', sans-serif;
 }
 
 //ヘッダー入り込み解除
 
-.top{
+.top {
   margin-top: 150px;
 }
 
-.recipe_show, .recipe_edit, .recipe_index, .recipe_new, .categories_show{
+.recipe_show,
+.recipe_edit,
+.recipe_index,
+.recipe_new,
+.categories_show,
+.users_show {
   margin-top: 230px;
 }
 
@@ -191,13 +196,13 @@ $breakpoints: ('sm': 'screen and (max-width: 480px)',
 
   .link_btn {
     font-size: 14px;
-    margin-top:  20px;
-}
+    margin-top: 20px;
+  }
 
-.top_link {
+  .top_link {
     display: block;
     margin: 10px 0 0 60px;
-}
+  }
 
 
 }
@@ -709,4 +714,3 @@ main {
   color: #000;
   text-decoration: none;
 }
-
