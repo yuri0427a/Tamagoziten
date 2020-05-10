@@ -69,7 +69,7 @@
 }
 
 
-.r_index_items{
+.r_index_items {
     float: left;
     display: block;
     width: 280px;
@@ -116,7 +116,7 @@
     font-size: 40px;
 }
 
- // 検索件数０件の場合の表示（categories_show, recipes_index）
+// 検索件数０件の場合の表示（categories_show, recipes_index）
 
 .no_recipe_count {
     margin: 60px 0 180px 0;
@@ -171,8 +171,8 @@
 }
 
 .page_title {
-    font-size: 50px;
     margin: 0 0 30px 150px;
+    font-size: 50px;
 }
 
 .review-section {
@@ -190,16 +190,53 @@
 }
 
 
-//recipe_show
+// recipe_show
+
+
+//category_lists(recipe_show)
+
+.category_tags_list ul {
+    margin: 20px 0;
+}
+
+.category_tag {
+    display: inline-block;
+    padding: 10px;
+    margin-right: 5px;
+    font-size: 15px;
+    background-color: #f0e68c;
+    border-radius: 3px;
+
+}
+
+.category_tag:hover {
+    background-color: #ff8c00;
+}
+
+.category_tag:active {
+    background-color: #800000;
+}
+
+.tag-link {
+    color: #000;
+}
+
+.tag-link:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+//調理時間、レビュー数など
+
 .icon {
-    font-size: 30px;
     margin-right: 10px;
+    font-size: 30px;
     color: orange;
 }
 
 .icon:hover {
-    font-size: 40px;
     margin-bottom: 10px;
+    font-size: 40px;
     color: orange;
     opacity: 0.7;
 }
@@ -210,6 +247,11 @@
 
 .user-recipe-name {
     font-size: 20px;
+}
+
+#recipe_show_img {
+    width: 600px;
+    height: 600px;
 }
 
 .glyphicon-time {
@@ -229,35 +271,23 @@
     float: right;
 }
 
-//recipe_review
-.recipe-review {
-    border: solid 3px yellow;
-    width: 250px;
-}
 
-.review-paragraph {
-    margin: 30px 0 5px 0;
-}
-
-.review_img_preview {
-    width: 200px;
-    height: 150px;
-}
 
 //recipe_show
 
-
+.table-inverse {
+    border: none;
+}
 
 .label-recipe-description {
-    font-size: 25px;
     margin-top: 30px;
+    font-size: 25px;
 }
 
 .recipe-btn {
     margin-top: 60px;
 
 }
-
 
 .recipe-edit {
     margin: 0 50px;
@@ -267,15 +297,15 @@
 
 .accordion>li {
     cursor: pointer;
-    margin: 0 0 5px 0;
     padding: 0 10px;
+    margin-bottom: 5px;
     border-radius: 5px;
 }
 
 .accordion>li>h3 {
+    padding: 30px 10px;
     text-align: center;
     background-color: #ff6347;
-    padding: 30px 10px;
 
 }
 
@@ -299,50 +329,73 @@
 }
 
 .accordion>li.expend .content {
-    margin: 10px 0 0 0;
-    padding: 10px 0 0 0;
-    border-top: splid 1px #000;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: solid 1px #000;
 }
 
-//category_tag(recipe_show)
-
-.category-tag ul {
-    margin: 20px 0;
+//recipe_review
+.recipe-review {
+    width: 250px;
+    border: solid 3px yellow;
 }
 
-.category-tag li {
-    margin-right: px;
-    display: inline-block;
-    font-size: 15px;
-    background-color: #f0e68c;
-    padding: 10px;
-    border-radius: 3px;
-
+.review-paragraph {
+    margin: 30px 0 5px 0;
 }
 
-.category-tag li {
-    margin-right: px;
-    display: inline-block;
-    font-size: 15px;
-    background-color: #f0e68c;
-    padding: 10px;
-    border-radius: 3px;
-
+.review_img_preview {
+    width: 200px;
+    height: 150px;
 }
 
-.category-tag li:hover {
-    background-color: #ff8c00;
+//carousel(recipe_show review）
+//サムネイル増えても１列に並ぶよう配置
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 
-.category-tag li:active {
-    background-color: #800000;
+.thumbs {
+    position: relative;
+    width: 2560px;
+    left: 0;
 }
 
-.tag-link {
-    color: #000;
+//carousel 矢印ボタン(recipe_show review）
+
+.thunmb-nav a {
+    position: absolute;
+    bottom: 159px;
+    display: block;
+    width: 64px;
+    height: 64px;
+    background-image: image-url("recipes/yazirushi.png");
 }
 
-.tag-link:hover {
-    color: #000;
-    text-decoration: none;
+a.prev {
+    left: 0;
+    background-position: 0 64px;
+    transform: rotate(180deg);
+}
+
+a.prev:hover {
+    float: left;
+    opacity: 0.7;
+}
+
+a.next {
+    right: 0;
+    background-position: 0;
+}
+
+a.next:hover {
+    right: 0;
+    opacity: 0.7;
+}
+
+a.next:hover {
+    right: 0;
 }

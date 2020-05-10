@@ -11,7 +11,7 @@
     }
     
     .recipe-index-ul {
-        padding-left: 40px;
+        padding-left: 50px;
     }
     
     // 検索件数０件の場合の表示（categories_show, recipes_index）
@@ -31,4 +31,91 @@
         height: 200px;
         margin-bottom: 20px;
     }
+
+//recipe_show
+
+.recipe_show{
+    margin-top: 180px !important; 
+}
+
+.pc_recipe_show{
+    display: none;
+}
+
+
+#recipe_show_img{
+    width: 330px;
+    height: 260px;
+    margin-left: 15px;
+}
+
+.category_tag {
+    padding: 5px;
+    margin: 0 1px 25px 0;
+    font-size: 12px;
+}
+.recipe_detail{
+    float: right;
+    margin-top: -30px;
+}
+
+.bookmark_change_item span{ 
+    font-size: 13px;
+
+}
+
+.create-time{
+    font-size: 13px;
+}
+
+.label-recipe{
+    display: inline-block;  
+    font-size: 18px;
+    border-bottom: none;
+    text-align: center;
+}
+
+.label-recipe label{
+    display: none;
+}
+
+.icon_list{
+    margin: 15px 0 0 100px;
+}
+
+.time_ico{
+    margin-right: 50px;
+}
+
+.label-recipe-description{
+    font-size: 15px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.recipe-btn{
+    display: inline-block;
+    margin :15px 0 0 15px;
+}
+
+.btn{
+    padding: 10px !important;
+}
+
+.item-title, .cooking_method_list{
+    text-align: center;
+}
+
+.cooking_material_table td{
+    margin-left:-20px;
+    font-size: 20px;
+}
+
+.cooking_material_table table{
+    width:100%;
+    margin-right:20px;
+}
+
+
+
 }
