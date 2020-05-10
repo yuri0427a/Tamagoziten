@@ -32,12 +32,12 @@
   margin-top: 150px;
 }
 
+.users_show,
+.recipe_new,
 .recipe_show,
 .recipe_edit,
 .recipe_index,
-.recipe_new,
-.categories_show,
-.users_show {
+.categories_show{
   margin-top: 230px;
 }
 
@@ -91,12 +91,12 @@ $breakpoints: ('sm': 'screen and (max-width: 480px)',
 //lonin_page&signup_page(devise)
 
 .devise_win {
-  background-image: image-url('devise/egg-top-pc.jpg');
-  height: 800px;
-  background-repeat: no-repeat;
-  background-size: cover;
   position: relative;
   width: 100%;
+  height: 800px;
+  background-image: image-url('devise/egg-top-pc.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .field {
@@ -332,56 +332,6 @@ $breakpoints: ('sm': 'screen and (max-width: 480px)',
   transition: 0.1s;
 }
 
-//carousel(recipe_show review）
-//サムネイル増えても１列に並ぶよう配置
-
-.carousel {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-
-.thumbs {
-  width: 2560px;
-  position: relative;
-  left: 0;
-}
-
-//carousel 矢印ボタン(recipe_show review）
-
-.thunmb-nav a {
-  display: block;
-  position: absolute;
-  bottom: 159px;
-  width: 64px;
-  height: 64px;
-  background-image: image-url("recipes/yazirushi.png");
-}
-
-a.prev {
-  left: 0;
-  background-position: 0 64px;
-  transform: rotate(180deg);
-}
-
-a.prev:hover {
-  float: left;
-  opacity: 0.7;
-}
-
-a.next {
-  right: 0;
-  background-position: 0 0;
-}
-
-a.next:hover {
-  right: 0;
-  opacity: 0.7;
-}
-
-a.next:hover {
-  right: 0;
-}
 
 //category
 
@@ -474,25 +424,7 @@ header>h1 {
   margin-left: -10px;
 }
 
-// Place all the styles related to the recipes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 
-main {
-  width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  box-sizing: border-box;
-
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  box-sizing: border-box;
-  font-family: 'HanziPen TC', sans-serif;
-}
 
 
 
@@ -558,159 +490,6 @@ main {
 }
 
 
-//recipe_show
-.icon {
-  font-size: 30px;
-  margin-right: 10px;
-  color: orange;
-}
-
-.icon:hover {
-  font-size: 40px;
-  margin-bottom: 10px;
-  color: orange;
-  opacity: 0.7;
-}
-
-.bookmark-recipe-show {
-  font-size: 20px;
-}
-
-.user-recipe-name {
-  font-size: 20px;
-}
-
-.glyphicon-time {
-  margin-left: 5px;
-}
-
-.profile-thumb {
-  border: ridge 3px #ffd700;
-}
-
-.label-recipe {
-  font-size: 30px;
-  border-bottom: 2px dotted #a9a9a9;
-}
-
-.create-time {
-  float: right;
-}
-
-//recipe_review
-.recipe-review {
-  border: solid 3px yellow;
-  width: 250px;
-}
-
-.review-paragraph {
-  margin: 30px 0 5px 0;
-}
-
-.review_img_preview {
-  width: 200px;
-  height: 150px;
-}
-
-//recipe_show
 
 
 
-.label-recipe-description {
-  font-size: 25px;
-  margin-top: 30px;
-}
-
-.recipe-btn {
-  margin-top: 60px;
-
-}
-
-
-.recipe-edit {
-  margin: 0 50px;
-}
-
-//recipe_show accordion 開いた時
-
-.accordion>li {
-  cursor: pointer;
-  margin: 0 0 5px 0;
-  padding: 0 10px;
-  border-radius: 5px;
-}
-
-.accordion>li>h3 {
-  text-align: center;
-  background-color: #ff6347;
-  padding: 30px 10px;
-
-}
-
-.accordion>li:hover {
-  background-color: #fff;
-
-}
-
-.accordion>li .content {
-  display: none;
-}
-
-//recipe_show accodion 閉じたとき
-
-.accordion>li.expend {
-  background-color: #fff;
-}
-
-.accordion>li.expend>h2 {
-  font-weight: bold;
-}
-
-.accordion>li.expend .content {
-  margin: 10px 0 0 0;
-  padding: 10px 0 0 0;
-  border-top: splid 1px #000;
-}
-
-//category_tag(recipe_show)
-
-.category-tag ul {
-  margin: 20px 0;
-}
-
-.category-tag li {
-  margin-right: px;
-  display: inline-block;
-  font-size: 15px;
-  background-color: #f0e68c;
-  padding: 10px;
-  border-radius: 3px;
-
-}
-
-.category-tag li {
-  margin-right: px;
-  display: inline-block;
-  font-size: 15px;
-  background-color: #f0e68c;
-  padding: 10px;
-  border-radius: 3px;
-
-}
-
-.category-tag li:hover {
-  background-color: #ff8c00;
-}
-
-.category-tag li:active {
-  background-color: #800000;
-}
-
-.tag-link {
-  color: #000;
-}
-
-.tag-link:hover {
-  color: #000;
-  text-decoration: none;
-}
