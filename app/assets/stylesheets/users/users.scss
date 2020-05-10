@@ -11,6 +11,11 @@
     font-weight: normal;
 }
 
+.profile-image{
+    width: 300px;
+    height: 300px;
+}
+
 .edit-profile {
     margin-bottom: 15px;
     font-family: 'HanziPen TC';
@@ -26,15 +31,6 @@
 .tab_nav li {
     display: inline;
 
-}
-
-.tab_nav li a {
-    display: inline-block;
-    padding: 10px;
-    color: #fff;
-    text-decoration: none;
-    background: #405dca;
-    border-radius: 5px 5px 0 0;
 }
 
 
@@ -115,3 +111,30 @@
 .out {
     display: none;
 }
+
+@media screen and (max-width:480px) {
+
+    .profile-image{
+        width: 200px;
+        height: 200px;
+    }
+
+    .user-name {
+        font-size: 25px;
+        font-weight: normal;
+    }
+    
+
+    //tab
+
+    .tab_nav li:nth-child(1) {
+        margin-left: 50px;
+    }
+
+    .tab_nav li a {
+        padding: 10px;
+    }
+    
+    
+}
+

@@ -60,7 +60,7 @@
 </div>
 <div class="tab_content">
   <div id="tab_mypage">
-    <div class="col-xs-offset-4">
+    <div class="col-lg-offset-4 col-xs-offset-1">
       <% if flash[:error].present? %>
       <ul>
         <% flash[:error].each do |message| %>
@@ -76,7 +76,7 @@
       </p>
       <h1>Profile...</h1>
       <p>
-        <%= attachment_image_tag @user, :profile_image, :fill, 300, 300, format: "jpeg", class: "profile-image", fallback: "no_image/no_image.jpg", size: "300x300", alt: "プロフ画像" %>
+        <%= attachment_image_tag @user, :profile_image, :fill, 300, 300, format: "jpeg", class: "profile-image", fallback: "no_image/no_image.jpg",  alt: "プロフ画像" %>
         <label class="user-name">
           <span>I am</span>
           <%= current_user.name %>
@@ -106,12 +106,12 @@
       </li>
       <% end %>
     </ul>
-    <span class="user-edit">ユーザー編集↓</span>
+ <%#    <span class="user-edit">ユーザー編集↓</span>
     <%= link_to  users_user_path(current_user.id) , class: "show-modal" do %>
-    <%= image_tag('users/my_page/female_hand.png') %>
-    <% end %>
-    <p class="hiyoko_right"><%= image_tag('users/my_page/hiyoko.png')%></p>
-  </div>
+ <%#    <%= image_tag('users/my_page/female_hand.png') %>
+  <%#   <% end %> 
+    <%# <p class="hiyoko_right"><%= image_tag('users/my_page/hiyoko.png')</p> %>
+  </div> 
   <div id="tab_bookmark">
     <div class="bookmark-heading">
       <h2 class="heading-title">
