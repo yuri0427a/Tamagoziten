@@ -16,7 +16,7 @@ $(function () {
         var $window = $(window);
         //②全体の高さ（幅）-モーダルウィンドウの高さ（幅）/2 =　中央ぞろえ
         var posX = ($window.width() - $modalWin.outerWidth()) / 2;　　//★
-        var posY = ($window.height() - $modalWin.outerHeight()) / 2;　//★
+        var posY = ($window.height() - $modalWin.outerHeight())/ 1.3　//★
         //②outwidth(heigth)・・・モーダルウィンドウの幅(高さ)
 
         $modalWin
