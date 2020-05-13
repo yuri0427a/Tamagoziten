@@ -4,7 +4,7 @@ class Users::RecipesController < ApplicationController
 
   def index
     @search = Recipe.ransack(params[:q]) #ransackメソッド推奨
-    @search_recipes = @search.result.page(params[:page]).per(PER)
+    @search_recipes = @search.result.page(params[:page])
   end
 
   def show

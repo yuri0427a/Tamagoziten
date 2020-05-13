@@ -40,7 +40,9 @@
         </li>
         <% end %>
       </ul>
+      <div class="paginate">
+        <%= paginate @search_recipes %>
+         </div>
   </div>
-  <p><%= paginate @search_recipes %></p>
 </body>
 <%= render 'layouts/footer' %>

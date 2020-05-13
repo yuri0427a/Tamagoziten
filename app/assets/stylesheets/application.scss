@@ -262,6 +262,41 @@ $breakpoints: ('sm': 'screen and (max-width: 480px)',
   left: 100px;
 }
 
+//ページネーション
+
+
+.paginate{  
+  text-align: center;
+  margin: 50px 0;
+}
+
+
+.pagination>li>a {
+  border: solid 1px #d2b48c;
+  margin-right: 5px;/*枠線をなくす*/
+  color: #a0522d;
+
+}
+.pagination>.active>a {   
+  border: solid 1px #d2b48c; 
+  background-color: #ffa500 ;   /*背景の色を変える*/
+  color: #a0522d;
+}
+
+.pagination>.active>a:hover { 
+  border: solid 1px #d2b48c; 
+  background-color: #ffa500 ;    /*背景の色を変える*/
+  color: #a0522d;
+}
+
+
+
+.pagination>li>a:hover { 
+
+  background-color: #f0e68c;   
+  color: #a0522d;       /*角を丸くする*/
+}
+
 // recipe_bookmark_page(user_show)
 
 .heading-title {
