@@ -26,49 +26,6 @@
   font-family: "HanziPen TC", 'Hannotate SC', 'Meiryo UI', '游ゴシック', 'ヒラギノ丸ゴ Pro W4', 'Hiragino Maru Gothic ProN', 'ヒラギノ角ゴシック', 'Hiragino Sans', sans-serif;
 }
 
-//ヘッダー入り込み解除
-
-.top {
-  margin-top: 150px;
-}
-
-.users_show,
-.recipe_new,
-.recipe_show,
-.recipe_edit,
-.recipe_index,
-.categories_show{
-  margin-top: 230px;
-}
-
-// mixin mediaquery
-$breakpoints: ('sm': 'screen and (max-width: 480px)',
-  'lg': 'screen and (min-width: 1000px)',
-) !default;
-
-@mixin mq($breakpoint: sm) {
-  @media #{map-get($breakpoints, $breakpoint)} {
-    @content;
-  }
-}
-
-@mixin mq($breakpoint: md) {
-  @media #{map-get($breakpoints, $breakpoint)} {
-    @content;
-  }
-}
-
-@mixin mq($breakpoint: md) {
-  @media #{map-get($breakpoints, $breakpoint)} {
-    @content;
-  }
-}
-
-@mixin mq($breakpoint: md) {
-  @media #{map-get($breakpoints, $breakpoint)} {
-    @content;
-  }
-}
 
 
 
@@ -86,6 +43,21 @@ $breakpoints: ('sm': 'screen and (max-width: 480px)',
   }
 
 
+}
+
+//ヘッダー入り込み解除
+
+.top {
+  margin-top: 150px;
+}
+
+.users_show,
+.recipe_new,
+.recipe_show,
+.recipe_edit,
+.recipe_index,
+.categories_show{
+  margin-top: 230px;
 }
 
 //lonin_page&signup_page(devise)
@@ -217,63 +189,19 @@ $breakpoints: ('sm': 'screen and (max-width: 480px)',
   margin-top: 50px;
 }
 
-//mypage
-
-.tab_content {
-  position: relative;
-  margin-top: 30px;
-}
-
-.user-edit {
-  position: absolute;
-  font-size: 20px;
-  top: 210px;
-  left: 130px;
-  transform: rotate(-45deg);
-}
-
-.show-modal {
-  padding: 50px 70px;
-  border-radius: 100px;
-  position: absolute;
-  top: -150px;
-  left: 20px;
-}
-
-.show-modal:hover {
-  padding: 50px 70px;
-  border-radius: 100px;
-  position: absolute;
-  top: -170px;
-  left: 20px;
-  opacity: 0.7;
-  text-decoration: none;
-}
-
-.hiyoko_right {
-  position: absolute;
-  top: 40px;
-  right: 100px;
-}
-
-.hiyoko_left {
-  position: absolute;
-  top: 90px;
-  left: 100px;
-}
 
 //ページネーション
 
 
 .paginate{  
-  text-align: center;
   margin: 50px 0;
+  text-align: center;
 }
 
 
 .pagination>li>a {
+  margin-right: 5px;
   border: solid 1px #d2b48c;
-  margin-right: 5px;/*枠線をなくす*/
   color: #a0522d;
 
 }
@@ -297,75 +225,8 @@ $breakpoints: ('sm': 'screen and (max-width: 480px)',
   color: #a0522d;       /*角を丸くする*/
 }
 
-// recipe_bookmark_page(user_show)
 
-.heading-title {
-  text-align: center;
-  font-size: 70px;
-}
 
-.bookmark-heading-image {
-  margin-left: 370px;
-}
-
-.bookmark:nth-child(even) {
-  border: #deb887 5px double;
-  float: left;
-}
-
-.bookmark:nth-child(odd) {
-  border: #f0e68c 5px double;
-  float: left;
-}
-
-.bookmark:nth-child(even):hover {
-  border: #deb887 12px double;
-  opacity: 0.7;
-  transition: 0.1s;
-}
-
-.bookmark:nth-child(odd):hover {
-  border: #f0e68c 12px double;
-  opacity: 0.7;
-  transition: 0.1s;
-}
-
-.bookmark-description {
-  text-align: justify;
-}
-
-.bookmark-item {
-  float: left;
-  margin-left: 50px;
-}
-
-// my_recipe_page(user_show)
-
-.recipe-list-index {
-  margin-left: 80px;
-}
-
-.myrecipe:nth-child(odd) {
-  border: #ffb6c1 5px double;
-  height: 300px;
-}
-
-.myrecipe:nth-child(even) {
-  border: #f0e68c 5px double;
-  height: 300px;
-}
-
-.myrecipe:nth-child(even):hover {
-  border: #f0e68c 15px double;
-  opacity: 0.7;
-  transition: 0.1s;
-}
-
-.myrecipe:nth-child(odd):hover {
-  border: #ffb6c1 15px double;
-  opacity: 0.7;
-  transition: 0.1s;
-}
 
 
 //category

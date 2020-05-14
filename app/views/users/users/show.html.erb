@@ -1,171 +1,182 @@
 <%= render partial: 'layouts/header', locals: { search: @search } %>
+
 <body class="users_show">
-<% if current_user != @user %>
-<div class="tab">
-  <ul class="tab_nav">
-    <li><a href="#tab_mypage">プロフィール/投稿レシピ</a></li>
-  </ul>
-</div>
-<div class="tab_content">
-  <div id="tab_mypage">
-    <div class="col-xs-offset-4">
-      <h1>Profile...</h1>
-      <p>
-        <%= attachment_image_tag @user, :profile_image, :fill, 300, 300, format: "jpeg", class: "profile-image", fallback: "no_image/no_image.jpg", size: "300x300", alt: "プロフ画像" %>
-        <label class="user-name">
-          <span>I am</span>
-          <%= @user.name %>
-        </label><br>
-      </p>
-      <p class="user_introduction"><%= @user.introduction %></p>
-    </div>
-    <p class="hiyoko_left"><%= image_tag('users/my_page/hiyoko2.png')%></p>
-    <p class="hiyoko_right"><%= image_tag('users/my_page/hiyoko.png')%></p>
-    <ul class="recipe-list-index">
-      <% @userrecipes .each do |userrecipe| %>
-      <li class="list-items myrecipe">
-        <%= link_to users_recipe_path(userrecipe.id), class: "link-recipes" do %>
-        <%= attachment_image_tag userrecipe, :recipe_image, :fill, 230, 130, class: "reshipe-image", fallback: "no_image/no_image.jpg", size: "230x130", alt:"レシピ画像"  %>
-        <div class="detail">
-          <p class="recipe_icon">
-            <i class="glyphicon glyphicon-time"></i>
-            <%= userrecipe.cooking_time %><span>分</span>
-          </p>
-          <p class="recipe_icon">
-            <%= fa_icon("comment") %>
-            <%= userrecipe.recipe_reviews.count %>
-          </p>
-        </div>
-        <h3 class="recipe_title"><%= userrecipe.name %></h3>
-        <% end %>
-      </li>
-  <% end %>
-  </ul>
-</div>
-</div>
-<% else %>
-<div class="tab">
-  <ul class="tab_nav">
-    <li>
-      <a href="#tab_mypage">
-        プロフィール/投稿レシピ
-      </a>
-    </li>
-    <li>
-      <a href="#tab_bookmark">
-        保存レシピ
-      </a>
-    </li>
-  </ul>
-</div>
-<div class="tab_content">
-  <div id="tab_mypage">
-    <div class="col-lg-offset-4 col-xs-offset-1">
-      <% if flash[:error].present? %>
-      <ul>
-        <% flash[:error].each do |message| %>
-        <li class="error">
-          <i class="glyphicon glyphicon-star" aria-hidden="true"></i>
-          <%= message %>
+  <% if current_user != @user %>
+  <div class="tab">
+    <ul class="tab_nav">
+      <li><a href="#tab_mypage">プロフィール/投稿レシピ</a></li>
+    </ul>
+  </div>
+  <div class="tab_content">
+    <div id="tab_mypage">
+    <div class="otheruser_mypage">
+    <div class="otheruser_profile">
+      <div class="col-lg-offset-4 col-xs-offset-1">
+        <h1>Profile...</h1>
+        <p>
+          <%= attachment_image_tag @user, :profile_image, :fill, 300, 300, format: "jpeg", class: "profile-image", fallback: "no_image/no_image.jpg", size: "300x300", alt: "プロフ画像" %>
+          <label class="user-name">
+            <span>I am</span>
+            <%= @user.name %>
+          </label><br>
+        </p>
+        <p class="user_introduction"><%= @user.introduction %></p>
+      </div>
+      <p class="hiyoko_left"><%= image_tag 'users/my_page/hiyoko2.png', class: "hiyoko_left_img" %></p>
+      <p class="hiyoko_right"><%= image_tag 'users/my_page/hiyoko.png', class: "hiyoko_right_otheruser" %></p>
+      </div>
+      <div class="otheruser_recipe_list">
+      <ul class="recipe-list-index">
+        <% @userrecipes .each do |userrecipe| %>
+        <li class="list-items myrecipe">
+          <%= link_to users_recipe_path(userrecipe.id), class: "link-recipes" do %>
+          <%= attachment_image_tag userrecipe, :recipe_image, :fill, 230, 130, class: "reshipe-image", fallback: "no_image/no_image.jpg", size: "230x130", alt:"レシピ画像"  %>
+          <div class="detail">
+            <p class="recipe_icon">
+              <i class="glyphicon glyphicon-time"></i>
+              <%= userrecipe.cooking_time %><span>分</span>
+            </p>
+            <p class="recipe_icon">
+              <%= fa_icon("comment") %>
+              <%= userrecipe.recipe_reviews.count %>
+            </p>
+          </div>
+          <h3 class="recipe_title"><%= userrecipe.name %></h3>
+          <% end %>
         </li>
         <% end %>
       </ul>
-      <% end %>
-      <p id="notice">
-        <%=  notice %>
-      </p>
-      <h1>Profile...</h1>
-      <p>
-        <%= attachment_image_tag @user, :profile_image, :fill, 300, 300, format: "jpeg", class: "profile-image", fallback: "no_image/no_image.jpg",  alt: "プロフ画像" %>
-        <label class="user-name">
-          <span>I am</span>
-          <%= current_user.name %>
-        </label><br>
-      </p>
-      <p class="user-introduction">
-        <%= current_user.introduction %>
-      </p>
-    </div>
-    <ul class="recipe-list-index">
-      <% @recipes.each do |recipe| %>
-      <li class="list-items myrecipe">
-        <%= link_to users_recipe_path(recipe.id), class: "link-recipes" do %>
-        <%= attachment_image_tag recipe, :recipe_image, :fill, 230, 130, class: "reshipe-image", fallback: "no_image/no_image.jpg", size: "230x130", alt:"レシピ画像" %>
-        <div class="detail">
-          <p class="recipe_icon">
-            <i class="glyphicon glyphicon-time"></i>
-            <%= recipe.cooking_time %><span>分</span>
-          </p>
-          <p class="recipe_icon">
-            <%= fa_icon("comment") %>
-            <%= recipe.recipe_reviews.count %>
-          </p>
-        </div>
-        <h3 class="recipe_title"><%= recipe.name %></>
-          <% end %>
-      </li>
-      <% end %>
-    </ul>
- <%#    <span class="user-edit">ユーザー編集↓</span>
-    <%= link_to  users_user_path(current_user.id) , class: "show-modal" do %>
- <%#    <%= image_tag('users/my_page/female_hand.png') %>
-  <%#   <% end %> 
-    <%# <p class="hiyoko_right"><%= image_tag('users/my_page/hiyoko.png')</p> %>
-  </div> 
-  <div id="tab_bookmark">
-    <div class="bookmark-heading">
-      <h2 class="heading-title">
-        〜BookMark Recipe〜
-      </h2>
-      <div class="bookmark-heading-image">
-        <%= image_tag('users/my_page/cooking-removebg.png') %>
       </div>
     </div>
-    <div class="bookmark-section">
-      <ul>
-        <% @bookmarks.each  do |bookmark| %>
-        <li class="list-items bookmark">
-          <%= link_to users_recipe_path(bookmark.recipe.id), class: "link-recipes" do %>
-          <div class="bookmark-image">
-            <%= attachment_image_tag bookmark.recipe, :recipe_image, :fill, 230, 150, class: "reshipe-image", fallback: "no_image/no_image.jpg", size: "230x150", alt:"レシピ画像" %>
-          </div>
-          <div class="detail">
-            <h3 class="recipe_title">
-              <%= bookmark.recipe.name  %>
-            </h3>
-            <p class="bookmark-description">
-              <%= bookmark.recipe.description %>
-            </p><br>
-            <p class="bookmark-item time">
-              <i class="glyphicon glyphicon-time"></i>
-              <%= bookmark.recipe.cooking_time %><span>分</span>
-            </p>
-            <p class="bookmark-item coment">
-              <%= fa_icon("comment") %><%= bookmark.recipe.recipe_reviews.count %>
-            </p>
-          </div>
+    </div>
+  </div>
+  <% else %>
+  <div class="tab">
+    <ul class="tab_nav">
+      <li>
+        <a href="#tab_mypage">
+          プロフィール/投稿レシピ
+        </a>
+      </li>
+      <li>
+        <a href="#tab_bookmark">
+          保存レシピ
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="tab_content">
+    <div id="tab_mypage">
+      <div class="col-lg-offset-4 col-xs-offset-1">
+      <div class=" user_profile_dedail">
+        <% if flash[:error].present? %>
+        <ul>
+          <% flash[:error].each do |message| %>
+          <li class="error">
+            <i class="glyphicon glyphicon-star" aria-hidden="true"></i>
+            <%= message %>
+          </li>
           <% end %>
+        </ul>
+        <% end %>
+        <p id="notice">
+          <%=  notice %>
+        </p>
+        <h1>Profile...</h1>
+        <p>
+          <%= attachment_image_tag @user, :profile_image, :fill, 300, 300, format: "jpeg", class: "profile-image", fallback: "no_image/no_image.jpg",  alt: "プロフ画像" %>
+          <label class="user-name">
+            <span>I am</span>
+            <%= current_user.name %>
+          </label><br>
+        </p>
+        <p class="user-introduction">
+          <%= current_user.introduction %>
+        </p>
+      </div>
+      </div>
+      <div class="user_post_recipe">
+      <ul class="recipe-list-index">
+        <% @recipes.each do |recipe| %>
+        <li class="list-items myrecipe">
+          <%= link_to users_recipe_path(recipe.id), class: "link-recipes" do %>
+          <%= attachment_image_tag recipe, :recipe_image, :fill, 230, 130, class: "reshipe-image", fallback: "no_image/no_image.jpg", size: "230x130", alt:"レシピ画像" %>
+          <div class="detail">
+            <p class="recipe_icon">
+              <i class="glyphicon glyphicon-time"></i>
+              <%= recipe.cooking_time %><span>分</span>
+            </p>
+            <p class="recipe_icon">
+              <%= fa_icon("comment") %>
+              <%= recipe.recipe_reviews.count %>
+            </p>
+          </div>
+          <h3 class="recipe_title"><%= recipe.name %></>
+            <% end %>
         </li>
         <% end %>
       </ul>
+      </div>
+      <span class="user-edit">ユーザー編集↓</span>
+      <%= link_to  users_user_path(current_user.id) , class: "show-modal" do %>
+      <%= image_tag 'users/my_page/female_hand.png', class: "user_edit_btn" %>
+      <% end %>
+      <p class="hiyoko_right"><%= image_tag 'users/my_page/hiyoko.png', class: "hiyoko_right_img" %>
+    </div>
+    <div id="tab_bookmark">
+      <div class="bookmark-heading">
+        <h2 class="heading-title">
+          〜BookMark Recipe〜
+        </h2>
+        <div class="bookmark-heading-image">
+          <%= image_tag 'users/my_page/cooking-removebg.png', class: "bookmark_top_img" %>
+        </div>
+      </div>
+      <div class="bookmark-section">
+        <ul>
+          <% @bookmarks.each  do |bookmark| %>
+          <li class="list-items bookmark">
+            <%= link_to users_recipe_path(bookmark.recipe.id), class: "link-recipes" do %>
+            <div class="bookmark-image">
+              <%= attachment_image_tag bookmark.recipe, :recipe_image, :fill, 230, 150, class: "reshipe-image", fallback: "no_image/no_image.jpg", size: "230x150", alt:"レシピ画像" %>
+            </div>
+            <div class="detail">
+              <h3 class="recipe_title">
+                <%= bookmark.recipe.name  %>
+              </h3>
+              <p class="bookmark-description">
+                <%= bookmark.recipe.description %>
+              </p><br>
+              <p class="bookmark-item time">
+                <i class="glyphicon glyphicon-time"></i>
+                <%= bookmark.recipe.cooking_time %><span>分</span>
+              </p>
+              <p class="bookmark-item coment">
+                <%= fa_icon("comment") %><%= bookmark.recipe.recipe_reviews.count %>
+              </p>
+            </div>
+            <% end %>
+          </li>
+          <% end %>
+        </ul>
+      </div>
     </div>
   </div>
-</div>
-<% end %>
+  <% end %>
 
-<%# モーダルウィンドウ（user_edit） %>
+  <%# モーダルウィンドウ（user_edit） %>
 
-<%= form_for @user, url: users_user_path do |f| %>
-<div id="modalwin" , class="modalwin out">
-  <h1 class="edit-profile">〜Edit Profile〜</h1>
-  <img id="img_preview", class="userimg_preview">
-  <%= f.attachment_field :profile_image, placeholder: "プロフィール画像", class: "user-edit-form", id: "recipefile" %>
-  <h4 class="profile-name ">ニックネーム</h4>
+  <%= form_for @user, url: users_user_path do |f| %>
+  <div id="modalwin" , class="modalwin out">
+    <h1 class="edit-profile">〜Edit Profile〜</h1>
+    <img id="img_preview" , class="userimg_preview">
+    <%= f.attachment_field :profile_image, placeholder: "プロフィール画像", class: "user-edit-form", id: "recipefile" %>
+    <h4 class="profile-name ">ニックネーム</h4>
     <%= f.text_field :name , class: "form-control input-sm", placeholder: "10文字以内"%>
-  <h4 class="profile-name">自己紹介</h4>
-  <%= f.text_area :introduction, class: "form-control input-sm", placeholder: "20文字以内" %><br>
-  <%= f.submit "Update", class: "btn btn-danger" %>
-  <%= link_to users_user_path(current_user.id), class: "modal-close" do %>
-  <%= image_tag "users/modalwindows/icon_16-1.jpg", class: "modal-close" %>
-  <% end %>
-  <% end %>
+    <h4 class="profile-name">自己紹介</h4>
+    <%= f.text_area :introduction, class: "form-control input-sm", placeholder: "20文字以内" %><br>
+    <%= f.submit "Update", class: "btn btn-danger" %>
+    <%= link_to users_user_path(current_user.id), class: "modal-close" do %>
+    <%= image_tag "users/modalwindows/icon_16-1.jpg", class: "modal-close" %>
+    <% end %>
+    <% end %>

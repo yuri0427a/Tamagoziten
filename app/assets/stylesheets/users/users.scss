@@ -5,26 +5,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-//user_profile
-.user-name {
-    font-size: 30px;
-    font-weight: normal;
-}
 
-.profile-image{
-    width: 300px;
-    height: 300px;
-}
-
-.edit-profile {
-    margin-bottom: 15px;
-    font-family: 'HanziPen TC';
-}
-
-.user-introduction {
-    font-size: 15px;
-    width: 300px;
-}
+//マイページ（users_show）
 
 //tab
 
@@ -35,8 +17,8 @@
 
 
 .tab_nav {
-    margin-top: 50px;
     padding: 0;
+    margin-top: 50px;
     border-bottom: 6px solid #f0e68c;
 }
 
@@ -56,7 +38,28 @@
 .tab_nav li a:hover,
 .tab_nav li a.active {
     color: #fff;
-    background: #f0e68c;
+    background-color: #f0e68c;
+}
+
+//user_profile
+.user-name {
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.profile-image {
+    width: 300px;
+    height: 300px;
+}
+
+.edit-profile {
+    margin-bottom: 15px;
+
+}
+
+.user-introduction {
+    width: 300px;
+    font-size: 15px;
 }
 
 
@@ -112,18 +115,126 @@
     display: none;
 }
 
+
+
+//mypage
+
+.tab_content {
+    position: relative;
+    margin-top: 30px;
+}
+
+.user-edit {
+    position: absolute;
+    top: 210px;
+    left: 130px;
+    font-size: 20px;
+    transform: rotate(-45deg);
+}
+
+.show-modal {
+    position: absolute;
+    top: -150px;
+    left: 20px;
+    padding: 50px 70px;
+}
+
+.show-modal:hover {
+    position: absolute;
+    top: -170px;
+    left: 20px;
+    padding: 50px 70px;
+    text-decoration: none;
+    border-radius: 100px;
+    opacity: 0.7;
+}
+
+.hiyoko_right {
+    position: absolute;
+    top: 40px;
+    right: 100px;
+}
+
+.hiyoko_left {
+    position: absolute;
+    top: 90px;
+    left: 100px;
+}
+
+// my_recipe_page(user_show)
+
+.recipe-list-index {
+    margin-left: 80px;
+}
+
+.myrecipe:nth-child(odd) {
+    height: 300px;
+    border: 5px double #ffb6c1;
+}
+
+.myrecipe:nth-child(even) {
+    height: 300px;
+    border: 5px double #f0e68c;
+}
+
+.myrecipe:nth-child(even):hover {
+    border: 15px double #f0e68c;
+    opacity: 0.7;
+    transition: 0.1s;
+}
+
+.myrecipe:nth-child(odd):hover {
+    border: 15px double #ffb6c1;
+    opacity: 0.7;
+    transition: 0.1s;
+}
+
+// recipe_bookmark_page(user_show)
+
+.heading-title {
+    text-align: center;
+    font-size: 70px;
+}
+
+.bookmark-heading-image {
+    margin-left: 370px;
+}
+
+.bookmark:nth-child(even) {
+    float: left;
+    border: #deb887 5px double;
+}
+
+.bookmark:nth-child(odd) {
+    float: left;
+    border: #f0e68c 5px double;
+}
+
+.bookmark:nth-child(even):hover {
+    border: #deb887 12px double;
+    opacity: 0.7;
+    transition: 0.1s;
+}
+
+.bookmark:nth-child(odd):hover {
+    border: #f0e68c 12px double;
+    opacity: 0.7;
+    transition: 0.1s;
+}
+
+.bookmark-description {
+    text-align: justify;
+}
+
+.bookmark-item {
+    float: left;
+    margin-left: 50px;
+}
+
+
+
+//スマホ対応
 @media screen and (max-width:480px) {
-
-    .profile-image{
-        width: 200px;
-        height: 200px;
-    }
-
-    .user-name {
-        font-size: 25px;
-        font-weight: normal;
-    }
-    
 
     //tab
 
@@ -134,7 +245,121 @@
     .tab_nav li a {
         padding: 10px;
     }
-    
-    
-}
 
+    //user_profile
+    .profile-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .user-name {
+        font-size: 25px;
+        font-weight: normal;
+    }
+
+    .user_post_recipe {
+        margin-top: 250px;
+    }
+
+    .user_profile_dedail {
+        margin-bottom: 50px;
+    }
+
+    //ユーザー編集モーダル呼び出しボタン
+
+    .show-modal {
+        position: absolute;
+        top: 230px;
+        left: -80px;
+        transform: rotate(45deg);
+    }
+
+    .show-modal:hover {
+        position: absolute;
+        top: 230px;
+        left: -80px;
+    }
+
+    //modal_window
+
+    .modalwin {
+        width: 350px;
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+    .userimg_preview {
+        width: 100px;
+        height: 100px;
+    }
+
+
+    .user_edit_btn {
+        width: 200px;
+    }
+
+    .hiyoko_right_img {
+        width: 180px;
+    }
+
+    .user-edit {
+        font-size: 15px;
+        top: 400px;
+        left: 10px;
+        transform: rotate(-20deg);
+    }
+
+    .hiyoko_right {
+        position: absolute;
+        top: 360px;
+        right: 10px;
+    }
+
+    .user_post_recipe ul {
+        width: 300px;
+        margin: 30px auto;
+    }
+
+
+    //other_mypage
+
+    .hiyoko_left_img {
+        display: none;
+    }
+
+    .hiyoko_right_otheruser {
+        display: none;
+    }
+
+    .otheruser_profile {
+        margin-bottom: 30px;
+    }
+
+
+    //bookmark_tab
+
+    .heading-title {
+        font-size: 40px;
+    }
+
+    .bookmark_top_img {
+        width: 350px;
+        height: 250px;
+    }
+
+    .bookmark-heading-image {
+        width: 100%;
+    }
+
+    .bookmark-heading-image {
+        margin: 0 auto;
+    }
+
+
+
+    .bookmark-section li {
+        margin: 30px 50px;
+    }
+
+
+}
