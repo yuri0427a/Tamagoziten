@@ -9,12 +9,12 @@
     </p>
     <% if user_signed_in? %>
     <% else %>
-    <%= link_to new_user_registration_path, class: "sign_up_balloon" do %>
-    <%= image_tag('homes/mainvituals/kumo-l.png') %>
-    <% end %>
-    <%= link_to user_session_path, class: "log_in_balloon" do %>
-    <%= image_tag('homes/mainvituals/kumo-r.png') %>
-    <% end %>
+      <%= link_to new_user_registration_path, class: "sign_up_balloon" do %>
+        <%= image_tag('homes/mainvituals/kumo-l.png') %>
+      <% end %>
+      <%= link_to user_session_path, class: "log_in_balloon" do %>
+        <%= image_tag('homes/mainvituals/kumo-r.png') %>
+      <% end %>
     <% end %>
     <h1 class="app_title">
       たまご辞典
@@ -54,17 +54,17 @@
     <div class="category_list">
       <ul>
         <% @categories.each do |category| %>
-        <li>
-          <%= link_to category_path(category), class: "category_item" do %>
-          <p class="category_img"></p>
-          <p class="category_name">
-            <%= category.name %>
-          </p>
-          <% end %>
-        </li>
+          <li>
+            <%= link_to category_path(category), class: "category_item" do %>
+              <p class="category_img"></p>
+              <p class="category_name">
+                <%= category.name %>
+              </p>
+            <% end %>
+          </li>
         <% end %>
       </ul>
-    </div>
+    </div>  
   </section>
   <section class="recipe_ranking">
     <h1>〜Recipe Ranking〜</h1>
@@ -72,30 +72,31 @@
       ランキングから探す
     </p>
     <div class="ranking_list">
-    <ul>
-      <% @recipe_ranks.each.with_index(1) do |recipe, i| %>
-      <li>
-        <%= link_to users_recipe_path(recipe), class: "ranking_item" do %>
-        <p class="hover_item">
-          <%= image_tag 'homes/ranks/e0909_1-removebg-preview.png', size:"150x100" %>
-          <%= image_tag 'homes/mainvituals/niwatori.png', size:"80x100" %>
-        </p>
-        <%= attachment_image_tag recipe.user, :profile_image, :fill, 100, 100, class: "img-circle  profile-thumb rankin_user_img" ,fallback: "no_image/no_image.jpg", size: "80x80"%>
-        <%= attachment_image_tag recipe, :recipe_image, :fill, 250, 250, class: " profile-thumb rankin_recipe_img" ,fallback: "no_image/no_image.jpg", size: "250x250"%>
-        <p class="rank">
-          <%= i %>位
-        </p>
-        <p class="rankin_user_name">
-          <%= recipe.user.name %>
-        </p>
-        <p class="rankin_recipe_name">
-          <%= recipe.name %>
-        </p>
+      <ul>
+        <% @recipe_ranks.each.with_index(1) do |recipe, i| %>
+          <li>
+            <%= link_to users_recipe_path(recipe), class: "ranking_item" do %>
+              <p class="hover_item">
+                <%= image_tag 'homes/ranks/e0909_1-removebg-preview.png', size:"150x100" %>
+                <%= image_tag 'homes/mainvituals/niwatori.png', size:"80x100" %>
+              </p>
+              <%= attachment_image_tag recipe.user, :profile_image, :fill, 100, 100, class: "img-circle  profile-thumb rankin_user_img" ,fallback: "no_image/no_image.jpg", size: "80x80"%>
+              <%= attachment_image_tag recipe, :recipe_image, :fill, 250, 250, class: " profile-thumb rankin_recipe_img" ,fallback: "no_image/no_image.jpg", size: "250x250"%>
+              <p class="rank">
+                <%= i %>位
+              </p>
+              <p class="rankin_user_name">
+                <%= recipe.user.name %>
+              </p>
+              <p class="rankin_recipe_name">
+                <%= recipe.name %>
+              </p>
+            <% end %>
+          </li>
         <% end %>
-      </li>
-      <% end %>
-    </ul>
+      </ul>
     </div>
   </section>
-  </div>
+</div>
+</body>
   <%= render 'layouts/footer' %>

@@ -3,7 +3,7 @@
     <div class="header_inside">
       <h1 class="logo">
         <%= link_to root_path, class:"logo_link" do %>
-        〜Tamagoziten〜
+          〜Tamagoziten〜
         <% end %>
       </h1>
       <div class="tool">
@@ -23,14 +23,21 @@
             <li><%= link_to "ログアウト", destroy_user_session_path, data: {confirm: "ログアウトしますか？"}, class: "nav_item" %></li>
           </ul>
         </div>
-        <div class="sm_nav_wrapper"></div>
+        <div class="sm_nav_wrapper"> 
           <nav id="sm-nav" class="sm-nav">
             <h2>MENU</h2>
             <ul>
-              <li><%= link_to "マイページ", users_user_path(current_user.id), class: "nav_item" %></li>
-              <li><%= link_to "レシピ", users_recipes_path, class: "nav_item"  %></li>
-              <li><%= link_to "レシピ投稿", new_users_recipe_path , class: "nav_item"  %></li>
-              <li><%= link_to "ログアウト", destroy_user_session_path, data: {confirm: "ログアウトしますか？"}, class: "nav_item"  %>
+              <li>
+                <%= link_to "マイページ", users_user_path(current_user.id), class: "nav_item" %>
+              </li>
+              <li>
+                <%= link_to "レシピ", users_recipes_path, class: "nav_item"  %>
+              </li>
+              <li>
+                <%= link_to "レシピ投稿", new_users_recipe_path , class: "nav_item"  %>
+              </li>
+              <li>
+                <%= link_to "ログアウト", destroy_user_session_path, data: {confirm: "ログアウトしますか？"}, class: "nav_item"  %>
               </li>
               <li>
                 <%= search_form_for @search, class: "sm_search", url: users_recipes_path do |f| %>
@@ -40,7 +47,9 @@
                 <% end %>
               </li>
             </ul>
-            <p><%= image_tag'layouts/sm_nav.png', class:"nav_pic" %></p>
+            <p>
+              <%= image_tag'layouts/sm_nav.png', class:"nav_pic" %>
+            </p>
           </nav>
         </div>
         <div id="hm_icon">
@@ -54,38 +63,51 @@
     <% else %>
     <div class="pc_nav_wrapper">
       <ul class="pc_nav">
-        <li><%= link_to "マイページ", user_session_path, class: "nav_item" %></li>
-        <li><%= link_to "レシピ", users_recipes_path, class: "nav_item"  %></li>
-        <li><%= link_to "レシピ投稿", new_users_recipe_path , class: "nav_item"  %></li>
+        <li>
+          <%= link_to "マイページ", user_session_path, class: "nav_item" %>
+        </li>
+        <li>
+          <%= link_to "レシピ", users_recipes_path, class: "nav_item"  %>
+        </li>
+        <li>
+          <%= link_to "レシピ投稿", new_users_recipe_path , class: "nav_item"  %>
+        </li>
       </ul>
     </div>
-</div>
-<div class="sm_nav_wrapper">
-  <div id="sm-nav" class="sm-nav">
-      <h2>MENU</h2>
-    <ul>
-      <li><%= link_to "新規登録", new_user_registration_path, class: "nav_item"  %>
-      <li><%= link_to "ログイン", user_session_path, class: "nav_item" %></li>
-      <li><%= link_to "レシピ", users_recipes_path, class: "nav_item" %></li>
-      <li><%= link_to "レシピ投稿", new_users_recipe_path , class: "nav_item" %></li>
-      <li>
-        <%= search_form_for @search, class: "sm_search", url: users_recipes_path do |f| %>
-          <%= f.label :name, "レシピ検索" %>
-          <%= f.search_field :name_cont, class: "search_form",placeholder: "レシピ名" %>
-          <%= f.submit "検索", class: "search_btn" %>
-        <% end %>
-      </li>
-    </ul>
-    <p><%= image_tag'layouts/sm_nav.png', class:"nav_pic" %></p>
   </div>
-</div>
-<div id="hm_icon">
-  <a class="menu_trigger" href="#">
-    <span></span>
-    <span></span>
-    <span></span>
-  </a>
-</div>
+  <div class="sm_nav_wrapper">
+    <div id="sm-nav" class="sm-nav">
+        <h2>MENU</h2>
+      <ul>
+        <li>
+          <%= link_to "新規登録", new_user_registration_path, class: "nav_item"  %>
+        </li>
+        <li>
+          <%= link_to "ログイン", user_session_path, class: "nav_item" %>
+        </li>
+        <li>
+          <%= link_to "レシピ", users_recipes_path, class: "nav_item" %>
+        </li>
+        <li><%= link_to "レシピ投稿", new_users_recipe_path , class: "nav_item" %>
+        </li>
+        <li>
+          <%= search_form_for @search, class: "sm_search", url: users_recipes_path do |f| %>
+            <%= f.label :name, "レシピ検索" %>
+            <%= f.search_field :name_cont, class: "search_form",placeholder: "レシピ名" %>
+            <%= f.submit "検索", class: "search_btn" %>
+          <% end %>
+        </li>
+      </ul>
+      <p><%= image_tag'layouts/sm_nav.png', class:"nav_pic" %></p>
+    </div>
+  </div>
+  <div id="hm_icon">
+    <a class="menu_trigger" href="#">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+  </div>
 </nav>
 <% end %>
 <div class="header_outside">
