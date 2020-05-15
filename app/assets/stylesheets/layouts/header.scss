@@ -1,17 +1,24 @@
-
 //*= require_tree .
 //*= require_self
+
+
+#hm_icon,
+#sm-nav,
+.sm-header {
+  display: none;
+}
 
 
 //ヘッダーレイアウト
 
 
-.header{
+.header {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 10;
   width: 100%;
+  box-shadow: 0 3px 5px 0 #000;
 }
 
 .header_inside {
@@ -23,8 +30,9 @@
 .header_outside {
   height: 20px;
   box-shadow: 0 3px 5px 0 #000;
-  background-color: #ffa500
+  background-color: #ffd700;
 }
+
 
 
 //Tamagozitenロゴ
@@ -97,50 +105,55 @@
 //ヘッダースマホ対応
 
 @media screen and (max-width:480px) {
-  
+
 
   .header_inside {
     height: 120px;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
     margin: 0 0 -50px 0;
     text-align: center;
     background-color: #fff;
   }
-  
+
   .header_outside {
     box-shadow: none;
-    margin-top:30px;
+    margin-top: 50px;
   }
 
-  .logo{
-    padding-top : 30px;
+  .logo {
+    padding-top: 30px;
     font-size: 30px;
   }
 
-  .header_inside> .pc_nav_wrapper> ul .search_area {
-    margin: 50px 60px 0 0;  
+  .header_inside>.pc_nav_wrapper>ul .search_area {
+    margin: 50px 60px 0 0;
   }
 
 
-  .pc_nav_wrapper{
+  .pc_nav_wrapper {
     display: none;
   }
 
-  .tool{
+  .tool {
     margin-top: 50px;
     margin-right: 50px;
   }
 
   // メニューハンバーガーアイコン
 
+
+
   #hm_icon {
     position: fixed;
     top: 20px;
     right: 10px;
     z-index: 10;
+    display: inline-block;
   }
 
-  .sm_nav_wrapper h2{
+
+
+  .sm_nav_wrapper h2 {
     text-align: center;
   }
 
@@ -205,20 +218,20 @@
     background-color: #fff;
   }
 
-  .sm-nav ul{
+  .sm-nav ul {
     margin-top: 50px;
   }
-  
+
   .sm-nav li {
     margin-bottom: 20px;
     text-align: center;
   }
-  
-  .sm_nav_wrapper h2{
-    font-size: 50px; 
+
+  .sm_nav_wrapper h2 {
+    font-size: 50px;
   }
-  
-  .nav_pic{
+
+  .nav_pic {
     width: 300px;
     height: 200px;
     margin: 10px 0 0 50px;
