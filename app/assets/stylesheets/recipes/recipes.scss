@@ -135,6 +135,27 @@
 
 //recipe_new
 
+
+.page_title {
+    margin-bottom: 30px;
+    font-size: 50px;
+    text-align: center;
+}
+
+.recipe_newlist span {
+    font-size: 15px;
+    background-color: #f0e68c;
+    border-radius: 2px;
+}
+
+.input-sm {
+    margin-bottom: 20px;
+}
+
+.form-rows {
+    margin-right: 10px;
+}
+
 .nested-fields {
     display: inline-flex;
     margin: 10px 30px 0 0;
@@ -147,19 +168,7 @@
     border-radius: 3px;
 }
 
-.input-sm {
-    margin-bottom: 20px;
-}
 
-.form-rows {
-    margin-right: 10px;
-}
-
-.recipe_newlist span {
-    font-size: 15px;
-    background-color: #f0e68c;
-    border-radius: 2px;
-}
 
 .recipe-new span {
     background-color: #f0e68c;
@@ -170,24 +179,6 @@
 
 }
 
-.page_title {
-    margin: 0 0 30px 150px;
-    font-size: 50px;
-}
-
-.review-section {
-    text-align: center;
-}
-
-.recipe_img_preview {
-    width: 280px;
-    height: 200px;
-
-}
-
-#btn_submit {
-    margin-bottom: 30px;
-}
 
 
 // recipe_show
@@ -226,7 +217,7 @@
     text-decoration: none;
 }
 
-//調理時間、レビュー数など
+//調理時間、レビュー数
 
 .icon {
     margin-right: 10px;
@@ -272,8 +263,6 @@
 }
 
 
-
-//recipe_show
 
 .table-inverse {
     border: none;
@@ -335,9 +324,14 @@
 }
 
 //recipe_review
+
 .recipe-review {
     width: 250px;
     border: solid 3px yellow;
+}
+
+.review-section {
+    text-align: center;
 }
 
 .review-paragraph {
@@ -362,6 +356,17 @@
     position: relative;
     width: 2560px;
     left: 0;
+}
+
+
+.recipe_img_preview {
+    width: 280px;
+    height: 200px;
+
+}
+
+#btn_submit {
+    margin-bottom: 30px;
 }
 
 //carousel 矢印ボタン(recipe_show review）

@@ -1,7 +1,22 @@
 @media screen and (max-width:480px) {
 
+    .recipe_new,
+    .recipe_edit {
+        margin-top: 180px !important;
+    }
+
+    // recipe_new
+
+    .page_title {
+        font-size: 40px;
+    }
+
+    .recipe_newlist {
+        margin-top: 50px;
+    }
+
     // recipe_index
-    
+
     .recipe-list {
         width: 380px;
     }
@@ -9,112 +24,118 @@
     .recipe-list h1 {
         font-size: 40px;
     }
-    
+
     .recipe-index-ul {
         padding-left: 50px;
     }
-    
+
     // 検索件数０件の場合の表示（categories_show, recipes_index）
-    
+
     .no_recipe_view {
         width: 350px;
     }
-    
+
     .no_recipe_count {
         margin: 0 0 50px 20px;
         font-size: 18px;
         text-align: center;
     }
-    
+
     .no_recipe_img {
         width: 220px;
         height: 200px;
         margin-bottom: 20px;
     }
 
-//recipe_show
+    //recipe_show
 
-.recipe_show{
-    margin-top: 180px !important; 
-}
+    .recipe_show {
+        margin-top: 180px !important;
+    }
 
-.pc_recipe_show{
-    display: none;
-}
+    .pc_recipe_show {
+        display: none;
+    }
 
 
-#recipe_show_img{
-    width: 330px;
-    height: 260px;
-    margin-left: 15px;
-}
+    #recipe_show_img {
+        width: 330px;
+        height: 260px;
+        margin-left: 15px;
+    }
 
-.category_tag {
-    padding: 5px;
-    margin: 0 1px 25px 0;
-    font-size: 12px;
-}
-.recipe_detail{
-    float: right;
-    margin-top: -30px;
-}
+    .category_lists ul {
+        margin-bottom: 40px;
+    }
 
-.bookmark_change_item span{ 
-    font-size: 13px;
+    .category_tag {
+        padding: 5px;
+        margin-top: 8px;
+        font-size: 12px;
+    }
 
-}
+    .recipe_detail {
+        float: right;
+        margin-top: -30px;
+    }
 
-.create-time{
-    font-size: 13px;
-}
+    .bookmark_change_item span {
+        font-size: 13px;
 
-.label-recipe{
-    display: inline-block;  
-    font-size: 18px;
-    border-bottom: none;
-    text-align: center;
-}
+    }
 
-.label-recipe label{
-    display: none;
-}
+    .create-time {
+        font-size: 13px;
+    }
 
-.icon_list{
-    margin: 15px 0 0 100px;
-}
+    .label-recipe {
+        display: inline-block;
+        font-size: 18px;
+        border-bottom: none;
+        text-align: center;
+    }
 
-.time_ico{
-    margin-right: 50px;
-}
+    .label-recipe label {
+        display: none;
+    }
 
-.label-recipe-description{
-    font-size: 15px;
-    margin-top: 10px;
-    text-align: center;
-}
+    .icon_list {
+        margin: 15px 0 0 100px;
+    }
 
-.recipe-btn{
-    display: inline-block;
-    margin :15px 0 0 15px;
-}
+    .time_ico {
+        margin-right: 50px;
+    }
 
-.btn{
-    padding: 10px !important;
-}
+    .label-recipe-description {
+        font-size: 15px;
+        margin-top: 10px;
+        text-align: center;
+    }
 
-.item-title, .cooking_method_list{
-    text-align: center;
-}
+    .recipe-btn {
+        display: inline-block;
+        margin: 15px 0 0 15px;
+    }
 
-.cooking_material_table td{
-    margin-left:-20px;
-    font-size: 20px;
-}
+    .btn {
+        padding: 10px !important;
+    }
 
-.cooking_material_table table{
-    width:100%;
-    margin-right:20px;
-}
+    .item-title,
+    .cooking_method_list {
+        text-align: center;
+    }
+
+    .cooking_material_table td {
+        margin-left: -20px;
+        font-size: 20px;
+    }
+
+    .cooking_material_table table {
+        width: 100%;
+        margin-right: 20px;
+    }
 
 
 
