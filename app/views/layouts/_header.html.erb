@@ -34,9 +34,9 @@
               </li>
               <li>
                 <%= search_form_for @search, class: "sm_search", url: users_recipes_path do |f| %>
-                <%= f.label :name, "レシピ検索" %>
-                <%= f.search_field :name_cont, class: "search_form",placeholder: "レシピ名" %>
-                <%= f.submit "検索", class: "search_btn" %>
+                  <%= f.label :name, "レシピ検索" %>
+                  <%= f.search_field :name_cont, class: "search_form",placeholder: "レシピ名" %>
+                  <%= f.submit "検索", class: "search_btn" %>
                 <% end %>
               </li>
             </ul>

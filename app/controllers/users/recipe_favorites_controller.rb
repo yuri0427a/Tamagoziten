@@ -1,5 +1,6 @@
 class Users::RecipeFavoritesController < ApplicationController
     before_action :authenticate_user!
+
         def index
             @user = current_user
             @bookmarks = RecipeFavorite.where(user_id: current_user.id).all  #whereメソッド…したカラムの全データを取得できる（allの検索版）
@@ -18,4 +19,5 @@ class Users::RecipeFavoritesController < ApplicationController
             @favorite.destroy
             render :change
         end
+        
 end
