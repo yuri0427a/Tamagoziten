@@ -17,7 +17,9 @@
     padding: 20px;
 }
 
-
+.sm-character {
+    display: none;
+}
 
 .app_title {
     position: absolute;
@@ -70,10 +72,15 @@
 //top-page スマホ画面
 @media screen and (max-width:425px) {
 
+    .top {
+        margin-top: 130px !important;
+    }
+
     .main_vitual {
         height: 550px;
         background-image: image-url("homes/mainvituals/egg-sandwich.sm.jpg");
     }
+
 
     .app_title {
         position: absolute;
@@ -88,6 +95,10 @@
     .sign_up_balloon,
     .log_in_balloon {
         display: none;
+    }
+
+    .sm-character {
+        display: inline-block;
     }
 
     .sm_character_img {
@@ -403,74 +414,74 @@
     background-color: #fffacd;
     border-top: 5px dotted #8b4513;
     border-bottom: 5px dotted #8b4513;
-  }
-  
-  .recipe_ranking li {
+}
+
+.recipe_ranking li {
     width: 250px;
-  }
-  
-  .recipe_ranking h1 {
+}
+
+.recipe_ranking h1 {
     font-size: 60px;
     text-align: center;
     overflow: auto;
-  }
-  
-  .recipe_ranking ul {
+}
+
+.recipe_ranking ul {
     list-style: disc;
     padding-left: 40px;
-  }
-  
-  .recipe_ranking ul:after {
+}
+
+.recipe_ranking ul:after {
     content: "";
     display: block;
     clear: both;
-  }
-  
-  .recipe_ranking li {
+}
+
+.recipe_ranking li {
     position: relative;
     float: left;
     margin: 0 10px;
-  }
-  
-  
-  //rankng-hover
-  
-  //hoverすると鶏出現するcss
-  .hover_item {
+}
+
+
+//rankng-hover
+
+//hoverすると鶏出現するcss
+.hover_item {
     position: absolute;
     top: -100px;
     right: 5px;
     display: none;
-  }
-  
-  .recipe_ranking li:hover .hover_item {
+}
+
+.recipe_ranking li:hover .hover_item {
     display: block;
-  }
-  
-  .recipe_ranking li:hover .rank {
+}
+
+.recipe_ranking li:hover .rank {
     transform: rotate(360deg);
-  }
-  
-  
-  .rankin_user_img {
+}
+
+
+.rankin_user_img {
     position: absolute;
     top: 220px;
     left: 5px;
-  
-  }
-  
-  .rankin_user_name {
+
+}
+
+.rankin_user_name {
     font-size: 20px;
     margin-left: 100px;
-  }
-  
-  .rankin_recipe_name {
+}
+
+.rankin_recipe_name {
     font-size: 30px;
     text-align: center;
     margin-top: 30px;
-  }
-  
-  .rank {
+}
+
+.rank {
     position: absolute;
     top: -20px;
     left: 110px;
@@ -483,51 +494,49 @@
     height: 60px;
     background-color: #ffc0cb;
     border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-  }
-  
-  
-  .ranking_item {
+}
+
+
+.ranking_item {
     color: #000;
-  }
-  
-  .ranking_item:hover {
+}
+
+.ranking_item:hover {
     color: #000;
-  }
-  
-  
-  .ranking_list>ul>li:first-of-type>.ranking_item>.rank {
+}
+
+
+.ranking_list>ul>li:first-of-type>.ranking_item>.rank {
     background-color: #ffd700;
-  }
-  
-  .ranking_list>ul>li:nth-of-type(2)>.ranking_item>.rank {
+}
+
+.ranking_list>ul>li:nth-of-type(2)>.ranking_item>.rank {
     background-color: #c0c0c0;
-  }
-  
-  .ranking_list>ul>li:nth-of-type(3)>.ranking_item>.rank {
+}
+
+.ranking_list>ul>li:nth-of-type(3)>.ranking_item>.rank {
     background-color: #8b4513;
     color: #fff;
-  }
+}
 
-  @media screen and (max-width:425px) {
-    
+@media screen and (max-width:425px) {
+
     .recipe_ranking li {
         width: 250px;
         margin-bottom: 70px;
     }
-    
-    
-    .recipe_ranking h1{
+
+
+    .recipe_ranking h1 {
         font-size: 40px;
     }
 
     .ranking_list>ul>li:nth-of-type(2)>.ranking_item>.rank {
         background-color: #c0c0c0;
-      }
-      
-      .ranking_list>ul>li:nth-of-type(3)>.ranking_item>.rank {
+    }
+
+    .ranking_list>ul>li:nth-of-type(3)>.ranking_item>.rank {
         background-color: #8b4513;
         color: #fff;
-      }
-  }
-
-  
+    }
+}

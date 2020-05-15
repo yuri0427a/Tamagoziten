@@ -5,6 +5,13 @@
 
 // レシピアイテム共通
 
+
+.recipe-list::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
 .recipe-index-ul:after {
     content: "";
     display: block;
@@ -133,7 +140,7 @@
     margin-top: 100px;
 }
 
-//recipe_new
+//recipe_new, recipe_edit
 
 
 .page_title {
@@ -146,6 +153,14 @@
     font-size: 15px;
     background-color: #f0e68c;
     border-radius: 2px;
+}
+
+.recipe-new span {
+    background-color: #f0e68c;
+}
+
+.procedure-title span {
+    background-color: #f0e68c;
 }
 
 .input-sm {
@@ -169,14 +184,14 @@
 }
 
 
+//category(recipe_new,recipe_edit)
 
-.recipe-new span {
-    background-color: #f0e68c;
+.category-checkbox {
+    margin: 20px 0;
 }
 
-.procedure-title span {
-    background-color: #f0e68c;
-
+.category-checkbox span {
+    margin-left: 5px;
 }
 
 
