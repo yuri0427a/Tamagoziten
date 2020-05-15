@@ -521,14 +521,19 @@
 
 @media screen and (max-width:425px) {
 
-    .recipe_ranking li {
-        width: 250px;
-        margin-bottom: 70px;
-    }
-
 
     .recipe_ranking h1 {
         font-size: 40px;
+    }
+
+    .recipe_ranking ul {
+        width: 350px;
+        margin: 30px auto;
+    }
+
+    .recipe_ranking li {
+        width: 250px;
+        margin-bottom: 70px;
     }
 
     .ranking_list>ul>li:nth-of-type(2)>.ranking_item>.rank {
