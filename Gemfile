@@ -77,6 +77,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'pry-doc'
+  gem 'rspec-rails'
 end
 
 gem 'dotenv-rails'
