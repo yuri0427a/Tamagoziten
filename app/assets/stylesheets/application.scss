@@ -26,6 +26,11 @@
   font-family: "HanziPen TC", 'Hannotate SC', 'Meiryo UI', '游ゴシック', 'ヒラギノ丸ゴ Pro W4', 'Hiragino Maru Gothic ProN', 'ヒラギノ角ゴシック', 'Hiragino Sans', sans-serif;
 }
 
+@font-face {
+  font-family: "dot";
+  src: font-url("HuiFontP29.ttf") format("truetype");
+  
+}
 //ヘッダー入り込み解除
 
 .top {
@@ -70,6 +75,7 @@
 .devise_title {
   font-style: bold;
   text-align: center;
+  font-family: "dot" !important;
 }
 
 .login_btn {
