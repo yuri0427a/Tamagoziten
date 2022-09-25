@@ -1,7 +1,5 @@
 # README
 
-#たまご辞典  
-URL:https://tamagoziten.work/
 
 ### PC版
 <img width="1438" alt="スクリーンショット 2020-05-08 22.11.42.png" src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/574886/0d84ec6c-166e-7577-388f-ac77f218d7e1.png">
